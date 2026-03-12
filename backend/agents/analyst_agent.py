@@ -16,7 +16,7 @@ class AnalystAgent:
         self.data_engine = data_engine
         self.query_engine = QueryEngine()
 
-    async def run(self, message: str, active_file: str = None) -> str:
+    async def run(self, message: str, active_file: str = None, syntax_context: str = "") -> str:
         if not active_file:
             return "I am the Analyst. Please upload a dataset so I can analyze it."
         
@@ -62,6 +62,9 @@ class AnalystAgent:
             SYSTEM: You are a Polars Expert Analyst. It is PROHIBITED to use Pandas. 
             The use of .loc, .iloc, .groupby().apply() or square bracket access df['col'] is strictly forbidden.
             
+            SOURCE OF TRUTH (Librarian Context):
+            {syntax_context if syntax_context else "No specific context provided. Follow standard Polars documentation."}
+            
             Valid Polars Examples:
             - Pandas: df.groupby('A').B.sum() -> Polars: df.group_by('A').agg(pl.col('B').sum())
             - Pandas: df[df['A'] > 5] -> Polars: df.filter(pl.col('A') > 5)
@@ -104,6 +107,9 @@ class AnalystAgent:
             prompt = f"""
             SYSTEM: You are a Polars Expert Analyst. You MUST NOT suggest or use Pandas syntax.
             Always recommend Polars expressions (pl.col, df.filter, etc.).
+            
+            SOURCE OF TRUTH (Librarian Context):
+            {syntax_context if syntax_context else "No specific context provided. Follow standard Polars documentation."}
             
             You are the Analyst Agent. You have access to a dataset.
             

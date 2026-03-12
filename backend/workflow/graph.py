@@ -72,10 +72,18 @@ async def router_node(state: AgentState):
 from engines.data_engine import DataEngine, PandasSyntaxDetectedError
 
 async def analyst_node(state: AgentState):
-    with tracer.start_as_current_span("analyst_node"):
+    with tracer.start_as_current_span("analyst_node") as main_span:
         file_path = state.get("active_file")
         messages = list(state["messages"])
         last_user_query = messages[-1].content
+        
+        # 1. Collaboration: Ask Librarian for Polars Syntax help
+        logger.info("Librarian providenciou contexto de sintaxe para o Analyst")
+        with tracer.start_as_current_span("librarian_collaboration") as sub_span:
+            syntax_query = f"Polars syntax for {last_user_query}"
+            sub_span.set_attribute("syntax_query", syntax_query)
+            syntax_context = await librarian_agent.run(syntax_query, file_path)
+            sub_span.set_attribute("syntax_context_len", len(syntax_context))
         
         max_retries = 2
         retry_count = 0
@@ -84,7 +92,7 @@ async def analyst_node(state: AgentState):
         while retry_count <= max_retries:
             try:
                 logger.info(f"Executing Analyst Agent (Attempt {retry_count + 1})")
-                response = await analyst_agent.run(current_input, file_path)
+                response = await analyst_agent.run(current_input, file_path, syntax_context=syntax_context)
                 
                 return {
                     "messages": [AIMessage(content=response, name="analyst")]
