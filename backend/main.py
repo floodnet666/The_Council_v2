@@ -106,8 +106,8 @@ async def chat(request: ChatRequest):
                 "status": "success"
             }
     except Exception as e:
-        with logger.contextualize(session_id=request.session_id):
-            logger.error(f"Error processing chat: {e}")
+        with logger.contextualize(session_id=request_session_id):
+            logger.error(f"Error processing chat. State: {input_state} | Error: {e}")
             return {"response": "I encountered an error while processing your request.", "agent": "system", "status": "error"}
     
 

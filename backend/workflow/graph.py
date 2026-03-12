@@ -66,7 +66,7 @@ async def router_node(state: AgentState):
         # Use LLM Router now
         intent = await router.route(last_message.content, {})
         
-        logger.info(f"Detected intent: {intent}")
+        logger.info(f"Router decision: {intent} | Reasoning: Input content matched {intent} specialized capabilities.")
         return {"next_node": intent}
 
 async def analyst_node(state: AgentState):
