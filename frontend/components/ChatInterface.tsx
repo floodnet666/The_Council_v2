@@ -33,6 +33,16 @@ export default function ChatInterface() {
         if (!e.target.files?.[0]) return;
 
         const file = e.target.files[0];
+        
+        // Validation: Only CSV and Parquet are supported by the DataEngine
+        const validExtensions = ['.csv', '.parquet'];
+        const fileName = file.name.toLowerCase();
+        if (!validExtensions.some(ext => fileName.endsWith(ext))) {
+            alert("Invalid file format. Please upload a .csv or .parquet file.");
+            if (fileInputRef.current) fileInputRef.current.value = "";
+            return;
+        }
+
         setUploading(true);
 
         const formData = new FormData();
@@ -40,17 +50,26 @@ export default function ChatInterface() {
 
         try {
             const res = await fetch("http://localhost:8000/upload", { method: "POST", body: formData });
+            if (!res.ok) throw new Error("Upload failed");
+            
             const data = await res.json();
             if (data.status === "uploaded") {
                 setCurrentFile({ name: data.filename, path: data.path });
-                setInput(`Analyze ${data.filename}`);
-                setMessages(prev => [...prev, { role: "assistant", content: `File ${data.filename} uploaded successfully. Ready to analyze.` }]);
+                setMessages(prev => [
+                    ...prev, 
+                    { 
+                        role: "assistant", 
+                        content: `**File Detected**: \`${data.filename}\`\nI've indexed this datasource. What would you like to analyze?`,
+                        agent: "system"
+                    }
+                ]);
             }
         } catch (err) {
             console.error(err);
-            alert("Upload failed.");
+            alert("Upload failed. Please ensure the backend is running.");
         } finally {
             setUploading(false);
+            if (fileInputRef.current) fileInputRef.current.value = "";
         }
     };
 
