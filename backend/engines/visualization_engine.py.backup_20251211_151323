@@ -1,0 +1,32 @@
+from typing import Dict, Any, List
+import json
+
+class VisualizationEngine:
+    def __init__(self):
+        pass
+
+    def create_chart_spec(self, data: List[Dict[str, Any]], chart_type: str = "bar", x_col: str = "x", y_col: str = "y") -> str:
+        """
+        Generates a Plotly JSON spec.
+        """
+        x_vals = [row.get(x_col) for row in data]
+        y_vals = [row.get(y_col) for row in data]
+        
+        spec = {
+            "data": [
+                {
+                    "x": x_vals,
+                    "y": y_vals,
+                    "type": chart_type,
+                    "marker": {"color": "#00f0ff"} # Neon Blue
+                }
+            ],
+            "layout": {
+                "title": f"{y_col} vs {x_col}",
+                "template": "plotly_dark",
+                "paper_bgcolor": "rgba(0,0,0,0)",
+                "plot_bgcolor": "rgba(0,0,0,0)",
+                "font": {"color": "#ededed"}
+            }
+        }
+        return json.dumps(spec)

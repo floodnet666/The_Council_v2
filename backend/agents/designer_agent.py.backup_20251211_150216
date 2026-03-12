@@ -1,0 +1,72 @@
+from typing import Dict, Any
+from langchain_core.messages import AIMessage
+from engines.llm_engine import llm_engine
+from engines.data_engine import DataEngine
+from engines.visualization_engine import VisualizationEngine
+import json
+
+class DesignerAgent:
+    def __init__(self, data_engine: DataEngine, viz_engine: VisualizationEngine):
+        self.llm = llm_engine.get_llm()
+        self.data_engine = data_engine
+        self.viz_engine = viz_engine
+
+    async def run(self, message: str, active_file: str = None) -> str:
+        if not active_file or self.data_engine.df is None:
+             # Try to load if filename is known but not loaded in DataEngine
+             if active_file: 
+                 self.data_engine.load_data(active_file)
+        
+        if self.data_engine.df is None:
+            return "I need a loaded dataset to create a chart."
+
+        # Get all data and summary first
+        summary = self.data_engine.get_summary()
+        cols = summary.get("columns", [])
+        
+        # For Designer, we might need a bit more data or just schema
+        # Current implementation in graph.py takes whole data to dicts which might be heavy for big data
+        # But we stick to existing logic for now
+        data = self.data_engine.df.collect().to_dicts()
+
+        if len(cols) < 2:
+             return "Dataset has insufficient columns for a chart."
+
+        # We pass a sample of data to LLM
+        data_sample = data[:5] # First 5 rows to understand structure
+        
+        prompt = f"""
+        You are the Designer Agent. Create a Plotly JSON specification (data and layout) to visualize this data.
+        
+        Data Sample:
+        {json.dumps(data_sample, indent=2)}
+        
+        User Request: "{message}"
+
+        Instructions:
+        1. Identify the most suitable chart type (bar, scatter, line, pie) based on the data and user request.
+        2. detailed 'data' and 'layout' fields.
+        3. Use the Dark Theme:
+           - paper_bgcolor: 'rgba(0,0,0,0)'
+           - plot_bgcolor: 'rgba(0,0,0,0)'
+           - font color: '#ededed'
+           - marker color: '#00f0ff' (Neon Blue) or '#7000ff' (Neon Purple)
+        
+        Return ONLY the valid JSON string. Do not include markdown formatting like ```json.
+        """
+        
+        try:
+            response = self.llm.invoke(prompt).content
+            # Clean response if it contains markdown
+            spec = response.replace("```json", "").replace("```", "").strip()
+            # Verify JSON validity
+            json.loads(spec) 
+            return f"CHART_JSON:{spec}"
+        except Exception as e:
+            # Fallback to deterministic
+            if len(cols) >= 2:
+                x_col = cols[0]
+                y_col = cols[1]
+                spec = self.viz_engine.create_chart_spec(data, "bar", x_col, y_col)
+                return f"CHART_JSON:{spec}"
+            return f"Failed to generate chart: {e}"

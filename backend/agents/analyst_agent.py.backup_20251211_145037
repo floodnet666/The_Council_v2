@@ -1,0 +1,40 @@
+from typing import Dict, Any, List
+from langchain_core.messages import AIMessage
+from engines.llm_engine import llm_engine
+from engines.data_engine import DataEngine
+import json
+
+class AnalystAgent:
+    def __init__(self, data_engine: DataEngine):
+        self.llm = llm_engine.get_llm()
+        self.data_engine = data_engine
+
+    async def run(self, message: str, active_file: str = None) -> str:
+        if not active_file:
+            return "I am the Analyst. Please upload a dataset so I can analyze it."
+        
+        # Try validation/loading
+        if self.data_engine.df is None or self.data_engine.metadata.get("source") != active_file:
+            success = self.data_engine.load_data(active_file)
+            if not success:
+                return f"Could not load data from {active_file}."
+                
+        summary = self.data_engine.get_summary()
+        summary_text = f"Columns: {', '.join(summary.get('columns', []))}\nPreview:\n{json.dumps(summary.get('preview', []), indent=2)}"
+        
+        prompt = f"""
+        You are the Analyst Agent. You have access to a dataset with these columns and this preview data:
+        {summary_text}
+        
+        User Query: "{message}"
+        
+        Please provide a brief, professional summary of what this data seems to represent and suggest 3 potential insights or analyses.
+        Keep it concise.
+        """
+        
+        try:
+            response = self.llm.invoke(prompt).content
+        except Exception as e:
+            response = f"Data Loaded. Summary: {summary_text}. (LLM Error: {e})"
+            
+        return response

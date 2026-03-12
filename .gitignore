@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.env
+.python-version
+the_council.db
+backend/uploads/
+backend/the_council.db
+
+# Node
+node_modules/
+.next/
+out/
+build/
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+.gemini/antigravity/
+
+# Council v2 Specific
+debug_data.csv
+output.txt
+test_output.txt
+verify_*.py
+extract_pdf.py
+debug_error.py
