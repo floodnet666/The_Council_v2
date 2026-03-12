@@ -1,9 +1,36 @@
 import pytest
 import polars as pl
 from hypothesis import given, settings, HealthCheck, strategies as st
-from engines.data_engine import DataEngine
+from engines.data_engine import DataEngine, PandasSyntaxDetectedError
 import os
 import tempfile
+
+def test_pandas_syntax_blocking(engine):
+    pandas_codes = [
+        "df.loc[0, 'col']",
+        "df.iloc[:5]",
+        "df.apply(lambda x: x*2)",
+        "for index, row in df.iterrows():",
+        "import pandas as pd; pd.DataFrame()",
+        "df[df['A'] > 0]",
+        "df.groupby('A').apply(func)"
+    ]
+    
+    for code in pandas_codes:
+        with pytest.raises(PandasSyntaxDetectedError) as excinfo:
+            engine.validate_polars_syntax(code)
+        assert "Pandas syntax detected" in str(excinfo.value)
+
+def test_polars_syntax_allowed(engine):
+    polars_codes = [
+        "df.filter(pl.col('A') > 0)",
+        "df.group_by('A').agg(pl.col('B').sum())",
+        "df.select([pl.col('C').mean()])",
+        "df.with_columns(pl.lit(1).alias('new_col'))"
+    ]
+    
+    for code in polars_codes:
+        assert engine.validate_polars_syntax(code) is True
 
 # Use explicit strategy functions to avoid any potential shadowing
 text_strat = st.text

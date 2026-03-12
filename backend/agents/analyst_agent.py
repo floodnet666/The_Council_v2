@@ -59,6 +59,14 @@ class AnalystAgent:
             
             # LLM explica os resultados
             prompt = f"""
+            SYSTEM: You are a Polars Expert Analyst. It is PROHIBITED to use Pandas. 
+            The use of .loc, .iloc, .groupby().apply() or square bracket access df['col'] is strictly forbidden.
+            
+            Valid Polars Examples:
+            - Pandas: df.groupby('A').B.sum() -> Polars: df.group_by('A').agg(pl.col('B').sum())
+            - Pandas: df[df['A'] > 5] -> Polars: df.filter(pl.col('A') > 5)
+            - Pandas: col access -> Use pl.col('name')
+            
             You are the Analyst Agent. You performed a deterministic analysis on the dataset.
             
             Semantic Context:
@@ -94,6 +102,9 @@ class AnalystAgent:
             summary_text = f"Columns: {', '.join(summary.get('columns', []))}\nPreview:\n{safe_json_dumps(summary.get('preview', []), indent=2)}"
             
             prompt = f"""
+            SYSTEM: You are a Polars Expert Analyst. You MUST NOT suggest or use Pandas syntax.
+            Always recommend Polars expressions (pl.col, df.filter, etc.).
+            
             You are the Analyst Agent. You have access to a dataset.
             
             Semantic Mapping:
@@ -113,7 +124,16 @@ class AnalystAgent:
             
             try:
                 response = (await self.llm.ainvoke(prompt)).content
+                
+                # Logic to detect and validate code blocks for Polars integrity
+                code_blocks = re.findall(r"```python\n(.*?)\n```", response, re.DOTALL)
+                for code in code_blocks:
+                    self.data_engine.validate_polars_syntax(code)
+                
             except Exception as e:
+                # Se for PandasSyntaxDetectedError, deixa subir para o grafo tratar o self-healing
+                if "Pandas syntax detected" in str(e):
+                    raise
                 response = f"Data Loaded. Summary: {summary_text}. (LLM Error: {e})"
                 
             return f"{response}{ambiguity_report}"

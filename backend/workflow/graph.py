@@ -69,17 +69,41 @@ async def router_node(state: AgentState):
         logger.info(f"Router decision: {intent} | Reasoning: Input content matched {intent} specialized capabilities.")
         return {"next_node": intent}
 
+from engines.data_engine import DataEngine, PandasSyntaxDetectedError
+
 async def analyst_node(state: AgentState):
     with tracer.start_as_current_span("analyst_node"):
         file_path = state.get("active_file")
-        last_message = state["messages"][-1].content
+        messages = list(state["messages"])
+        last_user_query = messages[-1].content
         
-        logger.info("Executing Analyst Agent")
-        response = await analyst_agent.run(last_message, file_path)
+        max_retries = 2
+        retry_count = 0
+        current_input = last_user_query
         
-        return {
-            "messages": [AIMessage(content=response, name="analyst")]
-        }
+        while retry_count <= max_retries:
+            try:
+                logger.info(f"Executing Analyst Agent (Attempt {retry_count + 1})")
+                response = await analyst_agent.run(current_input, file_path)
+                
+                return {
+                    "messages": [AIMessage(content=response, name="analyst")]
+                }
+            except PandasSyntaxDetectedError as e:
+                retry_count += 1
+                if retry_count > max_retries:
+                    logger.error(f"Analyst Agent failed after {max_retries} retries: {e}")
+                    return {
+                        "messages": [AIMessage(content=f"Error: I was unable to generate valid Polars code after multiple attempts. Technical details: {e}", name="analyst")]
+                    }
+                
+                logger.warning(f"Self-healing trigger: {e}. Retrying...")
+                current_input = f"{last_user_query}\n\nERROR: {e}\nFIX: You used Pandas syntax. Rewrite the analysis using PURE POLARS (pl.col, df.filter, etc.)."
+            except Exception as e:
+                logger.error(f"Unexpected error in analyst_node: {e}")
+                return {
+                    "messages": [AIMessage(content=f"An unexpected error occurred during analysis: {e}", name="analyst")]
+                }
 
 async def librarian_node(state: AgentState):
     with tracer.start_as_current_span("librarian_node"):

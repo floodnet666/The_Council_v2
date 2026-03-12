@@ -7,11 +7,40 @@ import time
 
 tracer = trace.get_tracer(__name__)
 
+import re
+
+class PandasSyntaxDetectedError(Exception):
+    """Exception raised when Pandas syntax is detected in a code block intended for Polars."""
+    pass
+
 class DataEngine:
     def __init__(self):
         self.df: Optional[pl.LazyFrame] = None
         self.metadata: Dict[str, Any] = {}
         self.semantic_engine = SemanticEngine()
+
+    def validate_polars_syntax(self, code: str) -> bool:
+        """
+        Detects prohibited Pandas patterns using Regex.
+        Raises PandasSyntaxDetectedError if found.
+        """
+        prohibited_patterns = [
+            r'\.loc\b',
+            r'\.iloc\b',
+            r'\.apply\(lambda',
+            r'\.iterrows\(\)',
+            r'\bpd\.',
+            r'\[df\[',  # Common pandas filtering: df[df['col'] > 0]
+            r'\.groupby\(.*\)\.apply\('
+        ]
+        
+        for pattern in prohibited_patterns:
+            if re.search(pattern, code):
+                match = re.search(pattern, code).group()
+                logger.warning(f"Pandas syntax detected: {match}")
+                raise PandasSyntaxDetectedError(f"Pandas syntax detected: '{match}'. Use pure Polars (e.g., pl.col, df.filter, df.group_by).")
+        
+        return True
 
     def load_data(self, file_path: str):
         """
