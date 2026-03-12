@@ -5,15 +5,24 @@ from pydantic import BaseModel
 from typing import Optional
 from langchain_core.messages import HumanMessage
 from workflow.graph import create_graph
-import logging
+from workflow.graph import create_graph
+from utils.logging_config import logger
+from opentelemetry import trace
+from opentelemetry.sdk.trace import TracerProvider
+from opentelemetry.sdk.trace.export import BatchSpanProcessor, ConsoleSpanExporter
+from opentelemetry.instrumentation.fastapi import FastAPIInstrumentor
 from dotenv import load_dotenv
 import os
 
 load_dotenv()
 
-# Setup Logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger("TheCouncil")
+# Setup OpenTelemetry
+trace.set_tracer_provider(TracerProvider())
+tracer = trace.get_tracer(__name__)
+# Export traces to console for now (can be swapped for LangSmith/OTLP)
+trace.get_tracer_provider().add_span_processor(
+    BatchSpanProcessor(ConsoleSpanExporter())
+)
 
 # Initialize Graph in lifespan
 app_graph = None
@@ -34,6 +43,9 @@ app = FastAPI(
     version="2.0.0",
     lifespan=lifespan
 )
+
+# Instrument FastAPI
+FastAPIInstrumentor.instrument_app(app)
 
 # CORS Configuration
 allowed_origins = os.getenv("ALLOWED_ORIGINS", "http://localhost:3000").split(",")
@@ -77,20 +89,26 @@ async def chat(request: ChatRequest):
     
     # Run the graph
     try:
-        output = await app_graph.ainvoke(input_state, config=config)
-        
-        # Get the last message from the last agent
-        messages = output["messages"]
-        last_message = messages[-1]
-        
-        return {
-            "response": last_message.content,
-            "agent": last_message.name if hasattr(last_message, "name") else "unknown",
-            "status": "success"
-        }
+        # Contextual log for the entire request
+        with logger.contextualize(session_id=request.session_id):
+            logger.info("Starting graph execution")
+            output = await app_graph.ainvoke(input_state, config=config)
+            
+            # Get the last message from the last agent
+            messages = output["messages"]
+            last_message = messages[-1]
+            
+            logger.info(f"Graph execution complete. Agent: {last_message.name if hasattr(last_message, 'name') else 'unknown'}")
+            
+            return {
+                "response": last_message.content,
+                "agent": last_message.name if hasattr(last_message, "name") else "unknown",
+                "status": "success"
+            }
     except Exception as e:
-        logger.error(f"Error processing chat: {e}", exc_info=True)
-        return {"response": "I encountered an error while processing your request.", "agent": "system", "status": "error"}
+        with logger.contextualize(session_id=request.session_id):
+            logger.error(f"Error processing chat: {e}")
+            return {"response": "I encountered an error while processing your request.", "agent": "system", "status": "error"}
     
 
 from fastapi import UploadFile, File

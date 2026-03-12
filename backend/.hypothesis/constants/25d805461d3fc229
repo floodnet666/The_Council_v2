@@ -1,0 +1,4 @@
+# file: E:\The_Council_v2\backend\engines\data_engine.py
+# hypothesis_version: 6.151.9
+
+[200, ',', '.csv', '.parquet', 'ambiguities', 'ambiguity_reason', 'columns', 'duration_s', 'execute_query', 'file_path', 'is_ambiguous', 'load_data', 'loaded', 'no_data', 'preview', 'query', 'row_count', 'semantic_type', 'semantic_types', 'source', 'status', 'technical_dtypes']

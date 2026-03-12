@@ -1,0 +1,4 @@
+# file: E:\The_Council_v2\backend\utils\logging_config.py
+# hypothesis_version: 6.151.9
+
+['ENV', 'INFO', 'LOG_LEVEL', 'SYSTEM', 'development', 'production', '{message}']

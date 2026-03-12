@@ -9,6 +9,10 @@ from agents.analyst_agent import AnalystAgent
 from agents.designer_agent import DesignerAgent
 from agents.librarian_agent import LibrarianAgent
 from agents.general_agent import GeneralAgent
+from utils.logging_config import logger
+from opentelemetry import trace
+
+tracer = trace.get_tracer(__name__)
 
 from engines.data_engine import DataEngine
 from engines.memory_engine import MemoryEngine
@@ -52,53 +56,65 @@ async def router_node(state: AgentState):
     """
     Decides which agent should act next based on the last message.
     """
-    messages = state["messages"]
-    last_message = messages[-1]
-    
-    router = RouterAgent()
-    # Use LLM Router now
-    intent = await router.route(last_message.content, {})
-    
-    return {"next_node": intent}
+    with tracer.start_as_current_span("router_node"):
+        messages = state["messages"]
+        last_message = messages[-1]
+        
+        logger.info(f"Routing message: {last_message.content[:50]}...")
+        
+        router = RouterAgent()
+        # Use LLM Router now
+        intent = await router.route(last_message.content, {})
+        
+        logger.info(f"Detected intent: {intent}")
+        return {"next_node": intent}
 
 async def analyst_node(state: AgentState):
-    file_path = state.get("active_file")
-    last_message = state["messages"][-1].content
-    
-    response = await analyst_agent.run(last_message, file_path)
-    
-    return {
-        "messages": [AIMessage(content=response, name="analyst")]
-    }
+    with tracer.start_as_current_span("analyst_node"):
+        file_path = state.get("active_file")
+        last_message = state["messages"][-1].content
+        
+        logger.info("Executing Analyst Agent")
+        response = await analyst_agent.run(last_message, file_path)
+        
+        return {
+            "messages": [AIMessage(content=response, name="analyst")]
+        }
 
 async def librarian_node(state: AgentState):
-    file_path = state.get("active_file")
-    last_message = state["messages"][-1].content
-    
-    response = await librarian_agent.run(last_message, file_path)
+    with tracer.start_as_current_span("librarian_node"):
+        file_path = state.get("active_file")
+        last_message = state["messages"][-1].content
+        
+        logger.info("Executing Librarian Agent (RAG)")
+        response = await librarian_agent.run(last_message, file_path)
 
-    return {
-        "messages": [AIMessage(content=response, name="librarian")]
-    }
+        return {
+            "messages": [AIMessage(content=response, name="librarian")]
+        }
 
 async def general_node(state: AgentState):
-    last_message = state["messages"][-1].content
-    
-    response = await general_agent.run(last_message)
+    with tracer.start_as_current_span("general_node"):
+        last_message = state["messages"][-1].content
         
-    return {
-        "messages": [AIMessage(content=response, name="general")]
-    }
+        logger.info("Executing General Agent")
+        response = await general_agent.run(last_message)
+            
+        return {
+            "messages": [AIMessage(content=response, name="general")]
+        }
 
 async def designer_node(state: AgentState):
-    file_path = state.get("active_file")
-    last_message = state["messages"][-1].content
+    with tracer.start_as_current_span("designer_node"):
+        file_path = state.get("active_file")
+        last_message = state["messages"][-1].content
 
-    response = await designer_agent.run(last_message, file_path)
-    
-    return {
-        "messages": [AIMessage(content=response, name="designer")]
-    }
+        logger.info("Executing Designer Agent")
+        response = await designer_agent.run(last_message, file_path)
+        
+        return {
+            "messages": [AIMessage(content=response, name="designer")]
+        }
 
 # Conditional Logic
 def route_decision(state: AgentState) -> Literal["analyst", "librarian", "general", "designer"]:

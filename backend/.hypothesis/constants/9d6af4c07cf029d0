@@ -1,0 +1,4 @@
+# file: E:\The_Council_v2\backend\engines\semantic_engine.py
+# hypothesis_version: 6.151.9
+
+[0.3, 0.5, 0.8, 0.9, 100, 1900, 2100, '.', 'Bool', 'Boolean', 'CATEGORY', 'Categorical', 'DATE', 'Date', 'Decimal', 'Float', 'Float64', 'ID', 'Int', 'Int64', 'MEASURE', 'String', 'TEXT', 'UNKNOWN', 'Utf8', '^-?\\d*\\.?\\d+$', 'ambiguity_reason', 'amount', 'ano', 'avg', 'cat', 'categoria', 'cnpj', 'code', 'cpf', 'created', 'custo', 'data', 'date', 'day', 'dia', 'gender', 'genero', 'group', 'grupo', 'id$', 'identificador', 'is_ambiguous', 'key', 'lucro', 'matricula', 'mean', 'mes', 'month', 'pk$', 'postal', 'prazo', 'preco', 'price', 'qty', 'quantity', 'semantic_type', 'setor', 'sku', 'soma', 'state', 'status', 'suggested_dtype', 'timestamp', 'tipo', 'total', 'ts', 'type', 'uf', 'updated', 'uuid', 'valor', 'venda', 'year', 'zip']
