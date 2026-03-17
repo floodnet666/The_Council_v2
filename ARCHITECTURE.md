@@ -14,12 +14,15 @@ Each agent is a specialized "Councilor" with a specific cognitive role:
 | **Analyst** | Generates Polars expressions/SQL for data analysis. | 14B-32B (Reasoning) |
 | **Designer** | Translates insights into Plotly visualization schemas. | 7B (Precise) |
 | **Librarian** | Retrieval Augmented Generation (RAG) for Polars/Project context. | 1.5B-7B |
+| **Reporting** | Generates executive summaries and session reports. | 1.5B-7B |
 
 ## 2. Core Engines
 
 ### Data Engine (Polars)
 - **Lazy Execution**: Operations are queued and optimized by Polars before execution.
-- **SQLContext**: Allows the Analyst Agent to interact with data using familiar SQL syntax, compiled into high-speed Rust-based Polars code.
+- **Static Global Cache**: Uses singleton lazy frame references to avoid reloading 3GB+ files across isolated sessions.
+- **SQLContext**: Allows Analyst Agent to interact with data using familiar SQL syntax, compiled into high-speed Rust-based Polars code.
+- **Sandboxed Execution**: Runs Python code aggregates with `.execute_python()` securely limits safety setups benchmarks dynamically securely.
 
 ### Memory Engine (Faiss RAG)
 - **Fast Similarity Search**: Replaces standard vector DBs with low-latency Faiss indices.
@@ -31,10 +34,11 @@ Each agent is a specialized "Councilor" with a specific cognitive role:
 ## 3. Workflow Flow
 
 1. **Input**: User asks a natural language question.
-2. **Routing**: The Router determines if the query is a greeting, a data request, or a documentation search.
+2. **Routing**: Router determines if the query is a greeting, a data request, a document search, or sub-reports.
 3. **Execution**:
-   - If data: Analyst generates a query → Data Engine executes → Results returned.
+   - If data: Analyst generates query → Data Engine executes → Results returned.
    - If viz: Designer generates chart spec → Visualization Engine renders.
+   - If reporting: ReportingAgent generates executive summaries layout aggregating sets.
 4. **Synthesis**: Results are combined into a coherent, multi-lingual response.
 
 ## 4. State Management

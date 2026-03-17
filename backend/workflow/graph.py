@@ -2,6 +2,7 @@ from langgraph.graph import StateGraph, END
 from typing import Dict, Any, Literal
 from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 import json
+import os
 
 from .state import AgentState
 from agents.router_agent import RouterAgent
@@ -9,6 +10,7 @@ from agents.analyst_agent import AnalystAgent
 from agents.designer_agent import DesignerAgent
 from agents.librarian_agent import LibrarianAgent
 from agents.general_agent import GeneralAgent
+from agents.reporting_agent import ReportingAgent
 from utils.logging_config import logger
 from opentelemetry import trace
 
@@ -23,19 +25,15 @@ from engines.llm_engine import llm_engine
 data_engine = DataEngine()
 viz_engine = VisualizationEngine()
 
-# Initialize Memory Engine with Polars Knowledge Base
-# Try to load from data/ directory first, fallback to custom index
-import os
+# memory_engine is now a singleton imported from engines.memory_engine
+from engines.memory_engine import memory_engine
+
+# Seed Memory with basic info if it's the first time
 polars_kb_path = os.path.join("data", "faiss_index.bin")
 if os.path.exists(polars_kb_path):
-    memory_engine = MemoryEngine(
-        index_path=polars_kb_path,
-        metadata_path=os.path.join("data", "faiss_meta.json")
-    )
     print("Using Polars Knowledge Base from data/")
+    # Singleton already uses default paths, but we can override if needed
 else:
-    memory_engine = MemoryEngine()
-    # Seed Memory with basic info
     memory_engine.add_documents([
         "The Council works by routing messages to specialized agents.",
         "Analyst Agent handles data analysis using Polars.",
@@ -48,8 +46,9 @@ else:
 # Instantiate Agents
 analyst_agent = AnalystAgent(data_engine)
 designer_agent = DesignerAgent(data_engine, viz_engine)
-librarian_agent = LibrarianAgent(memory_engine)
+librarian_agent = LibrarianAgent()
 general_agent = GeneralAgent()
+reporting_agent = ReportingAgent(data_engine)
 
 # Nodes
 async def router_node(state: AgentState):
@@ -148,8 +147,17 @@ async def designer_node(state: AgentState):
             "messages": [AIMessage(content=response, name="designer")]
         }
 
+async def reporting_node(state: AgentState):
+    with tracer.start_as_current_span("reporting_node"):
+        logger.info("Executing Reporting Agent (Executive Summary)")
+        response = await reporting_agent.generate_executive_report(messages=state.get("messages"))
+        
+        return {
+            "messages": [AIMessage(content=response, name="reporting")]
+        }
+
 # Conditional Logic
-def route_decision(state: AgentState) -> Literal["analyst", "librarian", "general", "designer"]:
+def route_decision(state: AgentState) -> Literal["analyst", "librarian", "general", "designer", "reporting"]:
     return state["next_node"]
 
 from langgraph.checkpoint.sqlite.aio import AsyncSqliteSaver
@@ -175,6 +183,7 @@ async def create_graph():
     workflow.add_node("librarian", librarian_node)
     workflow.add_node("designer", designer_node)
     workflow.add_node("general", general_node)
+    workflow.add_node("reporting", reporting_node)
 
     # Entry point is router
     workflow.set_entry_point("router")
@@ -187,7 +196,8 @@ async def create_graph():
             "analyst": "analyst",
             "librarian": "librarian",
             "designer": "designer",
-            "general": "general"
+            "general": "general",
+            "reporting": "reporting"
         }
     )
     
@@ -196,6 +206,7 @@ async def create_graph():
     workflow.add_edge("librarian", END)
     workflow.add_edge("designer", END)
     workflow.add_edge("general", END)
+    workflow.add_edge("reporting", END)
     
     # Add Persistence with AsyncSqliteSaver
     checkpointer = await init_checkpointer()

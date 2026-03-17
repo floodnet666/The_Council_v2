@@ -33,6 +33,20 @@ async def lifespan(app: FastAPI):
     global app_graph
     logger.info("Initializing The Council Agent Graph...")
     app_graph = await create_graph()
+    
+    # Warmup DataEngine Cache to avoid reloading 3GB during first dynamic request node
+    try:
+        from engines.data_engine import DataEngine
+        logger.info("Warming up DataEngine singleton cache...")
+        de = DataEngine()
+        # Assumes the dataset is in uploads/Liquor_Sales.csv based on agent heuristics
+        csv_path = os.path.join("uploads", "Liquor_Sales.csv")
+        if os.path.exists(csv_path):
+            de.load_data(csv_path)
+            logger.info("DataEngine cache warmed up successfully.")
+    except Exception as e:
+        logger.warning(f"DataEngine Warmup Failed: {e}")
+        
     yield
     # Shutdown
     logger.info("Shutting down...")
@@ -85,6 +99,8 @@ async def chat(request: ChatRequest):
     
     config = {"configurable": {"thread_id": request.session_id}}
     
+    import asyncio
+
     logger.info(f"Processing request: {request.message[:50]}...")
     
     # Run the graph
@@ -92,7 +108,7 @@ async def chat(request: ChatRequest):
         # Contextual log for the entire request
         with logger.contextualize(session_id=request.session_id):
             logger.info("Starting graph execution")
-            output = await app_graph.ainvoke(input_state, config=config)
+            output = await asyncio.wait_for(app_graph.ainvoke(input_state, config=config), timeout=42.0)
             
             # Get the last message from the last agent
             messages = output["messages"]
@@ -105,8 +121,16 @@ async def chat(request: ChatRequest):
                 "agent": last_message.name if hasattr(last_message, "name") else "unknown",
                 "status": "success"
             }
+    except asyncio.TimeoutError:
+        with logger.contextualize(session_id=request.session_id):
+            logger.warning(f"Timeout (42s) reached for message: {request.message[:50]}")
+            return {
+                "response": "Sinto muito, a análise desta pergunta excedeu o limite de segurança de 42 segundos para evitar sobrecarga do servidor.",
+                "agent": "system",
+                "status": "timeout"
+            }
     except Exception as e:
-        with logger.contextualize(session_id=request_session_id):
+        with logger.contextualize(session_id=request.session_id):
             logger.error(f"Error processing chat. State: {input_state} | Error: {e}")
             return {"response": "I encountered an error while processing your request.", "agent": "system", "status": "error"}
     

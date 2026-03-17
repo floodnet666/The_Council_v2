@@ -11,10 +11,10 @@ class SemanticEngine:
     """
     
     PATTERNS = {
-        "DATE": [r'date', r'data', r'ts', r'timestamp', r'created', r'updated', r'ano', r'mes', r'dia', r'year', r'month', r'day', r'prazo'],
-        "ID": [r'id$', r'code', r'key', r'pk$', r'sku', r'uuid', r'cnpj', r'cpf', r'matricula', r'identificador', r'zip', r'postal'],
-        "MEASURE": [r'price', r'valor', r'total', r'amount', r'qty', r'quantity', r'preco', r'soma', r'mean', r'avg', r'venda', r'lucro', r'custo'],
-        "CATEGORY": [r'type', r'tipo', r'cat', r'categoria', r'group', r'grupo', r'status', r'state', r'uf', r'genero', r'gender', r'setor']
+        "DATE": [r'date', r'data', r'ts', r'timestamp', r'created', r'updated', r'\bano\b', r'\bmes\b', r'\bdia\b', r'\byear\b', r'\bmonth\b', r'\bday\b', r'prazo'],
+        "ID": [r'id\b', r'code', r'key', r'pk\b', r'sku', r'uuid', r'cnpj', r'cpf', r'matricula', r'identificador', r'zip', r'postal', r'number', r'\bnum\b'],
+        "MEASURE": [r'price', r'valor', r'total', r'amount', r'qty', r'quantity', r'preco', r'soma', r'mean', r'avg', r'venda', r'lucro', r'custo', r'cost', r'retail', r'sold', r'volume', r'liters', r'gallon', r'pack'],
+        "CATEGORY": [r'type', r'tipo', r'\bcat\b', r'categoria', r'category', r'group', r'grupo', r'status', r'\bstate\b', r'\buf\b', r'genero', r'gender', r'setor', r'name', r'nome', r'\bcity\b', r'\bcounty\b']
     }
 
     def detect_semantic_types(self, df_sample: pl.DataFrame) -> Dict[str, Dict[str, Any]]:
@@ -105,7 +105,7 @@ class SemanticEngine:
         elif "ID" in clues:
             if is_numeric:
                 # Highly unique or integers
-                if cardinality_ratio > 0.9 or unique_count > 100:
+                if cardinality_ratio > 0.9 or unique_count > 20:
                     final_type = "ID"
                 else:
                     final_type = "CATEGORY" # Low cardinality ID is usually a category (e.g. status_id)
@@ -125,10 +125,13 @@ class SemanticEngine:
 
         # Check for CATEGORY
         elif "CATEGORY" in clues:
-            final_type = "CATEGORY"
-            if is_numeric and unique_count > (total_count * 0.5) and total_count > 10:
-                ambiguous = True
-                reason = f"Name suggests CATEGORY but numeric data has very high cardinality."
+            if is_numeric and cardinality_ratio < 0.2:
+                final_type = "ID" # Assuming numeric category columns act as IDs/Codes (like Category = 1031200)
+            else:
+                final_type = "CATEGORY"
+                if is_numeric and unique_count > (total_count * 0.5) and total_count > 10:
+                    ambiguous = True
+                    reason = f"Name suggests CATEGORY but numeric data has very high cardinality."
 
         # Default fallback by data characteristics
         else:
@@ -143,7 +146,7 @@ class SemanticEngine:
                 final_type = "CATEGORY"
             elif is_string:
                 avg_len = sum(len(str(v)) for v in values) / total_count if total_count > 0 else 0
-                if unique_count < 20 and cardinality_ratio < 0.3:
+                if unique_count < 500 and cardinality_ratio < 0.5:
                     final_type = "CATEGORY"
                 elif "ID" in clues and cardinality_ratio > 0.8 and avg_len < 50:
                     final_type = "ID"

@@ -1,11 +1,11 @@
 from typing import Dict, Any, List
 from langchain_core.messages import AIMessage
 from engines.llm_engine import llm_engine
-from engines.memory_engine import MemoryEngine
+from engines.memory_engine import memory_engine
 import os
 
 class LibrarianAgent:
-    def __init__(self, memory_engine: MemoryEngine):
+    def __init__(self):
         self.llm = llm_engine.get_llm()
         self.memory_engine = memory_engine
         self._ingested_files = set()

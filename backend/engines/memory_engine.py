@@ -6,12 +6,12 @@ from typing import List, Dict, Any
 from sentence_transformers import SentenceTransformer
 
 class MemoryEngine:
-    def __init__(self, index_path: str = "custom_index.faiss", metadata_path: str = None):
+    def __init__(self, index_path: str = "data/faiss_index.bin", metadata_path: str = "data/faiss_meta.json"):
         self.index_path = index_path
-        self.metadata_path = metadata_path or index_path.replace(".faiss", "_meta.json")
+        self.metadata_path = metadata_path
         self.model = None
         self.index = None
-        self.documents = [] # Simple storage for demo, in prod use vector DB metadata
+        self.documents = []
         self._is_loaded = False
 
     def _load_lazy(self):
@@ -107,3 +107,6 @@ class MemoryEngine:
                 return "Empty file."
         except Exception as e:
             return f"Error ingesting file: {e}"
+
+# Global singleton instance
+memory_engine = MemoryEngine()

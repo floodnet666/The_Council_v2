@@ -8,6 +8,7 @@ import json
 from utils.json_utils import safe_json_dumps
 import re
 from datetime import datetime
+from utils.logging_config import logger
 
 
 QueryType = Literal[
@@ -17,6 +18,7 @@ QueryType = Literal[
     "sort",             # ordenar
     "describe",         # estatísticas descritivas
     "top_n",            # top N valores
+    "top_n_per_group",  # top N valores por grupo (rank over partition)
     "time_series",      # análise temporal
     "correlation",      # correlação entre colunas
     "unknown"
@@ -30,6 +32,19 @@ class QueryEngine:
         self.df = df
         self.cache: Dict[str, Any] = {}
         
+        # Synonyms for mapping Portuguese questions to English column names
+        self.column_synonyms = {
+            "City": ["cidade", "cidades", "city"],
+            "County": ["condado", "condados", "county"],
+            "Category Name": ["categoria", "categorias", "category"],
+            "Vendor Name": ["vendedor", "fabricante", "vendor"],
+            "Store Name": ["loja", "lojas", "store"],
+            "Bottles Sold": ["garrafas", "bottles", "garrafas vendidas"],
+            "Sale (Dollars)": ["faturamento", "receita", "venda", "vendas", "revenue", "valor"],
+            "State Bottle Cost": ["custo", "cost"],
+            "State Bottle Retail": ["varejo", "retail", "preço"]
+        }
+        
     def set_dataframe(self, df: pl.LazyFrame):
         """Define o DataFrame para análise"""
         self.df = df
@@ -42,21 +57,26 @@ class QueryEngine:
         # Padrões para cada tipo de query
         # IMPORTANTE: Ordem importa! Padrões mais específicos primeiro
         patterns = {
+            "top_n_per_group": [
+                r"\btop\s*\d+\s*.*por\s*(categoria|grupo|tipo|produto|ano)\b",
+                r"\bmelhores\s*\d+\s*.*por\s*(categoria|grupo|tipo|produto|ano)\b",
+                r"\b\d+\s*maiores\s*.*por\s*(categoria|grupo|tipo|produto|ano)\b"
+            ],
             "group_by": [
-                r'\b(por categoria|por tipo|group by|agrupar por)\b',
-                r'\b(cada|every)\b.*\b(categoria|tipo|grupo|class)\b',
-                r'\b(total|soma|média|count).*\b(por categoria|por tipo|por)\b'
+                r'\b(por categoria|por tipo|group by|agrupar por|por ano|por data)\b',
+                r'\b(cada|every)\b.*\b(categoria|tipo|grupo|class|produto|ano|dia|mês)\b',
+                r'\b(total|soma|média|count|vendas|vendidos|gráfico|grafico|plot)\b.*\b(por|by|das|de|de\s+cada)\b'
             ],
             "describe": [
-                r'\b(estatísticas|statistics|describe|resumo|summary|overview)\b'
+                r'\b(estatísticas|statistics|describe|resumo|summary|overview|informações|detalhes)\b'
             ],
             "top_n": [
-                r'\b(top \d+|melhores|piores)\b',
-                r'\b(\d+ maiores|\d+ menores)\b'
+                r'\b(top \d+|melhores|piores|maiores|menores)\b',
+                r'\b(\d+ maiores|\d+ menores|\d+ produtos|\d+ primeiros)\b'
             ],
             "aggregation": [
-                r'\b(total|soma|sum|média|average|avg|count|contar|quantos)\b',
-                r'\b(máximo|mínimo|max|min)\b'
+                r'\b(total|soma|sum|média|average|avg|count|contar|quantos|volume|valor)\b',
+                r'\b(máximo|mínimo|max|min|mais|menos)\b'
             ],
             "filter": [
                 r'\b(onde|where|filtrar|filter|apenas|only|somente)\b',
@@ -80,8 +100,59 @@ class QueryEngine:
                 if re.search(pattern, query_lower):
                     return query_type
                     
-        return "unknown"
-    
+    def _extract_filter_expr(self, query: str, schema_dict) -> Optional[pl.Expr]:
+        """Detecta filtros simples (Datas, Números) por regex de forma determinística."""
+        query_lower = query.lower()
+        expr = None
+        
+        # 1. Filtro de Data
+        # Padrão: "depois de dd/mm/aaaa", "após dd/mm/aaaa"
+        date_match = re.search(r'(depois|após|after|posterior)\s+(?:de\s+)?(\d{2}/\d{2}/\d{4})', query_lower)
+        if date_match:
+            date_str = date_match.group(2)
+            for col in schema_dict.keys():
+                if col.lower() in ["date", "data"]:
+                     from datetime import datetime
+                     try:
+                         dt = datetime.strptime(date_str, "%d/%m/%Y")
+                         expr = pl.col(col) > pl.lit(dt).cast(pl.Date)
+                     except:
+                         pass
+                     break
+
+        # Padrão: "antes de dd/mm/aaaa"
+        if not expr:
+            date_match = re.search(r'(antes|before|anterior)\s+(?:de\s+)?(\d{2}/\d{2}/\d{4})', query_lower)
+            if date_match:
+                date_str = date_match.group(2)
+                for col in schema_dict.keys():
+                    if col.lower() in ["date", "data"]:
+                         from datetime import datetime
+                         try:
+                             dt = datetime.strptime(date_str, "%d/%m/%Y")
+                             expr = pl.col(col) < pl.lit(dt).cast(pl.Date)
+                         except:
+                             pass
+                         break
+                         
+        return expr
+
+    def _match_column(self, query_lower: str, candidates: List[str]) -> Optional[str]:
+        """Tenta encontrar uma coluna pelo nome ou sinônimo determinístico"""
+        # 1. Match exato/substring
+        for cand in candidates:
+            if cand.lower() in query_lower:
+                return cand
+                
+        # 2. Match por sinônimos
+        for col_name, syns in getattr(self, "column_synonyms", {}).items():
+            if col_name in candidates:
+                for syn in syns:
+                    if re.search(r'\b' + re.escape(syn) + r'\b', query_lower):
+                        return col_name
+                        
+        return None
+        
     def execute_aggregation(self, query: str, columns: List[str]) -> Dict[str, Any]:
         """Executa agregações (sum, count, avg, etc)"""
         if self.df is None:
@@ -90,6 +161,14 @@ class QueryEngine:
         query_lower = query.lower()
         results = {}
         
+        # Filtro determinístico
+        df = self.df
+        schema = df.collect_schema()
+        filter_expr = self._extract_filter_expr(query, schema)
+        if filter_expr is not None:
+            logger.info(f"Deterministic Filter applied: {filter_expr}")
+            df = df.filter(filter_expr)
+            
         # Detecta operação
         if any(word in query_lower for word in ["total", "soma", "sum"]):
             operation = "sum"
@@ -114,7 +193,7 @@ class QueryEngine:
         # Executa agregação
         try:
             if operation == "count":
-                result = self.df.select(pl.len().alias("count")).collect()
+                result = df.select(pl.len().alias("count")).collect()
                 results["count"] = result["count"][0]
             else:
                 agg_exprs = []
@@ -129,7 +208,7 @@ class QueryEngine:
                         agg_exprs.append(pl.col(col).min().alias(f"{col}_min"))
                         
                 if agg_exprs:
-                    result = self.df.select(agg_exprs).collect()
+                    result = df.select(agg_exprs).collect(streaming=True)
                     results = result.to_dicts()[0]
                     
         except Exception as e:
@@ -149,15 +228,33 @@ class QueryEngine:
             
         schema = self.df.collect_schema()
         
-        # Identifica coluna de agrupamento (primeira coluna categórica ou string)
-        group_col = None
-        for col, dtype in schema.items():
-            if dtype in [pl.Utf8, pl.Categorical, pl.String]:
-                group_col = col
-                break
+        if not columns:
+            columns = schema.names()
+            
+        # Tenta encontrar colunas mencionadas na query ou heurística
+        group_cols = []
+        query_lower = query.lower()
+        
+        # Heurística: se mencionou "ano", tenta achar coluna de data
+        if "ano" in query_lower or "year" in query_lower:
+            for col, dtype in schema.items():
+                if dtype in [pl.Date, pl.Datetime]:
+                    group_cols.append(pl.col(col).dt.year().alias("year"))
+                    break
+                    
+        # Heurística: colunas categóricas mencionadas ou primeiras disponíveis
+        candidates = [col for col, dtype in schema.items() if dtype in [pl.Utf8, pl.Categorical, pl.String]]
+        matched_cand = self._match_column(query_lower, candidates)
+        if matched_cand:
+            if matched_cand not in [c.meta.output_name() if hasattr(c, "meta") else str(c) for c in group_cols]:
+                group_cols.append(pl.col(matched_cand))
+        
+        # Fallback: primeira categórica se nada foi achado
+        if not group_cols and candidates:
+            group_cols.append(pl.col(candidates[0]))
                 
-        if not group_col:
-            return {"error": "No categorical column found for grouping"}
+        if not group_cols:
+            return {"error": "No grouping columns found"}
             
         # Identifica colunas numéricas para agregação
         numeric_cols = [
@@ -165,19 +262,26 @@ class QueryEngine:
             if dtype in [pl.Int64, pl.Int32, pl.Float64, pl.Float32, pl.Int8, pl.Int16]
         ]
         
+        # Especial para vendas
+        target_col = self._match_column(query_lower, numeric_cols)
+        
+        if not target_col and numeric_cols:
+            target_col = numeric_cols[0]
+        
         if not numeric_cols:
             # Se não há colunas numéricas, apenas conta
             try:
                 result = (
-                    self.df
-                    .group_by(group_col)
+                    df
+                    .group_by(group_cols)
                     .agg(pl.len().alias("count"))
                     .sort("count", descending=True)
-                    .collect()
+                    .limit(100)
+                    .collect(streaming=True)
                 )
                 return {
                     "query_type": "group_by",
-                    "group_column": group_col,
+                    "group_columns": [str(c) for c in group_cols],
                     "results": result.to_dicts(),
                     "operation": "count"
                 }
@@ -187,62 +291,80 @@ class QueryEngine:
         # Com colunas numéricas, faz agregação
         try:
             agg_exprs = [pl.len().alias("count")]
-            
-            # Adiciona sum para primeira coluna numérica
-            if numeric_cols:
-                agg_exprs.append(pl.col(numeric_cols[0]).sum().alias(f"{numeric_cols[0]}_sum"))
-                agg_exprs.append(pl.col(numeric_cols[0]).mean().alias(f"{numeric_cols[0]}_mean"))
+            agg_exprs.append(pl.col(target_col).sum().alias(f"{target_col}_sum"))
+            agg_exprs.append(pl.col(target_col).mean().alias(f"{target_col}_mean"))
                 
             result = (
-                self.df
-                .group_by(group_col)
+                df
+                .group_by(group_cols)
                 .agg(agg_exprs)
-                .sort("count", descending=True)
-                .collect()
+                .sort(f"{target_col}_sum", descending=True)
+                .limit(100)
+                .collect(streaming=True)
             )
             
             return {
                 "query_type": "group_by",
-                "group_column": group_col,
-                "numeric_column": numeric_cols[0] if numeric_cols else None,
+                "group_columns": [str(c) for c in group_cols],
+                "target_column": target_col,
                 "results": result.to_dicts()
             }
         except Exception as e:
             return {"error": str(e)}
     
     def execute_describe(self) -> Dict[str, Any]:
-        """Retorna estatísticas descritivas do DataFrame"""
+        """Retorna estatísticas descritivas do DataFrame de forma preguiçosa (lazy)"""
         if self.df is None:
             return {"error": "No dataframe loaded"}
             
         try:
-            # Coleta estatísticas básicas
-            df_collected = self.df.collect()
+            # 1. Get Schema and Column Names
+            schema = self.df.collect_schema()
+            columns = schema.names()
+            
+            # 2. Identify numeric columns
+            numeric_cols = [
+                col for col, dtype in schema.items() 
+                if dtype in [pl.Int64, pl.Int32, pl.Float64, pl.Float32, pl.Int8, pl.Int16]
+            ]
+            
+            # 3. Build aggregation expressions for all numeric columns
+            agg_exprs = [pl.len().alias("row_count")]
+            for col in numeric_cols:
+                agg_exprs.extend([
+                    pl.col(col).mean().alias(f"{col}_mean"),
+                    pl.col(col).min().alias(f"{col}_min"),
+                    pl.col(col).max().alias(f"{col}_max"),
+                    pl.col(col).null_count().alias(f"{col}_null_count")
+                ])
+            
+            # 4. Collect Only Aggregations
+            logger.info(f"Describing dataset with {len(numeric_cols)} numeric columns (Lazy)...")
+            results_df = self.df.select(agg_exprs).collect()
+            results_dict = results_df.to_dicts()[0]
             
             stats = {
                 "query_type": "describe",
-                "row_count": len(df_collected),
-                "column_count": len(df_collected.columns),
-                "columns": df_collected.columns,
-                "dtypes": {k: str(v) for k, v in df_collected.schema.items()},
+                "row_count": results_dict.get("row_count"),
+                "column_count": len(columns),
+                "columns": columns,
+                "dtypes": {k: str(v) for k, v in schema.items()},
                 "numeric_stats": {}
             }
             
-            # Estatísticas para colunas numéricas
-            for col in df_collected.columns:
-                if df_collected[col].dtype in [pl.Int64, pl.Int32, pl.Float64, pl.Float32, pl.Int8, pl.Int16]:
-                    stats["numeric_stats"][col] = {
-                        "mean": float(df_collected[col].mean()),
-                        "median": float(df_collected[col].median()),
-                        "std": float(df_collected[col].std()),
-                        "min": float(df_collected[col].min()),
-                        "max": float(df_collected[col].max()),
-                        "null_count": int(df_collected[col].null_count())
-                    }
+            # 5. Restructure results for frontend
+            for col in numeric_cols:
+                stats["numeric_stats"][col] = {
+                    "mean": results_dict.get(f"{col}_mean"),
+                    "min": results_dict.get(f"{col}_min"),
+                    "max": results_dict.get(f"{col}_max"),
+                    "null_count": results_dict.get(f"{col}_null_count")
+                }
                     
             return stats
             
         except Exception as e:
+            logger.error(f"Error in execute_describe: {e}")
             return {"error": str(e)}
     
     def execute_top_n(self, query: str, n: int = 10) -> Dict[str, Any]:
@@ -285,7 +407,88 @@ class QueryEngine:
             }
         except Exception as e:
             return {"error": str(e)}
-    
+
+    def execute_top_n_per_group(self, query: str) -> Dict[str, Any]:
+        """Executa Top N por grupo (ex: Top 3 produtos por categoria)"""
+        if self.df is None:
+            return {"error": "No dataframe loaded"}
+            
+        query_lower = query.lower()
+        schema = self.df.collect_schema()
+        
+        # 1. Extrair N
+        n = 5
+        match_n = re.search(r'\b(\d+)\b', query)
+        if match_n: n = int(match_n.group(1))
+        
+        # 2. Identificar Grupos e Alvos
+        candidates = schema.names()
+        group_col = None
+        target_col = None
+        
+        # Heurística para grupo (ex: "por categoria")
+        match_group = re.search(r"por\s+(\w+)", query_lower)
+        if match_group:
+            g_name = match_group.group(1)
+            for col in candidates:
+                if g_name in col.lower():
+                    group_col = col
+                    break
+                    
+        # Heurística para alvo (ex: "top 3 produtos")
+        for col in candidates:
+            if col.lower() in query_lower and col != group_col:
+                target_col = col
+                break
+        
+        # Fallbacks
+        if not group_col:
+            cat_cols = [c for c, t in schema.items() if t in [pl.Utf8, pl.String, pl.Categorical]]
+            group_col = cat_cols[0] if cat_cols else None
+            
+        if not target_col:
+            cat_cols = [c for c, t in schema.items() if t in [pl.Utf8, pl.String, pl.Categorical] and c != group_col]
+            target_col = cat_cols[0] if cat_cols else None
+
+        if not group_col or not target_col:
+            return {"error": f"Não foi possível identificar grupo ({group_col}) ou alvo ({target_col}) para Ranking."}
+
+        # 3. Execução Window Function (Lazy)
+        try:
+             # Usamos contagem como métrica de 'mais vendidos' se não houver coluna 'vendas'
+             # Se houver 'vendas', usamos soma
+             agg_expr = pl.len().alias("count")
+             sort_col = "count"
+             
+             if "vendas" in schema.names():
+                  agg_expr = pl.col("vendas").sum().alias("total_vendas")
+                  sort_col = "total_vendas"
+             
+             # Group By + Rank Over Partition
+             res = (
+                 self.df
+                 .group_by([group_col, target_col])
+                 .agg(agg_expr)
+                 .with_columns(
+                     pl.col(sort_col).rank("desc").over(group_col).alias("rank")
+                 )
+                 .filter(pl.col("rank") <= n)
+                 .sort([group_col, "rank"])
+                 .limit(100) # Safety limit for result sets
+                 .collect()
+             )
+             
+             return {
+                 "query_type": "top_n_per_group",
+                 "n": n,
+                 "group_column": group_col,
+                 "target_column": target_col,
+                 "metric": sort_col,
+                 "results": res.to_dicts()
+             }
+        except Exception as e:
+            return {"error": str(e)}
+
     def execute_query(self, query: str) -> Dict[str, Any]:
         """
         Executa query detectando automaticamente o tipo
@@ -309,6 +512,8 @@ class QueryEngine:
         
         if query_type == "aggregation":
             result = self.execute_aggregation(query, columns)
+        elif query_type == "top_n_per_group":
+            result = self.execute_top_n_per_group(query)
         elif query_type == "group_by":
             result = self.execute_group_by(query, columns)
         elif query_type == "describe":

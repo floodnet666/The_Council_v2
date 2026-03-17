@@ -4,6 +4,8 @@ from engines.llm_engine import llm_engine
 from engines.data_engine import DataEngine
 from engines.query_engine import QueryEngine
 import json
+import re
+from engines.artifact_store import artifact_store
 from utils.json_utils import safe_json_dumps
 
 class AnalystAgent:
@@ -33,11 +35,24 @@ class AnalystAgent:
         semantic_types = summary.get("semantic_types", {})
         ambiguities = summary.get("ambiguities", {})
         
-        # Detecta se é uma query analítica ou exploratória
+        # Detecta se é uma query analítica, exploratória ou de simulação
         query_lower = message.lower()
-        is_analytical = any(word in query_lower for word in [
+        
+        is_simulation = any(word in query_lower for word in [
+            "simule", "preveja", "projeção", "projeto", "forecast", "simulate", "predict",
+            "tendência", "trend", "ml", "correlação", "regressão", "cluster"
+        ])
+        
+        is_sql_needed = any(word in query_lower for word in [
+            "select", "from", "where", "join", "group by", "order by", "sql",
+            "filtre", "filtrar", "depois", "antes", "acima", "abaixo", "entre", "período"
+        ])
+
+        is_analytical = is_simulation or is_sql_needed or any(word in query_lower for word in [
             "total", "soma", "média", "count", "quantos", "por categoria",
-            "group by", "agrupar", "top", "maior", "menor", "estatísticas"
+            "agrupar", "top", "maior", "menor", "estatísticas",
+            "vendidos", "produtos", "quais", "ranking", "most", "sold", "by",
+            "cada", "distribuição", "percentual"
         ])
         
         # Prepare ambiguity report
@@ -48,57 +63,81 @@ class AnalystAgent:
                 ambiguity_report += f"- Column `{col}` ({semantic_types.get(col)}): {reason}\n"
 
         if is_analytical:
-            # Executa análise determinística
-            analysis_result = self.query_engine.execute_query(message)
+            used_code = ""
+            # Seleciona motor de execução
+            if is_simulation:
+                # O LLM deve gerar o código Python
+                prompt_code = f"Gere APENAS o código Polars/Python para: {message}. Use 'lf' como LazyFrame. Salve o resultado final na variável 'result'."
+                code_resp = await self.llm.ainvoke(prompt_code)
+                used_code = f"```python\n{code_resp.content}\n```"
+                analysis_result = self.data_engine.execute_python(code_resp.content)
+            elif is_sql_needed:
+                # O LLM deve gerar o SQL
+                prompt_sql = f"Gere APENAS o SQL (Polars dialect) para: {message}. A tabela chama-se 'data'."
+                sql_resp = await self.llm.ainvoke(prompt_sql)
+                # Clean SQL if LLM adds markdown
+                sql_query = re.sub(r"```sql|```", "", sql_resp.content).strip()
+                used_code = f"```sql\n{sql_query}\n```"
+                analysis_result = self.data_engine.execute_sql(sql_query)
+            else:
+                # Tenta deterministic primeiro (QueryEngine)
+                analysis_result = self.query_engine.execute_query(message)
+                
+                # Fallback para SQL se QueryEngine falhar ou for inconclusivo
+                if "error" in analysis_result or not analysis_result.get("results"):
+                    prompt_sql = f"Gere APENAS o SQL (Polars dialect) para: {message}. A tabela chama-se 'data'."
+                    sql_resp = await self.llm.ainvoke(prompt_sql)
+                    sql_query = re.sub(r"```sql|```", "", sql_resp.content).strip()
+                    used_code = f"```sql\n{sql_query}\n```"
+                    analysis_result = self.data_engine.execute_sql(sql_query)
+                else:
+                    used_code = f"```json\n// Query Engine Interno\n{safe_json_dumps(analysis_result.get('metadata', {}))}\n```"
             
             if "error" in analysis_result:
-                return f"Error executing analysis: {analysis_result['error']}"
+                return f"Error executing analysis: {analysis_result['error']}\n\n**Tentativa de Código:**\n{used_code}"
             
-            # Formata resultado estruturado
-            result_json = safe_json_dumps(analysis_result, indent=2)
-            
+            # Formata um resumo dos dados para o LLM (não o JSON inteiro se for gigante)
+            sample_results = analysis_result.get("results") or analysis_result.get("data") or []
+            if isinstance(sample_results, list) and len(sample_results) > 10:
+                result_preview = sample_results[:10]
+                result_json_for_llm = f"{safe_json_dumps(result_preview)} ... [TRUNCATED for brevity, total rows: {len(sample_results)}]"
+            else:
+                result_json_for_llm = safe_json_dumps(analysis_result)
+
             # LLM explica os resultados
             prompt = f"""
-            SYSTEM: You are a Polars Expert Analyst. It is PROHIBITED to use Pandas. 
-            The use of .loc, .iloc, .groupby().apply() or square bracket access df['col'] is strictly forbidden.
+            SYSTEM: Senior Data Analyst. Respond in user's query language. Max 1-2 sentence executive summary.
+            POLLARS ONLY. No Pandas.
             
-            SOURCE OF TRUTH (Librarian Context):
-            {syntax_context if syntax_context else "No specific context provided. Follow standard Polars documentation."}
-            
-            Valid Polars Examples:
-            - Pandas: df.groupby('A').B.sum() -> Polars: df.group_by('A').agg(pl.col('B').sum())
-            - Pandas: df[df['A'] > 5] -> Polars: df.filter(pl.col('A') > 5)
-            - Pandas: col access -> Use pl.col('name')
-            
-            You are the Analyst Agent. You performed a deterministic analysis on the dataset.
-            
-            Semantic Context:
-            {safe_json_dumps(semantic_types, indent=2)}
-            
-            Analysis Results (JSON):
-            {result_json}
+            Analysis results (Sample):
+            {result_json_for_llm}
             
             User Query: "{message}"
             
-            Please provide a clear, professional explanation of these results in natural language.
-            Start with the key findings, then provide context and insights.
-            Keep it concise but informative.
-            
-            Format your response as:
-            1. Key Finding: [main result]
-            2. Details: [breakdown of results]
-            3. Insight: [what this means]
+            Task: Provide an EXTREMELY CONCISE executive summary (max 20 words).
+            Format:
+            1. Conclusão Principal: [Max 10 words]
+            2. Detalhes: [Max 10 words]
             """
             
             try:
-                explanation = (await self.llm.ainvoke(prompt)).content
+                # Record in ArtifactStore for reporting (Phase 10) - FULL DATA for persistence
+                artifact_store.record_result(
+                    title=f"Analysis: {message[:50]}...",
+                    data=analysis_result.get("results") or analysis_result.get("data"),
+                    meta={"query": message, "type": analysis_result.get("query_type")}
+                )
+
+                explanation = "Análise concluída com sucesso."
                 
-                # Retorna dados estruturados + explicação + avisos
-                return f"ANALYSIS_DATA:\n{result_json}\n\n---\n\n{explanation}{ambiguity_report}"
+                # Para o UI, enviamos os dados completos e o rastreio (evidence)
+                result_json_full = safe_json_dumps(analysis_result, indent=2)
+                return f"ANALYSIS_DATA:\n{result_json_full}\n\n---\n\n{explanation}{ambiguity_report}\n\n<details><summary>🔍 Código Fonte Executado</summary>\n\n{used_code}\n\n</details>"
                 
             except Exception as e:
                 # Fallback: retorna apenas os dados
-                return f"ANALYSIS_DATA:\n{result_json}\n\n(LLM explanation unavailable: {e}){ambiguity_report}"
+                result_json_full = safe_json_dumps(analysis_result, indent=2)
+                return f"ANALYSIS_DATA:\n{result_json_full}\n\n(LLM explanation unavailable: {e}){ambiguity_report}\n\n<details><summary>🔍 Código Fonte Executado</summary>\n\n{used_code}\n\n</details>"
         
         else:
             # Query exploratória - usa comportamento original
@@ -122,6 +161,7 @@ class AnalystAgent:
             User Query: "{message}"
             
             Please provide a brief, professional summary of what this data seems to represent and suggest 3 potential insights or analyses.
+            Everything MUST be written in the user's language (matching the language of their query).
             Mention if there are any significant semantic ambiguities (listed below if any).
             
             Ambiguities:
