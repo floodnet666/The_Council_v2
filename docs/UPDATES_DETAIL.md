@@ -41,3 +41,9 @@ Comprehensive details of recent features added to synchronize backend intelligen
 
 ### 📌 `ChatInterface.tsx`
 -   **[ADD]** Immediate upload feedback labels loops loaders setups loaders locks lockdown disabled buttons uploads frames thresholds triggers disables uploads locked locking lockdowns safes responsibly safely lock disabled uploading locked loaders disabled button safeguards locked.
+
+---
+
+## 4. Project Configuration (`.gemini.md`)
+
+-   **[ADD]** **Execution Directive**: Added rules instructing execution frameworks to STRICTLY use `uv run <script.py>` for all standalone or workspace Python execution runs to eliminate direct `python` or global virtualenv dependency anomalies.
