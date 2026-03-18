@@ -54,43 +54,38 @@ class QueryEngine:
         """Detecta o tipo de query baseado em palavras-chave"""
         query_lower = query.lower()
         
-        # Padrões para cada tipo de query
-        # IMPORTANTE: Ordem importa! Padrões mais específicos primeiro
+        # Padrões para cada tipo de query (Suporta PT, EN, IT)
         patterns = {
             "top_n_per_group": [
-                r"\btop\s*\d+\s*.*por\s*(categoria|grupo|tipo|produto|ano)\b",
-                r"\bmelhores\s*\d+\s*.*por\s*(categoria|grupo|tipo|produto|ano)\b",
-                r"\b\d+\s*maiores\s*.*por\s*(categoria|grupo|tipo|produto|ano)\b"
+                r"\btop\s*\d+\s*.*(por|by|per|for)\s*(categoria|grupo|tipo|produto|ano|category|group)\b",
+                r"\b(melhores|best|migliori)\s*\d+\s*.*(por|by|per)\s*(categoria|grupo|tipo)\b"
             ],
             "group_by": [
-                r'\b(por categoria|por tipo|group by|agrupar por|por ano|por data)\b',
-                r'\b(cada|every)\b.*\b(categoria|tipo|grupo|class|produto|ano|dia|mês)\b',
-                r'\b(total|soma|média|count|vendas|vendidos|gráfico|grafico|plot)\b.*\b(por|by|das|de|de\s+cada)\b'
+                r'\b(por|by|per)\s+(categoria|tipo|grupo|category|type|group)\b',
+                r'\b(cada|every|ogni)\b.*\b(categoria|tipo|grupo|category|type)\b',
+                r'\b(total|soma|média|count|sum|average|media|vendas|gráfico)\b.*\b(por|by|per)\b'
             ],
             "describe": [
-                r'\b(estatísticas|statistics|describe|resumo|summary|overview|informações|detalhes)\b'
+                r'\b(estatísticas|statistics|describe|resumo|summary|overview|statistiche)\b'
             ],
             "top_n": [
-                r'\b(top \d+|melhores|piores|maiores|menores)\b',
-                r'\b(\d+ maiores|\d+ menores|\d+ produtos|\d+ primeiros)\b'
+                r'\b(top \d+|melhores|piores|maiores|menores|best|worst|migliori|peggiori)\b'
             ],
             "aggregation": [
-                r'\b(total|soma|sum|média|average|avg|count|contar|quantos|volume|valor)\b',
-                r'\b(máximo|mínimo|max|min|mais|menos)\b'
+                r'\b(total|soma|sum|somma|média|average|avg|media|count|contar|conteggio|quantos|how many|quanti)\b',
+                r'\b(máximo|mínimo|max|min|mais|menos|more|less|più|meno)\b'
             ],
             "filter": [
-                r'\b(onde|where|filtrar|filter|apenas|only|somente)\b',
-                r'\b(maior que|menor que|igual a|greater|less|equal)\b'
+                r'\b(onde|where|dove|filtrar|filter|filtra|apenas|only|solo)\b'
             ],
             "sort": [
-                r'\b(ordenar|sort|ranking)\b'
+                r'\b(ordenar|sort|ordina|ranking)\b'
             ],
             "time_series": [
-                r'\b(ao longo do tempo|over time|temporal|tendência|trend)\b',
-                r'\b(por mês|por ano|por dia|monthly|yearly|daily)\b'
+                r'\b(ao longo do tempo|over time|nel tempo|temporal|tendência|trend)\b'
             ],
             "correlation": [
-                r'\b(correlação|correlation|relação|relationship)\b'
+                r'\b(correlação|correlation|correlazione|relação|relationship)\b'
             ]
         }
         
@@ -139,8 +134,9 @@ class QueryEngine:
 
     def _match_column(self, query_lower: str, candidates: List[str]) -> Optional[str]:
         """Tenta encontrar uma coluna pelo nome ou sinônimo determinístico"""
-        # 1. Match exato/substring
-        for cand in candidates:
+        # 1. Match exato/substring (ordena por tamanho decrescente para priorizar colunas mais longas/específicas)
+        sorted_candidates = sorted(candidates, key=len, reverse=True)
+        for cand in sorted_candidates:
             if cand.lower() in query_lower:
                 return cand
                 
@@ -168,6 +164,11 @@ class QueryEngine:
         if filter_expr is not None:
             logger.info(f"Deterministic Filter applied: {filter_expr}")
             df = df.filter(filter_expr)
+        else:
+            # Se fitro determinístico falhou, força fallback se houver indicadores de filtro
+            filter_indicators = ["=", ">", "<", "quando", "se", "mês", "mes", "ano", "true", "false", "filtre", "filtrar"]
+            if any(word in query_lower for word in filter_indicators):
+                return {"error": "Filtro detectado na query mas não suportado determinísticamente pelo QueryEngine. Use SQL."}
             
         # Detecta operação
         if any(word in query_lower for word in ["total", "soma", "sum"]):
@@ -226,6 +227,16 @@ class QueryEngine:
         if self.df is None:
             return {"error": "No dataframe loaded"}
             
+        df = self.df  # Define local df for queries below
+        filter_expr = self._extract_filter_expr(query, schema)
+        if filter_expr is not None:
+            logger.info(f"Deterministic Filter applied in groupby: {filter_expr}")
+            df = df.filter(filter_expr)
+        else:
+            # Se fitro determinístico falhou, força fallback se houver indicadores de filtro
+            filter_indicators = ["=", ">", "<", "quando", "se", "mês", "mes", "ano", "true", "false", "filtre", "filtrar"]
+            if any(word in query_lower for word in filter_indicators):
+                return {"error": "Filtro detectado na query de agrupamento mas não suportado pelo QueryEngine. Use SQL."}
         schema = self.df.collect_schema()
         
         if not columns:
@@ -387,8 +398,11 @@ class QueryEngine:
         if not numeric_cols:
             return {"error": "No numeric column found for ranking"}
             
-        sort_col = numeric_cols[0]
-        descending = "maior" in query.lower() or "top" in query.lower()
+        sort_col = self._match_column(query.lower(), numeric_cols)
+        if not sort_col:
+            sort_col = numeric_cols[0]
+            
+        descending = "maior" in query.lower() or "top" in query.lower() or "melhores" in query.lower()
         
         try:
             result = (
@@ -521,11 +535,11 @@ class QueryEngine:
         elif query_type == "top_n":
             result = self.execute_top_n(query)
         else:
-            # Fallback: retorna estatísticas gerais
-            result = self.execute_describe()
+            # Fallback: retorna erro para acionar o fallback SQL no AnalystAgent
+            return {"error": f"Tipo de query '{query_type}' não suportado de forma determinística por Regex."}
             
         # Adiciona metadata
-        if result and "error" not in result:
+        if isinstance(result, dict) and "error" not in result:
             result["timestamp"] = datetime.now().isoformat()
             result["original_query"] = query
             

@@ -8,12 +8,15 @@ import time
 
 tracer = trace.get_tracer(__name__)
 
-import pandas as pd
+
 import json
+import numpy as np
 from sklearn.cluster import KMeans
 from sklearn.ensemble import IsolationForest
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import MinMaxScaler
+import re
+import warnings
 
 class PandasSyntaxDetectedError(Exception):
     """Exception raised when Pandas syntax is detected in a code block intended for Polars."""
@@ -146,6 +149,13 @@ class DataEngine:
                              refined_df = refined_df.with_columns(
                                  pl.col(col).str.replace_all(",", "").str.replace_all("$", "").cast(target_type, strict=False)
                              )
+                        elif target_type == pl.Boolean and schema[col] in [pl.String, pl.Utf8]:
+                             refined_df = refined_df.with_columns(
+                                 pl.when(pl.col(col).is_null() | (pl.col(col).str.strip_chars() == ""))
+                                 .then(None)
+                                 .otherwise(pl.col(col).str.to_lowercase().str.strip_chars() == "true")
+                                 .alias(col)
+                             )
                         else:
                             refined_df = refined_df.with_columns(
                                 pl.col(col).cast(target_type, strict=False)
@@ -229,7 +239,7 @@ class DataEngine:
                  self.ctx = pl.SQLContext(frames={"data": self.df})
             
             res = self.ctx.execute(query).limit(5000).collect(streaming=True)
-            return {"data": json.loads(res.to_pandas().to_json(orient="records")), "columns": res.columns}
+            return {"data": res.to_dicts(), "columns": res.columns}
         except Exception as e:
             logger.error(f"[SQL ERROR] {e}")
             return {"error": str(e)}
@@ -241,6 +251,8 @@ class DataEngine:
         loc = {
             "pl": pl,
             "np": np,
+            "re": re,
+            "df": self.df,
             "lf": self.df,
             "result": None,
             "LinearRegression": LinearRegression,
@@ -251,10 +263,19 @@ class DataEngine:
 
         try:
             # Clean and execute
-            code = code.replace("```python", "").replace("```", "").strip()
+            match = re.search(r"```(?:python)?\s*(.*?)\s*```", code, re.DOTALL)
+            if match:
+                code = match.group(1)
+            else:
+                code = code.strip()
+            # Fix common LLM Polars syntax hallucinations
+            code = code.replace(".not_null()", ".is_not_null()")
+            code = code.replace(".notnull()", ".is_not_null()")
+            
             # Prevent re-assignment of 'lf' if the agent tries it
             code = re.sub(r"(^\s*lf\s*=.*)", r"# \1", code, flags=re.MULTILINE)
 
+            logger.info(f"Sandbox CODE:\n{code}")
             with warnings.catch_warnings():
                 warnings.simplefilter("ignore")
                 exec(code, {}, loc)
@@ -275,7 +296,7 @@ class DataEngine:
             if isinstance(res, (pl.DataFrame, pl.Series)):
                 if isinstance(res, pl.Series):
                     res = res.to_frame()
-                return {"data": json.loads(res.to_pandas().to_json(orient="records"))}
+                return {"data": res.to_dicts()}
 
             return {"text": str(res)}
 

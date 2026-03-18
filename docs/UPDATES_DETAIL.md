@@ -47,3 +47,17 @@ Comprehensive details of recent features added to synchronize backend intelligen
 ## 4. Project Configuration (`.gemini.md`)
 
 -   **[ADD]** **Execution Directive**: Added rules instructing execution frameworks to STRICTLY use `uv run <script.py>` for all standalone or workspace Python execution runs to eliminate direct `python` or global virtualenv dependency anomalies.
+
+---
+
+## 5. Analyst Agent Evaluation Integrity (`backend/agents/`)
+
+### 📌 `analyst_agent.py`
+- **[FIX]** **Strict Dictionary Verification**: Replaced truthiness condition checks such as `if result:` with safe `isinstance(result, dict)` on node endpoints to guarantee upstream LazyFrame leaks don't trigger boolean context ambiguity crashes.
+- **[FIX]** **Safe List/Dict Item Recovery**: Removed `or` operators inside lines 115 and 199 (e.g., `a.get("results") or a.get("data")`) that inadvertently triggered implicit truthiness evaluations (`bool(lazyframe)`) on stream variables. Replaced with explicit `is None` conditional branches to secure fallbacks flawlessly.
+- **[MODIFY]** **Prompt Prompt Guideline**: Injected static rule guidelines preventing typical `.not_null()` expressions hallucinations triggering `AttributeError` loops during correlation queries framing.
+
+## 6. Deterministic Fallbacks Immunity (`backend/engines/`)
+
+### 📌 `query_engine.py`
+- **[FIX]** **Fallback Frame Constraints**: Injected strict `isinstance(result, dict)` guard inside `execute_query` metadata updater, preventing execution pipeline unwrappings triggering ambiguous LazyFrame exception flows downstream inside the Analyst wrapper responsibly.
