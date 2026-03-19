@@ -392,3 +392,39 @@ status = "[OK]" if detected == expected_type else "[FAIL]"
 **Implementado por**: Antigravity AI
 **Revisado**: ✅
 **Status**: Pronto para produção
+
+
+---
+
+## 🔧 Correção de Bug - LazyFrame Truth Value & NameError (2026-03-18)
+
+### 1. `backend/engines/data_engine.py`
+**Sintoma**: `the truth value of a LazyFrame is ambiguous` no `AnalystAgent.run()`.
+**Causa**: O método `load_data()` retornava `self.df` (um `LazyFrame`) quando havia um hit no cache estático global. O chamador avaliava `if not success:`, forçando a conversão para booleano.
+**Solução**: Alterado o retorno no bloco de cache hit para `return True`.
+
+```python
+# ANTES
+if DataEngine._global_lazy_df is not None and ...:
+    # ...
+    return self.df
+
+# DEPOIS
+if DataEngine._global_lazy_df is not None and ...:
+    # ...
+    return True
+```
+
+### 2. `backend/engines/query_engine.py`
+**Sintoma**: Possível `NameError: name 'schema' is not defined` em `execute_group_by`.
+**Causa**: A variável `schema` era passada para `_extract_filter_expr()` na linha 231, mas só era definida via `.collect_schema()` na linha 240.
+**Solução**: Movida a definição de `schema` para o início do método `execute_group_by`. Também adicionada a definição de `query_lower = query.lower()` localmente.
+
+---
+**Impacto**: 
+- ✅ Estabilidade restaurada para consultas consecutivas em grandes datasets (cache hit).
+- ✅ Prevenção de quebras em rotas de agrupamento (`execute_group_by`).
+
+**Implementado por**: Antigravity AI
+**Revisado**: ✅
+**Status**: Pronto para produção

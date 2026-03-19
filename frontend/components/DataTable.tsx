@@ -6,7 +6,14 @@ export default function DataTable({ dataJson }: { dataJson: string }) {
     const data = useMemo(() => {
         try {
             const parsed = JSON.parse(dataJson);
-            return parsed.results || [];
+            const results = parsed.results || [];
+            
+            // If results is a single object (aggregation), wrap it in an array
+            if (results && typeof results === 'object' && !Array.isArray(results)) {
+                return [results];
+            }
+            
+            return Array.isArray(results) ? results : [];
         } catch (e) {
             console.error("Invalid Table JSON", e);
             return [];

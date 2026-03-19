@@ -49,7 +49,17 @@ export default function ChatInterface() {
         formData.append("file", file);
 
         try {
-            const res = await fetch("http://localhost:8000/upload", { method: "POST", body: formData });
+            // Immediate feedback
+            setMessages(prev => [
+                ...prev,
+                {
+                    role: "assistant",
+                    content: "_Arquivo recebido. Aguarde um instante enquanto fazemos a análise preliminar e indexação (RAG)..._",
+                    agent: "system"
+                }
+            ]);
+
+            const res = await fetch("http://127.0.0.1:8000/upload", { method: "POST", body: formData });
             if (!res.ok) throw new Error("Upload failed");
             
             const data = await res.json();
@@ -82,7 +92,7 @@ export default function ChatInterface() {
         setIsLoading(true);
 
         try {
-            const res = await fetch("http://localhost:8000/chat", {
+            const res = await fetch("http://127.0.0.1:8000/chat", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
@@ -196,9 +206,17 @@ export default function ChatInterface() {
                         </div>
                         <h2 className="text-2xl font-light">How can The Council assist you today?</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl w-full">
-                            <button onClick={() => fileInputRef.current?.click()} className="glass-panel p-4 rounded-xl text-left hover:bg-[var(--color-surface-hover)] transition-all hover:border-[var(--color-neon-blue)] group cursor-pointer">
-                                <div className="text-sm font-semibold text-[var(--color-neon-blue)] mb-1 group-hover:glow-blue">Analyze Data</div>
-                                <div className="text-xs text-gray-400">Upload a CSV and get instant insights.</div>
+                            <button 
+                                onClick={() => !uploading && fileInputRef.current?.click()} 
+                                disabled={uploading}
+                                className={`glass-panel p-4 rounded-xl text-left transition-all group cursor-pointer ${uploading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[var(--color-surface-hover)] hover:border-[var(--color-neon-blue)]'}`}
+                            >
+                                <div className="text-sm font-semibold text-[var(--color-neon-blue)] mb-1 group-hover:glow-blue">
+                                    {uploading ? "Analyzing..." : "Analyze Data"}
+                                </div>
+                                <div className="text-xs text-gray-400">
+                                    {uploading ? "Indexing massive dataset (4.7GB+)..." : "Upload a CSV and get instant insights."}
+                                </div>
                             </button>
                             <button onClick={() => setInput("Generate a report")} className="glass-panel p-4 rounded-xl text-left hover:bg-[var(--color-surface-hover)] transition-all hover:border-[var(--color-neon-purple)] group cursor-pointer">
                                 <div className="text-sm font-semibold text-[var(--color-neon-purple)] mb-1 group-hover:glow-purple">Generate Report</div>
@@ -249,12 +267,17 @@ export default function ChatInterface() {
                         disabled={isLoading}
                     />
                     <button
-                        onClick={() => fileInputRef.current?.click()}
-                        className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full text-gray-400 hover:text-white transition-colors"
+                        onClick={() => !uploading && fileInputRef.current?.click()}
+                        disabled={isLoading || uploading}
+                        className={`absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full text-gray-400 transition-colors ${uploading ? 'animate-pulse text-[var(--color-neon-blue)]' : 'hover:text-white'}`}
                     >
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="m18.375 12.739-7.693 7.693a4.5 4.5 0 0 1-6.364-6.364l10.94-10.94A3 3 0 1 1 19.5 7.372L8.552 18.32m.009-.01-.01.01m5.699-9.941-7.81 7.81a1.5 1.5 0 0 0 2.112 2.13" />
-                        </svg>
+                        {uploading ? (
+                             <div className="w-5 h-5 border-2 border-[var(--color-neon-blue)] border-t-transparent rounded-full animate-spin"></div>
+                        ) : (
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="m18.375 12.739-7.693 7.693a4.5 4.5 0 0 1-6.364-6.364l10.94-10.94A3 3 0 1 1 19.5 7.372L8.552 18.32m.009-.01-.01.01m5.699-9.941-7.81 7.81a1.5 1.5 0 0 0 2.112 2.13" />
+                            </svg>
+                        )}
                     </button>
                     <button
                         onClick={handleSendMessage}

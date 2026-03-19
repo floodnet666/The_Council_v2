@@ -1,145 +1,101 @@
+"""
+Analyst Agent - Rewrite for The Council 2.0 Architectural Overhaul
+"""
 from typing import Dict, Any, List
 from langchain_core.messages import AIMessage
 from engines.llm_engine import llm_engine
 from engines.data_engine import DataEngine
 from engines.query_engine import QueryEngine
+from schemas.operations import PolarsOperation
 import json
-from utils.json_utils import safe_json_dumps
+import re
 
 class AnalystAgent:
-    """
-    Analyst Agent - Executa análises determinísticas usando QueryEngine
-    LLM é usado apenas para explicar resultados, não para cálculos
-    """
     def __init__(self, data_engine: DataEngine):
         self.llm = llm_engine.get_llm()
         self.data_engine = data_engine
         self.query_engine = QueryEngine()
 
-    async def run(self, message: str, active_file: str = None, syntax_context: str = "") -> str:
-        if not active_file:
-            return "I am the Analyst. Please upload a dataset so I can analyze it."
+    async def _extract_deterministic_intent(self, user_query: str, dataset_schema: str) -> PolarsOperation:
+        """
+        Usa o LLM exclusivamente para parseamento semântico, convertendo 
+        linguagem humana para uma AST (Abstract Syntax Tree) do Polars.
+        """
+        llm_with_tools = self.llm.with_structured_output(PolarsOperation)
         
-        # Try validation/loading
-        if self.data_engine.df is None or self.data_engine.metadata.get("source") != active_file:
-            success = self.data_engine.load_data(active_file)
-            if not success:
-                return f"Could not load data from {active_file}."
+        prompt = f"""
+        You are a strict data router. Analyze the user query and the available dataset columns.
+        Map the query to the correct PolarsOperation.
         
-        # Configura QueryEngine com o DataFrame atual
-        self.query_engine.set_dataframe(self.data_engine.df)
+        OPERATION GUIDELINES:
+        - USE 'group_by' when the query asks for aggregates (sum, total, count, average) with a categorical breakdown or grouping (e.g., "vendas por produto", "total per sector").
+        - USE 'aggregation' ONLY when asking for single comprehensive numbers representing the whole dataset (e.g., "total total de vendas", "média geral de preço").
+        - USE 'top_n' when asking for highest, lowest, best, worst, limited outputs sorted by a metric.
         
-        summary = self.data_engine.get_summary()
-        semantic_types = summary.get("semantic_types", {})
-        ambiguities = summary.get("ambiguities", {})
+        Dataset Schema:
+        {dataset_schema}
         
-        # Detecta se é uma query analítica ou exploratória
-        query_lower = message.lower()
-        is_analytical = any(word in query_lower for word in [
-            "total", "soma", "média", "count", "quantos", "por categoria",
-            "group by", "agrupar", "top", "maior", "menor", "estatísticas"
-        ])
+        User Query:
+        "{user_query}"
         
-        # Prepare ambiguity report
-        ambiguity_report = ""
-        if ambiguities:
-            ambiguity_report = "\n\n⚠️ **Semantic Note:** Some columns have ambiguous classifications:\n"
-            for col, reason in ambiguities.items():
-                ambiguity_report += f"- Column `{col}` ({semantic_types.get(col)}): {reason}\n"
+        Do not answer the query. Just output the JSON configuration for the operation conforming to your tool template.
+        """
+        return await llm_with_tools.ainvoke(prompt)
 
-        if is_analytical:
-            # Executa análise determinística
-            analysis_result = self.query_engine.execute_query(message)
-            
-            if "error" in analysis_result:
-                return f"Error executing analysis: {analysis_result['error']}"
-            
-            # Formata resultado estruturado
-            result_json = safe_json_dumps(analysis_result, indent=2)
-            
-            # LLM explica os resultados
-            prompt = f"""
-            SYSTEM: You are a Polars Expert Analyst. It is PROHIBITED to use Pandas. 
-            The use of .loc, .iloc, .groupby().apply() or square bracket access df['col'] is strictly forbidden.
-            
-            SOURCE OF TRUTH (Librarian Context):
-            {syntax_context if syntax_context else "No specific context provided. Follow standard Polars documentation."}
-            
-            Valid Polars Examples:
-            - Pandas: df.groupby('A').B.sum() -> Polars: df.group_by('A').agg(pl.col('B').sum())
-            - Pandas: df[df['A'] > 5] -> Polars: df.filter(pl.col('A') > 5)
-            - Pandas: col access -> Use pl.col('name')
-            
-            You are the Analyst Agent. You performed a deterministic analysis on the dataset.
-            
-            Semantic Context:
-            {safe_json_dumps(semantic_types, indent=2)}
-            
-            Analysis Results (JSON):
-            {result_json}
-            
-            User Query: "{message}"
-            
-            Please provide a clear, professional explanation of these results in natural language.
-            Start with the key findings, then provide context and insights.
-            Keep it concise but informative.
-            
-            Format your response as:
-            1. Key Finding: [main result]
-            2. Details: [breakdown of results]
-            3. Insight: [what this means]
-            """
-            
-            try:
-                explanation = (await self.llm.ainvoke(prompt)).content
-                
-                # Retorna dados estruturados + explicação + avisos
-                return f"ANALYSIS_DATA:\n{result_json}\n\n---\n\n{explanation}{ambiguity_report}"
-                
-            except Exception as e:
-                # Fallback: retorna apenas os dados
-                return f"ANALYSIS_DATA:\n{result_json}\n\n(LLM explanation unavailable: {e}){ambiguity_report}"
+
+    async def run(self, message: str, active_file: str = None, syntax_context: str = "") -> dict:
+        if not active_file:
+            return {
+                "messages": [AIMessage(content="I am the Analyst. Please upload a dataset so I can analyze it.", name="analyst")]
+            }
         
-        else:
-            # Query exploratória - usa comportamento original
-            summary_text = f"Columns: {', '.join(summary.get('columns', []))}\nPreview:\n{safe_json_dumps(summary.get('preview', []), indent=2)}"
+        # Carrega dados
+        success = self.data_engine.load_data(active_file)
+        if not success:
+            return {
+                "messages": [AIMessage(content=f"Could not load data from {active_file}.", name="analyst")]
+            }
             
+        self.query_engine.set_dataframe(self.data_engine.df)
+        summary = self.data_engine.get_summary()
+        columns_schema = str(summary.get("columns", []))
+        
+        try:
+            # 1. Passo Determinístico (Semântica -> Polars AST)
+            polars_op = await self._extract_deterministic_intent(message, columns_schema)
+            
+            # 2. Execução Matemática (Rápida e Determinística)
+            raw_results = self.query_engine.execute_deterministic_operation(polars_op)
+            
+            if "error" in raw_results:
+                return {
+                    "messages": [AIMessage(content=f"Error executing analysis: {raw_results['error']}", name="analyst")]
+                }
+                
+            # 3. Passo Conversacional (Fluidez Humana)
             prompt = f"""
-            SYSTEM: You are a Polars Expert Analyst. You MUST NOT suggest or use Pandas syntax.
-            Always recommend Polars expressions (pl.col, df.filter, etc.).
+            You are a Senior Data Analyst representing 'The Council'. 
+            The user asked: "{message}"
             
-            SOURCE OF TRUTH (Librarian Context):
-            {syntax_context if syntax_context else "No specific context provided. Follow standard Polars documentation."}
+            You performed a deterministic calculation on the dataset and obtained the following EXACT result:
+            {raw_results['data']}
             
-            You are the Analyst Agent. You have access to a dataset.
-            
-            Semantic Mapping:
-            {safe_json_dumps(semantic_types, indent=2)}
-            
-            Data Summary:
-            {summary_text}
-            
-            User Query: "{message}"
-            
-            Please provide a brief, professional summary of what this data seems to represent and suggest 3 potential insights or analyses.
-            Mention if there are any significant semantic ambiguities (listed below if any).
-            
-            Ambiguities:
-            {safe_json_dumps(ambiguities, indent=2)}
+            INSTRUCTIONS:
+            - Respond directly to the user in a fluid, highly professional, and insightful manner.
+            - Mention the key numbers from the result to prove the analysis.
+            - DO NOT output raw JSON, dictionaries, or tables in your text. The system UI will render the charts separately based on the raw data.
+            - Provide a brief insight or recommendation based on these numbers.
             """
             
-            try:
-                response = (await self.llm.ainvoke(prompt)).content
-                
-                # Logic to detect and validate code blocks for Polars integrity
-                code_blocks = re.findall(r"```python\n(.*?)\n```", response, re.DOTALL)
-                for code in code_blocks:
-                    self.data_engine.validate_polars_syntax(code)
-                
-            except Exception as e:
-                # Se for PandasSyntaxDetectedError, deixa subir para o grafo tratar o self-healing
-                if "Pandas syntax detected" in str(e):
-                    raise
-                response = f"Data Loaded. Summary: {summary_text}. (LLM Error: {e})"
-                
-            return f"{response}{ambiguity_report}"
+            human_response = await self.llm.ainvoke(prompt)
+            
+            # Retorna as mutações separadas para o LangGraph State!
+            return {
+                "messages": [AIMessage(content=human_response.content, name="analyst")],
+                "raw_data_context": raw_results['data']
+            }
+            
+        except Exception as e:
+            return {
+                "messages": [AIMessage(content=f"An unexpected error occurred during analysis: {e}", name="analyst")]
+            }

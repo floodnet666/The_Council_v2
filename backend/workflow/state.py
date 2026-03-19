@@ -1,4 +1,4 @@
-from typing import TypedDict, Annotated, List, Dict, Any, Union
+from typing import TypedDict, Annotated, List, Dict, Any, Union, Optional
 from langchain_core.messages import BaseMessage
 import operator
 
@@ -10,3 +10,10 @@ class AgentState(TypedDict):
     next_node: str
     # metadata can store session info
     metadata: Dict[str, Any]
+    
+    # NEW ARCHITECTURAL FIELDS:
+    # raw_data_context: Stores PURE JSON payload returned from Polars
+    raw_data_context: Optional[Dict[str, Any]]
+    
+    # visual_schema: Stores instructions from DesignerAgent for Plotly (if needed later)
+    visual_schema: Optional[Dict[str, Any]]

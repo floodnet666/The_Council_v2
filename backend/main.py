@@ -20,9 +20,10 @@ load_dotenv()
 trace.set_tracer_provider(TracerProvider())
 tracer = trace.get_tracer(__name__)
 # Export traces to console for now (can be swapped for LangSmith/OTLP)
-trace.get_tracer_provider().add_span_processor(
-    BatchSpanProcessor(ConsoleSpanExporter())
-)
+# trace.get_tracer_provider().add_span_processor(
+#     BatchSpanProcessor(ConsoleSpanExporter())
+# )
+
 
 # Initialize Graph in lifespan
 app_graph = None
@@ -33,6 +34,20 @@ async def lifespan(app: FastAPI):
     global app_graph
     logger.info("Initializing The Council Agent Graph...")
     app_graph = await create_graph()
+    
+    # Warmup DataEngine Cache to avoid reloading 3GB during first dynamic request node
+    try:
+        from engines.data_engine import DataEngine
+        logger.info("Warming up DataEngine singleton cache...")
+        de = DataEngine()
+        # Assumes the dataset is in uploads/Liquor_Sales.csv based on agent heuristics
+        csv_path = os.path.join("uploads", "Liquor_Sales.csv")
+        if os.path.exists(csv_path):
+            de.load_data(csv_path)
+            logger.info("DataEngine cache warmed up successfully.")
+    except Exception as e:
+        logger.warning(f"DataEngine Warmup Failed: {e}")
+        
     yield
     # Shutdown
     logger.info("Shutting down...")
@@ -85,6 +100,8 @@ async def chat(request: ChatRequest):
     
     config = {"configurable": {"thread_id": request.session_id}}
     
+    import asyncio
+
     logger.info(f"Processing request: {request.message[:50]}...")
     
     # Run the graph
@@ -95,18 +112,32 @@ async def chat(request: ChatRequest):
             output = await app_graph.ainvoke(input_state, config=config)
             
             # Get the last message from the last agent
-            messages = output["messages"]
-            last_message = messages[-1]
+            messages = output.get("messages", [])
+            last_message = messages[-1] if messages else HumanMessage(content="No response generated")
+            
+            # EXTRAI OS DADOS PUROS DO ESTADO (Injetados pelo Analyst/Polars)
+            raw_data = output.get("raw_data_context", None)
             
             logger.info(f"Graph execution complete. Agent: {last_message.name if hasattr(last_message, 'name') else 'unknown'}")
             
+            # O NOVO CONTRATO HTTP (Separação estrita UI/Data)
             return {
-                "response": last_message.content,
+                "response": last_message.content,  # Apenas texto fluido humano
+                "visual_data": raw_data,           # O frontend vai ler isso para gerar o gráfico diretamente!
                 "agent": last_message.name if hasattr(last_message, "name") else "unknown",
                 "status": "success"
             }
+
+    except asyncio.TimeoutError:
+        with logger.contextualize(session_id=request.session_id):
+            logger.warning(f"Timeout (42s) reached for message: {request.message[:50]}")
+            return {
+                "response": "Sinto muito, a análise desta pergunta excedeu o limite de segurança de 42 segundos para evitar sobrecarga do servidor.",
+                "agent": "system",
+                "status": "timeout"
+            }
     except Exception as e:
-        with logger.contextualize(session_id=request_session_id):
+        with logger.contextualize(session_id=request.session_id):
             logger.error(f"Error processing chat. State: {input_state} | Error: {e}")
             return {"response": "I encountered an error while processing your request.", "agent": "system", "status": "error"}
     
