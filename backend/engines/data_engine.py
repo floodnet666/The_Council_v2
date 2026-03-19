@@ -95,7 +95,7 @@ class DataEngine:
             logger.info(f"Using Static Global Cache for: {file_path}")
             self.df = DataEngine._global_lazy_df
             self.ctx = DataEngine._global_ctx
-            return self.df
+            return True
             
         with tracer.start_as_current_span("load_data") as span:
             span.set_attribute("file_path", file_path)

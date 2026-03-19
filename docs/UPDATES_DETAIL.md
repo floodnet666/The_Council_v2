@@ -61,3 +61,19 @@ Comprehensive details of recent features added to synchronize backend intelligen
 
 ### 📌 `query_engine.py`
 - **[FIX]** **Fallback Frame Constraints**: Injected strict `isinstance(result, dict)` guard inside `execute_query` metadata updater, preventing execution pipeline unwrappings triggering ambiguous LazyFrame exception flows downstream inside the Analyst wrapper responsibly.
+
+
+---
+
+## 7. Bug Fixes - LazyFrame Truth Value & NameError (2026-03-19)
+
+### 📌 `data_engine.py`
+- **[FIX]** **LazyFrame Boolean Ambiguity**: Changed the return value of `load_data` from `self.df` to `True` when addressing a static global cache hit (line 98). 
+  - **Before**: `return self.df` (returned a `LazyFrame`)
+  - **After**: `return True` (returns a `boolean`)
+  - **Reason**: O chamador (`AnalystAgent.run()`) avaliava o retorno com `if not success:`, o que dispara implicitamente `bool(LazyFrame)` gerando `TypeError: the truth value of a LazyFrame is ambiguous`. Retornar `True` previne esse crash mantendo o fluxo correto.
+
+### 📌 `query_engine.py`
+- **[FIX]** **execute_group_by NameError**: Moveu a definição de `schema = self.df.collect_schema()` para o início do método `execute_group_by`.
+  - **Before**: `schema` era passado para `_extract_filter_expr(..., schema=schema)` antes de ser definido.
+  - **After**: `schema` é avaliado logo no início, eliminando o `NameError` durante agrupamentos.

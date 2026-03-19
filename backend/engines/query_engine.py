@@ -227,7 +227,9 @@ class QueryEngine:
         if self.df is None:
             return {"error": "No dataframe loaded"}
             
+        schema = self.df.collect_schema()
         df = self.df  # Define local df for queries below
+        query_lower = query.lower()
         filter_expr = self._extract_filter_expr(query, schema)
         if filter_expr is not None:
             logger.info(f"Deterministic Filter applied in groupby: {filter_expr}")
@@ -237,7 +239,7 @@ class QueryEngine:
             filter_indicators = ["=", ">", "<", "quando", "se", "mês", "mes", "ano", "true", "false", "filtre", "filtrar"]
             if any(word in query_lower for word in filter_indicators):
                 return {"error": "Filtro detectado na query de agrupamento mas não suportado pelo QueryEngine. Use SQL."}
-        schema = self.df.collect_schema()
+        
         
         if not columns:
             columns = schema.names()
