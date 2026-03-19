@@ -1,0 +1,3743 @@
+{
+  "dataset": {},
+  "column_types": {},
+  "derived_columns": [],
+  "results": [
+    {
+      "id": "b3454752",
+      "title": "Analysis: Quais os 3 produtos mais vendidos por categoria?...",
+      "rows": 100,
+      "columns": [
+        "Invoice/Item Number",
+        "count",
+        "Store Number_sum",
+        "Store Number_mean"
+      ],
+      "sample": [
+        {
+          "Invoice/Item Number": "INV-13461400001",
+          "count": 1,
+          "Store Number_sum": 9938,
+          "Store Number_mean": 9938.0
+        },
+        {
+          "Invoice/Item Number": "INV-12249700001",
+          "count": 1,
+          "Store Number_sum": 9937,
+          "Store Number_mean": 9937.0
+        },
+        {
+          "Invoice/Item Number": "INV-09867400001",
+          "count": 1,
+          "Store Number_sum": 9936,
+          "Store Number_mean": 9936.0
+        },
+        {
+          "Invoice/Item Number": "INV-09867400002",
+          "count": 1,
+          "Store Number_sum": 9936,
+          "Store Number_mean": 9936.0
+        },
+        {
+          "Invoice/Item Number": "INV-10015100001",
+          "count": 1,
+          "Store Number_sum": 9934,
+          "Store Number_mean": 9934.0
+        },
+        {
+          "Invoice/Item Number": "INV-08718000001",
+          "count": 1,
+          "Store Number_sum": 9934,
+          "Store Number_mean": 9934.0
+        },
+        {
+          "Invoice/Item Number": "INV-05674000001",
+          "count": 1,
+          "Store Number_sum": 9932,
+          "Store Number_mean": 9932.0
+        },
+        {
+          "Invoice/Item Number": "INV-07538500001",
+          "count": 1,
+          "Store Number_sum": 9931,
+          "Store Number_mean": 9931.0
+        },
+        {
+          "Invoice/Item Number": "INV-10353600001",
+          "count": 1,
+          "Store Number_sum": 9931,
+          "Store Number_mean": 9931.0
+        },
+        {
+          "Invoice/Item Number": "INV-07079400001",
+          "count": 1,
+          "Store Number_sum": 9931,
+          "Store Number_mean": 9931.0
+        },
+        {
+          "Invoice/Item Number": "INV-08906300001",
+          "count": 1,
+          "Store Number_sum": 9931,
+          "Store Number_mean": 9931.0
+        },
+        {
+          "Invoice/Item Number": "INV-08432900001",
+          "count": 1,
+          "Store Number_sum": 9931,
+          "Store Number_mean": 9931.0
+        },
+        {
+          "Invoice/Item Number": "INV-12492100001",
+          "count": 1,
+          "Store Number_sum": 9931,
+          "Store Number_mean": 9931.0
+        },
+        {
+          "Invoice/Item Number": "INV-13078900002",
+          "count": 1,
+          "Store Number_sum": 9931,
+          "Store Number_mean": 9931.0
+        },
+        {
+          "Invoice/Item Number": "INV-09879700002",
+          "count": 1,
+          "Store Number_sum": 9931,
+          "Store Number_mean": 9931.0
+        },
+        {
+          "Invoice/Item Number": "INV-09879700001",
+          "count": 1,
+          "Store Number_sum": 9931,
+          "Store Number_mean": 9931.0
+        },
+        {
+          "Invoice/Item Number": "INV-09399700001",
+          "count": 1,
+          "Store Number_sum": 9931,
+          "Store Number_mean": 9931.0
+        },
+        {
+          "Invoice/Item Number": "INV-07964800001",
+          "count": 1,
+          "Store Number_sum": 9931,
+          "Store Number_mean": 9931.0
+        },
+        {
+          "Invoice/Item Number": "INV-10353600002",
+          "count": 1,
+          "Store Number_sum": 9931,
+          "Store Number_mean": 9931.0
+        },
+        {
+          "Invoice/Item Number": "INV-12492100002",
+          "count": 1,
+          "Store Number_sum": 9931,
+          "Store Number_mean": 9931.0
+        },
+        {
+          "Invoice/Item Number": "INV-12012600002",
+          "count": 1,
+          "Store Number_sum": 9931,
+          "Store Number_mean": 9931.0
+        },
+        {
+          "Invoice/Item Number": "INV-08760400001",
+          "count": 1,
+          "Store Number_sum": 9931,
+          "Store Number_mean": 9931.0
+        },
+        {
+          "Invoice/Item Number": "INV-12012600001",
+          "count": 1,
+          "Store Number_sum": 9931,
+          "Store Number_mean": 9931.0
+        },
+        {
+          "Invoice/Item Number": "INV-05976000001",
+          "count": 1,
+          "Store Number_sum": 9931,
+          "Store Number_mean": 9931.0
+        },
+        {
+          "Invoice/Item Number": "INV-13078900001",
+          "count": 1,
+          "Store Number_sum": 9931,
+          "Store Number_mean": 9931.0
+        },
+        {
+          "Invoice/Item Number": "INV-06744000001",
+          "count": 1,
+          "Store Number_sum": 9931,
+          "Store Number_mean": 9931.0
+        },
+        {
+          "Invoice/Item Number": "INV-05518000001",
+          "count": 1,
+          "Store Number_sum": 9931,
+          "Store Number_mean": 9931.0
+        },
+        {
+          "Invoice/Item Number": "INV-02253700001",
+          "count": 1,
+          "Store Number_sum": 9930,
+          "Store Number_mean": 9930.0
+        },
+        {
+          "Invoice/Item Number": "INV-09372100001",
+          "count": 1,
+          "Store Number_sum": 9930,
+          "Store Number_mean": 9930.0
+        },
+        {
+          "Invoice/Item Number": "INV-01301800001",
+          "count": 1,
+          "Store Number_sum": 9929,
+          "Store Number_mean": 9929.0
+        },
+        {
+          "Invoice/Item Number": "INV-01301800002",
+          "count": 1,
+          "Store Number_sum": 9929,
+          "Store Number_mean": 9929.0
+        },
+        {
+          "Invoice/Item Number": "INV-04201500002",
+          "count": 1,
+          "Store Number_sum": 9928,
+          "Store Number_mean": 9928.0
+        },
+        {
+          "Invoice/Item Number": "INV-04201500001",
+          "count": 1,
+          "Store Number_sum": 9928,
+          "Store Number_mean": 9928.0
+        },
+        {
+          "Invoice/Item Number": "INV-04055000001",
+          "count": 1,
+          "Store Number_sum": 9928,
+          "Store Number_mean": 9928.0
+        },
+        {
+          "Invoice/Item Number": "INV-06325900001",
+          "count": 1,
+          "Store Number_sum": 9928,
+          "Store Number_mean": 9928.0
+        },
+        {
+          "Invoice/Item Number": "INV-05095200001",
+          "count": 1,
+          "Store Number_sum": 9928,
+          "Store Number_mean": 9928.0
+        },
+        {
+          "Invoice/Item Number": "INV-00922400001",
+          "count": 1,
+          "Store Number_sum": 9928,
+          "Store Number_mean": 9928.0
+        },
+        {
+          "Invoice/Item Number": "INV-04055000002",
+          "count": 1,
+          "Store Number_sum": 9928,
+          "Store Number_mean": 9928.0
+        },
+        {
+          "Invoice/Item Number": "INV-05095200002",
+          "count": 1,
+          "Store Number_sum": 9928,
+          "Store Number_mean": 9928.0
+        },
+        {
+          "Invoice/Item Number": "INV-06325900002",
+          "count": 1,
+          "Store Number_sum": 9928,
+          "Store Number_mean": 9928.0
+        },
+        {
+          "Invoice/Item Number": "INV-08285300001",
+          "count": 1,
+          "Store Number_sum": 9927,
+          "Store Number_mean": 9927.0
+        },
+        {
+          "Invoice/Item Number": "INV-07249500002",
+          "count": 1,
+          "Store Number_sum": 9927,
+          "Store Number_mean": 9927.0
+        },
+        {
+          "Invoice/Item Number": "INV-03808900001",
+          "count": 1,
+          "Store Number_sum": 9927,
+          "Store Number_mean": 9927.0
+        },
+        {
+          "Invoice/Item Number": "INV-00103500002",
+          "count": 1,
+          "Store Number_sum": 9927,
+          "Store Number_mean": 9927.0
+        },
+        {
+          "Invoice/Item Number": "INV-07249500001",
+          "count": 1,
+          "Store Number_sum": 9927,
+          "Store Number_mean": 9927.0
+        },
+        {
+          "Invoice/Item Number": "INV-01167400003",
+          "count": 1,
+          "Store Number_sum": 9927,
+          "Store Number_mean": 9927.0
+        },
+        {
+          "Invoice/Item Number": "INV-06460700001",
+          "count": 1,
+          "Store Number_sum": 9927,
+          "Store Number_mean": 9927.0
+        },
+        {
+          "Invoice/Item Number": "INV-01167400001",
+          "count": 1,
+          "Store Number_sum": 9927,
+          "Store Number_mean": 9927.0
+        },
+        {
+          "Invoice/Item Number": "INV-03844600001",
+          "count": 1,
+          "Store Number_sum": 9927,
+          "Store Number_mean": 9927.0
+        },
+        {
+          "Invoice/Item Number": "INV-00103500001",
+          "count": 1,
+          "Store Number_sum": 9927,
+          "Store Number_mean": 9927.0
+        },
+        {
+          "Invoice/Item Number": "INV-01167400002",
+          "count": 1,
+          "Store Number_sum": 9927,
+          "Store Number_mean": 9927.0
+        },
+        {
+          "Invoice/Item Number": "INV-08025700002",
+          "count": 1,
+          "Store Number_sum": 9925,
+          "Store Number_mean": 9925.0
+        },
+        {
+          "Invoice/Item Number": "INV-05435300001",
+          "count": 1,
+          "Store Number_sum": 9925,
+          "Store Number_mean": 9925.0
+        },
+        {
+          "Invoice/Item Number": "INV-05435300003",
+          "count": 1,
+          "Store Number_sum": 9925,
+          "Store Number_mean": 9925.0
+        },
+        {
+          "Invoice/Item Number": "INV-12200500002",
+          "count": 1,
+          "Store Number_sum": 9925,
+          "Store Number_mean": 9925.0
+        },
+        {
+          "Invoice/Item Number": "INV-03801600001",
+          "count": 1,
+          "Store Number_sum": 9925,
+          "Store Number_mean": 9925.0
+        },
+        {
+          "Invoice/Item Number": "INV-08025700001",
+          "count": 1,
+          "Store Number_sum": 9925,
+          "Store Number_mean": 9925.0
+        },
+        {
+          "Invoice/Item Number": "INV-05435300002",
+          "count": 1,
+          "Store Number_sum": 9925,
+          "Store Number_mean": 9925.0
+        },
+        {
+          "Invoice/Item Number": "INV-05435400001",
+          "count": 1,
+          "Store Number_sum": 9925,
+          "Store Number_mean": 9925.0
+        },
+        {
+          "Invoice/Item Number": "INV-06094600001",
+          "count": 1,
+          "Store Number_sum": 9925,
+          "Store Number_mean": 9925.0
+        },
+        {
+          "Invoice/Item Number": "INV-07045100001",
+          "count": 1,
+          "Store Number_sum": 9925,
+          "Store Number_mean": 9925.0
+        },
+        {
+          "Invoice/Item Number": "INV-12200500001",
+          "count": 1,
+          "Store Number_sum": 9925,
+          "Store Number_mean": 9925.0
+        },
+        {
+          "Invoice/Item Number": "INV-13430300001",
+          "count": 1,
+          "Store Number_sum": 9925,
+          "Store Number_mean": 9925.0
+        },
+        {
+          "Invoice/Item Number": "INV-11319100001",
+          "count": 1,
+          "Store Number_sum": 9925,
+          "Store Number_mean": 9925.0
+        },
+        {
+          "Invoice/Item Number": "INV-09398400002",
+          "count": 1,
+          "Store Number_sum": 9925,
+          "Store Number_mean": 9925.0
+        },
+        {
+          "Invoice/Item Number": "INV-03801600002",
+          "count": 1,
+          "Store Number_sum": 9925,
+          "Store Number_mean": 9925.0
+        },
+        {
+          "Invoice/Item Number": "INV-07045100002",
+          "count": 1,
+          "Store Number_sum": 9925,
+          "Store Number_mean": 9925.0
+        },
+        {
+          "Invoice/Item Number": "INV-09398400001",
+          "count": 1,
+          "Store Number_sum": 9925,
+          "Store Number_mean": 9925.0
+        },
+        {
+          "Invoice/Item Number": "INV-13430300002",
+          "count": 1,
+          "Store Number_sum": 9925,
+          "Store Number_mean": 9925.0
+        },
+        {
+          "Invoice/Item Number": "INV-13216800002",
+          "count": 1,
+          "Store Number_sum": 9923,
+          "Store Number_mean": 9923.0
+        },
+        {
+          "Invoice/Item Number": "INV-13216800001",
+          "count": 1,
+          "Store Number_sum": 9923,
+          "Store Number_mean": 9923.0
+        },
+        {
+          "Invoice/Item Number": "INV-13216800003",
+          "count": 1,
+          "Store Number_sum": 9923,
+          "Store Number_mean": 9923.0
+        },
+        {
+          "Invoice/Item Number": "INV-02330600001",
+          "count": 1,
+          "Store Number_sum": 9922,
+          "Store Number_mean": 9922.0
+        },
+        {
+          "Invoice/Item Number": "INV-05674200001",
+          "count": 1,
+          "Store Number_sum": 9922,
+          "Store Number_mean": 9922.0
+        },
+        {
+          "Invoice/Item Number": "INV-05674200002",
+          "count": 1,
+          "Store Number_sum": 9922,
+          "Store Number_mean": 9922.0
+        },
+        {
+          "Invoice/Item Number": "INV-05674200003",
+          "count": 1,
+          "Store Number_sum": 9922,
+          "Store Number_mean": 9922.0
+        },
+        {
+          "Invoice/Item Number": "INV-00357700001",
+          "count": 1,
+          "Store Number_sum": 9922,
+          "Store Number_mean": 9922.0
+        },
+        {
+          "Invoice/Item Number": "INV-07928500001",
+          "count": 1,
+          "Store Number_sum": 9919,
+          "Store Number_mean": 9919.0
+        },
+        {
+          "Invoice/Item Number": "INV-01388000001",
+          "count": 1,
+          "Store Number_sum": 9919,
+          "Store Number_mean": 9919.0
+        },
+        {
+          "Invoice/Item Number": "INV-03560800002",
+          "count": 1,
+          "Store Number_sum": 9919,
+          "Store Number_mean": 9919.0
+        },
+        {
+          "Invoice/Item Number": "INV-00635400001",
+          "count": 1,
+          "Store Number_sum": 9919,
+          "Store Number_mean": 9919.0
+        },
+        {
+          "Invoice/Item Number": "INV-13097100002",
+          "count": 1,
+          "Store Number_sum": 9919,
+          "Store Number_mean": 9919.0
+        },
+        {
+          "Invoice/Item Number": "INV-12777700003",
+          "count": 1,
+          "Store Number_sum": 9919,
+          "Store Number_mean": 9919.0
+        },
+        {
+          "Invoice/Item Number": "INV-00376900002",
+          "count": 1,
+          "Store Number_sum": 9919,
+          "Store Number_mean": 9919.0
+        },
+        {
+          "Invoice/Item Number": "INV-07928200001",
+          "count": 1,
+          "Store Number_sum": 9919,
+          "Store Number_mean": 9919.0
+        },
+        {
+          "Invoice/Item Number": "INV-10740400001",
+          "count": 1,
+          "Store Number_sum": 9919,
+          "Store Number_mean": 9919.0
+        },
+        {
+          "Invoice/Item Number": "INV-13192000002",
+          "count": 1,
+          "Store Number_sum": 9919,
+          "Store Number_mean": 9919.0
+        },
+        {
+          "Invoice/Item Number": "INV-12777700004",
+          "count": 1,
+          "Store Number_sum": 9919,
+          "Store Number_mean": 9919.0
+        },
+        {
+          "Invoice/Item Number": "INV-05661900001",
+          "count": 1,
+          "Store Number_sum": 9919,
+          "Store Number_mean": 9919.0
+        },
+        {
+          "Invoice/Item Number": "INV-12777700001",
+          "count": 1,
+          "Store Number_sum": 9919,
+          "Store Number_mean": 9919.0
+        },
+        {
+          "Invoice/Item Number": "INV-13097100001",
+          "count": 1,
+          "Store Number_sum": 9919,
+          "Store Number_mean": 9919.0
+        },
+        {
+          "Invoice/Item Number": "INV-10743400002",
+          "count": 1,
+          "Store Number_sum": 9919,
+          "Store Number_mean": 9919.0
+        },
+        {
+          "Invoice/Item Number": "INV-09195800003",
+          "count": 1,
+          "Store Number_sum": 9919,
+          "Store Number_mean": 9919.0
+        },
+        {
+          "Invoice/Item Number": "INV-09195800005",
+          "count": 1,
+          "Store Number_sum": 9919,
+          "Store Number_mean": 9919.0
+        },
+        {
+          "Invoice/Item Number": "INV-03560800003",
+          "count": 1,
+          "Store Number_sum": 9919,
+          "Store Number_mean": 9919.0
+        },
+        {
+          "Invoice/Item Number": "INV-00376900001",
+          "count": 1,
+          "Store Number_sum": 9919,
+          "Store Number_mean": 9919.0
+        },
+        {
+          "Invoice/Item Number": "INV-13192000001",
+          "count": 1,
+          "Store Number_sum": 9919,
+          "Store Number_mean": 9919.0
+        },
+        {
+          "Invoice/Item Number": "INV-09195800004",
+          "count": 1,
+          "Store Number_sum": 9919,
+          "Store Number_mean": 9919.0
+        },
+        {
+          "Invoice/Item Number": "INV-13537600001",
+          "count": 1,
+          "Store Number_sum": 9919,
+          "Store Number_mean": 9919.0
+        },
+        {
+          "Invoice/Item Number": "INV-10743400001",
+          "count": 1,
+          "Store Number_sum": 9919,
+          "Store Number_mean": 9919.0
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "Quais os 3 produtos mais vendidos por categoria?",
+        "type": "group_by"
+      },
+      "created_at": "2026-03-12T14:14:44.619036+00:00Z"
+    },
+    {
+      "id": "8dff9633",
+      "title": "Analysis: 19. Agrupe as vendas por 'Category Name' e me most...",
+      "rows": 100,
+      "columns": [
+        "Store Name",
+        "Category",
+        "Category Name",
+        "Vendor Name",
+        "count",
+        "State Bottle Retail_sum",
+        "State Bottle Retail_mean"
+      ],
+      "sample": [
+        {
+          "Store Name": "Central City Liquor, Inc.",
+          "Category": "1052100",
+          "Category Name": "Imported Brandies",
+          "Vendor Name": "MOET HENNESSY USA",
+          "count": 2122,
+          "State Bottle Retail_sum": 77268.7,
+          "State Bottle Retail_mean": 36.4131479736098
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1011200",
+          "Category Name": "STRAIGHT BOURBON WHISKIES",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 2421,
+          "State Bottle Retail_sum": 56951.75,
+          "State Bottle Retail_mean": 23.524060305658818
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 2091,
+          "State Bottle Retail_sum": 55537.22,
+          "State Bottle Retail_mean": 26.560124342419897
+        },
+        {
+          "Store Name": "Central City Liquor, Inc.",
+          "Category": "1012200",
+          "Category Name": "Scotch Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1133,
+          "State Bottle Retail_sum": 50488.58,
+          "State Bottle Retail_mean": 44.56185348631951
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1608,
+          "State Bottle Retail_sum": 49069.46,
+          "State Bottle Retail_mean": 30.515833333333333
+        },
+        {
+          "Store Name": "Central City Liquor, Inc.",
+          "Category": "1012200",
+          "Category Name": "SCOTCH WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 1204,
+          "State Bottle Retail_sum": 47386.75,
+          "State Bottle Retail_mean": 39.357765780730894
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1022200",
+          "Category Name": "100% Agave Tequila",
+          "Vendor Name": "Patron Spirits Company",
+          "count": 828,
+          "State Bottle Retail_sum": 45436.19,
+          "State Bottle Retail_mean": 54.874625603864736
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1032200",
+          "Category Name": "Imported Flavored Vodka",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1732,
+          "State Bottle Retail_sum": 44598.8,
+          "State Bottle Retail_mean": 25.749884526558894
+        },
+        {
+          "Store Name": "Central City Liquor, Inc.",
+          "Category": "1052010",
+          "Category Name": "IMPORTED GRAPE BRANDIES",
+          "Vendor Name": "Moet Hennessy USA, Inc.",
+          "count": 1190,
+          "State Bottle Retail_sum": 43160.68,
+          "State Bottle Retail_mean": 36.269478991596635
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1639,
+          "State Bottle Retail_sum": 42320.81,
+          "State Bottle Retail_mean": 25.82111653447224
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1011200",
+          "Category Name": "STRAIGHT BOURBON WHISKIES",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1626,
+          "State Bottle Retail_sum": 42099.73,
+          "State Bottle Retail_mean": 25.89159286592866
+        },
+        {
+          "Store Name": "Hy-Vee Wine and Spirits / Iowa City",
+          "Category": "1011200",
+          "Category Name": "STRAIGHT BOURBON WHISKIES",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 2081,
+          "State Bottle Retail_sum": 41892.61,
+          "State Bottle Retail_mean": 20.1309995194618
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1251,
+          "State Bottle Retail_sum": 40697.35,
+          "State Bottle Retail_mean": 32.531854516386886
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1031200",
+          "Category Name": "American Flavored Vodka",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 3046,
+          "State Bottle Retail_sum": 40216.1,
+          "State Bottle Retail_mean": 13.202921864740643
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1022200",
+          "Category Name": "100% Agave Tequila",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 794,
+          "State Bottle Retail_sum": 39297.01,
+          "State Bottle Retail_mean": 49.49245591939547
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1022100",
+          "Category Name": "TEQUILA",
+          "Vendor Name": "The Patron Spirits Company",
+          "count": 740,
+          "State Bottle Retail_sum": 39187.95,
+          "State Bottle Retail_mean": 52.956689189189184
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1022200",
+          "Category Name": "100% Agave Tequila",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 770,
+          "State Bottle Retail_sum": 38272.17,
+          "State Bottle Retail_mean": 49.70411688311688
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1032200",
+          "Category Name": "IMPORTED VODKA - MISC",
+          "Vendor Name": "Pernod Ricard USA/Austin Nichols",
+          "count": 1942,
+          "State Bottle Retail_sum": 37882.1,
+          "State Bottle Retail_mean": 19.506745623069
+        },
+        {
+          "Store Name": "Central City Liquor, Inc.",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1583,
+          "State Bottle Retail_sum": 37536.15,
+          "State Bottle Retail_mean": 23.712034112444726
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1031200",
+          "Category Name": "American Flavored Vodka",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 2867,
+          "State Bottle Retail_sum": 37271.740000000005,
+          "State Bottle Retail_mean": 13.00025810952215
+        },
+        {
+          "Store Name": "Central City Liquor, Inc.",
+          "Category": "1011200",
+          "Category Name": "STRAIGHT BOURBON WHISKIES",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1705,
+          "State Bottle Retail_sum": 36863.72,
+          "State Bottle Retail_mean": 21.620950146627568
+        },
+        {
+          "Store Name": "Benz Distributing",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1135,
+          "State Bottle Retail_sum": 36599.82,
+          "State Bottle Retail_mean": 32.24653744493392
+        },
+        {
+          "Store Name": "Lot-A-Spirits",
+          "Category": "1011200",
+          "Category Name": "STRAIGHT BOURBON WHISKIES",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1440,
+          "State Bottle Retail_sum": 36070.99,
+          "State Bottle Retail_mean": 25.04929861111111
+        },
+        {
+          "Store Name": "Hy-Vee Food Store / Cedar Falls",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1866,
+          "State Bottle Retail_sum": 35745.58,
+          "State Bottle Retail_mean": 19.15625937834941
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1032200",
+          "Category Name": "IMPORTED VODKA - MISC",
+          "Vendor Name": "Diageo Americas",
+          "count": 1189,
+          "State Bottle Retail_sum": 35669.2,
+          "State Bottle Retail_mean": 29.999327165685447
+        },
+        {
+          "Store Name": "Central City Liquor, Inc.",
+          "Category": "1012100",
+          "Category Name": "CANADIAN WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 1471,
+          "State Bottle Retail_sum": 35491.96,
+          "State Bottle Retail_mean": 24.12777702243372
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1031200",
+          "Category Name": "VODKA FLAVORED",
+          "Vendor Name": "Diageo Americas",
+          "count": 2661,
+          "State Bottle Retail_sum": 35084.12,
+          "State Bottle Retail_mean": 13.18456219466366
+        },
+        {
+          "Store Name": "Central City Liquor, Inc.",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1539,
+          "State Bottle Retail_sum": 35058.01,
+          "State Bottle Retail_mean": 22.779733593242366
+        },
+        {
+          "Store Name": "Lickety Liquor",
+          "Category": "1052100",
+          "Category Name": "Imported Brandies",
+          "Vendor Name": "MOET HENNESSY USA",
+          "count": 1121,
+          "State Bottle Retail_sum": 34314.55,
+          "State Bottle Retail_mean": 30.610660124888494
+        },
+        {
+          "Store Name": "Celtics Beverage Company",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1136,
+          "State Bottle Retail_sum": 34275.88,
+          "State Bottle Retail_mean": 30.172429577464786
+        },
+        {
+          "Store Name": "Hy-Vee Food Store #2 / Council Bluffs",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1451,
+          "State Bottle Retail_sum": 34093.55,
+          "State Bottle Retail_mean": 23.49658855961406
+        },
+        {
+          "Store Name": "I-80 Liquor / Council Bluffs",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1167,
+          "State Bottle Retail_sum": 33922.43,
+          "State Bottle Retail_mean": 29.068063410454155
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1031200",
+          "Category Name": "VODKA FLAVORED",
+          "Vendor Name": "Diageo Americas",
+          "count": 2527,
+          "State Bottle Retail_sum": 32885.18,
+          "State Bottle Retail_mean": 13.013525920063316
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1012400",
+          "Category Name": "Irish Whiskies",
+          "Vendor Name": "PERNOD RICARD USA",
+          "count": 974,
+          "State Bottle Retail_sum": 32815.439999999995,
+          "State Bottle Retail_mean": 33.691416837782334
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1012100",
+          "Category Name": "CANADIAN WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 1108,
+          "State Bottle Retail_sum": 32687.96,
+          "State Bottle Retail_mean": 29.50176895306859
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1022100",
+          "Category Name": "TEQUILA",
+          "Vendor Name": "Diageo Americas",
+          "count": 736,
+          "State Bottle Retail_sum": 32295.64,
+          "State Bottle Retail_mean": 43.87994565217391
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1032200",
+          "Category Name": "Imported Flavored Vodka",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1415,
+          "State Bottle Retail_sum": 32261.19,
+          "State Bottle Retail_mean": 22.799427561837454
+        },
+        {
+          "Store Name": "I-80 Liquor / Council Bluffs",
+          "Category": "1012100",
+          "Category Name": "CANADIAN WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 1352,
+          "State Bottle Retail_sum": 31899.53,
+          "State Bottle Retail_mean": 23.594326923076924
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1081400",
+          "Category Name": "American Schnapps",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 2713,
+          "State Bottle Retail_sum": 31890.23,
+          "State Bottle Retail_mean": 11.75460007371913
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1012200",
+          "Category Name": "SCOTCH WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 799,
+          "State Bottle Retail_sum": 31592.88,
+          "State Bottle Retail_mean": 39.54052565707134
+        },
+        {
+          "Store Name": "Hy-Vee Food Store #1 / Ames",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1515,
+          "State Bottle Retail_sum": 31562.48,
+          "State Bottle Retail_mean": 20.833320132013203
+        },
+        {
+          "Store Name": "Cyclone Liquors",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1363,
+          "State Bottle Retail_sum": 31497.09,
+          "State Bottle Retail_mean": 23.108650036683787
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1032200",
+          "Category Name": "IMPORTED VODKA - MISC",
+          "Vendor Name": "Pernod Ricard USA/Austin Nichols",
+          "count": 1605,
+          "State Bottle Retail_sum": 31458.3,
+          "State Bottle Retail_mean": 19.60018691588785
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1022100",
+          "Category Name": "TEQUILA",
+          "Vendor Name": "Proximo",
+          "count": 1376,
+          "State Bottle Retail_sum": 31427.22,
+          "State Bottle Retail_mean": 22.83954941860465
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1032200",
+          "Category Name": "Imported Flavored Vodka",
+          "Vendor Name": "PERNOD RICARD USA",
+          "count": 1533,
+          "State Bottle Retail_sum": 31396.17,
+          "State Bottle Retail_mean": 20.480215264187866
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1012200",
+          "Category Name": "SCOTCH WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 675,
+          "State Bottle Retail_sum": 31280.52,
+          "State Bottle Retail_mean": 46.34151111111111
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1022100",
+          "Category Name": "TEQUILA",
+          "Vendor Name": "Diageo Americas",
+          "count": 696,
+          "State Bottle Retail_sum": 30980.12,
+          "State Bottle Retail_mean": 44.51166666666666
+        },
+        {
+          "Store Name": "Celtics Beverage Company",
+          "Category": "1012100",
+          "Category Name": "CANADIAN WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 1131,
+          "State Bottle Retail_sum": 30929.39,
+          "State Bottle Retail_mean": 27.346940760389035
+        },
+        {
+          "Store Name": "Hy-Vee #1044 / Burlington",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1275,
+          "State Bottle Retail_sum": 30764.75,
+          "State Bottle Retail_mean": 24.12921568627451
+        },
+        {
+          "Store Name": "Hy-Vee Food Store / Coralville",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1554,
+          "State Bottle Retail_sum": 30713.690000000002,
+          "State Bottle Retail_mean": 19.764279279279283
+        },
+        {
+          "Store Name": "Hy-Vee Food Store / Coralville",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1229,
+          "State Bottle Retail_sum": 30696.78,
+          "State Bottle Retail_mean": 24.977038242473554
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1011400",
+          "Category Name": "Tennessee Whiskies",
+          "Vendor Name": "Brown Forman Corp.",
+          "count": 986,
+          "State Bottle Retail_sum": 30564.18,
+          "State Bottle Retail_mean": 30.998154158215012
+        },
+        {
+          "Store Name": "Hy-Vee Wine and Spirits / Iowa City",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1637,
+          "State Bottle Retail_sum": 30466.95,
+          "State Bottle Retail_mean": 18.611453879047037
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1011400",
+          "Category Name": "Tennessee Whiskies",
+          "Vendor Name": "Brown Forman Corp.",
+          "count": 1010,
+          "State Bottle Retail_sum": 30378.31,
+          "State Bottle Retail_mean": 30.07753465346535
+        },
+        {
+          "Store Name": "Hy-Vee Food Store #2 / Council Bluff",
+          "Category": "1011200",
+          "Category Name": "STRAIGHT BOURBON WHISKIES",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1728,
+          "State Bottle Retail_sum": 30143.22,
+          "State Bottle Retail_mean": 17.443993055555556
+        },
+        {
+          "Store Name": "Lot-A-Spirits",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1189,
+          "State Bottle Retail_sum": 30142.620000000003,
+          "State Bottle Retail_mean": 25.351236333052988
+        },
+        {
+          "Store Name": "Benz Distributing",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1069,
+          "State Bottle Retail_sum": 29864.670000000002,
+          "State Bottle Retail_mean": 27.93701590271282
+        },
+        {
+          "Store Name": "Hy-Vee Food Store #1 / Mason City",
+          "Category": "1011200",
+          "Category Name": "STRAIGHT BOURBON WHISKIES",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1634,
+          "State Bottle Retail_sum": 29669.19,
+          "State Bottle Retail_mean": 18.157399020807834
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1012100",
+          "Category Name": "CANADIAN WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 921,
+          "State Bottle Retail_sum": 29598.760000000002,
+          "State Bottle Retail_mean": 32.137633007600435
+        },
+        {
+          "Store Name": "Hy-Vee Food Store #2 / Council Bluffs",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1712,
+          "State Bottle Retail_sum": 29539.07,
+          "State Bottle Retail_mean": 17.254129672897196
+        },
+        {
+          "Store Name": "Cyclone Liquors",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1132,
+          "State Bottle Retail_sum": 29415.88,
+          "State Bottle Retail_mean": 25.98575971731449
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1031200",
+          "Category Name": "VODKA FLAVORED",
+          "Vendor Name": "Phillips Beverage Company",
+          "count": 2666,
+          "State Bottle Retail_sum": 29391.49,
+          "State Bottle Retail_mean": 11.024564891222806
+        },
+        {
+          "Store Name": "Hy-Vee Food Store #2 / Council Bluff",
+          "Category": "1012100",
+          "Category Name": "CANADIAN WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 1202,
+          "State Bottle Retail_sum": 29154.39,
+          "State Bottle Retail_mean": 24.25490016638935
+        },
+        {
+          "Store Name": "Hy-Vee #1044 / Burlington",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1529,
+          "State Bottle Retail_sum": 29019.98,
+          "State Bottle Retail_mean": 18.979712230215828
+        },
+        {
+          "Store Name": "Vom Fass / Des Moines",
+          "Category": "1012200",
+          "Category Name": "SCOTCH WHISKIES",
+          "Vendor Name": "Yahara Bay Distillers, Inc",
+          "count": 748,
+          "State Bottle Retail_sum": 28896.91,
+          "State Bottle Retail_mean": 38.632232620320856
+        },
+        {
+          "Store Name": "Hy-Vee Food Store #1 / Newton",
+          "Category": "1011300",
+          "Category Name": "TENNESSEE WHISKIES",
+          "Vendor Name": "Brown-Forman Corporation",
+          "count": 1564,
+          "State Bottle Retail_sum": 28802.97,
+          "State Bottle Retail_mean": 18.416221227621485
+        },
+        {
+          "Store Name": "Hy-Vee Food Store #3 / Sioux City",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1142,
+          "State Bottle Retail_sum": 28699.53,
+          "State Bottle Retail_mean": 25.130936952714535
+        },
+        {
+          "Store Name": "Central City Liquor, Inc.",
+          "Category": "1052010",
+          "Category Name": "IMPORTED GRAPE BRANDIES",
+          "Vendor Name": "REMY COINTREAU USA         .",
+          "count": 990,
+          "State Bottle Retail_sum": 28372.59,
+          "State Bottle Retail_mean": 28.659181818181818
+        },
+        {
+          "Store Name": "Hy-Vee Food Store #3 / Des Moines",
+          "Category": "1052100",
+          "Category Name": "Imported Brandies",
+          "Vendor Name": "MOET HENNESSY USA",
+          "count": 800,
+          "State Bottle Retail_sum": 28260.98,
+          "State Bottle Retail_mean": 35.326225
+        },
+        {
+          "Store Name": "Cyclone Liquors",
+          "Category": "1012200",
+          "Category Name": "Scotch Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 682,
+          "State Bottle Retail_sum": 28238.84,
+          "State Bottle Retail_mean": 41.40592375366569
+        },
+        {
+          "Store Name": "Wilkie Liquors",
+          "Category": "1022100",
+          "Category Name": "TEQUILA",
+          "Vendor Name": "The Patron Spirits Company",
+          "count": 528,
+          "State Bottle Retail_sum": 28155.48,
+          "State Bottle Retail_mean": 53.32477272727272
+        },
+        {
+          "Store Name": "Quick Shop / Clear Lake",
+          "Category": "1012100",
+          "Category Name": "CANADIAN WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 1273,
+          "State Bottle Retail_sum": 28097.99,
+          "State Bottle Retail_mean": 22.072262372348785
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1062300",
+          "Category Name": "FLAVORED RUM",
+          "Vendor Name": "Bacardi U.S.A., Inc.",
+          "count": 1930,
+          "State Bottle Retail_sum": 28086.91,
+          "State Bottle Retail_mean": 14.55280310880829
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1052100",
+          "Category Name": "Imported Brandies",
+          "Vendor Name": "MOET HENNESSY USA",
+          "count": 481,
+          "State Bottle Retail_sum": 27983.67,
+          "State Bottle Retail_mean": 58.178108108108106
+        },
+        {
+          "Store Name": "Pit Stop Liquors / Newton",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1314,
+          "State Bottle Retail_sum": 27982.72,
+          "State Bottle Retail_mean": 21.295829528158297
+        },
+        {
+          "Store Name": "Pit Stop Liquors / Newton",
+          "Category": "1012100",
+          "Category Name": "CANADIAN WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 1317,
+          "State Bottle Retail_sum": 27896.47,
+          "State Bottle Retail_mean": 21.181829916476843
+        },
+        {
+          "Store Name": "Hy-Vee Food Store / Spencer",
+          "Category": "1012100",
+          "Category Name": "CANADIAN WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 1249,
+          "State Bottle Retail_sum": 27781.35,
+          "State Bottle Retail_mean": 22.24287429943955
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1012300",
+          "Category Name": "IRISH WHISKIES",
+          "Vendor Name": "Pernod Ricard USA/Austin Nichols",
+          "count": 861,
+          "State Bottle Retail_sum": 27742.98,
+          "State Bottle Retail_mean": 32.221811846689896
+        },
+        {
+          "Store Name": "Hy-Vee Wine and Spirits #2",
+          "Category": "1011200",
+          "Category Name": "STRAIGHT BOURBON WHISKIES",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1326,
+          "State Bottle Retail_sum": 27701.43,
+          "State Bottle Retail_mean": 20.890972850678732
+        },
+        {
+          "Store Name": "Central City Liquor, Inc.",
+          "Category": "1012300",
+          "Category Name": "Single Malt Scotch",
+          "Vendor Name": "MOET HENNESSY USA",
+          "count": 437,
+          "State Bottle Retail_sum": 27687.97,
+          "State Bottle Retail_mean": 63.3591990846682
+        },
+        {
+          "Store Name": "Hy-Vee Food Store / Marshalltown",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1091,
+          "State Bottle Retail_sum": 27640.670000000002,
+          "State Bottle Retail_mean": 25.335169569202566
+        },
+        {
+          "Store Name": "Oasis",
+          "Category": "1052100",
+          "Category Name": "Imported Brandies",
+          "Vendor Name": "MOET HENNESSY USA",
+          "count": 1007,
+          "State Bottle Retail_sum": 27409.89,
+          "State Bottle Retail_mean": 27.2193545183714
+        },
+        {
+          "Store Name": "Sac Liquor Store",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 937,
+          "State Bottle Retail_sum": 27372.86,
+          "State Bottle Retail_mean": 29.213297758804696
+        },
+        {
+          "Store Name": "Lake Liquors Wine and Spirits",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 911,
+          "State Bottle Retail_sum": 27356.15,
+          "State Bottle Retail_mean": 30.028704720087816
+        },
+        {
+          "Store Name": "Hy-Vee #1044 / Burlington",
+          "Category": "1011200",
+          "Category Name": "STRAIGHT BOURBON WHISKIES",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1435,
+          "State Bottle Retail_sum": 27354.48,
+          "State Bottle Retail_mean": 19.062355400696863
+        },
+        {
+          "Store Name": "Lot-A-Spirits",
+          "Category": "1011400",
+          "Category Name": "Tennessee Whiskies",
+          "Vendor Name": "Brown Forman Corp.",
+          "count": 933,
+          "State Bottle Retail_sum": 27244.829999999998,
+          "State Bottle Retail_mean": 29.201318327974274
+        },
+        {
+          "Store Name": "Benz Distributing",
+          "Category": "1011200",
+          "Category Name": "STRAIGHT BOURBON WHISKIES",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1056,
+          "State Bottle Retail_sum": 27173.74,
+          "State Bottle Retail_mean": 25.732708333333335
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1022200",
+          "Category Name": "100% Agave Tequila",
+          "Vendor Name": "Patron Spirits Company",
+          "count": 487,
+          "State Bottle Retail_sum": 27166.76,
+          "State Bottle Retail_mean": 55.78390143737166
+        },
+        {
+          "Store Name": "Great Pastimes",
+          "Category": "1012100",
+          "Category Name": "CANADIAN WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 1120,
+          "State Bottle Retail_sum": 27115.920000000002,
+          "State Bottle Retail_mean": 24.210642857142858
+        },
+        {
+          "Store Name": "Hy-Vee Food Store #1 / Mason City",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1437,
+          "State Bottle Retail_sum": 27094.510000000002,
+          "State Bottle Retail_mean": 18.854913013221992
+        },
+        {
+          "Store Name": "Wilkie Liquors",
+          "Category": "1012100",
+          "Category Name": "CANADIAN WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 894,
+          "State Bottle Retail_sum": 27083.07,
+          "State Bottle Retail_mean": 30.29426174496644
+        },
+        {
+          "Store Name": "J D Spirits Liquor",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1168,
+          "State Bottle Retail_sum": 27059.57,
+          "State Bottle Retail_mean": 23.16744006849315
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1032200",
+          "Category Name": "Imported Flavored Vodka",
+          "Vendor Name": "PERNOD RICARD USA",
+          "count": 1328,
+          "State Bottle Retail_sum": 27042.219999999998,
+          "State Bottle Retail_mean": 20.363117469879516
+        },
+        {
+          "Store Name": "Okoboji Avenue Liquor",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1157,
+          "State Bottle Retail_sum": 26947.94,
+          "State Bottle Retail_mean": 23.291218668971478
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1012200",
+          "Category Name": "Scotch Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 624,
+          "State Bottle Retail_sum": 26898.63,
+          "State Bottle Retail_mean": 43.10677884615385
+        },
+        {
+          "Store Name": "Hy-Vee Wine and Spirits / Bettendorf",
+          "Category": "1012200",
+          "Category Name": "Scotch Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 771,
+          "State Bottle Retail_sum": 26759.6,
+          "State Bottle Retail_mean": 34.70765239948119
+        },
+        {
+          "Store Name": "Hy-Vee Food Store #4 / Sioux City",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1207,
+          "State Bottle Retail_sum": 26740.34,
+          "State Bottle Retail_mean": 22.154382767191382
+        },
+        {
+          "Store Name": "Hy-Vee Food Store / Muscatine",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1397,
+          "State Bottle Retail_sum": 26626.41,
+          "State Bottle Retail_mean": 19.05970651395848
+        },
+        {
+          "Store Name": "Hy-Vee Food Store / Marshalltown",
+          "Category": "1012100",
+          "Category Name": "CANADIAN WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 1111,
+          "State Bottle Retail_sum": 26601.15,
+          "State Bottle Retail_mean": 23.943429342934294
+        },
+        {
+          "Store Name": "Hy-Vee Food Store #1 / Ames",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1249,
+          "State Bottle Retail_sum": 26572.97,
+          "State Bottle Retail_mean": 21.275396317053644
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "19. Agrupe as vendas por 'Category Name' e me mostre o Top 5 de faturamento.",
+        "type": "group_by"
+      },
+      "created_at": "2026-03-16T17:06:32.579542+00:00Z"
+    },
+    {
+      "id": "6752095e",
+      "title": "Analysis: 19. Agrupe as vendas por 'Category Name' e me most...",
+      "rows": 100,
+      "columns": [
+        "Store Name",
+        "Category",
+        "Category Name",
+        "Vendor Name",
+        "count",
+        "State Bottle Retail_sum",
+        "State Bottle Retail_mean"
+      ],
+      "sample": [
+        {
+          "Store Name": "Central City Liquor, Inc.",
+          "Category": "1052100",
+          "Category Name": "Imported Brandies",
+          "Vendor Name": "MOET HENNESSY USA",
+          "count": 2122,
+          "State Bottle Retail_sum": 77268.7,
+          "State Bottle Retail_mean": 36.4131479736098
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1011200",
+          "Category Name": "STRAIGHT BOURBON WHISKIES",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 2421,
+          "State Bottle Retail_sum": 56951.75,
+          "State Bottle Retail_mean": 23.524060305658818
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 2091,
+          "State Bottle Retail_sum": 55537.22,
+          "State Bottle Retail_mean": 26.560124342419897
+        },
+        {
+          "Store Name": "Central City Liquor, Inc.",
+          "Category": "1012200",
+          "Category Name": "Scotch Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1133,
+          "State Bottle Retail_sum": 50488.58,
+          "State Bottle Retail_mean": 44.56185348631951
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1608,
+          "State Bottle Retail_sum": 49069.46,
+          "State Bottle Retail_mean": 30.515833333333333
+        },
+        {
+          "Store Name": "Central City Liquor, Inc.",
+          "Category": "1012200",
+          "Category Name": "SCOTCH WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 1204,
+          "State Bottle Retail_sum": 47386.75,
+          "State Bottle Retail_mean": 39.357765780730894
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1022200",
+          "Category Name": "100% Agave Tequila",
+          "Vendor Name": "Patron Spirits Company",
+          "count": 828,
+          "State Bottle Retail_sum": 45436.19,
+          "State Bottle Retail_mean": 54.874625603864736
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1032200",
+          "Category Name": "Imported Flavored Vodka",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1732,
+          "State Bottle Retail_sum": 44598.8,
+          "State Bottle Retail_mean": 25.749884526558894
+        },
+        {
+          "Store Name": "Central City Liquor, Inc.",
+          "Category": "1052010",
+          "Category Name": "IMPORTED GRAPE BRANDIES",
+          "Vendor Name": "Moet Hennessy USA, Inc.",
+          "count": 1190,
+          "State Bottle Retail_sum": 43160.68,
+          "State Bottle Retail_mean": 36.269478991596635
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1639,
+          "State Bottle Retail_sum": 42320.81,
+          "State Bottle Retail_mean": 25.82111653447224
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1011200",
+          "Category Name": "STRAIGHT BOURBON WHISKIES",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1626,
+          "State Bottle Retail_sum": 42099.73,
+          "State Bottle Retail_mean": 25.89159286592866
+        },
+        {
+          "Store Name": "Hy-Vee Wine and Spirits / Iowa City",
+          "Category": "1011200",
+          "Category Name": "STRAIGHT BOURBON WHISKIES",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 2081,
+          "State Bottle Retail_sum": 41892.61,
+          "State Bottle Retail_mean": 20.1309995194618
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1251,
+          "State Bottle Retail_sum": 40697.35,
+          "State Bottle Retail_mean": 32.531854516386886
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1031200",
+          "Category Name": "American Flavored Vodka",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 3046,
+          "State Bottle Retail_sum": 40216.1,
+          "State Bottle Retail_mean": 13.202921864740643
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1022200",
+          "Category Name": "100% Agave Tequila",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 794,
+          "State Bottle Retail_sum": 39297.01,
+          "State Bottle Retail_mean": 49.49245591939547
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1022100",
+          "Category Name": "TEQUILA",
+          "Vendor Name": "The Patron Spirits Company",
+          "count": 740,
+          "State Bottle Retail_sum": 39187.95,
+          "State Bottle Retail_mean": 52.956689189189184
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1022200",
+          "Category Name": "100% Agave Tequila",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 770,
+          "State Bottle Retail_sum": 38272.17,
+          "State Bottle Retail_mean": 49.70411688311688
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1032200",
+          "Category Name": "IMPORTED VODKA - MISC",
+          "Vendor Name": "Pernod Ricard USA/Austin Nichols",
+          "count": 1942,
+          "State Bottle Retail_sum": 37882.1,
+          "State Bottle Retail_mean": 19.506745623069
+        },
+        {
+          "Store Name": "Central City Liquor, Inc.",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1583,
+          "State Bottle Retail_sum": 37536.15,
+          "State Bottle Retail_mean": 23.712034112444726
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1031200",
+          "Category Name": "American Flavored Vodka",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 2867,
+          "State Bottle Retail_sum": 37271.740000000005,
+          "State Bottle Retail_mean": 13.00025810952215
+        },
+        {
+          "Store Name": "Central City Liquor, Inc.",
+          "Category": "1011200",
+          "Category Name": "STRAIGHT BOURBON WHISKIES",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1705,
+          "State Bottle Retail_sum": 36863.72,
+          "State Bottle Retail_mean": 21.620950146627568
+        },
+        {
+          "Store Name": "Benz Distributing",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1135,
+          "State Bottle Retail_sum": 36599.82,
+          "State Bottle Retail_mean": 32.24653744493392
+        },
+        {
+          "Store Name": "Lot-A-Spirits",
+          "Category": "1011200",
+          "Category Name": "STRAIGHT BOURBON WHISKIES",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1440,
+          "State Bottle Retail_sum": 36070.99,
+          "State Bottle Retail_mean": 25.04929861111111
+        },
+        {
+          "Store Name": "Hy-Vee Food Store / Cedar Falls",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1866,
+          "State Bottle Retail_sum": 35745.58,
+          "State Bottle Retail_mean": 19.15625937834941
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1032200",
+          "Category Name": "IMPORTED VODKA - MISC",
+          "Vendor Name": "Diageo Americas",
+          "count": 1189,
+          "State Bottle Retail_sum": 35669.2,
+          "State Bottle Retail_mean": 29.999327165685447
+        },
+        {
+          "Store Name": "Central City Liquor, Inc.",
+          "Category": "1012100",
+          "Category Name": "CANADIAN WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 1471,
+          "State Bottle Retail_sum": 35491.96,
+          "State Bottle Retail_mean": 24.12777702243372
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1031200",
+          "Category Name": "VODKA FLAVORED",
+          "Vendor Name": "Diageo Americas",
+          "count": 2661,
+          "State Bottle Retail_sum": 35084.12,
+          "State Bottle Retail_mean": 13.18456219466366
+        },
+        {
+          "Store Name": "Central City Liquor, Inc.",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1539,
+          "State Bottle Retail_sum": 35058.01,
+          "State Bottle Retail_mean": 22.779733593242366
+        },
+        {
+          "Store Name": "Lickety Liquor",
+          "Category": "1052100",
+          "Category Name": "Imported Brandies",
+          "Vendor Name": "MOET HENNESSY USA",
+          "count": 1121,
+          "State Bottle Retail_sum": 34314.55,
+          "State Bottle Retail_mean": 30.610660124888494
+        },
+        {
+          "Store Name": "Celtics Beverage Company",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1136,
+          "State Bottle Retail_sum": 34275.88,
+          "State Bottle Retail_mean": 30.172429577464786
+        },
+        {
+          "Store Name": "Hy-Vee Food Store #2 / Council Bluffs",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1451,
+          "State Bottle Retail_sum": 34093.55,
+          "State Bottle Retail_mean": 23.49658855961406
+        },
+        {
+          "Store Name": "I-80 Liquor / Council Bluffs",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1167,
+          "State Bottle Retail_sum": 33922.43,
+          "State Bottle Retail_mean": 29.068063410454155
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1031200",
+          "Category Name": "VODKA FLAVORED",
+          "Vendor Name": "Diageo Americas",
+          "count": 2527,
+          "State Bottle Retail_sum": 32885.18,
+          "State Bottle Retail_mean": 13.013525920063316
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1012400",
+          "Category Name": "Irish Whiskies",
+          "Vendor Name": "PERNOD RICARD USA",
+          "count": 974,
+          "State Bottle Retail_sum": 32815.439999999995,
+          "State Bottle Retail_mean": 33.691416837782334
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1012100",
+          "Category Name": "CANADIAN WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 1108,
+          "State Bottle Retail_sum": 32687.96,
+          "State Bottle Retail_mean": 29.50176895306859
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1022100",
+          "Category Name": "TEQUILA",
+          "Vendor Name": "Diageo Americas",
+          "count": 736,
+          "State Bottle Retail_sum": 32295.64,
+          "State Bottle Retail_mean": 43.87994565217391
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1032200",
+          "Category Name": "Imported Flavored Vodka",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1415,
+          "State Bottle Retail_sum": 32261.19,
+          "State Bottle Retail_mean": 22.799427561837454
+        },
+        {
+          "Store Name": "I-80 Liquor / Council Bluffs",
+          "Category": "1012100",
+          "Category Name": "CANADIAN WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 1352,
+          "State Bottle Retail_sum": 31899.53,
+          "State Bottle Retail_mean": 23.594326923076924
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1081400",
+          "Category Name": "American Schnapps",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 2713,
+          "State Bottle Retail_sum": 31890.23,
+          "State Bottle Retail_mean": 11.75460007371913
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1012200",
+          "Category Name": "SCOTCH WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 799,
+          "State Bottle Retail_sum": 31592.88,
+          "State Bottle Retail_mean": 39.54052565707134
+        },
+        {
+          "Store Name": "Hy-Vee Food Store #1 / Ames",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1515,
+          "State Bottle Retail_sum": 31562.48,
+          "State Bottle Retail_mean": 20.833320132013203
+        },
+        {
+          "Store Name": "Cyclone Liquors",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1363,
+          "State Bottle Retail_sum": 31497.09,
+          "State Bottle Retail_mean": 23.108650036683787
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1032200",
+          "Category Name": "IMPORTED VODKA - MISC",
+          "Vendor Name": "Pernod Ricard USA/Austin Nichols",
+          "count": 1605,
+          "State Bottle Retail_sum": 31458.3,
+          "State Bottle Retail_mean": 19.60018691588785
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1022100",
+          "Category Name": "TEQUILA",
+          "Vendor Name": "Proximo",
+          "count": 1376,
+          "State Bottle Retail_sum": 31427.22,
+          "State Bottle Retail_mean": 22.83954941860465
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1032200",
+          "Category Name": "Imported Flavored Vodka",
+          "Vendor Name": "PERNOD RICARD USA",
+          "count": 1533,
+          "State Bottle Retail_sum": 31396.17,
+          "State Bottle Retail_mean": 20.480215264187866
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1012200",
+          "Category Name": "SCOTCH WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 675,
+          "State Bottle Retail_sum": 31280.52,
+          "State Bottle Retail_mean": 46.34151111111111
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1022100",
+          "Category Name": "TEQUILA",
+          "Vendor Name": "Diageo Americas",
+          "count": 696,
+          "State Bottle Retail_sum": 30980.12,
+          "State Bottle Retail_mean": 44.51166666666666
+        },
+        {
+          "Store Name": "Celtics Beverage Company",
+          "Category": "1012100",
+          "Category Name": "CANADIAN WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 1131,
+          "State Bottle Retail_sum": 30929.39,
+          "State Bottle Retail_mean": 27.346940760389035
+        },
+        {
+          "Store Name": "Hy-Vee #1044 / Burlington",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1275,
+          "State Bottle Retail_sum": 30764.75,
+          "State Bottle Retail_mean": 24.12921568627451
+        },
+        {
+          "Store Name": "Hy-Vee Food Store / Coralville",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1554,
+          "State Bottle Retail_sum": 30713.690000000002,
+          "State Bottle Retail_mean": 19.764279279279283
+        },
+        {
+          "Store Name": "Hy-Vee Food Store / Coralville",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1229,
+          "State Bottle Retail_sum": 30696.78,
+          "State Bottle Retail_mean": 24.977038242473554
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1011400",
+          "Category Name": "Tennessee Whiskies",
+          "Vendor Name": "Brown Forman Corp.",
+          "count": 986,
+          "State Bottle Retail_sum": 30564.18,
+          "State Bottle Retail_mean": 30.998154158215012
+        },
+        {
+          "Store Name": "Hy-Vee Wine and Spirits / Iowa City",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1637,
+          "State Bottle Retail_sum": 30466.95,
+          "State Bottle Retail_mean": 18.611453879047037
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1011400",
+          "Category Name": "Tennessee Whiskies",
+          "Vendor Name": "Brown Forman Corp.",
+          "count": 1010,
+          "State Bottle Retail_sum": 30378.31,
+          "State Bottle Retail_mean": 30.07753465346535
+        },
+        {
+          "Store Name": "Hy-Vee Food Store #2 / Council Bluff",
+          "Category": "1011200",
+          "Category Name": "STRAIGHT BOURBON WHISKIES",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1728,
+          "State Bottle Retail_sum": 30143.22,
+          "State Bottle Retail_mean": 17.443993055555556
+        },
+        {
+          "Store Name": "Lot-A-Spirits",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1189,
+          "State Bottle Retail_sum": 30142.620000000003,
+          "State Bottle Retail_mean": 25.351236333052988
+        },
+        {
+          "Store Name": "Benz Distributing",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1069,
+          "State Bottle Retail_sum": 29864.670000000002,
+          "State Bottle Retail_mean": 27.93701590271282
+        },
+        {
+          "Store Name": "Hy-Vee Food Store #1 / Mason City",
+          "Category": "1011200",
+          "Category Name": "STRAIGHT BOURBON WHISKIES",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1634,
+          "State Bottle Retail_sum": 29669.19,
+          "State Bottle Retail_mean": 18.157399020807834
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1012100",
+          "Category Name": "CANADIAN WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 921,
+          "State Bottle Retail_sum": 29598.760000000002,
+          "State Bottle Retail_mean": 32.137633007600435
+        },
+        {
+          "Store Name": "Hy-Vee Food Store #2 / Council Bluffs",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1712,
+          "State Bottle Retail_sum": 29539.07,
+          "State Bottle Retail_mean": 17.254129672897196
+        },
+        {
+          "Store Name": "Cyclone Liquors",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1132,
+          "State Bottle Retail_sum": 29415.88,
+          "State Bottle Retail_mean": 25.98575971731449
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1031200",
+          "Category Name": "VODKA FLAVORED",
+          "Vendor Name": "Phillips Beverage Company",
+          "count": 2666,
+          "State Bottle Retail_sum": 29391.49,
+          "State Bottle Retail_mean": 11.024564891222806
+        },
+        {
+          "Store Name": "Hy-Vee Food Store #2 / Council Bluff",
+          "Category": "1012100",
+          "Category Name": "CANADIAN WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 1202,
+          "State Bottle Retail_sum": 29154.39,
+          "State Bottle Retail_mean": 24.25490016638935
+        },
+        {
+          "Store Name": "Hy-Vee #1044 / Burlington",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1529,
+          "State Bottle Retail_sum": 29019.98,
+          "State Bottle Retail_mean": 18.979712230215828
+        },
+        {
+          "Store Name": "Vom Fass / Des Moines",
+          "Category": "1012200",
+          "Category Name": "SCOTCH WHISKIES",
+          "Vendor Name": "Yahara Bay Distillers, Inc",
+          "count": 748,
+          "State Bottle Retail_sum": 28896.91,
+          "State Bottle Retail_mean": 38.632232620320856
+        },
+        {
+          "Store Name": "Hy-Vee Food Store #1 / Newton",
+          "Category": "1011300",
+          "Category Name": "TENNESSEE WHISKIES",
+          "Vendor Name": "Brown-Forman Corporation",
+          "count": 1564,
+          "State Bottle Retail_sum": 28802.97,
+          "State Bottle Retail_mean": 18.416221227621485
+        },
+        {
+          "Store Name": "Hy-Vee Food Store #3 / Sioux City",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1142,
+          "State Bottle Retail_sum": 28699.53,
+          "State Bottle Retail_mean": 25.130936952714535
+        },
+        {
+          "Store Name": "Central City Liquor, Inc.",
+          "Category": "1052010",
+          "Category Name": "IMPORTED GRAPE BRANDIES",
+          "Vendor Name": "REMY COINTREAU USA         .",
+          "count": 990,
+          "State Bottle Retail_sum": 28372.59,
+          "State Bottle Retail_mean": 28.659181818181818
+        },
+        {
+          "Store Name": "Hy-Vee Food Store #3 / Des Moines",
+          "Category": "1052100",
+          "Category Name": "Imported Brandies",
+          "Vendor Name": "MOET HENNESSY USA",
+          "count": 800,
+          "State Bottle Retail_sum": 28260.98,
+          "State Bottle Retail_mean": 35.326225
+        },
+        {
+          "Store Name": "Cyclone Liquors",
+          "Category": "1012200",
+          "Category Name": "Scotch Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 682,
+          "State Bottle Retail_sum": 28238.84,
+          "State Bottle Retail_mean": 41.40592375366569
+        },
+        {
+          "Store Name": "Wilkie Liquors",
+          "Category": "1022100",
+          "Category Name": "TEQUILA",
+          "Vendor Name": "The Patron Spirits Company",
+          "count": 528,
+          "State Bottle Retail_sum": 28155.48,
+          "State Bottle Retail_mean": 53.32477272727272
+        },
+        {
+          "Store Name": "Quick Shop / Clear Lake",
+          "Category": "1012100",
+          "Category Name": "CANADIAN WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 1273,
+          "State Bottle Retail_sum": 28097.99,
+          "State Bottle Retail_mean": 22.072262372348785
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1062300",
+          "Category Name": "FLAVORED RUM",
+          "Vendor Name": "Bacardi U.S.A., Inc.",
+          "count": 1930,
+          "State Bottle Retail_sum": 28086.91,
+          "State Bottle Retail_mean": 14.55280310880829
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1052100",
+          "Category Name": "Imported Brandies",
+          "Vendor Name": "MOET HENNESSY USA",
+          "count": 481,
+          "State Bottle Retail_sum": 27983.67,
+          "State Bottle Retail_mean": 58.178108108108106
+        },
+        {
+          "Store Name": "Pit Stop Liquors / Newton",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1314,
+          "State Bottle Retail_sum": 27982.72,
+          "State Bottle Retail_mean": 21.295829528158297
+        },
+        {
+          "Store Name": "Pit Stop Liquors / Newton",
+          "Category": "1012100",
+          "Category Name": "CANADIAN WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 1317,
+          "State Bottle Retail_sum": 27896.47,
+          "State Bottle Retail_mean": 21.181829916476843
+        },
+        {
+          "Store Name": "Hy-Vee Food Store / Spencer",
+          "Category": "1012100",
+          "Category Name": "CANADIAN WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 1249,
+          "State Bottle Retail_sum": 27781.35,
+          "State Bottle Retail_mean": 22.24287429943955
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1012300",
+          "Category Name": "IRISH WHISKIES",
+          "Vendor Name": "Pernod Ricard USA/Austin Nichols",
+          "count": 861,
+          "State Bottle Retail_sum": 27742.98,
+          "State Bottle Retail_mean": 32.221811846689896
+        },
+        {
+          "Store Name": "Hy-Vee Wine and Spirits #2",
+          "Category": "1011200",
+          "Category Name": "STRAIGHT BOURBON WHISKIES",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1326,
+          "State Bottle Retail_sum": 27701.43,
+          "State Bottle Retail_mean": 20.890972850678732
+        },
+        {
+          "Store Name": "Central City Liquor, Inc.",
+          "Category": "1012300",
+          "Category Name": "Single Malt Scotch",
+          "Vendor Name": "MOET HENNESSY USA",
+          "count": 437,
+          "State Bottle Retail_sum": 27687.97,
+          "State Bottle Retail_mean": 63.3591990846682
+        },
+        {
+          "Store Name": "Hy-Vee Food Store / Marshalltown",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1091,
+          "State Bottle Retail_sum": 27640.670000000002,
+          "State Bottle Retail_mean": 25.335169569202566
+        },
+        {
+          "Store Name": "Oasis",
+          "Category": "1052100",
+          "Category Name": "Imported Brandies",
+          "Vendor Name": "MOET HENNESSY USA",
+          "count": 1007,
+          "State Bottle Retail_sum": 27409.89,
+          "State Bottle Retail_mean": 27.2193545183714
+        },
+        {
+          "Store Name": "Sac Liquor Store",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 937,
+          "State Bottle Retail_sum": 27372.86,
+          "State Bottle Retail_mean": 29.213297758804696
+        },
+        {
+          "Store Name": "Lake Liquors Wine and Spirits",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 911,
+          "State Bottle Retail_sum": 27356.15,
+          "State Bottle Retail_mean": 30.028704720087816
+        },
+        {
+          "Store Name": "Hy-Vee #1044 / Burlington",
+          "Category": "1011200",
+          "Category Name": "STRAIGHT BOURBON WHISKIES",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1435,
+          "State Bottle Retail_sum": 27354.48,
+          "State Bottle Retail_mean": 19.062355400696863
+        },
+        {
+          "Store Name": "Lot-A-Spirits",
+          "Category": "1011400",
+          "Category Name": "Tennessee Whiskies",
+          "Vendor Name": "Brown Forman Corp.",
+          "count": 933,
+          "State Bottle Retail_sum": 27244.829999999998,
+          "State Bottle Retail_mean": 29.201318327974274
+        },
+        {
+          "Store Name": "Benz Distributing",
+          "Category": "1011200",
+          "Category Name": "STRAIGHT BOURBON WHISKIES",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1056,
+          "State Bottle Retail_sum": 27173.74,
+          "State Bottle Retail_mean": 25.732708333333335
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1022200",
+          "Category Name": "100% Agave Tequila",
+          "Vendor Name": "Patron Spirits Company",
+          "count": 487,
+          "State Bottle Retail_sum": 27166.76,
+          "State Bottle Retail_mean": 55.78390143737166
+        },
+        {
+          "Store Name": "Great Pastimes",
+          "Category": "1012100",
+          "Category Name": "CANADIAN WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 1120,
+          "State Bottle Retail_sum": 27115.920000000002,
+          "State Bottle Retail_mean": 24.210642857142858
+        },
+        {
+          "Store Name": "Hy-Vee Food Store #1 / Mason City",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1437,
+          "State Bottle Retail_sum": 27094.510000000002,
+          "State Bottle Retail_mean": 18.854913013221992
+        },
+        {
+          "Store Name": "Wilkie Liquors",
+          "Category": "1012100",
+          "Category Name": "CANADIAN WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 894,
+          "State Bottle Retail_sum": 27083.07,
+          "State Bottle Retail_mean": 30.29426174496644
+        },
+        {
+          "Store Name": "J D Spirits Liquor",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1168,
+          "State Bottle Retail_sum": 27059.57,
+          "State Bottle Retail_mean": 23.16744006849315
+        },
+        {
+          "Store Name": "Central City 2",
+          "Category": "1032200",
+          "Category Name": "Imported Flavored Vodka",
+          "Vendor Name": "PERNOD RICARD USA",
+          "count": 1328,
+          "State Bottle Retail_sum": 27042.219999999998,
+          "State Bottle Retail_mean": 20.363117469879516
+        },
+        {
+          "Store Name": "Okoboji Avenue Liquor",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1157,
+          "State Bottle Retail_sum": 26947.94,
+          "State Bottle Retail_mean": 23.291218668971478
+        },
+        {
+          "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+          "Category": "1012200",
+          "Category Name": "Scotch Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 624,
+          "State Bottle Retail_sum": 26898.63,
+          "State Bottle Retail_mean": 43.10677884615385
+        },
+        {
+          "Store Name": "Hy-Vee Wine and Spirits / Bettendorf",
+          "Category": "1012200",
+          "Category Name": "Scotch Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 771,
+          "State Bottle Retail_sum": 26759.6,
+          "State Bottle Retail_mean": 34.70765239948119
+        },
+        {
+          "Store Name": "Hy-Vee Food Store #4 / Sioux City",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1207,
+          "State Bottle Retail_sum": 26740.34,
+          "State Bottle Retail_mean": 22.154382767191382
+        },
+        {
+          "Store Name": "Hy-Vee Food Store / Muscatine",
+          "Category": "1011200",
+          "Category Name": "Straight Bourbon Whiskies",
+          "Vendor Name": "Jim Beam Brands",
+          "count": 1397,
+          "State Bottle Retail_sum": 26626.41,
+          "State Bottle Retail_mean": 19.05970651395848
+        },
+        {
+          "Store Name": "Hy-Vee Food Store / Marshalltown",
+          "Category": "1012100",
+          "Category Name": "CANADIAN WHISKIES",
+          "Vendor Name": "Diageo Americas",
+          "count": 1111,
+          "State Bottle Retail_sum": 26601.15,
+          "State Bottle Retail_mean": 23.943429342934294
+        },
+        {
+          "Store Name": "Hy-Vee Food Store #1 / Ames",
+          "Category": "1012100",
+          "Category Name": "Canadian Whiskies",
+          "Vendor Name": "DIAGEO AMERICAS",
+          "count": 1249,
+          "State Bottle Retail_sum": 26572.97,
+          "State Bottle Retail_mean": 21.275396317053644
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "19. Agrupe as vendas por 'Category Name' e me mostre o Top 5 de faturamento.",
+        "type": "group_by"
+      },
+      "created_at": "2026-03-16T17:38:12.102931+00:00Z"
+    },
+    {
+      "id": "2c43d23e",
+      "title": "Analysis: 25. Conte o número de vendas para cada dia da sema...",
+      "rows": 100,
+      "columns": [
+        "Invoice/Item Number",
+        "count",
+        "State Bottle Retail_sum",
+        "State Bottle Retail_mean"
+      ],
+      "sample": [
+        {
+          "Invoice/Item Number": "INV-01159600001",
+          "count": 1,
+          "State Bottle Retail_sum": 11520.0,
+          "State Bottle Retail_mean": 11520.0
+        },
+        {
+          "Invoice/Item Number": "S31355800001",
+          "count": 1,
+          "State Bottle Retail_sum": 9702.0,
+          "State Bottle Retail_mean": 9702.0
+        },
+        {
+          "Invoice/Item Number": "S32021500001",
+          "count": 1,
+          "State Bottle Retail_sum": 9702.0,
+          "State Bottle Retail_mean": 9702.0
+        },
+        {
+          "Invoice/Item Number": "S29392600001",
+          "count": 1,
+          "State Bottle Retail_sum": 9150.0,
+          "State Bottle Retail_mean": 9150.0
+        },
+        {
+          "Invoice/Item Number": "S29393500001",
+          "count": 1,
+          "State Bottle Retail_sum": 9150.0,
+          "State Bottle Retail_mean": 9150.0
+        },
+        {
+          "Invoice/Item Number": "S28648700001",
+          "count": 1,
+          "State Bottle Retail_sum": 9000.0,
+          "State Bottle Retail_mean": 9000.0
+        },
+        {
+          "Invoice/Item Number": "S28646300002",
+          "count": 1,
+          "State Bottle Retail_sum": 9000.0,
+          "State Bottle Retail_mean": 9000.0
+        },
+        {
+          "Invoice/Item Number": "S28645600001",
+          "count": 1,
+          "State Bottle Retail_sum": 9000.0,
+          "State Bottle Retail_mean": 9000.0
+        },
+        {
+          "Invoice/Item Number": "S28648800001",
+          "count": 1,
+          "State Bottle Retail_sum": 9000.0,
+          "State Bottle Retail_mean": 9000.0
+        },
+        {
+          "Invoice/Item Number": "S28647000001",
+          "count": 1,
+          "State Bottle Retail_sum": 8700.0,
+          "State Bottle Retail_mean": 8700.0
+        },
+        {
+          "Invoice/Item Number": "S28646300001",
+          "count": 1,
+          "State Bottle Retail_sum": 8700.0,
+          "State Bottle Retail_mean": 8700.0
+        },
+        {
+          "Invoice/Item Number": "S30686100001",
+          "count": 1,
+          "State Bottle Retail_sum": 8700.0,
+          "State Bottle Retail_mean": 8700.0
+        },
+        {
+          "Invoice/Item Number": "INV-01612700001",
+          "count": 1,
+          "State Bottle Retail_sum": 8700.0,
+          "State Bottle Retail_mean": 8700.0
+        },
+        {
+          "Invoice/Item Number": "S28777000001",
+          "count": 1,
+          "State Bottle Retail_sum": 8700.0,
+          "State Bottle Retail_mean": 8700.0
+        },
+        {
+          "Invoice/Item Number": "S22020100001",
+          "count": 1,
+          "State Bottle Retail_sum": 8700.0,
+          "State Bottle Retail_mean": 8700.0
+        },
+        {
+          "Invoice/Item Number": "S28920300001",
+          "count": 1,
+          "State Bottle Retail_sum": 8700.0,
+          "State Bottle Retail_mean": 8700.0
+        },
+        {
+          "Invoice/Item Number": "INV-01160300001",
+          "count": 1,
+          "State Bottle Retail_sum": 8700.0,
+          "State Bottle Retail_mean": 8700.0
+        },
+        {
+          "Invoice/Item Number": "S22085400001",
+          "count": 1,
+          "State Bottle Retail_sum": 8700.0,
+          "State Bottle Retail_mean": 8700.0
+        },
+        {
+          "Invoice/Item Number": "S31354800001",
+          "count": 1,
+          "State Bottle Retail_sum": 8250.0,
+          "State Bottle Retail_mean": 8250.0
+        },
+        {
+          "Invoice/Item Number": "INV-02047700001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01216200001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01264700001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01303700001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01335800001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01999200001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01219100001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01216100001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01235000001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01311300001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01331800001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01247600001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01287100001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01346500001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01289000001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01298500001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01232500001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01332700001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01334300001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01322000001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01268000001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01302000001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01277600001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01307100001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-02218700001",
+          "count": 1,
+          "State Bottle Retail_sum": 3374.96,
+          "State Bottle Retail_mean": 3374.96
+        },
+        {
+          "Invoice/Item Number": "INV-11482500001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-11455500001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-11426400001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-11532100001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-11427500001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-11529500001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-11461000001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-11437600001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-11544800001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-11488200001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-11468500001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-11504400001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-11502600001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-11507900001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-30191600004",
+          "count": 1,
+          "State Bottle Retail_sum": 2775.0,
+          "State Bottle Retail_mean": 2775.0
+        },
+        {
+          "Invoice/Item Number": "INV-19709500005",
+          "count": 1,
+          "State Bottle Retail_sum": 2623.68,
+          "State Bottle Retail_mean": 2623.68
+        },
+        {
+          "Invoice/Item Number": "INV-29521400001",
+          "count": 1,
+          "State Bottle Retail_sum": 2623.68,
+          "State Bottle Retail_mean": 2623.68
+        },
+        {
+          "Invoice/Item Number": "INV-27090600001",
+          "count": 1,
+          "State Bottle Retail_sum": 2623.68,
+          "State Bottle Retail_mean": 2623.68
+        },
+        {
+          "Invoice/Item Number": "INV-27327500001",
+          "count": 1,
+          "State Bottle Retail_sum": 2623.68,
+          "State Bottle Retail_mean": 2623.68
+        },
+        {
+          "Invoice/Item Number": "INV-29308100032",
+          "count": 1,
+          "State Bottle Retail_sum": 2623.68,
+          "State Bottle Retail_mean": 2623.68
+        },
+        {
+          "Invoice/Item Number": "INV-20622800005",
+          "count": 1,
+          "State Bottle Retail_sum": 2623.68,
+          "State Bottle Retail_mean": 2623.68
+        },
+        {
+          "Invoice/Item Number": "INV-22888400071",
+          "count": 1,
+          "State Bottle Retail_sum": 2623.68,
+          "State Bottle Retail_mean": 2623.68
+        },
+        {
+          "Invoice/Item Number": "INV-22530000007",
+          "count": 1,
+          "State Bottle Retail_sum": 2623.68,
+          "State Bottle Retail_mean": 2623.68
+        },
+        {
+          "Invoice/Item Number": "INV-28718000039",
+          "count": 1,
+          "State Bottle Retail_sum": 2623.68,
+          "State Bottle Retail_mean": 2623.68
+        },
+        {
+          "Invoice/Item Number": "INV-29166800002",
+          "count": 1,
+          "State Bottle Retail_sum": 2623.68,
+          "State Bottle Retail_mean": 2623.68
+        },
+        {
+          "Invoice/Item Number": "INV-29634600002",
+          "count": 1,
+          "State Bottle Retail_sum": 2623.68,
+          "State Bottle Retail_mean": 2623.68
+        },
+        {
+          "Invoice/Item Number": "INV-24029500001",
+          "count": 1,
+          "State Bottle Retail_sum": 2594.22,
+          "State Bottle Retail_mean": 2594.22
+        },
+        {
+          "Invoice/Item Number": "S17588400001",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.8,
+          "State Bottle Retail_mean": 2398.8
+        },
+        {
+          "Invoice/Item Number": "S17599500001",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.8,
+          "State Bottle Retail_mean": 2398.8
+        },
+        {
+          "Invoice/Item Number": "S17599600001",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.8,
+          "State Bottle Retail_mean": 2398.8
+        },
+        {
+          "Invoice/Item Number": "S17599700001",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.8,
+          "State Bottle Retail_mean": 2398.8
+        },
+        {
+          "Invoice/Item Number": "S17599300054",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.8,
+          "State Bottle Retail_mean": 2398.8
+        },
+        {
+          "Invoice/Item Number": "S17599100001",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.8,
+          "State Bottle Retail_mean": 2398.8
+        },
+        {
+          "Invoice/Item Number": "S17598700001",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.8,
+          "State Bottle Retail_mean": 2398.8
+        },
+        {
+          "Invoice/Item Number": "S17598900001",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.8,
+          "State Bottle Retail_mean": 2398.8
+        },
+        {
+          "Invoice/Item Number": "INV-10731700005",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-03606800003",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-10125300001",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-16944400013",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-10075800002",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-13182900057",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-06252700001",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-01576600003",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-14116400001",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-02120400001",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-02314800006",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-11253600003",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-04928100002",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-09635500001",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-01893200001",
+          "count": 1,
+          "State Bottle Retail_sum": 2362.49,
+          "State Bottle Retail_mean": 2362.49
+        },
+        {
+          "Invoice/Item Number": "S31692000002",
+          "count": 1,
+          "State Bottle Retail_sum": 2173.89,
+          "State Bottle Retail_mean": 2173.89
+        },
+        {
+          "Invoice/Item Number": "S25912500002",
+          "count": 1,
+          "State Bottle Retail_sum": 2173.89,
+          "State Bottle Retail_mean": 2173.89
+        },
+        {
+          "Invoice/Item Number": "S19051000001",
+          "count": 1,
+          "State Bottle Retail_sum": 2098.94,
+          "State Bottle Retail_mean": 2098.94
+        },
+        {
+          "Invoice/Item Number": "S24248500001",
+          "count": 1,
+          "State Bottle Retail_sum": 2098.94,
+          "State Bottle Retail_mean": 2098.94
+        },
+        {
+          "Invoice/Item Number": "S22434800001",
+          "count": 1,
+          "State Bottle Retail_sum": 2098.94,
+          "State Bottle Retail_mean": 2098.94
+        },
+        {
+          "Invoice/Item Number": "S25141000003",
+          "count": 1,
+          "State Bottle Retail_sum": 2098.94,
+          "State Bottle Retail_mean": 2098.94
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "25. Conte o número de vendas para cada dia da semana (segunda a domingo).",
+        "type": "group_by"
+      },
+      "created_at": "2026-03-16T17:41:03.982860+00:00Z"
+    },
+    {
+      "id": "85431e3a",
+      "title": "Analysis: 26. Filtre as vendas que ocorreram depois de 01/01...",
+      "rows": 100,
+      "columns": [
+        "Invoice/Item Number",
+        "count",
+        "State Bottle Retail_sum",
+        "State Bottle Retail_mean"
+      ],
+      "sample": [
+        {
+          "Invoice/Item Number": "INV-01159600001",
+          "count": 1,
+          "State Bottle Retail_sum": 11520.0,
+          "State Bottle Retail_mean": 11520.0
+        },
+        {
+          "Invoice/Item Number": "S31355800001",
+          "count": 1,
+          "State Bottle Retail_sum": 9702.0,
+          "State Bottle Retail_mean": 9702.0
+        },
+        {
+          "Invoice/Item Number": "S32021500001",
+          "count": 1,
+          "State Bottle Retail_sum": 9702.0,
+          "State Bottle Retail_mean": 9702.0
+        },
+        {
+          "Invoice/Item Number": "S29393500001",
+          "count": 1,
+          "State Bottle Retail_sum": 9150.0,
+          "State Bottle Retail_mean": 9150.0
+        },
+        {
+          "Invoice/Item Number": "S29392600001",
+          "count": 1,
+          "State Bottle Retail_sum": 9150.0,
+          "State Bottle Retail_mean": 9150.0
+        },
+        {
+          "Invoice/Item Number": "S28645600001",
+          "count": 1,
+          "State Bottle Retail_sum": 9000.0,
+          "State Bottle Retail_mean": 9000.0
+        },
+        {
+          "Invoice/Item Number": "S28646300002",
+          "count": 1,
+          "State Bottle Retail_sum": 9000.0,
+          "State Bottle Retail_mean": 9000.0
+        },
+        {
+          "Invoice/Item Number": "S28648800001",
+          "count": 1,
+          "State Bottle Retail_sum": 9000.0,
+          "State Bottle Retail_mean": 9000.0
+        },
+        {
+          "Invoice/Item Number": "S28648700001",
+          "count": 1,
+          "State Bottle Retail_sum": 9000.0,
+          "State Bottle Retail_mean": 9000.0
+        },
+        {
+          "Invoice/Item Number": "INV-01160300001",
+          "count": 1,
+          "State Bottle Retail_sum": 8700.0,
+          "State Bottle Retail_mean": 8700.0
+        },
+        {
+          "Invoice/Item Number": "S28920300001",
+          "count": 1,
+          "State Bottle Retail_sum": 8700.0,
+          "State Bottle Retail_mean": 8700.0
+        },
+        {
+          "Invoice/Item Number": "S30686100001",
+          "count": 1,
+          "State Bottle Retail_sum": 8700.0,
+          "State Bottle Retail_mean": 8700.0
+        },
+        {
+          "Invoice/Item Number": "S22085400001",
+          "count": 1,
+          "State Bottle Retail_sum": 8700.0,
+          "State Bottle Retail_mean": 8700.0
+        },
+        {
+          "Invoice/Item Number": "S22020100001",
+          "count": 1,
+          "State Bottle Retail_sum": 8700.0,
+          "State Bottle Retail_mean": 8700.0
+        },
+        {
+          "Invoice/Item Number": "S28647000001",
+          "count": 1,
+          "State Bottle Retail_sum": 8700.0,
+          "State Bottle Retail_mean": 8700.0
+        },
+        {
+          "Invoice/Item Number": "S28646300001",
+          "count": 1,
+          "State Bottle Retail_sum": 8700.0,
+          "State Bottle Retail_mean": 8700.0
+        },
+        {
+          "Invoice/Item Number": "INV-01612700001",
+          "count": 1,
+          "State Bottle Retail_sum": 8700.0,
+          "State Bottle Retail_mean": 8700.0
+        },
+        {
+          "Invoice/Item Number": "S28777000001",
+          "count": 1,
+          "State Bottle Retail_sum": 8700.0,
+          "State Bottle Retail_mean": 8700.0
+        },
+        {
+          "Invoice/Item Number": "S31354800001",
+          "count": 1,
+          "State Bottle Retail_sum": 8250.0,
+          "State Bottle Retail_mean": 8250.0
+        },
+        {
+          "Invoice/Item Number": "INV-01277600001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01216100001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01999200001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01302000001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01232500001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01247600001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01268000001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01311300001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01298500001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01219100001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01322000001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01303700001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01331800001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01264700001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01334300001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01307100001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01332700001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01335800001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01346500001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01289000001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01235000001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01216200001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-01287100001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-02047700001",
+          "count": 1,
+          "State Bottle Retail_sum": 5305.95,
+          "State Bottle Retail_mean": 5305.95
+        },
+        {
+          "Invoice/Item Number": "INV-02218700001",
+          "count": 1,
+          "State Bottle Retail_sum": 3374.96,
+          "State Bottle Retail_mean": 3374.96
+        },
+        {
+          "Invoice/Item Number": "INV-11482500001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-11427500001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-11468500001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-11504400001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-11502600001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-11532100001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-11426400001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-11437600001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-11529500001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-11455500001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-11461000001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-11507900001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-11488200001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-11544800001",
+          "count": 1,
+          "State Bottle Retail_sum": 2806.8,
+          "State Bottle Retail_mean": 2806.8
+        },
+        {
+          "Invoice/Item Number": "INV-30191600004",
+          "count": 1,
+          "State Bottle Retail_sum": 2775.0,
+          "State Bottle Retail_mean": 2775.0
+        },
+        {
+          "Invoice/Item Number": "INV-29521400001",
+          "count": 1,
+          "State Bottle Retail_sum": 2623.68,
+          "State Bottle Retail_mean": 2623.68
+        },
+        {
+          "Invoice/Item Number": "INV-22530000007",
+          "count": 1,
+          "State Bottle Retail_sum": 2623.68,
+          "State Bottle Retail_mean": 2623.68
+        },
+        {
+          "Invoice/Item Number": "INV-22888400071",
+          "count": 1,
+          "State Bottle Retail_sum": 2623.68,
+          "State Bottle Retail_mean": 2623.68
+        },
+        {
+          "Invoice/Item Number": "INV-29634600002",
+          "count": 1,
+          "State Bottle Retail_sum": 2623.68,
+          "State Bottle Retail_mean": 2623.68
+        },
+        {
+          "Invoice/Item Number": "INV-28718000039",
+          "count": 1,
+          "State Bottle Retail_sum": 2623.68,
+          "State Bottle Retail_mean": 2623.68
+        },
+        {
+          "Invoice/Item Number": "INV-27090600001",
+          "count": 1,
+          "State Bottle Retail_sum": 2623.68,
+          "State Bottle Retail_mean": 2623.68
+        },
+        {
+          "Invoice/Item Number": "INV-27327500001",
+          "count": 1,
+          "State Bottle Retail_sum": 2623.68,
+          "State Bottle Retail_mean": 2623.68
+        },
+        {
+          "Invoice/Item Number": "INV-29308100032",
+          "count": 1,
+          "State Bottle Retail_sum": 2623.68,
+          "State Bottle Retail_mean": 2623.68
+        },
+        {
+          "Invoice/Item Number": "INV-19709500005",
+          "count": 1,
+          "State Bottle Retail_sum": 2623.68,
+          "State Bottle Retail_mean": 2623.68
+        },
+        {
+          "Invoice/Item Number": "INV-20622800005",
+          "count": 1,
+          "State Bottle Retail_sum": 2623.68,
+          "State Bottle Retail_mean": 2623.68
+        },
+        {
+          "Invoice/Item Number": "INV-29166800002",
+          "count": 1,
+          "State Bottle Retail_sum": 2623.68,
+          "State Bottle Retail_mean": 2623.68
+        },
+        {
+          "Invoice/Item Number": "INV-24029500001",
+          "count": 1,
+          "State Bottle Retail_sum": 2594.22,
+          "State Bottle Retail_mean": 2594.22
+        },
+        {
+          "Invoice/Item Number": "S17598700001",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.8,
+          "State Bottle Retail_mean": 2398.8
+        },
+        {
+          "Invoice/Item Number": "S17599500001",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.8,
+          "State Bottle Retail_mean": 2398.8
+        },
+        {
+          "Invoice/Item Number": "S17599600001",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.8,
+          "State Bottle Retail_mean": 2398.8
+        },
+        {
+          "Invoice/Item Number": "S17588400001",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.8,
+          "State Bottle Retail_mean": 2398.8
+        },
+        {
+          "Invoice/Item Number": "S17599700001",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.8,
+          "State Bottle Retail_mean": 2398.8
+        },
+        {
+          "Invoice/Item Number": "S17599100001",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.8,
+          "State Bottle Retail_mean": 2398.8
+        },
+        {
+          "Invoice/Item Number": "S17598900001",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.8,
+          "State Bottle Retail_mean": 2398.8
+        },
+        {
+          "Invoice/Item Number": "S17599300054",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.8,
+          "State Bottle Retail_mean": 2398.8
+        },
+        {
+          "Invoice/Item Number": "INV-02314800006",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-03606800003",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-06252700001",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-04928100002",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-10125300001",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-10731700005",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-10075800002",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-02120400001",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-16944400013",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-09635500001",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-14116400001",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-11253600003",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-13182900057",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-01576600003",
+          "count": 1,
+          "State Bottle Retail_sum": 2398.79,
+          "State Bottle Retail_mean": 2398.79
+        },
+        {
+          "Invoice/Item Number": "INV-01893200001",
+          "count": 1,
+          "State Bottle Retail_sum": 2362.49,
+          "State Bottle Retail_mean": 2362.49
+        },
+        {
+          "Invoice/Item Number": "S31692000002",
+          "count": 1,
+          "State Bottle Retail_sum": 2173.89,
+          "State Bottle Retail_mean": 2173.89
+        },
+        {
+          "Invoice/Item Number": "S25912500002",
+          "count": 1,
+          "State Bottle Retail_sum": 2173.89,
+          "State Bottle Retail_mean": 2173.89
+        },
+        {
+          "Invoice/Item Number": "S19051000001",
+          "count": 1,
+          "State Bottle Retail_sum": 2098.94,
+          "State Bottle Retail_mean": 2098.94
+        },
+        {
+          "Invoice/Item Number": "S25141000003",
+          "count": 1,
+          "State Bottle Retail_sum": 2098.94,
+          "State Bottle Retail_mean": 2098.94
+        },
+        {
+          "Invoice/Item Number": "S24248500001",
+          "count": 1,
+          "State Bottle Retail_sum": 2098.94,
+          "State Bottle Retail_mean": 2098.94
+        },
+        {
+          "Invoice/Item Number": "S22434800001",
+          "count": 1,
+          "State Bottle Retail_sum": 2098.94,
+          "State Bottle Retail_mean": 2098.94
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "26. Filtre as vendas que ocorreram depois de 01/01/2015 e grupe por categoria, sumando o número de garrafas.",
+        "type": "group_by"
+      },
+      "created_at": "2026-03-16T17:41:30.586679+00:00Z"
+    },
+    {
+      "id": "36278580",
+      "title": "Analysis: Identifique os Top 3 fornecedores que têm o maior ...",
+      "rows": 3,
+      "columns": [
+        "Invoice/Item Number",
+        "Date",
+        "Store Number",
+        "Store Name",
+        "Address",
+        "City",
+        "Zip Code",
+        "Store Location",
+        "County Number",
+        "County",
+        "Category",
+        "Category Name",
+        "Vendor Number",
+        "Vendor Name",
+        "Item Number",
+        "Item Description",
+        "Pack",
+        "Bottle Volume (ml)",
+        "State Bottle Cost",
+        "State Bottle Retail",
+        "Bottles Sold",
+        "Sale (Dollars)",
+        "Volume Sold (Liters)",
+        "Volume Sold (Gallons)",
+        "ano",
+        "mes_ano",
+        "dia_semana_idx"
+      ],
+      "sample": [
+        {
+          "Invoice/Item Number": "S26924300001",
+          "Date": 

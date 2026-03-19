@@ -1,0 +1,121 @@
+--- Testing Query 1: 'Qual a média da taxa de rejeição (BounceRates) geral?' ---
+
+[RESPONSE 1]
+ANALYSIS_DATA:
+{
+  "query_type": "aggregation",
+  "operation": "mean",
+  "results": {
+    "Administrative_mean": 2.780928780928781,
+    "Administrative_Duration_mean": 117.85996184885838,
+    "Informational_Duration_mean": 74.69524397096124,
+    "ProductRelated_mean": 37.60918560918561,
+    "ProductRelated_Duration_mean": 1496.7996973450472,
+    "BounceRates_mean": 0.031455091523439505,
+    "PageValues_mean": 8.854572362587458,
+    "SpecialDay_mean": 0.11264953776103472
+  },
+  "columns_analyzed": [
+    "Administrative",
+    "Administrative_Duration",
+    "Informational_Duration",
+    "ProductRelated",
+    "ProductRelated_Duration",
+    "BounceRates",
+    "PageValues",
+    "SpecialDay"
+  ],
+  "timestamp": "2026-03-18T16:34:11.416086",
+  "original_query": "Qual a média da taxa de rejeição (BounceRates) geral?"
+}
+
+---
+
+**Conclusão Principal:** A taxa de rejeição geral (BounceRates_mean) é 3.15%.
+
+**Detalhes:** O valor mais alto da tabela, 1496.80, corresponde à média da duração relacionada a Produtos (ProductRelated_Duration_mean), enquanto o menor valor, 3.15%, está associado à taxa de rejeição geral (BounceRates_mean).
+
+⚠️ **Semantic Note:** Some columns have ambiguous classifications:
+- Column `Informational` (CATEGORY): Numeric column with very low cardinality (6 uniques).
+- Column `OperatingSystems` (CATEGORY): Numeric column with very low cardinality (5 uniques).
+- Column `Browser` (CATEGORY): Numeric column with very low cardinality (7 uniques).
+- Column `Region` (CATEGORY): Numeric column with very low cardinality (9 uniques).
+- Column `Month` (TEXT): Column name suggests DATE but string values don't match date patterns.
+
+
+<details><summary>🔍 Código Fonte Executado</summary>
+
+```json
+// Query Engine Interno
+{}
+```
+
+</details>
+
+--- Testing Query 2: 'Quantas visitas foram registradas para cada sistema operacional (OperatingSystems)?' ---
+
+[RESPONSE 2]
+ANALYSIS_DATA:
+{
+  "data": [
+    {
+      "OperatingSystems": "2",
+      "Visits": 413874
+    },
+    {
+      "OperatingSystems": "3",
+      "Visits": 274040
+    },
+    {
+      "OperatingSystems": "1",
+      "Visits": 246194
+    },
+    {
+      "OperatingSystems": "4",
+      "Visits": 61155
+    },
+    {
+      "OperatingSystems": "5",
+      "Visits": 4616
+    },
+    {
+      "OperatingSystems": "6",
+      "Visits": 120
+    }
+  ],
+  "columns": [
+    "OperatingSystems",
+    "Visits"
+  ]
+}
+
+---
+
+**Conclusão Principal**: Para cada sistema operacional (OperatingSystems), foram registradas as seguintes visitas:
+
+- Sistema Operacional 2: 413,874 visitas
+- Sistema Operacional 3: 274,040 visitas
+- Sistema Operacional 1: 246,194 visitas
+- Sistema Operacional 4: 61,155 visitas
+- Sistema Operacional 5: 4,616 visitas
+- Sistema Operacional 6: 120 visitas
+
+**Detalhes**: A tabela apresenta as visitas totais para cada sistema operacional, onde o sistema operacional com mais visitas é "OperatingSystems=2" com 413,874 visitas.
+
+⚠️ **Semantic Note:** Some columns have ambiguous classifications:
+- Column `Informational` (CATEGORY): Numeric column with very low cardinality (6 uniques).
+- Column `OperatingSystems` (CATEGORY): Numeric column with very low cardinality (5 uniques).
+- Column `Browser` (CATEGORY): Numeric column with very low cardinality (7 uniques).
+- Column `Region` (CATEGORY): Numeric column with very low cardinality (9 uniques).
+- Column `Month` (TEXT): Column name suggests DATE but string values don't match date patterns.
+
+
+<details><summary>🔍 Código Fonte Executado</summary>
+
+```sql
+SELECT OperatingSystems, COUNT(*) AS Visits
+FROM data
+GROUP BY OperatingSystems;
+```
+
+</details>

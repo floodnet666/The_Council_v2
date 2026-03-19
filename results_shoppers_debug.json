@@ -1,0 +1,417 @@
+[
+  {
+    "query": "Qual o total do valor de PageValues?",
+    "type": "aggregation",
+    "council_result": {
+      "query_type": "aggregation",
+      "operation": "sum",
+      "results": {
+        "Administrative_sum": 2780926,
+        "Administrative_Duration_sum": 117859843.98889652,
+        "Informational_sum": 782442,
+        "Informational_Duration_sum": 74695169.27571727,
+        "ProductRelated_sum": 37609148,
+        "ProductRelated_Duration_sum": 1496798200.5453494,
+        "BounceRates_sum": 31455.060068347986,
+        "ExitRates_sum": 47371.619065902894,
+        "PageValues_sum": 8854563.508015096,
+        "SpecialDay_sum": 112649.42511149692,
+        "OperatingSystems_sum": 2164482,
+        "Browser_sum": 2562503,
+        "Region_sum": 3386569,
+        "TrafficType_sum": 4584331
+      },
+      "columns_analyzed": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType"
+      ],
+      "timestamp": "2026-03-17T15:09:42.531491",
+      "original_query": "Qual o total do valor de PageValues?"
+    },
+    "ground_truth": 8854563.508015098,
+    "match": true
+  },
+  {
+    "query": "Qual a soma de Administrative_Duration?",
+    "type": "aggregation",
+    "council_result": {
+      "query_type": "aggregation",
+      "operation": "sum",
+      "results": {
+        "Administrative_sum": 2780926,
+        "Administrative_Duration_sum": 117859843.98889652,
+        "Informational_sum": 782442,
+        "Informational_Duration_sum": 74695169.27571727,
+        "ProductRelated_sum": 37609148,
+        "ProductRelated_Duration_sum": 1496798200.5453494,
+        "BounceRates_sum": 31455.060068347986,
+        "ExitRates_sum": 47371.6190659029,
+        "PageValues_sum": 8854563.508015096,
+        "SpecialDay_sum": 112649.42511149692,
+        "OperatingSystems_sum": 2164482,
+        "Browser_sum": 2562503,
+        "Region_sum": 3386569,
+        "TrafficType_sum": 4584331
+      },
+      "columns_analyzed": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType"
+      ],
+      "timestamp": "2026-03-17T15:09:42.537518",
+      "original_query": "Qual a soma de Administrative_Duration?"
+    },
+    "ground_truth": 117859843.98889641,
+    "match": true
+  },
+  {
+    "query": "M\u00e9dia de ProductRelated_Duration por tipo de visitante (VisitorType)",
+    "type": "group_by",
+    "council_result": {
+      "query_type": "group_by",
+      "group_columns": [
+        "col(\"VisitorType\")"
+      ],
+      "target_column": "ProductRelated_Duration",
+      "results": [
+        {
+          "VisitorType": "Returning_Visitor",
+          "count": 855666,
+          "ProductRelated_Duration_sum": 1270024038.34811,
+          "ProductRelated_Duration_mean": 1484.2520777360676
+        },
+        {
+          "VisitorType": "New_Visitor",
+          "count": 137351,
+          "ProductRelated_Duration_sum": 216148306.08906692,
+          "ProductRelated_Duration_mean": 1573.6929915986555
+        },
+        {
+          "VisitorType": "Other",
+          "count": 6982,
+          "ProductRelated_Duration_sum": 10625856.108176367,
+          "ProductRelated_Duration_mean": 1521.892882866853
+        }
+      ],
+      "timestamp": "2026-03-17T15:09:42.556854",
+      "original_query": "M\u00e9dia de ProductRelated_Duration por tipo de visitante (VisitorType)"
+    },
+    "ground_truth": [
+      {
+        "VisitorType": "New_Visitor",
+        "ProductRelated_Duration": 1573.6929915986548
+      },
+      {
+        "VisitorType": "Other",
+        "ProductRelated_Duration": 1521.8928828668536
+      },
+      {
+        "VisitorType": "Returning_Visitor",
+        "ProductRelated_Duration": 1484.2520777360705
+      }
+    ],
+    "match": true
+  },
+  {
+    "query": "Top 5 maiores ProductRelated_Duration",
+    "type": "top_n",
+    "council_result": {
+      "query_type": "top_n",
+      "n": 5,
+      "sort_column": "ProductRelated_Duration",
+      "descending": true,
+      "results": [
+        {
+          "Administrative": 11,
+          "Administrative_Duration": 674.5821944512917,
+          "Informational": 4,
+          "Informational_Duration": 374.9923579116504,
+          "ProductRelated": 264,
+          "ProductRelated_Duration": 12125.67389653455,
+          "BounceRates": 0.011813776265987756,
+          "ExitRates": 0.03250138876447239,
+          "PageValues": 0.0,
+          "SpecialDay": 0.0723856527565421,
+          "OperatingSystems": 4,
+          "Browser": 3,
+          "Region": 4,
+          "TrafficType": 1,
+          "Month": "Mar",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 7,
+          "Administrative_Duration": 260.6340950373193,
+          "Informational": 4,
+          "Informational_Duration": 351.8448708127179,
+          "ProductRelated": 228,
+          "ProductRelated_Duration": 11162.269611522479,
+          "BounceRates": 0.001033683936583511,
+          "ExitRates": 0.012798658613613408,
+          "PageValues": 38.75980339809633,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 2,
+          "Region": 5,
+          "TrafficType": 9,
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 11,
+          "Administrative_Duration": 529.6449523215283,
+          "Informational": 6,
+          "Informational_Duration": 442.67081612389654,
+          "ProductRelated": 264,
+          "ProductRelated_Duration": 11076.50839364094,
+          "BounceRates": 0.013976865005779248,
+          "ExitRates": 0.022393612699598803,
+          "PageValues": 0.0,
+          "SpecialDay": 0.034242781581120194,
+          "OperatingSystems": 1,
+          "Browser": 4,
+          "Region": 1,
+          "TrafficType": 2,
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 2,
+          "Administrative_Duration": 164.31738884795067,
+          "Informational": 3,
+          "Informational_Duration": 253.9354887523052,
+          "ProductRelated": 260,
+          "ProductRelated_Duration": 10948.7028866221,
+          "BounceRates": 0.0,
+          "ExitRates": 0.0,
+          "PageValues": 36.18260325512456,
+          "SpecialDay": 0.14770811042919757,
+          "OperatingSystems": 3,
+          "Browser": 1,
+          "Region": 8,
+          "TrafficType": 1,
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 10,
+          "Administrative_Duration": 238.3528551817157,
+          "Informational": 1,
+          "Informational_Duration": 174.08173758135416,
+          "ProductRelated": 250,
+          "ProductRelated_Duration": 10849.290798535105,
+          "BounceRates": 0.0,
+          "ExitRates": 0.009650704694945679,
+          "PageValues": 0.0,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 4,
+          "Region": 3,
+          "TrafficType": 9,
+          "Month": "Sep",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        }
+      ],
+      "timestamp": "2026-03-17T15:09:42.642727",
+      "original_query": "Top 5 maiores ProductRelated_Duration"
+    },
+    "ground_truth": [
+      {
+        "ProductRelated_Duration": 12125.67389653455,
+        "PageValues": 0.0
+      },
+      {
+        "ProductRelated_Duration": 11162.269611522479,
+        "PageValues": 38.75980339809633
+      },
+      {
+        "ProductRelated_Duration": 11076.50839364094,
+        "PageValues": 0.0
+      },
+      {
+        "ProductRelated_Duration": 10948.7028866221,
+        "PageValues": 36.18260325512456
+      },
+      {
+        "ProductRelated_Duration": 10849.290798535105,
+        "PageValues": 0.0
+      }
+    ],
+    "match": true
+  },
+  {
+    "query": "Resumo estat\u00edstico das colunas",
+    "type": "describe",
+    "council_result": {
+      "query_type": "describe",
+      "row_count": 999999,
+      "column_count": 18,
+      "columns": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "Month",
+        "VisitorType",
+        "Weekend",
+        "Revenue"
+      ],
+      "dtypes": {
+        "Administrative": "Int64",
+        "Administrative_Duration": "Float64",
+        "Informational": "Int64",
+        "Informational_Duration": "Float64",
+        "ProductRelated": "Int64",
+        "ProductRelated_Duration": "Float64",
+        "BounceRates": "Float64",
+        "ExitRates": "Float64",
+        "PageValues": "Float64",
+        "SpecialDay": "Float64",
+        "OperatingSystems": "Int64",
+        "Browser": "Int64",
+        "Region": "Int64",
+        "TrafficType": "Int64",
+        "Month": "String",
+        "VisitorType": "String",
+        "Weekend": "Boolean",
+        "Revenue": "Boolean"
+      },
+      "numeric_stats": {
+        "Administrative": {
+          "mean": 2.780928780928781,
+          "min": 0,
+          "max": 20,
+          "null_count": 0
+        },
+        "Administrative_Duration": {
+          "mean": 117.85996184885826,
+          "min": 0.0,
+          "max": 1179.0882094128174,
+          "null_count": 0
+        },
+        "Informational": {
+          "mean": 0.7824427824427824,
+          "min": 0,
+          "max": 7,
+          "null_count": 0
+        },
+        "Informational_Duration": {
+          "mean": 74.69524397096126,
+          "min": 0.0,
+          "max": 875.3371469895809,
+          "null_count": 0
+        },
+        "ProductRelated": {
+          "mean": 37.60918560918561,
+          "min": 0,
+          "max": 299,
+          "null_count": 0
+        },
+        "ProductRelated_Duration": {
+          "mean": 1496.7996973450468,
+          "min": 0.0,
+          "max": 12125.67389653455,
+          "null_count": 0
+        },
+        "BounceRates": {
+          "mean": 0.031455091523439525,
+          "min": 0.0,
+          "max": 0.2,
+          "null_count": 0
+        },
+        "ExitRates": {
+          "mean": 0.04737166643756936,
+          "min": 0.0,
+          "max": 0.2,
+          "null_count": 0
+        },
+        "PageValues": {
+          "mean": 8.854572362587461,
+          "min": 0.0,
+          "max": 191.9076347972832,
+          "null_count": 0
+        },
+        "SpecialDay": {
+          "mean": 0.1126495377610346,
+          "min": 0.0,
+          "max": 1.0,
+          "null_count": 0
+        },
+        "OperatingSystems": {
+          "mean": 2.1644841644841644,
+          "min": 1,
+          "max": 6,
+          "null_count": 0
+        },
+        "Browser": {
+          "mean": 2.5625055625055624,
+          "min": 1,
+          "max": 11,
+          "null_count": 0
+        },
+        "Region": {
+          "mean": 3.3865723865723867,
+          "min": 1,
+          "max": 9,
+          "null_count": 0
+        },
+        "TrafficType": {
+          "mean": 4.584335584335585,
+          "min": 1,
+          "max": 20,
+          "null_count": 0
+        }
+      },
+      "timestamp": "2026-03-17T15:09:42.766216",
+      "original_query": "Resumo estat\u00edstico das colunas"
+    },
+    "ground_truth": {
+      "row_count": 999999,
+      "PageValues_mean": 8.854572362587461
+    },
+    "match": true
+  }
+]

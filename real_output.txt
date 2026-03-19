@@ -1,0 +1,80 @@
+===================================================================== test session starts ======================================================================
+platform win32 -- Python 3.10.18, pytest-9.0.2, pluggy-1.6.0
+rootdir: E:\The_Council_v2\backend
+configfile: pyproject.toml
+plugins: anyio-4.12.1
+collected 2 items
+
+backend\tests\test_api_e2e_true.py .F                                                                                                                     [100%]
+
+=========================================================================== FAILURES ===========================================================================
+_______________________________________________________ test_analyst_fluid_response_and_data_separation ________________________________________________________
+
+client = <starlette.testclient.TestClient object at 0x00000232E20767D0>
+
+    def test_analyst_fluid_response_and_data_separation(client):
+        """
+        Tests the True E2E Contract for the False Positive Paradox.
+        Verifies that the LLM explanation in 'response' does not contain raw JSON,
+        and the deterministic data is isolated in 'visual_data'.
+        """
+        payload = {
+            "message": "Quais são as 3 cidades com mais garrafas vendidas?",
+            "session_id": "test_e2e_true_01",
+            "file_path": "uploads/Liquor_Sales.csv"
+        }
+    
+        response = client.post("/chat", json=payload)
+        assert response.status_code == 200, f"Error: {response.text}"
+    
+        data = response.json()
+>       assert data["status"] == "success"
+E       AssertionError: assert 'error' == 'success'
+E         
+E         - success
+E         + error
+
+backend\tests\test_api_e2e_true.py:40: AssertionError
+--------------------------------------------------------------------- Captured stdout call ---------------------------------------------------------------------
+[32m2026-03-19 12:48:19[0m | [1mINFO    [0m | [36mSYSTEM[0m - [1mProcessing request: Quais são as 3 cidades com mais garrafas vendidas?...[0m
+[32m2026-03-19 12:48:19[0m | [1mINFO    [0m | [36mSYSTEM[0m - [1mStarting graph execution[0m
+[32m2026-03-19 12:48:19[0m | [1mINFO    [0m | [36mSYSTEM[0m - [1mRouting message: Quais são as 3 cidades com mais garrafas vendidas?...[0m
+[32m2026-03-19 12:48:19[0m | [1mINFO    [0m | [36mSYSTEM[0m - [1mRouter decision: analyst | Reasoning: Input content matched analyst specialized capabilities.[0m
+[32m2026-03-19 12:48:19[0m | [1mINFO    [0m | [36mSYSTEM[0m - [1mExecuting Analyst Agent (Deterministic AST Mode)[0m
+[32m2026-03-19 12:48:19[0m | [1mINFO    [0m | [36mSYSTEM[0m - [1mLoading data from: uploads/Liquor_Sales.csv (0.00 MB)[0m
+[32m2026-03-19 12:48:19[0m | [31m[1mERROR   [0m | [36mSYSTEM[0m - [31m[1mError loading data: Impossibile trovare il file specificato. (os error 2): uploads/Liquor_Sales.csv[0m
+[32m2026-03-19 12:48:19[0m | [1mINFO    [0m | [36mSYSTEM[0m - [1mRunning Reflection on Analyst output...[0m
+[32m2026-03-19 12:48:19[0m | [1mINFO    [0m | [36mSYSTEM[0m - [1mReflection Passed: Analyst response is clean and human-like.[0m
+[32m2026-03-19 12:48:19[0m | [31m[1mERROR   [0m | [36mSYSTEM[0m - [31m[1mError processing chat. State: {'messages': [HumanMessage(content='Quais são as 3 cidades com mais garrafas vendidas?')], 'language': 'en', 'active_file': 'uploads/Liquor_Sales.csv'} | Error: Object of type HumanMessage is not JSON serializable[0m
+------------------------------------------------------------------- Captured stdout teardown -------------------------------------------------------------------
+[32m2026-03-19 12:48:19[0m | [1mINFO    [0m | [36mSYSTEM[0m - [1mShutting down...[0m
+======================================================================= warnings summary =======================================================================
+.venv\lib\site-packages\_pytest\config\__init__.py:1428
+  E:\The_Council_v2\.venv\lib\site-packages\_pytest\config\__init__.py:1428: PytestConfigWarning: Unknown config option: asyncio_mode
+  
+    self._warn_or_fail_if_strict(f"Unknown config option: {key}\n")
+
+<frozen importlib._bootstrap>:241
+  <frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+
+<frozen importlib._bootstrap>:241
+  <frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+
+<frozen importlib._bootstrap>:241
+  <frozen importlib._bootstrap>:241: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=================================================================== short test summary info ====================================================================
+FAILED backend\tests\test_api_e2e_true.py::test_analyst_fluid_response_and_data_separation - AssertionError: assert 'error' == 'success'
+=========================================================== 1 failed, 1 passed, 4 warnings in 4.56s ============================================================
+
+
+--- STDERR ---
+
+Exception while exporting Span.
+Traceback (most recent call last):
+  File "E:\The_Council_v2\.venv\lib\site-packages\opentelemetry\sdk\_shared_internal\__init__.py", line 181, in _export
+    self._exporter.export(
+  File "E:\The_Council_v2\.venv\lib\site-packages\opentelemetry\sdk\trace\export\__init__.py", line 313, in export
+    self.out.write(self.formatter(span))
+ValueError: I/O operation on closed file.

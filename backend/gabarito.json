@@ -1,0 +1,6336 @@
+{
+  "1": 19666763,
+  "2": {
+    "min": "2012-01-03",
+    "max": "2020-09-30"
+  },
+  "3": 2652215869.75,
+  "4": [
+    "Casey's General Store #1316 / Milfor",
+    "Hy-Vee Dollar Fresh - Toledo",
+    "Hy-Vee / Waverly",
+    "Casey's General Store #2551 / Woodward",
+    "Ehlinger's Vinton Express"
+  ],
+  "5": {
+    "Address": "1013 Main",
+    "City": "Keokuk"
+  },
+  "6": 202,
+  "7": 195358292.44,
+  "8": 179554172.32999998,
+  "9": [
+    {
+      "Invoice/Item Number": "S24127700024",
+      "Date": "2015-02-19",
+      "Store Number": 3678,
+      "Store Name": "Smoke Shop, The",
+      "Address": "1918 SE 14TH ST",
+      "City": "DES MOINES",
+      "Zip Code": "50320",
+      "Store Location": "POINT (-93.597011 41.570844)",
+      "County Number": 77,
+      "County": "Polk",
+      "Category": 1031200,
+      "Category Name": "VODKA FLAVORED",
+      "Vendor Number": 380,
+      "Vendor Name": "Phillips Beverage Company",
+      "Item Number": 41783,
+      "Item Description": "Uv Blue Raspberry Vodka Mini",
+      "Pack": 6,
+      "Bottle Volume (ml)": 500,
+      "State Bottle Cost": 4.89,
+      "State Bottle Retail": 7.34,
+      "Bottles Sold": 2,
+      "Sale (Dollars)": 14.68,
+      "Volume Sold (Liters)": 1.0,
+      "Volume Sold (Gallons)": 0.26
+    },
+    {
+      "Invoice/Item Number": "S15066200002",
+      "Date": "2013-10-10",
+      "Store Number": 2633,
+      "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+      "Address": "3221 SE 14TH ST",
+      "City": "DES MOINES",
+      "Zip Code": "50320",
+      "Store Location": "POINT (-93.596754 41.554101)",
+      "County Number": 77,
+      "County": "Polk",
+      "Category": 1082900,
+      "Category Name": "MISC. IMPORTED CORDIALS & LIQUEURS",
+      "Vendor Number": 305,
+      "Vendor Name": "MHW Ltd",
+      "Item Number": 904969,
+      "Item Description": "Sabe Premiom Sake Double Barrel",
+      "Pack": 6,
+      "Bottle Volume (ml)": 750,
+      "State Bottle Cost": 14.99,
+      "State Bottle Retail": 22.49,
+      "Bottles Sold": 6,
+      "Sale (Dollars)": 134.94,
+      "Volume Sold (Liters)": 4.5,
+      "Volume Sold (Gallons)": 1.19
+    },
+    {
+      "Invoice/Item Number": "S19323500030",
+      "Date": "2014-06-03",
+      "Store Number": 2607,
+      "Store Name": "Hy-Vee Wine and Spirits / Shenandoah",
+      "Address": "520 SO FREMONT",
+      "City": "SHENANDOAH",
+      "Zip Code": "51601",
+      "Store Location": "POINT (-95.385111 40.761736)",
+      "County Number": 73,
+      "County": "Page",
+      "Category": 1062200,
+      "Category Name": "PUERTO RICO & VIRGIN ISLANDS RUM",
+      "Vendor Number": 434,
+      "Vendor Name": "Luxco-St Louis",
+      "Item Number": 45277,
+      "Item Description": "Paramount White Rum",
+      "Pack": 12,
+      "Bottle Volume (ml)": 1000,
+      "State Bottle Cost": 4.34,
+      "State Bottle Retail": 6.51,
+      "Bottles Sold": 12,
+      "Sale (Dollars)": 78.12,
+      "Volume Sold (Liters)": 12.0,
+      "Volume Sold (Gallons)": 3.17
+    },
+    {
+      "Invoice/Item Number": "S23334500013",
+      "Date": "2015-01-06",
+      "Store Number": 4810,
+      "Store Name": "Kum & Go #518 / Ankeny",
+      "Address": "3603 NE OTTERVIEW CIRCLE",
+      "City": "ANKENY",
+      "Zip Code": "50021",
+      "Store Location": "POINT (-93.572458 41.760989)",
+      "County Number": 77,
+      "County": "Polk",
+      "Category": 1062200,
+      "Category Name": "PUERTO RICO & VIRGIN ISLANDS RUM",
+      "Vendor Number": 35,
+      "Vendor Name": "Bacardi U.S.A., Inc.",
+      "Item Number": 43121,
+      "Item Description": "Bacardi Superior Rum Mini",
+      "Pack": 12,
+      "Bottle Volume (ml)": 500,
+      "State Bottle Cost": 5.54,
+      "State Bottle Retail": 8.31,
+      "Bottles Sold": 1,
+      "Sale (Dollars)": 8.31,
+      "Volume Sold (Liters)": 0.5,
+      "Volume Sold (Gallons)": 0.13
+    },
+    {
+      "Invoice/Item Number": "S09742200010",
+      "Date": "2012-12-27",
+      "Store Number": 4025,
+      "Store Name": "Karam Kaur Khasriya Llc",
+      "Address": "702 13TH ST",
+      "City": "BELLE PLAINE",
+      "Zip Code": "52208",
+      "Store Location": "POINT (-92.277759 41.897052)",
+      "County Number": 6,
+      "County": "Benton",
+      "Category": 1012100,
+      "Category Name": "CANADIAN WHISKIES",
+      "Vendor Number": 260,
+      "Vendor Name": "Diageo Americas",
+      "Item Number": 11298,
+      "Item Description": "Crown Royal Canadian Whisky",
+      "Pack": 6,
+      "Bottle Volume (ml)": 1750,
+      "State Bottle Cost": 31.0,
+      "State Bottle Retail": 46.49,
+      "Bottles Sold": 2,
+      "Sale (Dollars)": 92.98,
+      "Volume Sold (Liters)": 3.5,
+      "Volume Sold (Gallons)": 0.92
+    }
+  ],
+  "10": {
+    "Item Description": "Black Velvet",
+    "count": 510611
+  },
+  "11": 59610582,
+  "12": 1711664,
+  "13": 911.5952267284657,
+  "14": 230537,
+  "15": "Diageo Americas",
+  "16": [
+    {
+      "City": "Des Moines",
+      "total": 183367081.26
+    },
+    {
+      "City": "DES MOINES",
+      "total": 143458967.8
+    },
+    {
+      "City": "Cedar Rapids",
+      "total": 97636602.43
+    },
+    {
+      "City": "CEDAR RAPIDS",
+      "total": 80756393.16
+    },
+    {
+      "City": "Davenport",
+      "total": 76811077.67
+    },
+    {
+      "City": "DAVENPORT",
+      "total": 58151785.5
+    },
+    {
+      "City": "West Des Moines",
+      "total": 57943381.52
+    },
+    {
+      "City": "Waterloo",
+      "total": 51446752.74
+    },
+    {
+      "City": "Council Bluffs",
+      "total": 50259017.48
+    },
+    {
+      "City": "Sioux City",
+      "total": 49979013.6
+    }
+  ],
+  "17": "Diageo Americas",
+  "18": "Hy-Vee #3 / BDI / Des Moines",
+  "19": [
+    {
+      "Category Name": "American Vodkas",
+      "Sale (Dollars)": 203442973.34
+    },
+    {
+      "Category Name": "Canadian Whiskies",
+      "Sale (Dollars)": 170682696.68
+    },
+    {
+      "Category Name": "CANADIAN WHISKIES",
+      "Sale (Dollars)": 150942547.97
+    },
+    {
+      "Category Name": "VODKA 80 PROOF",
+      "Sale (Dollars)": 145764888.83
+    },
+    {
+      "Category Name": "SPICED RUM",
+      "Sale (Dollars)": 99708252.04
+    }
+  ],
+  "20": "WINNESHIEK",
+  "21": "2020-06",
+  "22": [
+    {
+      "City": "CLEAR LAKE",
+      "Volume Sold (Liters)": 210104.5
+    },
+    {
+      "City": "Norway",
+      "Volume Sold (Liters)": 3203.25
+    },
+    {
+      "City": "MANLY",
+      "Volume Sold (Liters)": 577.5
+    },
+    {
+      "City": "MAQUOKETA",
+      "Volume Sold (Liters)": 121898.55
+    },
+    {
+      "City": "Bevington",
+      "Volume Sold (Liters)": 4312.6
+    },
+    {
+      "City": "MOUNT PLEASANT",
+      "Volume Sold (Liters)": 85607.15
+    },
+    {
+      "City": "CRESCENT",
+      "Volume Sold (Liters)": 598.8
+    },
+    {
+      "City": "Primghar",
+      "Volume Sold (Liters)": 13780.45
+    },
+    {
+      "City": "Allerton",
+      "Volume Sold (Liters)": 10.25
+    },
+    {
+      "City": "Shenandoah",
+      "Volume Sold (Liters)": 111404.8
+    },
+    {
+      "City": "Wapello",
+      "Volume Sold (Liters)": 13936.05
+    },
+    {
+      "City": "Hartley",
+      "Volume Sold (Liters)": 24349.9
+    },
+    {
+      "City": "Marion",
+      "Volume Sold (Liters)": 415485.05
+    },
+    {
+      "City": "KEOSAUQUA",
+      "Volume Sold (Liters)": 21884.6
+    },
+    {
+      "City": "Lovilia",
+      "Volume Sold (Liters)": 694.5
+    },
+    {
+      "City": "Lake Park",
+      "Volume Sold (Liters)": 8224.45
+    },
+    {
+      "City": "Cresco",
+      "Volume Sold (Liters)": 141563.15
+    },
+    {
+      "City": "Bussey",
+      "Volume Sold (Liters)": 840.0
+    },
+    {
+      "City": "Indianola",
+      "Volume Sold (Liters)": 265267.2
+    },
+    {
+      "City": "Grand Mound",
+      "Volume Sold (Liters)": 413.95
+    },
+    {
+      "City": "MANSON",
+      "Volume Sold (Liters)": 16448.55
+    },
+    {
+      "City": "GREENFIELD",
+      "Volume Sold (Liters)": 25700.2
+    },
+    {
+      "City": "Redfield",
+      "Volume Sold (Liters)": 1527.5
+    },
+    {
+      "City": "Kalona",
+      "Volume Sold (Liters)": 5994.3
+    },
+    {
+      "City": "SEYMOUR",
+      "Volume Sold (Liters)": 91.5
+    },
+    {
+      "City": "Maxwell",
+      "Volume Sold (Liters)": 7882.25
+    },
+    {
+      "City": "SHELLSBURG",
+      "Volume Sold (Liters)": 8517.25
+    },
+    {
+      "City": "MARENGO",
+      "Volume Sold (Liters)": 74787.35
+    },
+    {
+      "City": "CORWITH",
+      "Volume Sold (Liters)": 1958.25
+    },
+    {
+      "City": "Clear Lake",
+      "Volume Sold (Liters)": 224030.85
+    },
+    {
+      "City": "Williamsburg",
+      "Volume Sold (Liters)": 49755.1
+    },
+    {
+      "City": "Rockford",
+      "Volume Sold (Liters)": 1775.0
+    },
+    {
+      "City": "Delmar",
+      "Volume Sold (Liters)": 1459.5
+    },
+    {
+      "City": "Muscatine",
+      "Volume Sold (Liters)": 438931.84
+    },
+    {
+      "City": "ANAMOSA",
+      "Volume Sold (Liters)": 124686.5
+    },
+    {
+      "City": "RED OAK",
+      "Volume Sold (Liters)": 90725.75
+    },
+    {
+      "City": "FAYETTE",
+      "Volume Sold (Liters)": 11901.75
+    },
+    {
+      "City": "MASON CITY",
+      "Volume Sold (Liters)": 662094.5
+    },
+    {
+      "City": "BELLE PLAINE",
+      "Volume Sold (Liters)": 41592.2
+    },
+    {
+      "City": "Harlan",
+      "Volume Sold (Liters)": 160615.15
+    },
+    {
+      "City": "WASHBURN",
+      "Volume Sold (Liters)": 6.0
+    },
+    {
+      "City": "Farmington",
+      "Volume Sold (Liters)": 1839.75
+    },
+    {
+      "City": "Creston",
+      "Volume Sold (Liters)": 156351.05
+    },
+    {
+      "City": "CASEY",
+      "Volume Sold (Liters)": 2364.9
+    },
+    {
+      "City": "WAPELLO",
+      "Volume Sold (Liters)": 14203.55
+    },
+    {
+      "City": "CLARINDA",
+      "Volume Sold (Liters)": 47176.7
+    },
+    {
+      "City": "Latimer",
+      "Volume Sold (Liters)": 4706.05
+    },
+    {
+      "City": "PALO",
+      "Volume Sold (Liters)": 5245.5
+    },
+    {
+      "City": "Tripoli",
+      "Volume Sold (Liters)": 24613.75
+    },
+    {
+      "City": "SHELDON",
+      "Volume Sold (Liters)": 153921.6
+    },
+    {
+      "City": "Coon Rapids",
+      "Volume Sold (Liters)": 20325.65
+    },
+    {
+      "City": "BONDURANT",
+      "Volume Sold (Liters)": 9936.85
+    },
+    {
+      "City": "Lenox",
+      "Volume Sold (Liters)": 5005.25
+    },
+    {
+      "City": "ROCK RAPIDS",
+      "Volume Sold (Liters)": 40453.25
+    },
+    {
+      "City": "Guthrie Center",
+      "Volume Sold (Liters)": 18235.0
+    },
+    {
+      "City": "Le Claire",
+      "Volume Sold (Liters)": 29556.58
+    },
+    {
+      "City": "Exira",
+      "Volume Sold (Liters)": 6462.75
+    },
+    {
+      "City": "GUTHRIE CENTER",
+      "Volume Sold (Liters)": 14523.5
+    },
+    {
+      "City": "BELMOND",
+      "Volume Sold (Liters)": 45347.8
+    },
+    {
+      "City": "EVERLY",
+      "Volume Sold (Liters)": 1030.75
+    },
+    {
+      "City": "Ossian",
+      "Volume Sold (Liters)": 273.0
+    },
+    {
+      "City": "CHARITON",
+      "Volume Sold (Liters)": 55197.45
+    },
+    {
+      "City": "HARTLEY",
+      "Volume Sold (Liters)": 25553.05
+    },
+    {
+      "City": "COON RAPIDS",
+      "Volume Sold (Liters)": 8378.1
+    },
+    {
+      "City": "DELMAR",
+      "Volume Sold (Liters)": 966.0
+    },
+    {
+      "City": "Cedar Falls",
+      "Volume Sold (Liters)": 614697.19
+    },
+    {
+      "City": "Shellsburg",
+      "Volume Sold (Liters)": 7918.75
+    },
+    {
+      "City": "Marquette",
+      "Volume Sold (Liters)": 1267.75
+    },
+    {
+      "City": "WHEATLAND",
+      "Volume Sold (Liters)": 1097.25
+    },
+    {
+      "City": "Sigourney",
+      "Volume Sold (Liters)": 24337.85
+    },
+    {
+      "City": "ADEL",
+      "Volume Sold (Liters)": 53439.6
+    },
+    {
+      "City": "ARNOLD'S PARK",
+      "Volume Sold (Liters)": 2261.5
+    },
+    {
+      "City": "Emmetsburg",
+      "Volume Sold (Liters)": 115793.48
+    },
+    {
+      "City": "IDA GROVE",
+      "Volume Sold (Liters)": 37396.1
+    },
+    {
+      "City": "RUNNELLS",
+      "Volume Sold (Liters)": 87.0
+    },
+    {
+      "City": "PRAIRIE CITY",
+      "Volume Sold (Liters)": 3784.35
+    },
+    {
+      "City": "Estherville",
+      "Volume Sold (Liters)": 116747.0
+    },
+    {
+      "City": "CONRAD",
+      "Volume Sold (Liters)": 11244.35
+    },
+    {
+      "City": "Adair",
+      "Volume Sold (Liters)": 4805.35
+    },
+    {
+      "City": "Grand Junction",
+      "Volume Sold (Liters)": 2446.0
+    },
+    {
+      "City": "POMEROY",
+      "Volume Sold (Liters)": 829.5
+    },
+    {
+      "City": "SWEA CITY",
+      "Volume Sold (Liters)": 9304.6
+    },
+    {
+      "City": "SWISHER",
+      "Volume Sold (Liters)": 7913.6
+    },
+    {
+      "City": "MEDIAPOLIS",
+      "Volume Sold (Liters)": 12957.15
+    },
+    {
+      "City": "Nichols",
+      "Volume Sold (Liters)": 510.0
+    },
+    {
+      "City": "HAMBURG",
+      "Volume Sold (Liters)": 1381.95
+    },
+    {
+      "City": "ARNOLDS PARK",
+      "Volume Sold (Liters)": 30579.5
+    },
+    {
+      "City": "MUSCATINE",
+      "Volume Sold (Liters)": 359945.28
+    },
+    {
+      "City": "Urbandale",
+      "Volume Sold (Liters)": 409356.8
+    },
+    {
+      "City": "WEST BEND",
+      "Volume Sold (Liters)": 39360.8
+    },
+    {
+      "City": "Garwin",
+      "Volume Sold (Liters)": 1826.25
+    },
+    {
+      "City": "Garnavillo",
+      "Volume Sold (Liters)": 414.75
+    },
+    {
+      "City": "ROCKWELL",
+      "Volume Sold (Liters)": 12526.15
+    },
+    {
+      "City": "Guttenberg",
+      "Volume Sold (Liters)": 24696.6
+    },
+    {
+      "City": "Wellman",
+      "Volume Sold (Liters)": 14250.15
+    },
+    {
+      "City": "WALKER",
+      "Volume Sold (Liters)": 2547.0
+    },
+    {
+      "City": "WEST BURLINGTON",
+      "Volume Sold (Liters)": 105007.7
+    },
+    {
+      "City": "Akron",
+      "Volume Sold (Liters)": 6604.5
+    },
+    {
+      "City": "MONTEZUMA",
+      "Volume Sold (Liters)": 27787.7
+    },
+    {
+      "City": "Raymond",
+      "Volume Sold (Liters)": 5375.23
+    }
+  ],
+  "23": [
+    {
+      "Store Name": "Hy-Vee #3 / BDI / Des Moines",
+      "profit": 28608673.59
+    },
+    {
+      "Store Name": "Central City 2",
+      "profit": 24279184.07
+    },
+    {
+      "Store Name": "Hy-Vee Wine and Spirits / Iowa City",
+      "profit": 12209319.11
+    }
+  ],
+  "24": "Colorado Springs",
+  "25": [
+    {
+      "weekday": 1,
+      "len": 4542453
+    },
+    {
+      "weekday": 2,
+      "len": 4693178
+    },
+    {
+      "weekday": 3,
+      "len": 4738672
+    },
+    {
+      "weekday": 4,
+      "len": 3671129
+    },
+    {
+      "weekday": 5,
+      "len": 1877528
+    },
+    {
+      "weekday": 6,
+      "len": 143477
+    },
+    {
+      "weekday": 7,
+      "len": 326
+    }
+  ],
+  "26": [
+    {
+      "Category Name": "PEACH BRANDIES",
+      "Bottles Sold": 75000
+    },
+    {
+      "Category Name": "LOW PROOF VODKA",
+      "Bottles Sold": 428
+    },
+    {
+      "Category Name": "ROOT BEER SCHNAPPS",
+      "Bottles Sold": 28902
+    },
+    {
+      "Category Name": "Single Barrel Bourbon Whiskies",
+      "Bottles Sold": 66155
+    },
+    {
+      "Category Name": "Delisted Items",
+      "Bottles Sold": 149
+    },
+    {
+      "Category Name": "CORN WHISKIES",
+      "Bottles Sold": 5138
+    },
+    {
+      "Category Name": "FLAVORED RUM",
+      "Bottles Sold": 777698
+    },
+    {
+      "Category Name": "Cocktails /RTD",
+      "Bottles Sold": 2234128
+    },
+    {
+      "Category Name": "SPICED RUM",
+      "Bottles Sold": 2362679
+    },
+    {
+      "Category Name": "100 PROOF VODKA",
+      "Bottles Sold": 340307
+    },
+    {
+      "Category Name": "Temporary & Specialty Packages",
+      "Bottles Sold": 1066691
+    },
+    {
+      "Category Name": "Whiskey Liqueur",
+      "Bottles Sold": 8552493
+    },
+    {
+      "Category Name": "RASPBERRY SCHNAPPS",
+      "Bottles Sold": 23015
+    },
+    {
+      "Category Name": "PEACH SCHNAPPS",
+      "Bottles Sold": 200582
+    },
+    {
+      "Category Name": "BUTTERSCOTCH SCHNAPPS",
+      "Bottles Sold": 68663
+    },
+    {
+      "Category Name": "CREME DE ALMOND",
+      "Bottles Sold": 2670
+    },
+    {
+      "Category Name": "IMPORTED AMARETTO",
+      "Bottles Sold": 19713
+    },
+    {
+      "Category Name": "JAPANESE WHISKY",
+      "Bottles Sold": 1610
+    },
+    {
+      "Category Name": "Temporary &  Specialty Packages",
+      "Bottles Sold": 20143
+    },
+    {
+      "Category Name": "VODKA 80 PROOF",
+      "Bottles Sold": 7133678
+    },
+    {
+      "Category Name": "APPLE SCHNAPPS",
+      "Bottles Sold": 74550
+    },
+    {
+      "Category Name": "Blended Whiskies",
+      "Bottles Sold": 3711128
+    },
+    {
+      "Category Name": "AMARETTO - IMPORTED",
+      "Bottles Sold": 854
+    },
+    {
+      "Category Name": "MISC. AMERICAN CORDIALS & LIQUEURS",
+      "Bottles Sold": 227516
+    },
+    {
+      "Category Name": "AMERICAN COCKTAILS",
+      "Bottles Sold": 742228
+    },
+    {
+      "Category Name": "Imported Cordials & Liqueurs",
+      "Bottles Sold": 1616528
+    },
+    {
+      "Category Name": "Coffee Liqueurs",
+      "Bottles Sold": 435429
+    },
+    {
+      "Category Name": "Straight Bourbon Whiskies",
+      "Bottles Sold": 4909262
+    },
+    {
+      "Category Name": "Neutral Grain Spirits",
+      "Bottles Sold": 196965
+    },
+    {
+      "Category Name": "GRAPE SCHNAPPS",
+      "Bottles Sold": 47647
+    },
+    {
+      "Category Name": "BOTTLED IN BOND BOURBON",
+      "Bottles Sold": 8699
+    },
+    {
+      "Category Name": "DISTILLED SPIRITS SPECIALTY",
+      "Bottles Sold": 288727
+    },
+    {
+      "Category Name": "Distilled Spirits Specialty",
+      "Bottles Sold": 873
+    },
+    {
+      "Category Name": "AMERICAN AMARETTO",
+      "Bottles Sold": 143956
+    },
+    {
+      "Category Name": "BLENDED WHISKIES",
+      "Bottles Sold": 1446748
+    },
+    {
+      "Category Name": "American Brandies",
+      "Bottles Sold": 3261922
+    },
+    {
+      "Category Name": "GREEN CREME DE MENTHE",
+      "Bottles Sold": 14753
+    },
+    {
+      "Category Name": "HIGH PROOF BEER - AMERICAN",
+      "Bottles Sold": 6
+    },
+    {
+      "Category Name": "American Distilled Spirits Specialty",
+      "Bottles Sold": 1265
+    },
+    {
+      "Category Name": "AMERICAN DRY GINS",
+      "Bottles Sold": 806999
+    },
+    {
+      "Category Name": "Canadian Whiskies",
+      "Bottles Sold": 11699574
+    },
+    {
+      "Category Name": "AMERICAN SLOE GINS",
+      "Bottles Sold": 10229
+    },
+    {
+      "Category Name": "WATERMELON SCHNAPPS",
+      "Bottles Sold": 58902
+    },
+    {
+      "Category Name": "TENNESSEE WHISKIES",
+      "Bottles Sold": 982527
+    },
+    {
+      "Category Name": "IMPORTED VODKA",
+      "Bottles Sold": 1419899
+    },
+    {
+      "Category Name": "Cocktails / RTD",
+      "Bottles Sold": 1865
+    },
+    {
+      "Category Name": "STRAIGHT BOURBON WHISKIES",
+      "Bottles Sold": 1500956
+    },
+    {
+      "Category Name": "DARK CREME DE CACAO",
+      "Bottles Sold": 10795
+    },
+    {
+      "Category Name": "CANADIAN WHISKIES",
+      "Bottles Sold": 4226212
+    },
+    {
+      "Category Name": "American Vodka",
+      "Bottles Sold": 13899
+    },
+    {
+      "Category Name": "STRAIGHT RYE WHISKIES",
+      "Bottles Sold": 142292
+    },
+    {
+      "Category Name": "Neutral Grain Spirits Flavored",
+      "Bottles Sold": 97189
+    },
+    {
+      "Category Name": "Temporary  & Specialty Packages",
+      "Bottles Sold": 125
+    },
+    {
+      "Category Name": "American Sloe Gins",
+      "Bottles Sold": 14537
+    },
+    {
+      "Category Name": "APRICOT BRANDIES",
+      "Bottles Sold": 82570
+    },
+    {
+      "Category Name": "CREAM LIQUEURS",
+      "Bottles Sold": 523282
+    },
+    {
+      "Category Name": "SINGLE MALT SCOTCH",
+      "Bottles Sold": 108093
+    },
+    {
+      "Category Name": "American Distilled Spirit Specialty",
+      "Bottles Sold": 96019
+    },
+    {
+      "Category Name": "Delisted / Special Order Items",
+      "Bottles Sold": 12
+    },
+    {
+      "Category Name": "Imported Gins",
+      "Bottles Sold": 12
+    },
+    {
+      "Category Name": "ANISETTE",
+      "Bottles Sold": 1866
+    },
+    {
+      "Category Name": "FLAVORED GINS",
+      "Bottles Sold": 18512
+    },
+    {
+      "Category Name": "CINNAMON SCHNAPPS",
+      "Bottles Sold": 46538
+    },
+    {
+      "Category Name": "SINGLE BARREL BOURBON WHISKIES",
+      "Bottles Sold": 18165
+    },
+    {
+      "Category Name": "Irish Whiskies",
+      "Bottles Sold": 1178242
+    },
+    {
+      "Category Name": "IRISH WHISKIES",
+      "Bottles Sold": 319607
+    },
+    {
+      "Category Name": "Holiday VAP",
+      "Bottles Sold": 133
+    },
+    {
+      "Category Name": "Imported Distilled Spirit Specialty",
+      "Bottles Sold": 738750
+    },
+    {
+      "Category Name": "WHITE CREME DE MENTHE",
+      "Bottles Sold": 2801
+    },
+    {
+      "Category Name": "Imported Vodka",
+      "Bottles Sold": 55529
+    },
+    {
+      "Category Name": "IMPORTED SCHNAPPS",
+      "Bottles Sold": 454220
+    },
+    {
+      "Category Name": "IMPORTED GRAPE BRANDIES",
+      "Bottles Sold": 693109
+    },
+    {
+      "Category Name": "Straight Rye Whiskies",
+      "Bottles Sold": 431576
+    },
+    {
+      "Category Name": "Imported Distilled Spirits Specialty",
+      "Bottles Sold": 706
+    },
+    {
+      "Category Name": "TRIPLE SEC",
+      "Bottles Sold": 315851
+    },
+    {
+      "Category Name": "Aged Dark Rum",
+      "Bottles Sold": 152955
+    },
+    {
+      "Category Name": "WHITE CREME DE CACAO",
+      "Bottles Sold": 12416
+    },
+    {
+      "Category Name": "American Cordials & Liqueurs",
+      "Bottles Sold": 10291
+    },
+    {
+      "Category Name": "American Flavored Vodka",
+      "Bottles Sold": 3766061
+    },
+    {
+      "Category Name": "AMERICAN GRAPE BRANDIES",
+      "Bottles Sold": 943785
+    },
+    {
+      "Category Name": "Special Order Items",
+      "Bottles Sold": 433160
+    },
+    {
+      "Category Name": "Imported Cordials & Liqueur",
+      "Bottles Sold": 9811
+    },
+    {
+      "Category Name": "Imported Schnapps",
+      "Bottles Sold": 1230762
+    },
+    {
+      "Category Name": "AMERICAN ALCOHOL",
+      "Bottles Sold": 67840
+    },
+    {
+      "Category Name": "JAMAICA RUM",
+      "Bottles Sold": 27550
+    },
+    {
+      "Category Name": "American Cordials & Liqueur",
+      "Bottles Sold": 3105701
+    },
+    {
+      "Category Name": "Corn Whiskies",
+      "Bottles Sold": 34531
+    },
+    {
+      "Category Name": "DECANTERS & SPECIALTY PACKAGES",
+      "Bottles Sold": 182985
+    },
+    {
+      "Category Name": "Imported Brandies",
+      "Bottles Sold": 2716659
+    },
+    {
+      "Category Name": "Single Malt Scotch",
+      "Bottles Sold": 342315
+    },
+    {
+      "Category Name": "SCHNAPPS - IMPORTED",
+      "Bottles Sold": 24
+    },
+    {
+      "Category Name": "Triple Sec",
+      "Bottles Sold": 766938
+    },
+    {
+      "Category Name": "COFFEE LIQUEURS",
+      "Bottles Sold": 164536
+    },
+    {
+      "Category Name": "Flavored Rum",
+      "Bottles Sold": 2130619
+    },
+    {
+      "Category Name": "WHISKEY LIQUEUR",
+      "Bottles Sold": 1879516
+    },
+    {
+      "Category Name": "Flavored Gin",
+      "Bottles Sold": 39313
+    },
+    {
+      "Category Name": "Cream Liqueurs",
+      "Bottles Sold": 1480034
+    },
+    {
+      "Category Name": "SCOTCH WHISKIES",
+      "Bottles Sold": 378831
+    },
+    {
+      "Category Name": "BARBADOS RUM",
+      "Bottles Sold": 19778
+    },
+    {
+      "Category Name": "Iowa Distillery Whiskies",
+      "Bottles Sold": 9938
+    },
+    {
+      "Category Name": "PUERTO RICO & VIRGIN ISLANDS RUM",
+      "Bottles Sold": 1195738
+    },
+    {
+      "Category Name": "MISCELLANEOUS  BRANDIES",
+      "Bottles Sold": 16361
+    },
+    {
+      "Category Name": "Imported Flavored Vodka",
+      "Bottles Sold": 1509445
+    },
+    {
+      "Category Name": "Imported Dry Gins",
+      "Bottles Sold": 780046
+    },
+    {
+      "Category Name": "American Dry Gins",
+      "Bottles Sold": 1906014
+    },
+    {
+      "Category Name": "PEPPERMINT SCHNAPPS",
+      "Bottles Sold": 322204
+    },
+    {
+      "Category Name": "Tennessee Whiskies",
+      "Bottles Sold": 2595211
+    },
+    {
+      "Category Name": "VODKA FLAVORED",
+      "Bottles Sold": 1402283
+    },
+    {
+      "Category Name": "Imported Vodkas",
+      "Bottles Sold": 3689117
+    },
+    {
+      "Category Name": "STRAWBERRY SCHNAPPS",
+      "Bottles Sold": 21299
+    },
+    {
+      "Category Name": "American Vodkas",
+      "Bottles Sold": 22295376
+    },
+    {
+      "Category Name": "American Schnapps",
+      "Bottles Sold": 2491291
+    },
+    {
+      "Category Name": "100% Agave Tequila",
+      "Bottles Sold": 1937133
+    },
+    {
+      "Category Name": "TEQUILA",
+      "Bottles Sold": 1573491
+    },
+    {
+      "Category Name": "Scotch Whiskies",
+      "Bottles Sold": 922264
+    },
+    {
+      "Category Name": "Gold Rum",
+      "Bottles Sold": 410166
+    },
+    {
+      "Category Name": "White Rum",
+      "Bottles Sold": 2352480
+    },
+    {
+      "Category Name": "MISC. IMPORTED CORDIALS & LIQUEURS",
+      "Bottles Sold": 630272
+    },
+    {
+      "Category Name": "Spiced Rum",
+      "Bottles Sold": 5956974
+    },
+    {
+      "Category Name": "IMPORTED DRY GINS",
+      "Bottles Sold": 290589
+    },
+    {
+      "Category Name": "ROCK & RYE",
+      "Bottles Sold": 4200
+    },
+    {
+      "Category Name": "SPEARMINT SCHNAPPS",
+      "Bottles Sold": 6977
+    },
+    {
+      "Category Name": "MISCELLANEOUS SCHNAPPS",
+      "Bottles Sold": 84478
+    },
+    {
+      "Category Name": "TROPICAL FRUIT SCHNAPPS",
+      "Bottles Sold": 17833
+    },
+    {
+      "Category Name": "BLACKBERRY BRANDIES",
+      "Bottles Sold": 142262
+    },
+    {
+      "Category Name": "Iowa Distilleries",
+      "Bottles Sold": 16185
+    },
+    {
+      "Category Name": null,
+      "Bottles Sold": 227068
+    },
+    {
+      "Category Name": "CHERRY BRANDIES",
+      "Bottles Sold": 23947
+    },
+    {
+      "Category Name": "IMPORTED VODKA - MISC",
+      "Bottles Sold": 646143
+    },
+    {
+      "Category Name": "Bottled in Bond Bourbon",
+      "Bottles Sold": 38633
+    },
+    {
+      "Category Name": "IMPORTED VODKA - CHERRY",
+      "Bottles Sold": 12
+    },
+    {
+      "Category Name": "Mixto Tequila",
+      "Bottles Sold": 2722801
+    },
+    {
+      "Category Name": "Mezcal",
+      "Bottles Sold": 19823
+    },
+    {
+      "Category Name": "OTHER PROOF VODKA",
+      "Bottles Sold": 6040
+    }
+  ],
+  "27": "Jim Beam Brands",
+  "28": "Vodka",
+  "29": 12.322754447993214,
+  "30": true,
+  "31": {
+    "mean": 134.85784205201549,
+    "min": 0.0,
+    "max": 279557.28
+  },
+  "32": 4.981401984354,
+  "33": "Black Velvet",
+  "34": [
+    {
+      "Store Name": "New Star / Fort Dodge",
+      "unique_stores": 3
+    },
+    {
+      "Store Name": "Urban Liquor",
+      "unique_stores": 3
+    },
+    {
+      "Store Name": "Liquor and Tobacco Outlet /",
+      "unique_stores": 3
+    },
+    {
+      "Store Name": "Point Liquor & Tobacco",
+      "unique_stores": 3
+    },
+    {
+      "Store Name": "Hometown Foods / State Center",
+      "unique_stores": 3
+    }
+  ],
+  "35": "2012-10",
+  "36": {
+    "1st_half": 135369547.85,
+    "2nd_half": 148959024.26,
+    "variation": 0.1003879870017605
+  },
+  "37": [
+    {
+      "Vendor Name": "Coup de Foudre LLC",
+      "ratio": 76.66666666666667
+    },
+    {
+      "Vendor Name": "SWISS CELLARS",
+      "ratio": 51.06742857142857
+    },
+    {
+      "Vendor Name": "HILLROCK ESTATE DISTILLERY",
+      "ratio": 49.04666666666667
+    }
+  ],
+  "38": [
+    {
+      "month": "2012-01",
+      "State Bottle Retail": 13.711083190260705
+    },
+    {
+      "month": "2012-02",
+      "State Bottle Retail": 13.899669184501386
+    },
+    {
+      "month": "2012-03",
+      "State Bottle Retail": 13.612686704291956
+    },
+    {
+      "month": "2012-04",
+      "State Bottle Retail": 14.046955489614302
+    },
+    {
+      "month": "2012-05",
+      "State Bottle Retail": 13.807286665082097
+    },
+    {
+      "month": "2012-06",
+      "State Bottle Retail": 13.85076151484143
+    },
+    {
+      "month": "2012-07",
+      "State Bottle Retail": 13.909192664143143
+    },
+    {
+      "month": "2012-08",
+      "State Bottle Retail": 13.76615054020188
+    },
+    {
+      "month": "2012-09",
+      "State Bottle Retail": 13.674573188405864
+    },
+    {
+      "month": "2012-10",
+      "State Bottle Retail": 13.92233460444294
+    },
+    {
+      "month": "2012-11",
+      "State Bottle Retail": 14.015937441351367
+    },
+    {
+      "month": "2012-12",
+      "State Bottle Retail": 14.473289654759895
+    }
+  ],
+  "39": [
+    {
+      "County": "POLK",
+      "City": "Des Moines",
+      "outliers": 83239
+    },
+    {
+      "County": "Polk",
+      "City": "DES MOINES",
+      "outliers": 61352
+    },
+    {
+      "County": "LINN",
+      "City": "Cedar Rapids",
+      "outliers": 36370
+    },
+    {
+      "County": "SCOTT",
+      "City": "Davenport",
+      "outliers": 31537
+    },
+    {
+      "County": "Linn",
+      "City": "CEDAR RAPIDS",
+      "outliers": 28097
+    }
+  ],
+  "40": -0.042224868459676705,
+  "41": [
+    {
+      "Category Name": "Imported Gins",
+      "Sale (Dollars)": 265.56
+    },
+    {
+      "Category Name": "Delisted / Special Order Items",
+      "Sale (Dollars)": 333.0
+    },
+    {
+      "Category Name": "Temporary  & Specialty Packages",
+      "Sale (Dollars)": 1638.75
+    },
+    {
+      "Category Name": "IMPORTED VODKA - CHERRY",
+      "Sale (Dollars)": 2348.7599999999998
+    },
+    {
+      "Category Name": "Holiday VAP",
+      "Sale (Dollars)": 3637.52
+    }
+  ],
+  "42": true,
+  "43": [
+    {
+      "month": "January",
+      "Sale (Dollars)": 182254001.28000998
+    },
+    {
+      "month": "November",
+      "Sale (Dollars)": 193887110.17999762
+    }
+  ],
+  "44": {
+    "Store": "Hy-Vee #3 / BDI / Des Moines",
+    "Share": 3.2270211141624587
+  },
+  "45": [
+    {
+      "month": "2012-01",
+      "Sale (Dollars)": 15916194.219999813
+    },
+    {
+      "month": "2012-02",
+      "Sale (Dollars)": 18116104.0699998
+    },
+    {
+      "month": "2012-03",
+      "Sale (Dollars)": 18139545.74999978
+    },
+    {
+      "month": "2012-04",
+      "Sale (Dollars)": 20004896.969999716
+    },
+    {
+      "month": "2012-05",
+      "Sale (Dollars)": 22193521.23999945
+    },
+    {
+      "month": "2012-06",
+      "Sale (Dollars)": 21858903.069999583
+    },
+    {
+      "month": "2012-07",
+      "Sale (Dollars)": 20697363.77999954
+    },
+    {
+      "month": "2012-08",
+      "Sale (Dollars)": 21531282.83999933
+    },
+    {
+      "month": "2012-09",
+      "Sale (Dollars)": 18188453.149999678
+    },
+    {
+      "month": "2012-10",
+      "Sale (Dollars)": 32713953.929999046
+    },
+    {
+      "month": "2012-11",
+      "Sale (Dollars)": 19778514.9199995
+    },
+    {
+      "month": "2012-12",
+      "Sale (Dollars)": 26064579.629999034
+    },
+    {
+      "month": "2013-01",
+      "Sale (Dollars)": 17838850.119999602
+    },
+    {
+      "month": "2013-02",
+      "Sale (Dollars)": 18258605.699999552
+    },
+    {
+      "month": "2013-03",
+      "Sale (Dollars)": 18221543.539999552
+    },
+    {
+      "month": "2013-04",
+      "Sale (Dollars)": 22162040.68999929
+    },
+    {
+      "month": "2013-05",
+      "Sale (Dollars)": 22409324.5799992
+    },
+    {
+      "month": "2013-06",
+      "Sale (Dollars)": 19734621.09999941
+    },
+    {
+      "month": "2013-07",
+      "Sale (Dollars)": 22637646.589999072
+    },
+    {
+      "month": "2013-08",
+      "Sale (Dollars)": 21552819.62999934
+    },
+    {
+      "month": "2013-09",
+      "Sale (Dollars)": 19126692.819999527
+    },
+    {
+      "month": "2013-10",
+      "Sale (Dollars)": 32145811.43999919
+    },
+    {
+      "month": "2013-11",
+      "Sale (Dollars)": 17800949.6399998
+    },
+    {
+      "month": "2013-12",
+      "Sale (Dollars)": 26214886.96999933
+    },
+    {
+      "month": "2014-01",
+      "Sale (Dollars)": 20045932.61999972
+    },
+    {
+      "month": "2014-02",
+      "Sale (Dollars)": 19183282.259999733
+    },
+    {
+      "month": "2014-03",
+      "Sale (Dollars)": 19328906.109999686
+    },
+    {
+      "month": "2014-04",
+      "Sale (Dollars)": 22639172.299999535
+    },
+    {
+      "month": "2014-05",
+      "Sale (Dollars)": 20966264.1999997
+    },
+    {
+      "month": "2014-06",
+      "Sale (Dollars)": 24429677.96999945
+    },
+    {
+      "month": "2014-07",
+      "Sale (Dollars)": 21947352.739999555
+    },
+    {
+      "month": "2014-08",
+      "Sale (Dollars)": 21170887.080000006
+    },
+    {
+      "month": "2014-09",
+      "Sale (Dollars)": 23435552.560000002
+    },
+    {
+      "month": "2014-10",
+      "Sale (Dollars)": 26542408.09000001
+    },
+    {
+      "month": "2014-11",
+      "Sale (Dollars)": 20272759.740000095
+    },
+    {
+      "month": "2014-12",
+      "Sale (Dollars)": 30625542.419999834
+    },
+    {
+      "month": "2015-01",
+      "Sale (Dollars)": 18498508.310000107
+    },
+    {
+      "month": "2015-02",
+      "Sale (Dollars)": 21224352.410000037
+    },
+    {
+      "month": "2015-03",
+      "Sale (Dollars)": 23262369.709999986
+    },
+    {
+      "month": "2015-04",
+      "Sale (Dollars)": 22857263.330000028
+    },
+    {
+      "month": "2015-05",
+      "Sale (Dollars)": 22437370.960000023
+    },
+    {
+      "month": "2015-06",
+      "Sale (Dollars)": 27089683.129999895
+    },
+    {
+      "month": "2015-07",
+      "Sale (Dollars)": 22414165.5
+    },
+    {
+      "month": "2015-08",
+      "Sale (Dollars)": 22116397.549999945
+    },
+    {
+      "month": "2015-09",
+      "Sale (Dollars)": 24113360.169999957
+    },
+    {
+      "month": "2015-10",
+      "Sale (Dollars)": 25913248.069999885
+    },
+    {
+      "month": "2015-11",
+      "Sale (Dollars)": 23718715.059999883
+    },
+    {
+      "month": "2015-12",
+      "Sale (Dollars)": 30683137.910000652
+    },
+    {
+      "month": "2016-01",
+      "Sale (Dollars)": 19018055.360000785
+    },
+    {
+      "month": "2016-02",
+      "Sale (Dollars)": 22801842.480000675
+    },
+    {
+      "month": "2016-03",
+      "Sale (Dollars)": 23706446.339999627
+    },
+    {
+      "month": "2016-04",
+      "Sale (Dollars)": 22667024.61000051
+    },
+    {
+      "month": "2016-05",
+      "Sale (Dollars)": 25819176.16000142
+    },
+    {
+      "month": "2016-06",
+      "Sale (Dollars)": 27338669.99000157
+    },
+    {
+      "month": "2016-07",
+      "Sale (Dollars)": 21988265.61999955
+    },
+    {
+      "month": "2016-08",
+      "Sale (Dollars)": 24471458.970000967
+    },
+    {
+      "month": "2016-09",
+      "Sale (Dollars)": 25318593.87000145
+    },
+    {
+      "month": "2016-10",
+      "Sale (Dollars)": 27311209.920002367
+    },
+    {
+      "month": "2016-11",
+      "Sale (Dollars)": 26432734.840001777
+    },
+    {
+      "month": "2016-12",
+      "Sale (Dollars)": 32574086.69000268
+    },
+    {
+      "month": "2017-01",
+      "Sale (Dollars)": 20068372.860000536
+    },
+    {
+      "month": "2017-02",
+      "Sale (Dollars)": 23086289.250001397
+    },
+    {
+      "month": "2017-03",
+      "Sale (Dollars)": 25019491.260001257
+    },
+    {
+      "month": "2017-04",
+      "Sale (Dollars)": 23176630.270001337
+    },
+    {
+      "month": "2017-05",
+      "Sale (Dollars)": 28227485.870001398
+    },
+    {
+      "month": "2017-06",
+      "Sale (Dollars)": 28626061.96000204
+    },
+    {
+      "month": "2017-07",
+      "Sale (Dollars)": 25200614.710001677
+    },
+    {
+      "month": "2017-08",
+      "Sale (Dollars)": 27647610.170001578
+    },
+    {
+      "month": "2017-09",
+      "Sale (Dollars)": 24463707.55000128
+    },
+    {
+      "month": "2017-10",
+      "Sale (Dollars)": 30779422.1000026
+    },
+    {
+      "month": "2017-11",
+      "Sale (Dollars)": 26848928.020001743
+    },
+    {
+      "month": "2017-12",
+      "Sale (Dollars)": 31385430.790003188
+    },
+    {
+      "month": "2018-01",
+      "Sale (Dollars)": 22606806.940000366
+    },
+    {
+      "month": "2018-02",
+      "Sale (Dollars)": 22861176.42000134
+    },
+    {
+      "month": "2018-03",
+      "Sale (Dollars)": 24873041.230001442
+    },
+    {
+      "month": "2018-04",
+      "Sale (Dollars)": 26214746.690001324
+    },
+    {
+      "month": "2018-05",
+      "Sale (Dollars)": 30180818.39000172
+    },
+    {
+      "month": "2018-06",
+      "Sale (Dollars)": 28574027.260001674
+    },
+    {
+      "month": "2018-07",
+      "Sale (Dollars)": 26194368.030000605
+    },
+    {
+      "month": "2018-08",
+      "Sale (Dollars)": 30507640.510001633
+    },
+    {
+      "month": "2018-09",
+      "Sale (Dollars)": 23804290.690000772
+    },
+    {
+      "month": "2018-10",
+      "Sale (Dollars)": 34609253.41000179
+    },
+    {
+      "month": "2018-11",
+      "Sale (Dollars)": 28764343.45000024
+    },
+    {
+      "month": "2018-12",
+      "Sale (Dollars)": 35026330.05000182
+    },
+    {
+      "month": "2019-01",
+      "Sale (Dollars)": 23466782.5900004
+    },
+    {
+      "month": "2019-02",
+      "Sale (Dollars)": 24641910.4900008
+    },
+    {
+      "month": "2019-03",
+      "Sale (Dollars)": 24982728.36000285
+    },
+    {
+      "month": "2019-04",
+      "Sale (Dollars)": 27788607.850000534
+    },
+    {
+      "month": "2019-05",
+      "Sale (Dollars)": 32756773.270001397
+    },
+    {
+      "month": "2019-06",
+      "Sale (Dollars)": 28877030.96000197
+    },
+    {
+      "month": "2019-07",
+      "Sale (Dollars)": 30967399.69000221
+    },
+    {
+      "month": "2019-08",
+      "Sale (Dollars)": 28424263.28999983
+    },
+    {
+      "month": "2019-09",
+      "Sale (Dollars)": 28078111.23000073
+    },
+    {
+      "month": "2019-10",
+      "Sale (Dollars)": 34448213.35000117
+    },
+    {
+      "month": "2019-11",
+      "Sale (Dollars)": 30270164.51000072
+    },
+    {
+      "month": "2019-12",
+      "Sale (Dollars)": 34518356.04000095
+    },
+    {
+      "month": "2020-01",
+      "Sale (Dollars)": 24794498.260000218
+    },
+    {
+      "month": "2020-02",
+      "Sale (Dollars)": 25720303.900001947
+    },
+    {
+      "month": "2020-03",
+      "Sale (Dollars)": 31210733.110001694
+    },
+    {
+      "month": "2020-04",
+      "Sale (Dollars)": 31987264.680002004
+    },
+    {
+      "month": "2020-05",
+      "Sale (Dollars)": 32081114.180002794
+    },
+    {
+      "month": "2020-06",
+      "Sale (Dollars)": 36007843.00000267
+    },
+    {
+      "month": "2020-07",
+      "Sale (Dollars)": 34272654.200001
+    },
+    {
+      "month": "2020-08",
+      "Sale (Dollars)": 33722408.12000098
+    },
+    {
+      "month": "2020-09",
+      "Sale (Dollars)": 36780839.35000137
+    }
+  ],
+  "46": [
+    {
+      "City": "Des Moines",
+      "Bottles Sold": 14450336
+    },
+    {
+      "City": "DES MOINES",
+      "Bottles Sold": 11303102
+    },
+    {
+      "City": "Cedar Rapids",
+      "Bottles Sold": 7855962
+    },
+    {
+      "City": "Davenport",
+      "Bottles Sold": 6657432
+    },
+    {
+      "City": "CEDAR RAPIDS",
+      "Bottles Sold": 6328891
+    },
+    {
+      "City": "DAVENPORT",
+      "Bottles Sold": 5108205
+    },
+    {
+      "City": "Waterloo",
+      "Bottles Sold": 4710347
+    },
+    {
+      "City": "WATERLOO",
+      "Bottles Sold": 4022611
+    },
+    {
+      "City": "Council Bluffs",
+      "Bottles Sold": 3993833
+    },
+    {
+      "City": "Sioux City",
+      "Bottles Sold": 3853484
+    }
+  ],
+  "47": [
+    {
+      "County": "Polk",
+      "Sale (Dollars)": 304781652.8
+    },
+    {
+      "County": "POLK",
+      "Sale (Dollars)": 291520674.4
+    },
+    {
+      "County": "LINN",
+      "Sale (Dollars)": 119144474.03
+    },
+    {
+      "County": "Linn",
+      "Sale (Dollars)": 111590362.27
+    },
+    {
+      "County": "SCOTT",
+      "Sale (Dollars)": 99034836.95
+    }
+  ],
+  "48": [
+    {
+      "month": "2012-01",
+      "Sale (Dollars)": 15916194.219999831
+    },
+    {
+      "month": "2012-02",
+      "Sale (Dollars)": 18116104.06999978
+    },
+    {
+      "month": "2012-03",
+      "Sale (Dollars)": 18139545.749999788
+    },
+    {
+      "month": "2012-04",
+      "Sale (Dollars)": 20004896.969999723
+    },
+    {
+      "month": "2012-05",
+      "Sale (Dollars)": 22193521.239999484
+    },
+    {
+      "month": "2012-06",
+      "Sale (Dollars)": 21858903.069999572
+    },
+    {
+      "month": "2012-07",
+      "Sale (Dollars)": 20697363.779999558
+    },
+    {
+      "month": "2012-08",
+      "Sale (Dollars)": 21531282.83999934
+    },
+    {
+      "month": "2012-09",
+      "Sale (Dollars)": 18188453.1499997
+    },
+    {
+      "month": "2012-10",
+      "Sale (Dollars)": 32713953.92999901
+    },
+    {
+      "month": "2012-11",
+      "Sale (Dollars)": 19778514.91999948
+    },
+    {
+      "month": "2012-12",
+      "Sale (Dollars)": 26064579.629999023
+    },
+    {
+      "month": "2013-01",
+      "Sale (Dollars)": 17838850.119999602
+    },
+    {
+      "month": "2013-02",
+      "Sale (Dollars)": 18258605.699999563
+    },
+    {
+      "month": "2013-03",
+      "Sale (Dollars)": 18221543.53999955
+    },
+    {
+      "month": "2013-04",
+      "Sale (Dollars)": 22162040.6899993
+    },
+    {
+      "month": "2013-05",
+      "Sale (Dollars)": 22409324.57999922
+    },
+    {
+      "month": "2013-06",
+      "Sale (Dollars)": 19734621.099999417
+    },
+    {
+      "month": "2013-07",
+      "Sale (Dollars)": 22637646.589999083
+    },
+    {
+      "month": "2013-08",
+      "Sale (Dollars)": 21552819.629999336
+    },
+    {
+      "month": "2013-09",
+      "Sale (Dollars)": 19126692.81999955
+    },
+    {
+      "month": "2013-10",
+      "Sale (Dollars)": 32145811.43999914
+    },
+    {
+      "month": "2013-11",
+      "Sale (Dollars)": 17800949.639999785
+    },
+    {
+      "month": "2013-12",
+      "Sale (Dollars)": 26214886.969999317
+    },
+    {
+      "month": "2014-01",
+      "Sale (Dollars)": 20045932.619999707
+    },
+    {
+      "month": "2014-02",
+      "Sale (Dollars)": 19183282.25999974
+    },
+    {
+      "month": "2014-03",
+      "Sale (Dollars)": 19328906.10999971
+    },
+    {
+      "month": "2014-04",
+      "Sale (Dollars)": 22639172.299999546
+    },
+    {
+      "month": "2014-05",
+      "Sale (Dollars)": 20966264.199999698
+    },
+    {
+      "month": "2014-06",
+      "Sale (Dollars)": 24429677.969999444
+    },
+    {
+      "month": "2014-07",
+      "Sale (Dollars)": 21947352.739999533
+    },
+    {
+      "month": "2014-08",
+      "Sale (Dollars)": 21170887.080000024
+    },
+    {
+      "month": "2014-09",
+      "Sale (Dollars)": 23435552.559999987
+    },
+    {
+      "month": "2014-10",
+      "Sale (Dollars)": 26542408.089999996
+    },
+    {
+      "month": "2014-11",
+      "Sale (Dollars)": 20272759.7400001
+    },
+    {
+      "month": "2014-12",
+      "Sale (Dollars)": 30625542.419999775
+    },
+    {
+      "month": "2015-01",
+      "Sale (Dollars)": 18498508.310000107
+    },
+    {
+      "month": "2015-02",
+      "Sale (Dollars)": 21224352.410000034
+    },
+    {
+      "month": "2015-03",
+      "Sale (Dollars)": 23262369.709999952
+    },
+    {
+      "month": "2015-04",
+      "Sale (Dollars)": 22857263.32999999
+    },
+    {
+      "month": "2015-05",
+      "Sale (Dollars)": 22437370.96000001
+    },
+    {
+      "month": "2015-06",
+      "Sale (Dollars)": 27089683.1299999
+    },
+    {
+      "month": "2015-07",
+      "Sale (Dollars)": 22414165.5
+    },
+    {
+      "month": "2015-08",
+      "Sale (Dollars)": 22116397.549999956
+    },
+    {
+      "month": "2015-09",
+      "Sale (Dollars)": 24113360.169999976
+    },
+    {
+      "month": "2015-10",
+      "Sale (Dollars)": 25913248.069999866
+    },
+    {
+      "month": "2015-11",
+      "Sale (Dollars)": 23718715.059999883
+    },
+    {
+      "month": "2015-12",
+      "Sale (Dollars)": 30683137.910003137
+    },
+    {
+      "month": "2016-01",
+      "Sale (Dollars)": 19018055.360000785
+    },
+    {
+      "month": "2016-02",
+      "Sale (Dollars)": 22801842.480000645
+    },
+    {
+      "month": "2016-03",
+      "Sale (Dollars)": 23706446.3399996
+    },
+    {
+      "month": "2016-04",
+      "Sale (Dollars)": 22667024.61000052
+    },
+    {
+      "month": "2016-05",
+      "Sale (Dollars)": 25819176.16000156
+    },
+    {
+      "month": "2016-06",
+      "Sale (Dollars)": 27338669.990001585
+    },
+    {
+      "month": "2016-07",
+      "Sale (Dollars)": 21988265.61999973
+    },
+    {
+      "month": "2016-08",
+      "Sale (Dollars)": 24471458.97000106
+    },
+    {
+      "month": "2016-09",
+      "Sale (Dollars)": 25318593.870001446
+    },
+    {
+      "month": "2016-10",
+      "Sale (Dollars)": 27311209.920002375
+    },
+    {
+      "month": "2016-11",
+      "Sale (Dollars)": 26432734.840001784
+    },
+    {
+      "month": "2016-12",
+      "Sale (Dollars)": 32574086.690002777
+    },
+    {
+      "month": "2017-01",
+      "Sale (Dollars)": 20068372.86000057
+    },
+    {
+      "month": "2017-02",
+      "Sale (Dollars)": 23086289.250001337
+    },
+    {
+      "month": "2017-03",
+      "Sale (Dollars)": 25019491.260001257
+    },
+    {
+      "month": "2017-04",
+      "Sale (Dollars)": 23176630.270001337
+    },
+    {
+      "month": "2017-05",
+      "Sale (Dollars)": 28227485.87000139
+    },
+    {
+      "month": "2017-06",
+      "Sale (Dollars)": 28626061.960002027
+    },
+    {
+      "month": "2017-07",
+      "Sale (Dollars)": 25200614.7100016
+    },
+    {
+      "month": "2017-08",
+      "Sale (Dollars)": 27647610.170001615
+    },
+    {
+      "month": "2017-09",
+      "Sale (Dollars)": 24463707.550001286
+    },
+    {
+      "month": "2017-10",
+      "Sale (Dollars)": 30779422.10000272
+    },
+    {
+      "month": "2017-11",
+      "Sale (Dollars)": 26848928.020001736
+    },
+    {
+      "month": "2017-12",
+      "Sale (Dollars)": 31385430.790003188
+    },
+    {
+      "month": "2018-01",
+      "Sale (Dollars)": 22606806.940000366
+    },
+    {
+      "month": "2018-02",
+      "Sale (Dollars)": 22861176.42000135
+    },
+    {
+      "month": "2018-03",
+      "Sale (Dollars)": 24873041.230001442
+    },
+    {
+      "month": "2018-04",
+      "Sale (Dollars)": 26214746.690001406
+    },
+    {
+      "month": "2018-05",
+      "Sale (Dollars)": 30180818.39000172
+    },
+    {
+      "month": "2018-06",
+      "Sale (Dollars)": 28574027.26000158
+    },
+    {
+      "month": "2018-07",
+      "Sale (Dollars)": 26194368.0300006
+    },
+    {
+      "month": "2018-08",
+      "Sale (Dollars)": 30507640.51000162
+    },
+    {
+      "month": "2018-09",
+      "Sale (Dollars)": 23804290.69000087
+    },
+    {
+      "month": "2018-10",
+      "Sale (Dollars)": 34609253.41000173
+    },
+    {
+      "month": "2018-11",
+      "Sale (Dollars)": 28764343.45000024
+    },
+    {
+      "month": "2018-12",
+      "Sale (Dollars)": 35026330.05000196
+    },
+    {
+      "month": "2019-01",
+      "Sale (Dollars)": 23466782.590000402
+    },
+    {
+      "month": "2019-02",
+      "Sale (Dollars)": 24641910.49000081
+    },
+    {
+      "month": "2019-03",
+      "Sale (Dollars)": 24982728.360002853
+    },
+    {
+      "month": "2019-04",
+      "Sale (Dollars)": 27788607.850000523
+    },
+    {
+      "month": "2019-05",
+      "Sale (Dollars)": 32756773.270001397
+    },
+    {
+      "month": "2019-06",
+      "Sale (Dollars)": 28877030.96000197
+    },
+    {
+      "month": "2019-07",
+      "Sale (Dollars)": 30967399.69000221
+    },
+    {
+      "month": "2019-08",
+      "Sale (Dollars)": 28424263.289999828
+    },
+    {
+      "month": "2019-09",
+      "Sale (Dollars)": 28078111.230000727
+    },
+    {
+      "month": "2019-10",
+      "Sale (Dollars)": 34448213.35000117
+    },
+    {
+      "month": "2019-11",
+      "Sale (Dollars)": 30270164.51000072
+    },
+    {
+      "month": "2019-12",
+      "Sale (Dollars)": 34518356.04000095
+    },
+    {
+      "month": "2020-01",
+      "Sale (Dollars)": 24794498.260000214
+    },
+    {
+      "month": "2020-02",
+      "Sale (Dollars)": 25720303.90000195
+    },
+    {
+      "month": "2020-03",
+      "Sale (Dollars)": 31210733.110001698
+    },
+    {
+      "month": "2020-04",
+      "Sale (Dollars)": 31987264.680002004
+    },
+    {
+      "month": "2020-05",
+      "Sale (Dollars)": 32081114.18000279
+    },
+    {
+      "month": "2020-06",
+      "Sale (Dollars)": 36007843.00000267
+    },
+    {
+      "month": "2020-07",
+      "Sale (Dollars)": 34272654.20000101
+    },
+    {
+      "month": "2020-08",
+      "Sale (Dollars)": 33722408.12000098
+    },
+    {
+      "month": "2020-09",
+      "Sale (Dollars)": 36780839.350001365
+    }
+  ],
+  "49": [
+    {
+      "State Bottle Cost": 4.89,
+      "State Bottle Retail": 7.34
+    },
+    {
+      "State Bottle Cost": 14.99,
+      "State Bottle Retail": 22.49
+    },
+    {
+      "State Bottle Cost": 4.34,
+      "State Bottle Retail": 6.51
+    },
+    {
+      "State Bottle Cost": 5.54,
+      "State Bottle Retail": 8.31
+    },
+    {
+      "State Bottle Cost": 31.0,
+      "State Bottle Retail": 46.49
+    },
+    {
+      "State Bottle Cost": 12.5,
+      "State Bottle Retail": 18.75
+    },
+    {
+      "State Bottle Cost": 4.96,
+      "State Bottle Retail": 7.44
+    },
+    {
+      "State Bottle Cost": 4.05,
+      "State Bottle Retail": 6.08
+    },
+    {
+      "State Bottle Cost": 4.9,
+      "State Bottle Retail": 7.35
+    },
+    {
+      "State Bottle Cost": 8.2,
+      "State Bottle Retail": 12.3
+    },
+    {
+      "State Bottle Cost": 7.65,
+      "State Bottle Retail": 11.48
+    },
+    {
+      "State Bottle Cost": 5.5,
+      "State Bottle Retail": 8.25
+    },
+    {
+      "State Bottle Cost": 4.5,
+      "State Bottle Retail": 6.75
+    },
+    {
+      "State Bottle Cost": 3.36,
+      "State Bottle Retail": 5.04
+    },
+    {
+      "State Bottle Cost": 27.0,
+      "State Bottle Retail": 40.5
+    },
+    {
+      "State Bottle Cost": 17.97,
+      "State Bottle Retail": 26.96
+    },
+    {
+      "State Bottle Cost": 20.25,
+      "State Bottle Retail": 30.38
+    },
+    {
+      "State Bottle Cost": 5.44,
+      "State Bottle Retail": 8.15
+    },
+    {
+      "State Bottle Cost": 18.08,
+      "State Bottle Retail": 27.13
+    },
+    {
+      "State Bottle Cost": 3.42,
+      "State Bottle Retail": 5.13
+    },
+    {
+      "State Bottle Cost": 7.5,
+      "State Bottle Retail": 11.25
+    },
+    {
+      "State Bottle Cost": 4.83,
+      "State Bottle Retail": 7.44
+    },
+    {
+      "State Bottle Cost": 7.1,
+      "State Bottle Retail": 10.65
+    },
+    {
+      "State Bottle Cost": 10.99,
+      "State Bottle Retail": 16.49
+    },
+    {
+      "State Bottle Cost": 8.92,
+      "State Bottle Retail": 13.38
+    },
+    {
+      "State Bottle Cost": 9.23,
+      "State Bottle Retail": 13.85
+    },
+    {
+      "State Bottle Cost": 4.7,
+      "State Bottle Retail": 7.05
+    },
+    {
+      "State Bottle Cost": 2.28,
+      "State Bottle Retail": 3.42
+    },
+    {
+      "State Bottle Cost": 14.5,
+      "State Bottle Retail": 21.74
+    },
+    {
+      "State Bottle Cost": 7.35,
+      "State Bottle Retail": 11.03
+    },
+    {
+      "State Bottle Cost": 10.5,
+      "State Bottle Retail": 15.74
+    },
+    {
+      "State Bottle Cost": 10.42,
+      "State Bottle Retail": 15.63
+    },
+    {
+      "State Bottle Cost": 8.2,
+      "State Bottle Retail": 12.3
+    },
+    {
+      "State Bottle Cost": 9.7,
+      "State Bottle Retail": 14.92
+    },
+    {
+      "State Bottle Cost": 2.27,
+      "State Bottle Retail": 3.41
+    },
+    {
+      "State Bottle Cost": 7.0,
+      "State Bottle Retail": 10.5
+    },
+    {
+      "State Bottle Cost": 14.67,
+      "State Bottle Retail": 22.0
+    },
+    {
+      "State Bottle Cost": 9.64,
+      "State Bottle Retail": 14.46
+    },
+    {
+      "State Bottle Cost": 29.99,
+      "State Bottle Retail": 44.99
+    },
+    {
+      "State Bottle Cost": 24.5,
+      "State Bottle Retail": 36.74
+    },
+    {
+      "State Bottle Cost": 20.25,
+      "State Bottle Retail": 30.37
+    },
+    {
+      "State Bottle Cost": 8.75,
+      "State Bottle Retail": 13.12
+    },
+    {
+      "State Bottle Cost": 5.24,
+      "State Bottle Retail": 7.87
+    },
+    {
+      "State Bottle Cost": 11.28,
+      "State Bottle Retail": 16.93
+    },
+    {
+      "State Bottle Cost": 7.11,
+      "State Bottle Retail": 10.67
+    },
+    {
+      "State Bottle Cost": 10.0,
+      "State Bottle Retail": 15.0
+    },
+    {
+      "State Bottle Cost": 3.46,
+      "State Bottle Retail": 5.19
+    },
+    {
+      "State Bottle Cost": 3.86,
+      "State Bottle Retail": 6.04
+    },
+    {
+      "State Bottle Cost": 4.97,
+      "State Bottle Retail": 7.46
+    },
+    {
+      "State Bottle Cost": 7.0,
+      "State Bottle Retail": 10.5
+    },
+    {
+      "State Bottle Cost": 4.88,
+      "State Bottle Retail": 7.32
+    },
+    {
+      "State Bottle Cost": 22.04,
+      "State Bottle Retail": 33.06
+    },
+    {
+      "State Bottle Cost": 6.63,
+      "State Bottle Retail": 9.94
+    },
+    {
+      "State Bottle Cost": 4.33,
+      "State Bottle Retail": 6.5
+    },
+    {
+      "State Bottle Cost": 17.0,
+      "State Bottle Retail": 25.49
+    },
+    {
+      "State Bottle Cost": 24.34,
+      "State Bottle Retail": 36.51
+    },
+    {
+      "State Bottle Cost": 7.74,
+      "State Bottle Retail": 11.61
+    },
+    {
+      "State Bottle Cost": 9.0,
+      "State Bottle Retail": 13.5
+    },
+    {
+      "State Bottle Cost": 7.25,
+      "State Bottle Retail": 11.25
+    },
+    {
+      "State Bottle Cost": 26.08,
+      "State Bottle Retail": 39.13
+    },
+    {
+      "State Bottle Cost": 11.0,
+      "State Bottle Retail": 16.5
+    },
+    {
+      "State Bottle Cost": 5.0,
+      "State Bottle Retail": 7.5
+    },
+    {
+      "State Bottle Cost": 9.71,
+      "State Bottle Retail": 14.57
+    },
+    {
+      "State Bottle Cost": 2.07,
+      "State Bottle Retail": 3.11
+    },
+    {
+      "State Bottle Cost": 10.3,
+      "State Bottle Retail": 15.45
+    },
+    {
+      "State Bottle Cost": 2.28,
+      "State Bottle Retail": 3.42
+    },
+    {
+      "State Bottle Cost": 8.25,
+      "State Bottle Retail": 12.38
+    },
+    {
+      "State Bottle Cost": 8.2,
+      "State Bottle Retail": 12.3
+    },
+    {
+      "State Bottle Cost": 9.85,
+      "State Bottle Retail": 14.78
+    },
+    {
+      "State Bottle Cost": 49.99,
+      "State Bottle Retail": 74.99
+    },
+    {
+      "State Bottle Cost": 26.9,
+      "State Bottle Retail": 40.35
+    },
+    {
+      "State Bottle Cost": 6.9,
+      "State Bottle Retail": 10.35
+    },
+    {
+      "State Bottle Cost": 12.99,
+      "State Bottle Retail": 19.49
+    },
+    {
+      "State Bottle Cost": 11.75,
+      "State Bottle Retail": 17.63
+    },
+    {
+      "State Bottle Cost": 6.15,
+      "State Bottle Retail": 9.23
+    },
+    {
+      "State Bottle Cost": 7.67,
+      "State Bottle Retail": 11.51
+    },
+    {
+      "State Bottle Cost": 8.2,
+      "State Bottle Retail": 12.3
+    },
+    {
+      "State Bottle Cost": 4.59,
+      "State Bottle Retail": 6.89
+    },
+    {
+      "State Bottle Cost": 7.35,
+      "State Bottle Retail": 11.03
+    },
+    {
+      "State Bottle Cost": 3.31,
+      "State Bottle Retail": 4.96
+    },
+    {
+      "State Bottle Cost": 6.64,
+      "State Bottle Retail": 9.96
+    },
+    {
+      "State Bottle Cost": 14.38,
+      "State Bottle Retail": 21.57
+    },
+    {
+      "State Bottle Cost": 21.0,
+      "State Bottle Retail": 31.5
+    },
+    {
+      "State Bottle Cost": 3.78,
+      "State Bottle Retail": 5.66
+    },
+    {
+      "State Bottle Cost": 28.69,
+      "State Bottle Retail": 43.04
+    },
+    {
+      "State Bottle Cost": 9.65,
+      "State Bottle Retail": 14.48
+    },
+    {
+      "State Bottle Cost": 8.33,
+      "State Bottle Retail": 12.49
+    },
+    {
+      "State Bottle Cost": 9.49,
+      "State Bottle Retail": 14.73
+    },
+    {
+      "State Bottle Cost": 1.93,
+      "State Bottle Retail": 2.89
+    },
+    {
+      "State Bottle Cost": 7.17,
+      "State Bottle Retail": 10.76
+    },
+    {
+      "State Bottle Cost": 9.36,
+      "State Bottle Retail": 14.04
+    },
+    {
+      "State Bottle Cost": 2.75,
+      "State Bottle Retail": 4.13
+    },
+    {
+      "State Bottle Cost": 18.49,
+      "State Bottle Retail": 27.74
+    },
+    {
+      "State Bottle Cost": 5.0,
+      "State Bottle Retail": 7.5
+    },
+    {
+      "State Bottle Cost": 16.0,
+      "State Bottle Retail": 24.0
+    },
+    {
+      "State Bottle Cost": 10.49,
+      "State Bottle Retail": 15.99
+    },
+    {
+      "State Bottle Cost": 3.34,
+      "State Bottle Retail": 5.01
+    },
+    {
+      "State Bottle Cost": 5.51,
+      "State Bottle Retail": 8.26
+    },
+    {
+      "State Bottle Cost": 2.84,
+      "State Bottle Retail": 4.25
+    },
+    {
+      "State Bottle Cost": 10.49,
+      "State Bottle Retail": 15.74
+    },
+    {
+      "State Bottle Cost": 6.8,
+      "State Bottle Retail": 10.2
+    },
+    {
+      "State Bottle Cost": 7.5,
+      "State Bottle Retail": 11.25
+    },
+    {
+      "State Bottle Cost": 4.75,
+      "State Bottle Retail": 7.13
+    },
+    {
+      "State Bottle Cost": 6.06,
+      "State Bottle Retail": 9.09
+    },
+    {
+      "State Bottle Cost": 11.34,
+      "State Bottle Retail": 17.01
+    },
+    {
+      "State Bottle Cost": 13.5,
+      "State Bottle Retail": 20.25
+    },
+    {
+      "State Bottle Cost": 7.53,
+      "State Bottle Retail": 11.3
+    },
+    {
+      "State Bottle Cost": 5.92,
+      "State Bottle Retail": 8.88
+    },
+    {
+      "State Bottle Cost": 10.0,
+      "State Bottle Retail": 14.99
+    },
+    {
+      "State Bottle Cost": 8.2,
+      "State Bottle Retail": 12.3
+    },
+    {
+      "State Bottle Cost": 7.35,
+      "State Bottle Retail": 11.03
+    },
+    {
+      "State Bottle Cost": 8.25,
+      "State Bottle Retail": 12.37
+    },
+    {
+      "State Bottle Cost": 2.24,
+      "State Bottle Retail": 3.36
+    },
+    {
+      "State Bottle Cost": 4.36,
+      "State Bottle Retail": 6.53
+    },
+    {
+      "State Bottle Cost": 19.87,
+      "State Bottle Retail": 29.81
+    },
+    {
+      "State Bottle Cost": 14.25,
+      "State Bottle Retail": 21.62
+    },
+    {
+      "State Bottle Cost": 4.86,
+      "State Bottle Retail": 7.29
+    },
+    {
+      "State Bottle Cost": 18.56,
+      "State Bottle Retail": 27.84
+    },
+    {
+      "State Bottle Cost": 3.09,
+      "State Bottle Retail": 4.64
+    },
+    {
+      "State Bottle Cost": 3.34,
+      "State Bottle Retail": 5.0
+    },
+    {
+      "State Bottle Cost": 18.49,
+      "State Bottle Retail": 27.74
+    },
+    {
+      "State Bottle Cost": 10.0,
+      "State Bottle Retail": 14.99
+    },
+    {
+      "State Bottle Cost": 12.5,
+      "State Bottle Retail": 18.74
+    },
+    {
+      "State Bottle Cost": 8.5,
+      "State Bottle Retail": 12.74
+    },
+    {
+      "State Bottle Cost": 7.47,
+      "State Bottle Retail": 11.21
+    },
+    {
+      "State Bottle Cost": 12.5,
+      "State Bottle Retail": 18.75
+    },
+    {
+      "State Bottle Cost": 4.76,
+      "State Bottle Retail": 7.14
+    },
+    {
+      "State Bottle Cost": 3.46,
+      "State Bottle Retail": 5.19
+    },
+    {
+      "State Bottle Cost": 4.1,
+      "State Bottle Retail": 6.15
+    },
+    {
+      "State Bottle Cost": 7.5,
+      "State Bottle Retail": 11.25
+    },
+    {
+      "State Bottle Cost": 5.15,
+      "State Bottle Retail": 7.73
+    },
+    {
+      "State Bottle Cost": 3.3,
+      "State Bottle Retail": 4.96
+    },
+    {
+      "State Bottle Cost": 15.5,
+      "State Bottle Retail": 23.25
+    },
+    {
+      "State Bottle Cost": 10.83,
+      "State Bottle Retail": 16.24
+    },
+    {
+      "State Bottle Cost": 3.85,
+      "State Bottle Retail": 5.77
+    },
+    {
+      "State Bottle Cost": 10.99,
+      "State Bottle Retail": 16.49
+    },
+    {
+      "State Bottle Cost": 10.23,
+      "State Bottle Retail": 15.35
+    },
+    {
+      "State Bottle Cost": 10.5,
+      "State Bottle Retail": 15.75
+    },
+    {
+      "State Bottle Cost": 3.71,
+      "State Bottle Retail": 5.57
+    },
+    {
+      "State Bottle Cost": 4.17,
+      "State Bottle Retail": 6.25
+    },
+    {
+      "State Bottle Cost": 8.67,
+      "State Bottle Retail": 13.01
+    },
+    {
+      "State Bottle Cost": 6.9,
+      "State Bottle Retail": 10.35
+    },
+    {
+      "State Bottle Cost": 6.25,
+      "State Bottle Retail": 9.49
+    },
+    {
+      "State Bottle Cost": 6.3,
+      "State Bottle Retail": 9.45
+    },
+    {
+      "State Bottle Cost": 9.99,
+      "State Bottle Retail": 14.99
+    },
+    {
+      "State Bottle Cost": 33.66,
+      "State Bottle Retail": 50.49
+    },
+    {
+      "State Bottle Cost": 17.76,
+      "State Bottle Retail": 26.65
+    },
+    {
+      "State Bottle Cost": 19.15,
+      "State Bottle Retail": 28.73
+    },
+    {
+      "State Bottle Cost": 3.34,
+      "State Bottle Retail": 5.01
+    },
+    {
+      "State Bottle Cost": 5.99,
+      "State Bottle Retail": 9.24
+    },
+    {
+      "State Bottle Cost": 4.96,
+      "State Bottle Retail": 7.44
+    },
+    {
+      "State Bottle Cost": 3.39,
+      "State Bottle Retail": 5.09
+    },
+    {
+      "State Bottle Cost": 18.09,
+      "State Bottle Retail": 27.14
+    },
+    {
+      "State Bottle Cost": 3.3,
+      "State Bottle Retail": 4.96
+    },
+    {
+      "State Bottle Cost": 10.5,
+      "State Bottle Retail": 15.75
+    },
+    {
+      "State Bottle Cost": 6.82,
+      "State Bottle Retail": 10.24
+    },
+    {
+      "State Bottle Cost": 11.0,
+      "State Bottle Retail": 16.5
+    },
+    {
+      "State Bottle Cost": 6.38,
+      "State Bottle Retail": 9.56
+    },
+    {
+      "State Bottle Cost": 3.25,
+      "State Bottle Retail": 4.88
+    },
+    {
+      "State Bottle Cost": 5.0,
+      "State Bottle Retail": 7.5
+    },
+    {
+      "State Bottle Cost": 2.74,
+      "State Bottle Retail": 4.11
+    },
+    {
+      "State Bottle Cost": 13.5,
+      "State Bottle Retail": 20.25
+    },
+    {
+      "State Bottle Cost": 11.8,
+      "State Bottle Retail": 17.7
+    },
+    {
+      "State Bottle Cost": 14.8,
+      "State Bottle Retail": 22.21
+    },
+    {
+      "State Bottle Cost": 10.49,
+      "State Bottle Retail": 15.73
+    },
+    {
+      "State Bottle Cost": 6.0,
+      "State Bottle Retail": 9.25
+    },
+    {
+      "State Bottle Cost": 5.25,
+      "State Bottle Retail": 7.88
+    },
+    {
+      "State Bottle Cost": 3.39,
+      "State Bottle Retail": 5.09
+    },
+    {
+      "State Bottle Cost": 2.28,
+      "State Bottle Retail": 3.42
+    },
+    {
+      "State Bottle Cost": 5.78,
+      "State Bottle Retail": 8.67
+    },
+    {
+      "State Bottle Cost": 15.0,
+      "State Bottle Retail": 22.49
+    },
+    {
+      "State Bottle Cost": 6.75,
+      "State Bottle Retail": 10.12
+    },
+    {
+      "State Bottle Cost": 16.93,
+      "State Bottle Retail": 25.4
+    },
+    {
+      "State Bottle Cost": 8.66,
+      "State Bottle Retail": 12.99
+    },
+    {
+      "State Bottle Cost": 8.75,
+      "State Bottle Retail": 13.12
+    },
+    {
+      "State Bottle Cost": 3.3,
+      "State Bottle Retail": 4.95
+    },
+    {
+      "State Bottle Cost": 14.94,
+      "State Bottle Retail": 22.41
+    },
+    {
+      "State Bottle Cost": 7.88,
+      "State Bottle Retail": 11.82
+    },
+    {
+      "State Bottle Cost": 11.35,
+      "State Bottle Retail": 17.03
+    },
+    {
+      "State Bottle Cost": 5.25,
+      "State Bottle Retail": 7.87
+    },
+    {
+      "State Bottle Cost": 31.0,
+      "State Bottle Retail": 46.49
+    },
+    {
+      "State Bottle Cost": 3.75,
+      "State Bottle Retail": 5.62
+    },
+    {
+      "State Bottle Cost": 15.75,
+      "State Bottle Retail": 23.62
+    },
+    {
+      "State Bottle Cost": 6.75,
+      "State Bottle Retail": 10.13
+    },
+    {
+      "State Bottle Cost": 14.99,
+      "State Bottle Retail": 22.49
+    },
+    {
+      "State Bottle Cost": 13.86,
+      "State Bottle Retail": 20.79
+    },
+    {
+      "State Bottle Cost": 9.0,
+      "State Bottle Retail": 13.5
+    },
+    {
+      "State Bottle Cost": 1.2,
+      "State Bottle Retail": 1.8
+    },
+    {
+      "State Bottle Cost": 10.23,
+      "State Bottle Retail": 15.35
+    },
+    {
+      "State Bottle Cost": 3.24,
+      "State Bottle Retail": 4.86
+    },
+    {
+      "State Bottle Cost": 9.7,
+      "State Bottle Retail": 14.92
+    },
+    {
+      "State Bottle Cost": 11.34,
+      "State Bottle Retail": 17.01
+    },
+    {
+      "State Bottle Cost": 9.65,
+      "State Bottle Retail": 14.48
+    },
+    {
+      "State Bottle Cost": 7.41,
+      "State Bottle Retail": 11.62
+    },
+    {
+      "State Bottle Cost": 13.41,
+      "State Bottle Retail": 20.12
+    },
+    {
+      "State Bottle Cost": 6.55,
+      "State Bottle Retail": 9.83
+    },
+    {
+      "State Bottle Cost": 10.0,
+      "State Bottle Retail": 15.0
+    },
+    {
+      "State Bottle Cost": 4.05,
+      "State Bottle Retail": 6.08
+    },
+    {
+      "State Bottle Cost": 5.0,
+      "State Bottle Retail": 7.5
+    },
+    {
+      "State Bottle Cost": 38.94,
+      "State Bottle Retail": 58.41
+    },
+    {
+      "State Bottle Cost": 10.23,
+      "State Bottle Retail": 15.35
+    },
+    {
+      "State Bottle Cost": 15.33,
+      "State Bottle Retail": 23.0
+    },
+    {
+      "State Bottle Cost": 13.64,
+      "State Bottle Retail": 20.46
+    },
+    {
+      "State Bottle Cost": 17.0,
+      "State Bottle Retail": 25.49
+    },
+    {
+      "State Bottle Cost": 7.33,
+      "State Bottle Retail": 11.49
+    },
+    {
+      "State Bottle Cost": 3.97,
+      "State Bottle Retail": 5.96
+    },
+    {
+      "State Bottle Cost": 8.49,
+      "State Bottle Retail": 12.74
+    },
+    {
+      "State Bottle Cost": 9.71,
+      "State Bottle Retail": 14.56
+    },
+    {
+      "State Bottle Cost": 12.5,
+      "State Bottle Retail": 18.75
+    },
+    {
+      "State Bottle Cost": 1.8,
+      "State Bottle Retail": 2.7
+    },
+    {
+      "State Bottle Cost": 24.5,
+      "State Bottle Retail": 36.74
+    },
+    {
+      "State Bottle Cost": 7.49,
+      "State Bottle Retail": 11.24
+    },
+    {
+      "State Bottle Cost": 13.5,
+      "State Bottle Retail": 21.0
+    },
+    {
+      "State Bottle Cost": 1.8,
+      "State Bottle Retail": 2.69
+    },
+    {
+      "State Bottle Cost": 10.5,
+      "State Bottle Retail": 15.75
+    },
+    {
+      "State Bottle Cost": 17.7,
+      "State Bottle Retail": 26.55
+    },
+    {
+      "State Bottle Cost": 7.17,
+      "State Bottle Retail": 10.76
+    },
+    {
+      "State Bottle Cost": 12.48,
+      "State Bottle Retail": 18.72
+    },
+    {
+      "State Bottle Cost": 11.45,
+      "State Bottle Retail": 17.18
+    },
+    {
+      "State Bottle Cost": 5.92,
+      "State Bottle Retail": 8.88
+    },
+    {
+      "State Bottle Cost": 5.5,
+      "State Bottle Retail": 8.25
+    },
+    {
+      "State Bottle Cost": 6.25,
+      "State Bottle Retail": 9.63
+    },
+    {
+      "State Bottle Cost": 3.71,
+      "State Bottle Retail": 5.57
+    },
+    {
+      "State Bottle Cost": 13.73,
+      "State Bottle Retail": 20.59
+    },
+    {
+      "State Bottle Cost": 8.97,
+      "State Bottle Retail": 13.46
+    },
+    {
+      "State Bottle Cost": 19.99,
+      "State Bottle Retail": 29.99
+    },
+    {
+      "State Bottle Cost": 13.73,
+      "State Bottle Retail": 20.59
+    },
+    {
+      "State Bottle Cost": 9.45,
+      "State Bottle Retail": 14.68
+    },
+    {
+      "State Bottle Cost": 7.2,
+      "State Bottle Retail": 10.79
+    },
+    {
+      "State Bottle Cost": 7.5,
+      "State Bottle Retail": 11.24
+    },
+    {
+      "State Bottle Cost": 6.52,
+      "State Bottle Retail": 9.78
+    },
+    {
+      "State Bottle Cost": 7.96,
+      "State Bottle Retail": 11.94
+    },
+    {
+      "State Bottle Cost": 7.0,
+      "State Bottle Retail": 10.49
+    },
+    {
+      "State Bottle Cost": 13.28,
+      "State Bottle Retail": 19.92
+    },
+    {
+      "State Bottle Cost": 11.5,
+      "State Bottle Retail": 17.49
+    },
+    {
+      "State Bottle Cost": 34.99,
+      "State Bottle Retail": 52.49
+    },
+    {
+      "State Bottle Cost": 18.49,
+      "State Bottle Retail": 27.74
+    },
+    {
+      "State Bottle Cost": 15.75,
+      "State Bottle Retail": 23.63
+    },
+    {
+      "State Bottle Cost": 6.88,
+      "State Bottle Retail": 10.32
+    },
+    {
+      "State Bottle Cost": 8.0,
+      "State Bottle Retail": 12.0
+    },
+    {
+      "State Bottle Cost": 15.0,
+      "State Bottle Retail": 22.5
+    },
+    {
+      "State Bottle Cost": 15.0,
+      "State Bottle Retail": 22.5
+    },
+    {
+      "State Bottle Cost": 3.0,
+      "State Bottle Retail": 4.49
+    },
+    {
+      "State Bottle Cost": 5.92,
+      "State Bottle Retail": 8.88
+    },
+    {
+      "State Bottle Cost": 26.05,
+      "State Bottle Retail": 39.08
+    },
+    {
+      "State Bottle Cost": 4.01,
+      "State Bottle Retail": 6.01
+    },
+    {
+      "State Bottle Cost": 8.95,
+      "State Bottle Retail": 13.43
+    },
+    {
+      "State Bottle Cost": 2.05,
+      "State Bottle Retail": 3.07
+    },
+    {
+      "State Bottle Cost": 6.5,
+      "State Bottle Retail": 9.74
+    },
+    {
+      "State Bottle Cost": 6.92,
+      "State Bottle Retail": 10.38
+    },
+    {
+      "State Bottle Cost": 7.11,
+      "State Bottle Retail": 10.67
+    },
+    {
+      "State Bottle Cost": 9.0,
+      "State Bottle Retail": 13.5
+    },
+    {
+      "State Bottle Cost": 4.29,
+      "State Bottle Retail": 6.44
+    },
+    {
+      "State Bottle Cost": 6.06,
+      "State Bottle Retail": 9.09
+    },
+    {
+      "State Bottle Cost": 20.9,
+      "State Bottle Retail": 31.35
+    },
+    {
+      "State Bottle Cost": 7.36,
+      "State Bottle Retail": 11.04
+    },
+    {
+      "State Bottle Cost": 5.47,
+      "State Bottle Retail": 8.21
+    },
+    {
+      "State Bottle Cost": 7.47,
+      "State Bottle Retail": 11.21
+    },
+    {
+      "State Bottle Cost": 14.75,
+      "State Bottle Retail": 22.12
+    },
+    {
+      "State Bottle Cost": 10.24,
+      "State Bottle Retail": 15.35
+    },
+    {
+      "State Bottle Cost": 6.3,
+      "State Bottle Retail": 9.45
+    },
+    {
+      "State Bottle Cost": 4.23,
+      "State Bottle Retail": 6.35
+    },
+    {
+      "State Bottle Cost": 15.54,
+      "State Bottle Retail": 23.31
+    },
+    {
+      "State Bottle Cost": 15.0,
+      "State Bottle Retail": 22.5
+    },
+    {
+      "State Bottle Cost": 11.0,
+      "State Bottle Retail": 16.5
+    },
+    {
+      "State Bottle Cost": 9.36,
+      "State Bottle Retail": 14.04
+    },
+    {
+      "State Bottle Cost": 4.83,
+      "State Bottle Retail": 7.44
+    },
+    {
+      "State Bottle Cost": 5.43,
+      "State Bottle Retail": 8.15
+    },
+    {
+      "State Bottle Cost": 3.07,
+      "State Bottle Retail": 4.61
+    },
+    {
+      "State Bottle Cost": 7.33,
+      "State Bottle Retail": 11.0
+    },
+    {
+      "State Bottle Cost": 7.08,
+      "State Bottle Retail": 10.62
+    },
+    {
+      "State Bottle Cost": 2.07,
+      "State Bottle Retail": 3.11
+    },
+    {
+      "State Bottle Cost": 9.65,
+      "State Bottle Retail": 14.48
+    },
+    {
+      "State Bottle Cost": 7.41,
+      "State Bottle Retail": 11.12
+    },
+    {
+      "State Bottle Cost": 17.15,
+      "State Bottle Retail": 25.73
+    },
+    {
+      "State Bottle Cost": 6.83,
+      "State Bottle Retail": 10.24
+    },
+    {
+      "State Bottle Cost": 7.17,
+      "State Bottle Retail": 10.76
+    },
+    {
+      "State Bottle Cost": 10.98,
+      "State Bottle Retail": 16.48
+    },
+    {
+      "State Bottle Cost": 13.75,
+      "State Bottle Retail": 21.13
+    },
+    {
+      "State Bottle Cost": 1.13,
+      "State Bottle Retail": 1.7
+    },
+    {
+      "State Bottle Cost": 10.49,
+      "State Bottle Retail": 15.73
+    },
+    {
+      "State Bottle Cost": 6.3,
+      "State Bottle Retail": 9.45
+    },
+    {
+      "State Bottle Cost": 17.25,
+      "State Bottle Retail": 25.87
+    },
+    {
+      "State Bottle Cost": 8.32,
+      "State Bottle Retail": 12.48
+    },
+    {
+      "State Bottle Cost": 9.87,
+      "State Bottle Retail": 14.81
+    },
+    {
+      "State Bottle Cost": 4.67,
+      "State Bottle Retail": 7.01
+    },
+    {
+      "State Bottle Cost": 6.06,
+      "State Bottle Retail": 9.09
+    },
+    {
+      "State Bottle Cost": 9.0,
+      "State Bottle Retail": 13.49
+    },
+    {
+      "State Bottle Cost": 11.55,
+      "State Bottle Retail": 17.32
+    },
+    {
+      "State Bottle Cost": 17.61,
+      "State Bottle Retail": 26.41
+    },
+    {
+      "State Bottle Cost": 7.49,
+      "State Bottle Retail": 11.23
+    },
+    {
+      "State Bottle Cost": 11.96,
+      "State Bottle Retail": 17.93
+    },
+    {
+      "State Bottle Cost": 4.95,
+      "State Bottle Retail": 7.43
+    },
+    {
+      "State Bottle Cost": 11.0,
+      "State Bottle Retail": 16.5
+    },
+    {
+      "State Bottle Cost": 7.1,
+      "State Bottle Retail": 10.65
+    },
+    {
+      "State Bottle Cost": 18.49,
+      "State Bottle Retail": 27.74
+    },
+    {
+      "State Bottle Cost": 4.83,
+      "State Bottle Retail": 7.44
+    },
+    {
+      "State Bottle Cost": 29.98,
+      "State Bottle Retail": 44.97
+    },
+    {
+      "State Bottle Cost": 5.44,
+      "State Bottle Retail": 8.15
+    },
+    {
+      "State Bottle Cost": 1.96,
+      "State Bottle Retail": 2.94
+    },
+    {
+      "State Bottle Cost": 6.3,
+      "State Bottle Retail": 9.45
+    },
+    {
+      "State Bottle Cost": 6.67,
+      "State Bottle Retail": 10.0
+    },
+    {
+      "State Bottle Cost": 14.84,
+      "State Bottle Retail": 22.26
+    },
+    {
+      "State Bottle Cost": 4.83,
+      "State Bottle Retail": 7.25
+    },
+    {
+      "State Bottle Cost": 6.25,
+      "State Bottle Retail": 9.49
+    },
+    {
+      "State Bottle Cost": 7.08,
+      "State Bottle Retail": 10.62
+    },
+    {
+      "State Bottle Cost": 11.5,
+      "State Bottle Retail": 17.49
+    },
+    {
+      "State Bottle Cost": 5.15,
+      "State Bottle Retail": 7.73
+    },
+    {
+      "State Bottle Cost": 14.75,
+      "State Bottle Retail": 22.13
+    },
+    {
+      "State Bottle Cost": 11.5,
+      "State Bottle Retail": 17.25
+    },
+    {
+      "State Bottle Cost": 6.0,
+      "State Bottle Retail": 9.25
+    },
+    {
+      "State Bottle Cost": 4.62,
+      "State Bottle Retail": 6.93
+    },
+    {
+      "State Bottle Cost": 9.49,
+      "State Bottle Retail": 14.24
+    },
+    {
+      "State Bottle Cost": 1.13,
+      "State Bottle Retail": 1.69
+    },
+    {
+      "State Bottle Cost": 21.77,
+      "State Bottle Retail": 32.66
+    },
+    {
+      "State Bottle Cost": 9.7,
+      "State Bottle Retail": 14.95
+    },
+    {
+      "State Bottle Cost": 15.0,
+      "State Bottle Retail": 22.49
+    },
+    {
+      "State Bottle Cost": 8.5,
+      "State Bottle Retail": 12.75
+    },
+    {
+      "State Bottle Cost": 28.71,
+      "State Bottle Retail": 43.07
+    },
+    {
+      "State Bottle Cost": 5.0,
+      "State Bottle Retail": 7.5
+    },
+    {
+      "State Bottle Cost": 14.75,
+      "State Bottle Retail": 22.13
+    },
+    {
+      "State Bottle Cost": 8.98,
+      "State Bottle Retail": 13.47
+    },
+    {
+      "State Bottle Cost": 18.08,
+      "State Bottle Retail": 27.13
+    },
+    {
+      "State Bottle Cost": 5.69,
+      "State Bottle Retail": 9.04
+    },
+    {
+      "State Bottle Cost": 5.01,
+      "State Bottle Retail": 7.76
+    },
+    {
+      "State Bottle Cost": 8.99,
+      "State Bottle Retail": 13.49
+    },
+    {
+      "State Bottle Cost": 11.0,
+      "State Bottle Retail": 16.5
+    },
+    {
+      "State Bottle Cost": 3.42,
+      "State Bottle Retail": 5.13
+    },
+    {
+      "State Bottle Cost": 11.83,
+      "State Bottle Retail": 17.75
+    },
+    {
+      "State Bottle Cost": 7.13,
+      "State Bottle Retail": 10.7
+    },
+    {
+      "State Bottle Cost": 9.88,
+      "State Bottle Retail": 14.82
+    },
+    {
+      "State Bottle Cost": 3.67,
+      "State Bottle Retail": 5.5
+    },
+    {
+      "State Bottle Cost": 4.01,
+      "State Bottle Retail": 6.01
+    },
+    {
+      "State Bottle Cost": 5.09,
+      "State Bottle Retail": 7.64
+    },
+    {
+      "State Bottle Cost": 13.86,
+      "State Bottle Retail": 20.79
+    },
+    {
+      "State Bottle Cost": 7.08,
+      "State Bottle Retail": 10.62
+    },
+    {
+      "State Bottle Cost": 7.18,
+      "State Bottle Retail": 10.77
+    },
+    {
+      "State Bottle Cost": 5.77,
+      "State Bottle Retail": 8.66
+    },
+    {
+      "State Bottle Cost": 5.54,
+      "State Bottle Retail": 8.31
+    },
+    {
+      "State Bottle Cost": 6.63,
+      "State Bottle Retail": 9.94
+    },
+    {
+      "State Bottle Cost": 6.0,
+      "State Bottle Retail": 9.25
+    },
+    {
+      "State Bottle Cost": 12.5,
+      "State Bottle Retail": 18.75
+    },
+    {
+      "State Bottle Cost": 10.16,
+      "State Bottle Retail": 15.74
+    },
+    {
+      "State Bottle Cost": 3.22,
+      "State Bottle Retail": 4.83
+    },
+    {
+      "State Bottle Cost": 7.13,
+      "State Bottle Retail": 10.7
+    },
+    {
+      "State Bottle Cost": 13.5,
+      "State Bottle Retail": 20.25
+    },
+    {
+      "State Bottle Cost": 9.34,
+      "State Bottle Retail": 14.01
+    },
+    {
+      "State Bottle Cost": 10.0,
+      "State Bottle Retail": 15.0
+    },
+    {
+      "State Bottle Cost": 4.99,
+      "State Bottle Retail": 7.49
+    },
+    {
+      "State Bottle Cost": 3.73,
+      "State Bottle Retail": 5.6
+    },
+    {
+      "State Bottle Cost": 5.5,
+      "State Bottle Retail": 8.25
+    },
+    {
+      "State Bottle Cost": 19.49,
+      "State Bottle Retail": 29.24
+    },
+    {
+      "State Bottle Cost": 4.29,
+      "State Bottle Retail": 6.44
+    },
+    {
+      "State Bottle Cost": 5.78,
+      "State Bottle Retail": 8.67
+    },
+    {
+      "State Bottle Cost": 4.0,
+      "State Bottle Retail": 6.0
+    },
+    {
+      "State Bottle Cost": 21.33,
+      "State Bottle Retail": 32.0
+    },
+    {
+      "State Bottle Cost": 4.54,
+      "State Bottle Retail": 6.81
+    },
+    {
+      "State Bottle Cost": 3.57,
+      "State Bottle Retail": 5.36
+    },
+    {
+      "State Bottle Cost": 7.08,
+      "State Bottle Retail": 10.62
+    },
+    {
+      "State Bottle Cost": 27.0,
+      "State Bottle Retail": 40.5
+    },
+    {
+      "State Bottle Cost": 4.04,
+      "State Bottle Retail": 6.06
+    },
+    {
+      "State Bottle Cost": 2.02,
+      "State Bottle Retail": 3.03
+    },
+    {
+      "State Bottle Cost": 7.62,
+      "State Bottle Retail": 11.43
+    },
+    {
+      "State Bottle Cost": 18.09,
+      "State Bottle Retail": 27.14
+    },
+    {
+      "State Bottle Cost": 1.74,
+      "State Bottle Retail": 2.6
+    },
+    {
+      "State Bottle Cost": 6.55,
+      "State Bottle Retail": 9.83
+    },
+    {
+      "State Bottle Cost": 16.18,
+      "State Bottle Retail": 24.27
+    },
+    {
+      "State Bottle Cost": 18.5,
+      "State Bottle Retail": 27.75
+    },
+    {
+      "State Bottle Cost": 10.24,
+      "State Bottle Retail": 15.48
+    },
+    {
+      "State Bottle Cost": 14.75,
+      "State Bottle Retail": 22.13
+    },
+    {
+      "State Bottle Cost": 11.0,
+      "State Bottle Retail": 16.5
+    },
+    {
+      "State Bottle Cost": 5.33,
+      "State Bottle Retail": 7.99
+    },
+    {
+      "State Bottle Cost": 6.67,
+      "State Bottle Retail": 10.0
+    },
+    {
+      "State Bottle Cost": 7.23,
+      "State Bottle Retail": 10.85
+    },
+    {
+      "State Bottle Cost": 7.5,
+      "State Bottle Retail": 11.25
+    },
+    {
+      "State Bottle Cost": 5.99,
+      "State Bottle Retail": 8.99
+    },
+    {
+      "State Bottle Cost": 10.49,
+      "State Bottle Retail": 15.74
+    },
+    {
+      "State Bottle Cost": 8.98,
+      "State Bottle Retail": 13.47
+    },
+    {
+      "State Bottle Cost": 2.38,
+      "State Bottle Retail": 3.57
+    },
+    {
+      "State Bottle Cost": 10.0,
+      "State Bottle Retail": 15.0
+    },
+    {
+      "State Bottle Cost": 10.0,
+      "State Bottle Retail": 14.99
+    },
+    {
+      "State Bottle Cost": 9.87,
+      "State Bottle Retail": 14.8
+    },
+    {
+      "State Bottle Cost": 2.13,
+      "State Bottle Retail": 3.2
+    },
+    {
+      "State Bottle Cost": 13.01,
+      "State Bottle Retail": 19.51
+    },
+    {
+      "State Bottle Cost": 14.0,
+      "State Bottle Retail": 20.99
+    },
+    {
+      "State Bottle Cost": 3.44,
+      "State Bottle Retail": 5.16
+    },
+    {
+      "State Bottle Cost": 3.31,
+      "State Bottle Retail": 4.97
+    },
+    {
+      "State Bottle Cost": 17.99,
+      "State Bottle Retail": 26.99
+    },
+    {
+      "State Bottle Cost": 4.54,
+      "State Bottle Retail": 6.8
+    },
+    {
+      "State Bottle Cost": 4.17,
+      "State Bottle Retail": 6.26
+    },
+    {
+      "State Bottle Cost": 8.98,
+      "State Bottle Retail": 13.47
+    },
+    {
+      "State Bottle Cost": 7.99,
+      "State Bottle Retail": 13.49
+    },
+    {
+      "State Bottle Cost": 7.7,
+      "State Bottle Retail": 11.8
+    },
+    {
+      "State Bottle Cost": 4.83,
+      "State Bottle Retail": 7.25
+    },
+    {
+      "State Bottle Cost": 7.33,
+      "State Bottle Retail": 11.49
+    },
+    {
+      "State Bottle Cost": 8.83,
+      "State Bottle Retail": 13.74
+    },
+    {
+      "State Bottle Cost": 10.99,
+      "State Bottle Retail": 16.49
+    },
+    {
+      "State Bottle Cost": 14.0,
+      "State Bottle Retail": 20.99
+    },
+    {
+      "State Bottle Cost": 6.83,
+      "State Bottle Retail": 10.24
+    },
+    {
+      "State Bottle Cost": 4.0,
+      "State Bottle Retail": 6.0
+    },
+    {
+      "State Bottle Cost": 7.46,
+      "State Bottle Retail": 11.19
+    },
+    {
+      "State Bottle Cost": 15.0,
+      "State Bottle Retail": 22.5
+    },
+    {
+      "State Bottle Cost": 8.33,
+      "State Bottle Retail": 12.5
+    },
+    {
+      "State Bottle Cost": 6.77,
+      "State Bottle Retail": 10.16
+    },
+    {
+      "State Bottle Cost": 11.0,
+      "State Bottle Retail": 16.49
+    },
+    {
+      "State Bottle Cost": 13.0,
+      "State Bottle Retail": 19.49
+    },
+    {
+      "State Bottle Cost": 11.54,
+      "State Bottle Retail": 17.31
+    },
+    {
+      "State Bottle Cost": 3.86,
+      "State Bottle Retail": 5.78
+    },
+    {
+      "State Bottle Cost": 8.33,
+      "State Bottle Retail": 12.5
+    },
+    {
+      "State Bottle Cost": 3.28,
+      "State Bottle Retail": 4.92
+    },
+    {
+      "State Bottle Cost": 7.0,
+      "State Bottle Retail": 10.5
+    },
+    {
+      "State Bottle Cost": 6.05,
+      "State Bottle Retail": 9.08
+    },
+    {
+      "State Bottle Cost": 14.53,
+      "State Bottle Retail": 21.8
+    },
+    {
+      "State Bottle Cost": 6.5,
+      "State Bottle Retail": 9.75
+    },
+    {
+      "State Bottle Cost": 27.48,
+      "State Bottle Retail": 41.23
+    },
+    {
+      "State Bottle Cost": 11.33,
+      "State Bottle Retail": 17.0
+    },
+    {
+      "State Bottle Cost": 1.74,
+      "State Bottle Retail": 2.6
+    },
+    {
+      "State Bottle Cost": 7.62,
+      "State Bottle Retail": 11.43
+    },
+    {
+      "State Bottle Cost": 7.33,
+      "State Bottle Retail": 11.49
+    },
+    {
+      "State Bottle Cost": 9.7,
+      "State Bottle Retail": 14.93
+    },
+    {
+      "State Bottle Cost": 3.39,
+      "State Bottle Retail": 5.09
+    },
+    {
+      "State Bottle Cost": 5.75,
+      "State Bottle Retail": 8.62
+    },
+    {
+      "State Bottle Cost": 35.0,
+      "State Bottle Retail": 52.49
+    },
+    {
+      "State Bottle Cost": 3.37,
+      "State Bottle Retail": 5.06
+    },
+    {
+      "State Bottle Cost": 10.49,
+      "State Bottle Retail": 15.74
+    },
+    {
+      "State Bottle Cost": 7.21,
+      "State Bottle Retail": 11.19
+    },
+    {
+      "State Bottle Cost": 10.01,
+      "State Bottle Retail": 15.01
+    },
+    {
+      "State Bottle Cost": 6.14,
+      "State Bottle Retail": 9.21
+    },
+    {
+      "State Bottle Cost": 7.0,
+      "State Bottle Retail": 10.49
+    },
+    {
+      "State Bottle Cost": 7.62,
+      "State Bottle Retail": 11.43
+    },
+    {
+      "State Bottle Cost": 5.26,
+      "State Bottle Retail": 7.89
+    },
+    {
+      "State Bottle Cost": 7.49,
+      "State Bottle Retail": 11.23
+    },
+    {
+      "State Bottle Cost": 15.46,
+      "State Bottle Retail": 23.19
+    },
+    {
+      "State Bottle Cost": 2.89,
+      "State Bottle Retail": 4.34
+    },
+    {
+      "State Bottle Cost": 2.67,
+      "State Bottle Retail": 4.01
+    },
+    {
+      "State Bottle Cost": 6.25,
+      "State Bottle Retail": 9.5
+    },
+    {
+      "State Bottle Cost": 6.92,
+      "State Bottle Retail": 10.38
+    },
+    {
+      "State Bottle Cost": 15.75,
+      "State Bottle Retail": 23.63
+    },
+    {
+      "State Bottle Cost": 26.0,
+      "State Bottle Retail": 38.99
+    },
+    {
+      "State Bottle Cost": 5.99,
+      "State Bottle Retail": 9.24
+    },
+    {
+      "State Bottle Cost": 18.17,
+      "State Bottle Retail": 27.26
+    },
+    {
+      "State Bottle Cost": 7.2,
+      "State Bottle Retail": 10.8
+    },
+    {
+      "State Bottle Cost": 7.2,
+      "State Bottle Retail": 10.79
+    },
+    {
+      "State Bottle Cost": 10.3,
+      "State Bottle Retail": 15.45
+    },
+    {
+      "State Bottle Cost": 4.7,
+      "State Bottle Retail": 7.06
+    },
+    {
+      "State Bottle Cost": 15.74,
+      "State Bottle Retail": 23.61
+    },
+    {
+      "State Bottle Cost": 12.5,
+      "State Bottle Retail": 18.99
+    },
+    {
+      "State Bottle Cost": 3.37,
+      "State Bottle Retail": 5.06
+    },
+    {
+      "State Bottle Cost": 8.62,
+      "State Bottle Retail": 12.94
+    },
+    {
+      "State Bottle Cost": 29.72,
+      "State Bottle Retail": 44.58
+    },
+    {
+      "State Bottle Cost": 6.92,
+      "State Bottle Retail": 10.38
+    },
+    {
+      "State Bottle Cost": 4.33,
+      "State Bottle Retail": 6.5
+    },
+    {
+      "State Bottle Cost": 6.92,
+      "State Bottle Retail": 10.38
+    },
+    {
+      "State Bottle Cost": 10.89,
+      "State Bottle Retail": 16.33
+    },
+    {
+      "State Bottle Cost": 7.62,
+      "State Bottle Retail": 11.43
+    },
+    {
+      "State Bottle Cost": 7.08,
+      "State Bottle Retail": 10.62
+    },
+    {
+      "State Bottle Cost": 17.99,
+      "State Bottle Retail": 26.99
+    },
+    {
+      "State Bottle Cost": 3.47,
+      "State Bottle Retail": 5.2
+    },
+    {
+      "State Bottle Cost": 17.5,
+      "State Bottle Retail": 26.24
+    },
+    {
+      "State Bottle Cost": 11.92,
+      "State Bottle Retail": 17.88
+    },
+    {
+      "State Bottle Cost": 4.62,
+      "State Bottle Retail": 6.92
+    },
+    {
+      "State Bottle Cost": 8.5,
+      "State Bottle Retail": 12.75
+    },
+    {
+      "State Bottle Cost": 11.0,
+      "State Bottle Retail": 16.5
+    },
+    {
+      "State Bottle Cost": 6.9,
+      "State Bottle Retail": 10.35
+    },
+    {
+      "State Bottle Cost": 8.25,
+      "State Bottle Retail": 12.38
+    },
+    {
+      "State Bottle Cost": 13.86,
+      "State Bottle Retail": 20.79
+    },
+    {
+      "State Bottle Cost": 7.47,
+      "State Bottle Retail": 11.21
+    },
+    {
+      "State Bottle Cost": 3.78,
+      "State Bottle Retail": 5.66
+    },
+    {
+      "State Bottle Cost": 17.0,
+      "State Bottle Retail": 25.74
+    },
+    {
+      "State Bottle Cost": 5.0,
+      "State Bottle Retail": 7.5
+    },
+    {
+      "State Bottle Cost": 7.62,
+      "State Bottle Retail": 11.43
+    },
+    {
+      "State Bottle Cost": 16.33,
+      "State Bottle Retail": 24.5
+    },
+    {
+      "State Bottle Cost": 12.3,
+      "State Bottle Retail": 18.45
+    },
+    {
+      "State Bottle Cost": 11.75,
+      "State Bottle Retail": 17.62
+    },
+    {
+      "State Bottle Cost": 1.51,
+      "State Bottle Retail": 2.27
+    },
+    {
+      "State Bottle Cost": 2.06,
+      "State Bottle Retail": 3.09
+    },
+    {
+      "State Bottle Cost": 3.07,
+      "State Bottle Retail": 4.6
+    },
+    {
+      "State Bottle Cost": 9.43,
+      "State Bottle Retail": 14.14
+    },
+    {
+      "State Bottle Cost": 18.0,
+      "State Bottle Retail": 27.0
+    },
+    {
+      "State Bottle Cost": 12.05,
+      "State Bottle Retail": 18.08
+    },
+    {
+      "State Bottle Cost": 6.3,
+      "State Bottle Retail": 9.45
+    },
+    {
+      "State Bottle Cost": 3.96,
+      "State Bottle Retail": 5.94
+    },
+    {
+      "State Bottle Cost": 14.0,
+      "State Bottle Retail": 21.0
+    },
+    {
+      "State Bottle Cost": 4.65,
+      "State Bottle Retail": 6.97
+    },
+    {
+      "State Bottle Cost": 12.66,
+      "State Bottle Retail": 18.99
+    },
+    {
+      "State Bottle Cost": 14.75,
+      "State Bottle Retail": 22.13
+    },
+    {
+      "State Bottle Cost": 7.27,
+      "State Bottle Retail": 10.91
+    },
+    {
+      "State Bottle Cost": 11.0,
+      "State Bottle Retail": 16.5
+    },
+    {
+      "State Bottle Cost": 10.24,
+      "State Bottle Retail": 15.48
+    },
+    {
+      "State Bottle Cost": 18.33,
+      "State Bottle Retail": 27.99
+    },
+    {
+      "State Bottle Cost": 4.54,
+      "State Bottle Retail": 6.8
+    },
+    {
+      "State Bottle Cost": 12.8,
+      "State Bottle Retail": 19.19
+    },
+    {
+      "State Bottle Cost": 4.5,
+      "State Bottle Retail": 6.75
+    },
+    {
+      "State Bottle Cost": 9.34,
+      "State Bottle Retail": 14.01
+    },
+    {
+      "State Bottle Cost": 7.21,
+      "State Bottle Retail": 11.19
+    },
+    {
+      "State Bottle Cost": 7.2,
+      "State Bottle Retail": 10.79
+    },
+    {
+      "State Bottle Cost": 11.3,
+      "State Bottle Retail": 16.94
+    },
+    {
+      "State Bottle Cost": 9.83,
+      "State Bottle Retail": 14.74
+    },
+    {
+      "State Bottle Cost": 4.96,
+      "State Bottle Retail": 7.44
+    },
+    {
+      "State Bottle Cost": 17.5,
+      "State Bottle Retail": 26.24
+    },
+    {
+      "State Bottle Cost": 3.3,
+      "State Bottle Retail": 4.96
+    },
+    {
+      "State Bottle Cost": 11.0,
+      "State Bottle Retail": 16.5
+    },
+    {
+      "State Bottle Cost": 19.17,
+      "State Bottle Retail": 28.76
+    },
+    {
+      "State Bottle Cost": 4.3,
+      "State Bottle Retail": 6.45
+    },
+    {
+      "State Bottle Cost": 3.31,
+      "State Bottle Retail": 4.97
+    },
+    {
+      "State Bottle Cost": 15.04,
+      "State Bottle Retail": 22.56
+    },
+    {
+      "State Bottle Cost": 12.5,
+      "State Bottle Retail": 18.75
+    },
+    {
+      "State Bottle Cost": 11.21,
+      "State Bottle Retail": 16.82
+    },
+    {
+      "State Bottle Cost": 12.25,
+      "State Bottle Retail": 18.38
+    },
+    {
+      "State Bottle Cost": 5.25,
+      "State Bottle Retail": 7.88
+    },
+    {
+      "State Bottle Cost": 10.98,
+      "State Bottle Retail": 16.47
+    },
+    {
+      "State Bottle Cost": 10.49,
+      "State Bottle Retail": 15.99
+    },
+    {
+      "State Bottle Cost": 6.62,
+      "State Bottle Retail": 9.93
+    },
+    {
+      "State Bottle Cost": 6.9,
+      "State Bottle Retail": 10.35
+    },
+    {
+      "State Bottle Cost": 15.0,
+      "State Bottle Retail": 22.49
+    },
+    {
+      "State Bottle Cost": 14.0,
+      "State Bottle Retail": 21.0
+    },
+    {
+      "State Bottle Cost": 1.74,
+      "State Bottle Retail": 2.61
+    },
+    {
+      "State Bottle Cost": 12.25,
+      "State Bottle Retail": 18.38
+    },
+    {
+      "State Bottle Cost": 14.99,
+      "State Bottle Retail": 22.49
+    },
+    {
+      "State Bottle Cost": 7.94,
+      "State Bottle Retail": 11.91
+    },
+    {
+      "State Bottle Cost": 15.53,
+      "State Bottle Retail": 23.3
+    },
+    {
+      "State Bottle Cost": 7.96,
+      "State Bottle Retail": 11.94
+    },
+    {
+      "State Bottle Cost": 4.5,
+      "State Bottle Retail": 6.74
+    },
+    {
+      "State Bottle Cost": 9.5,
+      "State Bottle Retail": 14.25
+    },
+    {
+      "State Bottle Cost": 6.9,
+      "State Bottle Retail": 10.35
+    },
+    {
+      "State Bottle Cost": 31.5,
+      "State Bottle Retail": 47.24
+    },
+    {
+      "State Bottle Cost": 6.87,
+      "State Bottle Retail": 10.81
+    },
+    {
+      "State Bottle Cost": 9.0,
+      "State Bottle Retail": 13.5
+    },
+    {
+      "State Bottle Cost": 8.25,
+      "State Bottle Retail": 12.37
+    },
+    {
+      "State Bottle Cost": 4.0,
+      "State Bottle Retail": 6.0
+    },
+    {
+      "State Bottle Cost": 18.49,
+      "State Bottle Retail": 27.74
+    },
+    {
+      "State Bottle Cost": 29.72,
+      "State Bottle Retail": 44.58
+    },
+    {
+      "State Bottle Cost": 10.99,
+      "State Bottle Retail": 16.49
+    },
+    {
+      "State Bottle Cost": 17.6,
+      "State Bottle Retail": 26.4
+    },
+    {
+      "State Bottle Cost": 11.47,
+      "State Bottle Retail": 17.21
+    },
+    {
+      "State Bottle Cost": 13.5,
+      "State Bottle Retail": 20.25
+    },
+    {
+      "State Bottle Cost": 17.4,
+      "State Bottle Retail": 26.11
+    },
+    {
+      "State Bottle Cost": 7.11,
+      "State Bottle Retail": 10.67
+    },
+    {
+      "State Bottle Cost": 11.55,
+      "State Bottle Retail": 17.32
+    },
+    {
+      "State Bottle Cost": 7.7,
+      "State Bottle Retail": 11.55
+    },
+    {
+      "State Bottle Cost": 18.99,
+      "State Bottle Retail": 28.49
+    },
+    {
+      "State Bottle Cost": 6.5,
+      "State Bottle Retail": 9.75
+    },
+    {
+      "State Bottle Cost": 8.2,
+      "State Bottle Retail": 12.3
+    },
+    {
+      "State Bottle Cost": 9.65,
+      "State Bottle Retail": 14.48
+    },
+    {
+      "State Bottle Cost": 5.01,
+      "State Bottle Retail": 7.76
+    },
+    {
+      "State Bottle Cost": 28.69,
+      "State Bottle Retail": 43.04
+    },
+    {
+      "State Bottle Cost": 1.13,
+      "State Bottle Retail": 1.7
+    },
+    {
+      "State Bottle Cost": 13.5,
+      "State Bottle Retail": 20.25
+    },
+    {
+      "State Bottle Cost": 15.25,
+      "State Bottle Retail": 22.88
+    },
+    {
+      "State Bottle Cost": 11.29,
+      "State Bottle Retail": 16.94
+    },
+    {
+      "State Bottle Cost": 9.14,
+      "State Bottle Retail": 13.71
+    },
+    {
+      "State Bottle Cost": 7.17,
+      "State Bottle Retail": 10.76
+    },
+    {
+      "State Bottle Cost": 8.2,
+      "State Bottle Retail": 12.3
+    },
+    {
+      "State Bottle Cost": 3.46,
+      "State Bottle Retail": 5.19
+    },
+    {
+      "State Bottle Cost": 7.36,
+      "State Bottle Retail": 11.04
+    },
+    {
+      "State Bottle Cost": 7.2,
+      "State Bottle Retail": 10.8
+    },
+    {
+      "State Bottle Cost": 3.34,
+      "State Bottle Retail": 5.01
+    },
+    {
+      "State Bottle Cost": 4.75,
+      "State Bottle Retail": 7.13
+    },
+    {
+      "State Bottle Cost": 8.26,
+      "State Bottle Retail": 12.39
+    },
+    {
+      "State Bottle Cost": 8.32,
+      "State Bottle Retail": 12.48
+    },
+    {
+      "State Bottle Cost": 7.6,
+      "State Bottle Retail": 11.4
+    },
+    {
+      "State Bottle Cost": 7.33,
+      "State Bottle Retail": 11.49
+    },
+    {
+      "State Bottle Cost": 5.26,
+      "State Bottle Retail": 7.89
+    },
+    {
+      "State Bottle Cost": 5.23,
+      "State Bottle Retail": 7.85
+    },
+    {
+      "State Bottle Cost": 11.26,
+      "State Bottle Retail": 16.9
+    },
+    {
+      "State Bottle Cost": 18.98,
+      "State Bottle Retail": 28.47
+    },
+    {
+      "State Bottle Cost": 3.33,
+      "State Bottle Retail": 4.99
+    },
+    {
+      "State Bottle Cost": 7.41,
+      "State Bottle Retail": 11.12
+    },
+    {
+      "State Bottle Cost": 7.35,
+      "State Bottle Retail": 11.02
+    },
+    {
+      "State Bottle Cost": 11.49,
+      "State Bottle Retail": 17.24
+    },
+    {
+      "State Bottle Cost": 8.25,
+      "State Bottle Retail": 12.38
+    },
+    {
+      "State Bottle Cost": 6.94,
+      "State Bottle Retail": 10.41
+    },
+    {
+      "State Bottle Cost": 5.0,
+      "State Bottle Retail": 7.5
+    },
+    {
+      "State Bottle Cost": 2.5,
+      "State Bottle Retail": 3.75
+    },
+    {
+      "State Bottle Cost": 5.0,
+      "State Bottle Retail": 7.5
+    },
+    {
+      "State Bottle Cost": 9.44,
+      "State Bottle Retail": 14.16
+    },
+    {
+      "State Bottle Cost": 18.37,
+      "State Bottle Retail": 27.55
+    },
+    {
+      "State Bottle Cost": 7.43,
+      "State Bottle Retail": 11.15
+    },
+    {
+      "State Bottle Cost": 5.51,
+      "State Bottle Retail": 8.26
+    },
+    {
+      "State Bottle Cost": 12.5,
+      "State Bottle Retail": 18.74
+    },
+    {
+      "State Bottle Cost": 10.0,
+      "State Bottle Retail": 15.0
+    },
+    {
+      "State Bottle Cost": 8.25,
+      "State Bottle Retail": 12.38
+    },
+    {
+      "State Bottle Cost": 4.94,
+      "State Bottle Retail": 7.4
+    },
+    {
+      "State Bottle Cost": 7.6,
+      "State Bottle Retail": 11.4
+    },
+    {
+      "State Bottle Cost": 14.75,
+      "State Bottle Retail": 22.13
+    },
+    {
+      "State Bottle Cost": 4.0,
+      "State Bottle Retail": 6.0
+    },
+    {
+      "State Bottle Cost": 8.39,
+      "State Bottle Retail": 12.59
+    },
+    {
+      "State Bottle Cost": 3.07,
+      "State Bottle Retail": 4.61
+    },
+    {
+      "State Bottle Cost": 3.57,
+      "State Bottle Retail": 5.36
+    },
+    {
+      "State Bottle Cost": 7.0,
+      "State Bottle Retail": 10.5
+    },
+    {
+      "State Bottle Cost": 6.87,
+      "State Bottle Retail": 10.81
+    },
+    {
+      "State Bottle Cost": 7.38,
+      "State Bottle Retail": 11.07
+    },
+    {
+      "State Bottle Cost": 8.2,
+      "State Bottle Retail": 12.3
+    },
+    {
+      "State Bottle Cost": 6.01,
+      "State Bottle Retail": 9.52
+    },
+    {
+      "State Bottle Cost": 25.69,
+      "State Bottle Retail": 38.53
+    },
+    {
+      "State Bottle Cost": 17.76,
+      "State Bottle Retail": 26.65
+    },
+    {
+      "State Bottle Cost": 5.51,
+      "State Bottle Retail": 8.26
+    },
+    {
+      "State Bottle Cost": 7.17,
+      "State Bottle Retail": 10.76
+    },
+    {
+      "State Bottle Cost": 3.84,
+      "State Bottle Retail": 6.01
+    },
+    {
+      "State Bottle Cost": 4.79,
+      "State Bottle Retail": 7.19
+    },
+    {
+      "State Bottle Cost": 26.05,
+      "State Bottle Retail": 39.08
+    },
+    {
+      "State Bottle Cost": 10.89,
+      "State Bottle Retail": 16.33
+    },
+    {
+      "State Bottle Cost": 6.5,
+      "State Bottle Retail": 9.74
+    },
+    {
+      "State Bottle Cost": 11.83,
+      "State Bottle Retail": 17.75
+    },
+    {
+      "State Bottle Cost": 5.33,
+      "State Bottle Retail": 7.99
+    },
+    {
+      "State Bottle Cost": 7.7,
+      "State Bottle Retail": 11.8
+    },
+    {
+      "State Bottle Cost": 14.89,
+      "State Bottle Retail": 22.34
+    },
+    {
+      "State Bottle Cost": 8.25,
+      "State Bottle Retail": 12.62
+    },
+    {
+      "State Bottle Cost": 5.54,
+      "State Bottle Retail": 8.31
+    },
+    {
+      "State Bottle Cost": 8.25,
+      "State Bottle Retail": 12.38
+    },
+    {
+      "State Bottle Cost": 10.0,
+      "State Bottle Retail": 14.99
+    },
+    {
+      "State Bottle Cost": 12.5,
+      "State Bottle Retail": 18.75
+    },
+    {
+      "State Bottle Cost": 17.4,
+      "State Bottle Retail": 26.11
+    },
+    {
+      "State Bottle Cost": 19.99,
+      "State Bottle Retail": 30.49
+    },
+    {
+      "State Bottle Cost": 10.5,
+      "State Bottle Retail": 15.75
+    },
+    {
+      "State Bottle Cost": 14.75,
+      "State Bottle Retail": 22.13
+    },
+    {
+      "State Bottle Cost": 14.75,
+      "State Bottle Retail": 22.13
+    },
+    {
+      "State Bottle Cost": 10.3,
+      "State Bottle Retail": 15.45
+    },
+    {
+      "State Bottle Cost": 14.1,
+      "State Bottle Retail": 21.15
+    },
+    {
+      "State Bottle Cost": 24.0,
+      "State Bottle Retail": 36.0
+    },
+    {
+      "State Bottle Cost": 7.17,
+      "State Bottle Retail": 10.76
+    },
+    {
+      "State Bottle Cost": 8.2,
+      "State Bottle Retail": 12.3
+    },
+    {
+      "State Bottle Cost": 7.49,
+      "State Bottle Retail": 11.24
+    },
+    {
+      "State Bottle Cost": 10.89,
+      "State Bottle Retail": 16.33
+    },
+    {
+      "State Bottle Cost": 8.98,
+      "State Bottle Retail": 13.47
+    },
+    {
+      "State Bottle Cost": 9.0,
+      "State Bottle Retail": 13.5
+    },
+    {
+      "State Bottle Cost": 7.58,
+      "State Bottle Retail": 11.37
+    },
+    {
+      "State Bottle Cost": 2.04,
+      "State Bottle Retail": 3.06
+    },
+    {
+      "State Bottle Cost": 4.92,
+      "State Bottle Retail": 7.38
+    },
+    {
+      "State Bottle Cost": 6.75,
+      "State Bottle Retail": 10.13
+    },
+    {
+      "State Bottle Cost": 7.84,
+      "State Bottle Retail": 11.76
+    },
+    {
+      "State Bottle Cost": 7.0,
+      "State Bottle Retail": 10.49
+    },
+    {
+      "State Bottle Cost": 13.86,
+      "State Bottle Retail": 20.79
+    },
+    {
+      "State Bottle Cost": 12.04,
+      "State Bottle Retail": 18.06
+    },
+    {
+      "State Bottle Cost": 11.26,
+      "State Bottle Retail": 16.9
+    },
+    {
+      "State Bottle Cost": 7.35,
+      "State Bottle Retail": 11.02
+    },
+    {
+      "State Bottle Cost": 18.75,
+      "State Bottle Retail": 28.12
+    },
+    {
+      "State Bottle Cost": 6.45,
+      "State Bottle Retail": 10.0
+    },
+    {
+      "State Bottle Cost": 3.34,
+      "State Bottle Retail": 5.01
+    },
+    {
+      "State Bottle Cost": 12.0,
+      "State Bottle Retail": 17.99
+    },
+    {
+      "State Bottle Cost": 8.67,
+      "State Bottle Retail": 13.01
+    },
+    {
+      "State Bottle Cost": 6.35,
+      "State Bottle Retail": 9.52
+    },
+    {
+      "State Bottle Cost": 14.5,
+      "State Bottle Retail": 21.75
+    },
+    {
+      "State Bottle Cost": 6.92,
+      "State Bottle Retail": 10.38
+    },
+    {
+      "State Bottle Cost": 3.5,
+      "State Bottle Retail": 5.25
+    },
+    {
+      "State Bottle Cost": 18.75,
+      "State Bottle Retail": 28.12
+    },
+    {
+      "State Bottle Cost": 5.15,
+      "State Bottle Retail": 7.73
+    },
+    {
+      "State Bottle Cost": 20.76,
+      "State Bottle Retail": 31.14
+    },
+    {
+      "State Bottle Cost": 6.5,
+      "State Bottle Retail": 9.75
+    },
+    {
+      "State Bottle Cost": 7.13,
+      "State Bottle Retail": 10.7
+    },
+    {
+      "State Bottle Cost": 11.82,
+      "State Bottle Retail": 17.74
+    },
+    {
+      "State Bottle Cost": 10.0,
+      "State Bottle Retail": 15.0
+    },
+    {
+      "State Bottle Cost": 5.23,
+      "State Bottle Retail": 7.84
+    },
+    {
+      "State Bottle Cost": 11.0,
+      "State Bottle Retail": 16.5
+    },
+    {
+      "State Bottle Cost": 6.74,
+      "State Bottle Retail": 10.49
+    },
+    {
+      "State Bottle Cost": 6.92,
+      "State Bottle Retail": 10.38
+    },
+    {
+      "State Bottle Cost": 10.99,
+      "State Bottle Retail": 16.49
+    },
+    {
+      "State Bottle Cost": 6.87,
+      "State Bottle Retail": 10.3
+    },
+    {
+      "State Bottle Cost": 4.47,
+      "State Bottle Retail": 6.7
+    },
+    {
+      "State Bottle Cost": 29.72,
+      "State Bottle Retail": 44.58
+    },
+    {
+      "State Bottle Cost": 1.77,
+      "State Bottle Retail": 2.66
+    },
+    {
+      "State Bottle Cost": 3.38,
+      "State Bottle Retail": 5.07
+    },
+    {
+      "State Bottle Cost": 11.96,
+      "State Bottle Retail": 17.93
+    },
+    {
+      "State Bottle Cost": 4.05,
+      "State Bottle Retail": 6.08
+    },
+    {
+      "State Bottle Cost": 8.92,
+      "State Bottle Retail": 13.38
+    },
+    {
+      "State Bottle Cost": 4.89,
+      "State Bottle Retail": 7.33
+    },
+    {
+      "State Bottle Cost": 3.5,
+      "State Bottle Retail": 5.25
+    },
+    {
+      "State Bottle Cost": 19.16,
+      "State Bottle Retail": 28.74
+    },
+    {
+      "State Bottle Cost": 10.0,
+      "State Bottle Retail": 14.99
+    },
+    {
+      "State Bottle Cost": 5.99,
+      "State Bottle Retail": 9.24
+    },
+    {
+      "State Bottle Cost": 3.34,
+      "State Bottle Retail": 5.01
+    },
+    {
+      "State Bottle Cost": 6.49,
+      "State Bottle Retail": 9.74
+    },
+    {
+      "State Bottle Cost": 7.02,
+      "State Bottle Retail": 10.53
+    },
+    {
+      "State Bottle Cost": 7.8,
+      "State Bottle Retail": 11.69
+    },
+    {
+      "State Bottle Cost": 12.41,
+      "State Bottle Retail": 18.8
+    },
+    {
+      "State Bottle Cost": 9.97,
+      "State Bottle Retail": 14.96
+    },
+    {
+      "State Bottle Cost": 10.01,
+      "State Bottle Retail": 15.01
+    },
+    {
+      "State Bottle Cost": 11.45,
+      "State Bottle Retail": 17.18
+    },
+    {
+      "State Bottle Cost": 7.7,
+      "State Bottle Retail": 11.55
+    },
+    {
+      "State Bottle Cost": 22.5,
+      "State Bottle Retail": 33.74
+    },
+    {
+      "State Bottle Cost": 11.0,
+      "State Bottle Retail": 16.5
+    },
+    {
+      "State Bottle Cost": 9.7,
+      "State Bottle Retail": 14.92
+    },
+    {
+      "State Bottle Cost": 15.0,
+      "State Bottle Retail": 22.49
+    },
+    {
+      "State Bottle Cost": 6.83,
+      "State Bottle Retail": 10.25
+    },
+    {
+      "State Bottle Cost": 3.85,
+      "State Bottle Retail": 5.77
+    },
+    {
+      "State Bottle Cost": 5.51,
+      "State Bottle Retail": 8.26
+    },
+    {
+      "State Bottle Cost": 21.17,
+      "State Bottle Retail": 31.76
+    },
+    {
+      "State Bottle Cost": 6.0,
+      "State Bottle Retail": 9.25
+    },
+    {
+      "State Bottle Cost": 2.04,
+      "State Bottle Retail": 3.06
+    },
+    {
+      "State Bottle Cost": 7.88,
+      "State Bottle Retail": 11.82
+    },
+    {
+      "State Bottle Cost": 7.87,
+      "State Bottle Retail": 11.81
+    },
+    {
+      "State Bottle Cost": 10.5,
+      "State Bottle Retail": 15.75
+    },
+    {
+      "State Bottle Cost": 8.98,
+      "State Bottle Retail": 13.47
+    },
+    {
+      "State Bottle Cost": 5.92,
+      "State Bottle Retail": 8.88
+    },
+    {
+      "State Bottle Cost": 4.7,
+      "State Bottle Retail": 7.05
+    },
+    {
+      "State Bottle Cost": 4.75,
+      "State Bottle Retail": 7.13
+    },
+    {
+      "State Bottle Cost": 24.5,
+      "State Bottle Retail": 36.74
+    },
+    {
+      "State Bottle Cost": 4.29,
+      "State Bottle Retail": 6.44
+    },
+    {
+      "State Bottle Cost": 15.07,
+      "State Bottle Retail": 22.61
+    },
+    {
+      "State Bottle Cost": 13.0,
+      "State Bottle Retail": 19.5
+    },
+    {
+      "State Bottle Cost": 15.0,
+      "State Bottle Retail": 22.5
+    },
+    {
+      "State Bottle Cost": 17.0,
+      "State Bottle Retail": 25.49
+    },
+    {
+      "State Bottle Cost": 5.5,
+      "State Bottle Retail": 8.25
+    },
+    {
+      "State Bottle Cost": 4.0,
+      "State Bottle Retail": 6.0
+    },
+    {
+      "State Bottle Cost": 6.3,
+      "State Bottle Retail": 9.45
+    },
+    {
+      "State Bottle Cost": 6.9,
+      "State Bottle Retail": 10.35
+    },
+    {
+      "State Bottle Cost": 9.18,
+      "State Bottle Retail": 13.77
+    },
+    {
+      "State Bottle Cost": 6.27,
+      "State Bottle Retail": 9.4
+    },
+    {
+      "State Bottle Cost": 9.42,
+      "State Bottle Retail": 14.13
+    },
+    {
+      "State Bottle Cost": 7.94,
+      "State Bottle Retail": 11.91
+    },
+    {
+      "State Bottle Cost": 4.36,
+      "State Bottle Retail": 6.54
+    },
+    {
+      "State Bottle Cost": 14.25,
+      "State Bottle Retail": 21.38
+    },
+    {
+      "State Bottle Cost": 4.98,
+      "State Bottle Retail": 7.47
+    },
+    {
+      "State Bottle Cost": 6.5,
+      "State Bottle Retail": 9.74
+    },
+    {
+      "State Bottle Cost": 7.2,
+      "State Bottle Retail": 10.8
+    },
+    {
+      "State Bottle Cost": 4.17,
+      "State Bottle Retail": 6.25
+    },
+    {
+      "State Bottle Cost": 3.5,
+      "State Bottle Retail": 5.25
+    },
+    {
+      "State Bottle Cost": 4.55,
+      "State Bottle Retail": 6.82
+    },
+    {
+      "State Bottle Cost": 7.6,
+      "State Bottle Retail": 11.4
+    },
+    {
+      "State Bottle Cost": 5.0,
+      "State Bottle Retail": 7.5
+    },
+    {
+      "State Bottle Cost": 4.12,
+      "State Bottle Retail": 6.37
+    },
+    {
+      "State Bottle Cost": 7.75,
+      "State Bottle Retail": 12.0
+    },
+    {
+      "State Bottle Cost": 5.0,
+      "State Bottle Retail": 7.5
+    },
+    {
+      "State Bottle Cost": 12.08,
+      "State Bottle Retail": 18.12
+    },
+    {
+      "State Bottle Cost": 6.49,
+      "State Bottle Retail": 9.74
+    },
+    {
+      "State Bottle Cost": 6.92,
+      "State Bottle Retail": 10.38
+    },
+    {
+      "State Bottle Cost": 31.5,
+      "State Bottle Retail": 47.24
+    },
+    {
+      "State Bottle Cost": 18.75,
+      "State Bottle Retail": 28.12
+    },
+    {
+      "State Bottle Cost": 4.84,
+      "State Bottle Retail": 7.26
+    },
+    {
+      "State Bottle Cost": 5.71,
+      "State Bottle Retail": 8.56
+    },
+    {
+      "State Bottle Cost": 13.1,
+      "State Bottle Retail": 19.65
+    },
+    {
+      "State Bottle Cost": 3.85,
+      "State Bottle Retail": 5.77
+    },
+    {
+      "State Bottle Cost": 10.24,
+      "State Bottle Retail": 15.35
+    },
+    {
+      "State Bottle Cost": 4.04,
+      "State Bottle Retail": 6.06
+    },
+    {
+      "State Bottle Cost": 8.62,
+      "State Bottle Retail": 12.94
+    },
+    {
+      "State Bottle Cost": 9.67,
+      "State Bottle Retail": 14.51
+    },
+    {
+      "State Bottle Cost": 11.55,
+      "State Bottle Retail": 17.32
+    },
+    {
+      "State Bottle Cost": 11.5,
+      "State Bottle Retail": 17.25
+    },
+    {
+      "State Bottle Cost": 8.75,
+      "State Bottle Retail": 13.13
+    },
+    {
+      "State Bottle Cost": 8.25,
+      "State Bottle Retail": 12.38
+    },
+    {
+      "State Bottle Cost": 9.5,
+      "State Bottle Retail": 14.25
+    },
+    {
+      "State Bottle Cost": 5.3,
+      "State Bottle Retail": 8.45
+    },
+    {
+      "State Bottle Cost": 8.48,
+      "State Bottle Retail": 12.72
+    },
+    {
+      "State Bottle Cost": 13.01,
+      "State Bottle Retail": 19.51
+    },
+    {
+      "State Bottle Cost": 8.98,
+      "State Bottle Retail": 13.47
+    },
+    {
+      "State Bottle Cost": 2.0,
+      "State Bottle Retail": 3.0
+    },
+    {
+      "State Bottle Cost": 5.99,
+      "State Bottle Retail": 9.24
+    },
+    {
+      "State Bottle Cost": 6.6,
+      "State Bottle Retail": 9.9
+    },
+    {
+      "State Bottle Cost": 5.9,
+      "State Bottle Retail": 8.85
+    },
+    {
+      "State Bottle Cost": 4.86,
+      "State Bottle Retail": 7.29
+    },
+    {
+      "State Bottle Cost": 17.9,
+      "State Bottle Retail": 26.85
+    },
+    {
+      "State Bottle Cost": 7.53,
+      "State Bottle Retail": 11.3
+    },
+    {
+      "State Bottle Cost": 15.99,
+      "State Bottle Retail": 23.99
+    },
+    {
+      "State Bottle Cost": 9.44,
+      "State Bottle Retail": 14.16
+    },
+    {
+      "State Bottle Cost": 14.98,
+      "State Bottle Retail": 22.47
+    },
+    {
+      "State Bottle Cost": 6.53,
+      "State Bottle Retail": 9.8
+    },
+    {
+      "State Bottle Cost": 4.96,
+      "State Bottle Retail": 7.44
+    },
+    {
+      "State Bottle Cost": 6.63,
+      "State Bottle Retail": 9.94
+    },
+    {
+      "State Bottle Cost": 5.5,
+      "State Bottle Retail": 8.25
+    },
+    {
+      "State Bottle Cost": 6.25,
+      "State Bottle Retail": 9.49
+    },
+    {
+      "State Bottle Cost": 5.23,
+      "State Bottle Retail": 7.85
+    },
+    {
+      "State Bottle Cost": 3.75,
+      "State Bottle Retail": 5.62
+    },
+    {
+      "State Bottle Cost": 8.98,
+      "State Bottle Retail": 13.47
+    },
+    {
+      "State Bottle Cost": 9.18,
+      "State Bottle Retail": 13.77
+    },
+    {
+      "State Bottle Cost": 5.25,
+      "State Bottle Retail": 7.87
+    },
+    {
+      "State Bottle Cost": 5.77,
+      "State Bottle Retail": 8.66
+    },
+    {
+      "State Bottle Cost": 25.24,
+      "State Bottle Retail": 37.86
+    },
+    {
+      "State Bottle Cost": 10.0,
+      "State Bottle Retail": 15.0
+    },
+    {
+      "State Bottle Cost": 11.01,
+      "State Bottle Retail": 16.52
+    },
+    {
+      "State Bottle Cost": 12.5,
+      "State Bottle Retail": 18.75
+    },
+    {
+      "State Bottle Cost": 5.99,
+      "State Bottle Retail": 8.99
+    },
+    {
+      "State Bottle Cost": 15.0,
+      "State Bottle Retail": 22.49
+    },
+    {
+      "State Bottle Cost": 5.24,
+      "State Bottle Retail": 7.87
+    },
+    {
+      "State Bottle Cost": 9.36,
+      "State Bottle Retail": 14.04
+    },
+    {
+      "State Bottle Cost": 5.0,
+      "State Bottle Retail": 7.5
+    },
+    {
+      "State Bottle Cost": 13.28,
+      "State Bottle Retail": 19.92
+    },
+    {
+      "State Bottle Cost": 5.25,
+      "State Bottle Retail": 7.87
+    },
+    {
+      "State Bottle Cost": 8.83,
+      "State Bottle Retail": 13.25
+    },
+    {
+      "State Bottle Cost": 6.66,
+      "State Bottle Retail": 9.99
+    },
+    {
+      "State Bottle Cost": 8.25,
+      "State Bottle Retail": 12.38
+    },
+    {
+      "State Bottle Cost": 9.14,
+      "State Bottle Retail": 13.71
+    },
+    {
+      "State Bottle Cost": 14.04,
+      "State Bottle Retail": 21.05
+    },
+    {
+      "State Bottle Cost": 8.07,
+      "State Bottle Retail": 12.11
+    },
+    {
+      "State Bottle Cost": 31.0,
+      "State Bottle Retail": 46.49
+    },
+    {
+      "State Bottle Cost": 6.9,
+      "State Bottle Retail": 10.35
+    },
+    {
+      "State Bottle Cost": 26.22,
+      "State Bottle Retail": 39.33
+    },
+    {
+      "State Bottle Cost": 7.2,
+      "State Bottle Retail": 10.79
+    },
+    {
+      "State Bottle Cost": 11.47,
+      "State Bottle Retail": 17.21
+    },
+    {
+      "State Bottle Cost": 5.0,
+      "State Bottle Retail": 7.5
+    },
+    {
+      "State Bottle Cost": 8.0,
+      "State Bottle Retail": 12.0
+    },
+    {
+      "State Bottle Cost": 5.25,
+      "State Bottle Retail": 7.87
+    },
+    {
+      "State Bottle Cost": 3.07,
+      "State Bottle Retail": 4.61
+    },
+    {
+      "State Bottle Cost": 17.75,
+      "State Bottle Retail": 26.62
+    },
+    {
+      "State Bottle Cost": 6.75,
+      "State Bottle Retail": 10.13
+    },
+    {
+      "State Bottle Cost": 3.46,
+      "State Bottle Retail": 5.19
+    },
+    {
+      "State Bottle Cost": 15.75,
+      "State Bottle Retail": 23.63
+    },
+    {
+      "State Bottle Cost": 10.01,
+      "State Bottle Retail": 15.02
+    },
+    {
+      "State Bottle Cost": 7.49,
+      "State Bottle Retail": 11.24
+    },
+    {
+      "State Bottle Cost": 13.5,
+      "State Bottle Retail": 20.25
+    },
+    {
+      "State Bottle Cost": 18.94,
+      "State Bottle Retail": 28.41
+    },
+    {
+      "State Bottle Cost": 3.5,
+      "State Bottle Retail": 5.25
+    },
+    {
+      "State Bottle Cost": 28.69,
+      "State Bottle Retail": 43.04
+    },
+    {
+      "State Bottle Cost": 6.92,
+      "State Bottle Retail": 10.38
+    },
+    {
+      "State Bottle Cost": 4.38,
+      "State Bottle Retail": 6.57
+    },
+    {
+      "State Bottle Cost": 11.83,
+      "State Bottle Retail": 17.75
+    },
+    {
+      "State Bottle Cost": 13.0,
+      "State Bottle Retail": 19.49
+    },
+    {
+      "State Bottle Cost": 9.23,
+      "State Bottle Retail": 13.85
+    },
+    {
+      "State Bottle Cost": 10.54,
+      "State Bottle Retail": 16.31
+    },
+    {
+      "State Bottle Cost": 6.87,
+      "State Bottle Retail": 10.3
+    },
+    {
+      "State Bottle Cost": 6.98,
+      "State Bottle Retail": 10.47
+    },
+    {
+      "State Bottle Cost": 8.2,
+      "State Bottle Retail": 12.3
+    },
+    {
+      "State Bottle Cost": 7.54,
+      "State Bottle Retail": 11.31
+    },
+    {
+      "State Bottle Cost": 8.75,
+      "State Bottle Retail": 13.13
+    },
+    {
+      "State Bottle Cost": 6.67,
+      "State Bottle Retail": 10.0
+    },
+    {
+      "State Bottle Cost": 3.4,
+      "State Bottle Retail": 5.1
+    },
+    {
+      "State Bottle Cost": 20.75,
+      "State Bottle Retail": 32.99
+    },
+    {
+      "State Bottle Cost": 6.0,
+      "State Bottle Retail": 8.99
+    },
+    {
+      "State Bottle Cost": 5.37,
+      "State Bottle Retail": 8.05
+    },
+    {
+      "State Bottle Cost": 6.25,
+      "State Bottle Retail": 9.63
+    },
+    {
+      "State Bottle Cost": 9.65,
+      "State Bottle Retail": 14.47
+    },
+    {
+      "State Bottle Cost": 9.06,
+      "State Bottle Retail": 13.59
+    },
+    {
+      "State Bottle Cost": 5.99,
+      "State Bottle Retail": 9.24
+    },
+    {
+      "State Bottle Cost": 6.6,
+      "State Bottle Retail": 9.9
+    },
+    {
+      "State Bottle Cost": 10.0,
+      "State Bottle Retail": 15.0
+    },
+    {
+      "State Bottle Cost": 5.48,
+      "State Bottle Retail": 8.22
+    },
+    {
+      "State Bottle Cost": 9.25,
+      "State Bottle Retail": 13.88
+    },
+    {
+      "State Bottle Cost": 14.5,
+      "State Bottle Retail": 21.74
+    },
+    {
+      "State Bottle Cost": 7.92,
+      "State Bottle Retail": 11.88
+    },
+    {
+      "State Bottle Cost": 6.52,
+      "State Bottle Retail": 9.78
+    },
+    {
+      "State Bottle Cost": 9.5,
+      "State Bottle Retail": 14.25
+    },
+    {
+      "State Bottle Cost": 4.98,
+      "State Bottle Retail": 7.47
+    },
+    {
+      "State Bottle Cost": 6.49,
+      "State Bottle Retail": 9.74
+    },
+    {
+      "State Bottle Cost": 6.97,
+      "State Bottle Retail": 10.95
+    },
+    {
+      "State Bottle Cost": 10.0,
+      "State Bottle Retail": 15.0
+    },
+    {
+      "State Bottle Cost": 8.2,
+      "State Bottle Retail": 12.3
+    },
+    {
+      "State Bottle Cost": 3.5,
+      "State Bottle Retail": 5.26
+    },
+    {
+      "State Bottle Cost": 5.23,
+      "State Bottle Retail": 7.84
+    },
+    {
+      "State Bottle Cost": 10.02,
+      "State Bottle Retail": 15.03
+    },
+    {
+      "State Bottle Cost": 20.0,
+      "State Bottle Retail": 30.0
+    },
+    {
+      "State Bottle Cost": 13.12,
+      "State Bottle Retail": 19.68
+    },
+    {
+      "State Bottle Cost": 7.35,
+      "State Bottle Retail": 11.02
+    },
+    {
+      "State Bottle Cost": 7.58,
+      "State Bottle Retail": 11.37
+    },
+    {
+      "State Bottle Cost": 29.72,
+      "State Bottle Retail": 44.58
+    },
+    {
+      "State Bottle Cost": 13.0,
+      "State Bottle Retail": 19.49
+    },
+    {
+      "State Bottle Cost": 8.75,
+      "State Bottle Retail": 13.13
+    },
+    {
+      "State Bottle Cost": 5.47,
+      "State Bottle Retail": 8.21
+    },
+    {
+      "State Bottle Cost": 11.34,
+      "State Bottle Retail": 17.01
+    },
+    {
+      "State Bottle Cost": 7.8,
+      "State Bottle Retail": 11.7
+    },
+    {
+      "State Bottle Cost": 7.49,
+      "State Bottle Retail": 11.23
+    },
+    {
+      "State Bottle Cost": 6.0,
+      "State Bottle Retail": 8.99
+    },
+    {
+      "State Bottle Cost": 9.18,
+      "State Bottle Retail": 13.77
+    },
+    {
+      "State Bottle Cost": 3.42,
+      "State Bottle Retail": 5.13
+    },
+    {
+      "State Bottle Cost": 16.79,
+      "State Bottle Retail": 25.19
+    },
+    {
+      "State Bottle Cost": 3.7,
+      "State Bottle Retail": 5.55
+    },
+    {
+      "State Bottle Cost": 1.93,
+      "State Bottle Retail": 2.89
+    },
+    {
+      "State Bottle Cost": 10.49,
+      "State Bottle Retail": 15.74
+    },
+    {
+      "State Bottle Cost": 11.18,
+      "State Bottle Retail": 16.76
+    },
+    {
+      "State Bottle Cost": 18.33,
+      "State Bottle Retail": 27.99
+    },
+    {
+      "State Bottle Cost": 7.6,
+      "State Bottle Retail": 11.4
+    },
+    {
+      "State Bottle Cost": 23.31,
+      "State Bottle Retail": 34.96
+    },
+    {
+      "State Bottle Cost": 13.33,
+      "State Bottle Retail": 19.99
+    },
+    {
+      "State Bottle Cost": 20.0,
+      "State Bottle Retail": 29.99
+    },
+    {
+      "State Bottle Cost": 7.97,
+      "State Bottle Retail": 11.95
+    },
+    {
+      "State Bottle Cost": 5.51,
+      "State Bottle Retail": 8.27
+    },
+    {
+      "State Bottle Cost": 8.49,
+      "State Bottle Retail": 12.74
+    },
+    {
+      "State Bottle Cost": 3.4,
+      "State Bottle Retail": 5.1
+    },
+    {
+      "State Bottle Cost": 6.49,
+      "State Bottle Retail": 9.74
+    },
+    {
+      "State Bottle Cost": 6.9,
+      "State Bottle Retail": 10.35
+    },
+    {
+      "State Bottle Cost": 3.34,
+      "State Bottle Retail": 5.01
+    },
+    {
+      "State Bottle Cost": 3.46,
+      "State Bottle Retail": 5.19
+    },
+    {
+      "State Bottle Cost": 5.23,
+      "State Bottle Retail": 7.84
+    },
+    {
+      "State Bottle Cost": 8.92,
+      "State Bottle Retail": 13.38
+    },
+    {
+      "State Bottle Cost": 14.38,
+      "State Bottle Retail": 21.57
+    },
+    {
+      "State Bottle Cost": 5.91,
+      "State Bottle Retail": 8.87
+    },
+    {
+      "State Bottle Cost": 11.58,
+      "State Bottle Retail": 17.37
+    },
+    {
+      "State Bottle Cost": 3.71,
+      "State Bottle Retail": 5.57
+    },
+    {
+      "State Bottle Cost": 11.54,
+      "State Bottle Retail": 17.31
+    },
+    {
+      "State Bottle Cost": 5.3,
+      "State Bottle Retail": 8.45
+    },
+    {
+      "State Bottle Cost": 17.0,
+      "State Bottle Retail": 25.49
+    },
+    {
+      "State Bottle Cost": 15.97,
+      "State Bottle Retail": 23.96
+    },
+    {
+      "State Bottle Cost": 9.44,
+      "State Bottle Retail": 14.16
+    },
+    {
+      "State Bottle Cost": 17.75,
+      "State Bottle Retail": 26.62
+    },
+    {
+      "State Bottle Cost": 7.96,
+      "State Bottle Retail": 11.94
+    },
+    {
+      "State Bottle Cost": 9.99,
+      "State Bottle Retail": 14.99
+    },
+    {
+      "State Bottle Cost": 6.49,
+      "State Bottle Retail": 9.74
+    },
+    {
+      "State Bottle Cost": 6.25,
+      "State Bottle Retail": 9.49
+    },
+    {
+      "State Bottle Cost": 7.13,
+      "State Bottle Retail": 10.7
+    },
+    {
+      "State Bottle Cost": 5.51,
+      "State Bottle Retail": 8.26
+    },
+    {
+      "State Bottle Cost": 7.2,
+      "State Bottle Retail": 10.8
+    },
+    {
+      "State Bottle Cost": 7.94,
+      "State Bottle Retail": 11.91
+    },
+    {
+      "State Bottle Cost": 8.2,
+      "State Bottle Retail": 12.3
+    },
+    {
+      "State Bottle Cost": 23.27,
+      "State Bottle Retail": 34.91
+    },
+    {
+      "State Bottle Cost": 28.5,
+      "State Bottle Retail": 42.75
+    },
+    {
+      "State Bottle Cost": 3.31,
+      "State Bottle Retail": 4.97
+    },
+    {
+      "State Bottle Cost": 6.75,
+      "State Bottle Retail": 10.13
+    },
+    {
+      "State Bottle Cost": 15.0,
+      "State Bottle Retail": 22.49
+    },
+    {
+      "State Bottle Cost": 27.0,
+      "State Bottle Retail": 40.5
+    },
+    {
+      "State Bottle Cost": 5.24,
+      "State Bottle Retail": 7.87
+    },
+    {
+      "State Bottle Cost": 24.83,
+      "State Bottle Retail": 37.25
+    },
+    {
+      "State Bottle Cost": 10.0,
+      "State Bottle Retail": 14.99
+    },
+    {
+      "State Bottle Cost": 7.5,
+      "State Bottle Retail": 11.24
+    },
+    {
+      "State Bottle Cost": 7.2,
+      "State Bottle Retail": 10.79
+    },
+    {
+      "State Bottle Cost": 7.96,
+      "State Bottle Retail": 11.94
+    },
+    {
+      "State Bottle Cost": 6.29,
+      "State Bottle Retail": 9.43
+    },
+    {
+      "State Bottle Cost": 14.66,
+      "State Bottle Retail": 21.99
+    },
+    {
+      "State Bottle Cost": 25.25,
+      "State Bottle Retail": 37.88
+    },
+    {
+      "State Bottle Cost": 3.25,
+      "State Bottle Retail": 4.88
+    },
+    {
+      "State Bottle Cost": 28.71,
+      "State Bottle Retail": 43.07
+    },
+    {
+      "State Bottle Cost": 4.38,
+      "State Bottle Retail": 6.57
+    },
+    {
+      "State Bottle Cost": 2.96,
+      "State Bottle Retail": 4.44
+    },
+    {
+      "State Bottle Cost": 4.76,
+      "State Bottle Retail": 7.14
+    },
+    {
+      "State Bottle Cost": 9.23,
+      "State Bottle Retail": 13.85
+    },
+    {
+      "State Bottle Cost": 11.02,
+      "State Bottle Retail": 16.54
+    },
+    {
+      "State Bottle Cost": 6.83,
+      "State Bottle Retail": 10.25
+    },
+    {
+      "State Bottle Cost": 12.99,
+      "State Bottle Retail": 19.49
+    },
+    {
+      "State Bottle Cost": 13.0,
+      "State Bottle Retail": 19.5
+    },
+    {
+      "State Bottle Cost": 10.5,
+      "State Bottle Retail": 15.75
+    },
+    {
+      "State Bottle Cost": 15.15,
+      "State Bottle Retail": 22.72
+    },
+    {
+      "State Bottle Cost": 10.49,
+      "State Bottle Retail": 15.73
+    },
+    {
+      "State Bottle Cost": 6.87,
+      "State Bottle Retail": 10.3
+    },
+    {
+      "State Bottle Cost": 1.56,
+      "State Bottle Retail": 2.34
+    },
+    {
+      "State Bottle Cost": 7.6,
+      "State Bottle Retail": 11.4
+    },
+    {
+      "State Bottle Cost": 5.44,
+      "State Bottle Retail": 8.15
+    },
+    {
+      "State Bottle Cost": 6.22,
+      "State Bottle Retail": 9.33
+    },
+    {
+      "State Bottle Cost": 4.42,
+      "State Bottle Retail": 6.63
+    },
+    {
+      "State Bottle Cost": 9.0,
+      "State Bottle Retail": 13.5
+    },
+    {
+      "State Bottle Cost": 5.47,
+      "State Bottle Retail": 8.21
+    },
+    {
+      "State Bottle Cost": 2.74,
+      "State Bottle Retail": 4.11
+    },
+    {
+      "State Bottle Cost": 4.75,
+      "State Bottle Retail": 7.13
+    },
+    {
+      "State Bottle Cost": 9.45,
+      "State Bottle Retail": 14.67
+    },
+    {
+      "State Bottle Cost": 11.49,
+      "State Bottle Retail": 17.24
+    },
+    {
+      "State Bottle Cost": 5.77,
+      "State Bottle Retail": 8.66
+    },
+    {
+      "State Bottle Cost": 11.01,
+      "State Bottle Retail": 16.52
+    },
+    {
+      "State Bottle Cost": 10.0,
+      "State Bottle Retail": 15.0
+    },
+    {
+      "State Bottle Cost": 10.74,
+      "State Bottle Retail": 16.49
+    },
+    {
+      "State Bottle Cost": 12.5,
+      "State Bottle Retail": 18.75
+    },
+    {
+      "State Bottle Cost": 6.38,
+      "State Bottle Retail": 9.57
+    },
+    {
+      "State Bottle Cost": 17.5,
+      "State Bottle Retail": 26.24
+    },
+    {
+      "State Bottle Cost": 11.02,
+      "State Bottle Retail": 16.53
+    },
+    {
+      "State Bottle Cost": 8.2,
+      "State Bottle Retail": 12.3
+    },
+    {
+      "State Bottle Cost": 1.8,
+      "State Bottle Retail": 2.69
+    },
+    {
+      "State Bottle Cost": 7.88,
+      "State Bottle Retail": 11.82
+    },
+    {
+      "State Bottle Cost": 12.99,
+      "State Bottle Retail": 19.49
+    },
+    {
+      "State Bottle Cost": 7.13,
+      "State Bottle Retail": 10.7
+    },
+    {
+      "State Bottle Cost": 17.0,
+      "State Bottle Retail": 25.5
+    },
+    {
+      "State Bottle Cost": 6.49,
+      "State Bottle Retail": 9.74
+    },
+    {
+      "State Bottle Cost": 8.2,
+      "State Bottle Retail": 12.3
+    },
+    {
+      "State Bottle Cost": 13.73,
+      "State Bottle Retail": 20.6
+    },
+    {
+      "State Bottle Cost": 7.62,
+      "State Bottle Retail": 11.43
+    },
+    {
+      "State Bottle Cost": 11.34,
+      "State Bottle Retail": 17.01
+    },
+    {
+      "State Bottle Cost": 6.51,
+      "State Bottle Retail": 9.77
+    },
+    {
+      "State Bottle Cost": 13.32,
+      "State Bottle Retail": 19.98
+    },
+    {
+      "State Bottle Cost": 11.16,
+      "State Bottle Retail": 16.74
+    },
+    {
+      "State Bottle Cost": 4.3,
+      "State Bottle Retail": 6.45
+    },
+    {
+      "State Bottle Cost": 17.97,
+      "State Bottle Retail": 26.96
+    },
+    {
+      "State Bottle Cost": 3.4,
+      "State Bottle Retail": 5.09
+    },
+    {
+      "State Bottle Cost": 7.99,
+      "State Bottle Retail": 11.99
+    },
+    {
+      "State Bottle Cost": 7.5,
+      "State Bottle Retail": 11.24
+    },
+    {
+      "State Bottle Cost": 6.75,
+      "State Bottle Retail": 10.13
+    },
+    {
+      "State Bottle Cost": 9.64,
+      "State Bottle Retail": 14.46
+    },
+    {
+      "State Bottle Cost": 22.57,
+      "State Bottle Retail": 33.86
+    },
+    {
+      "State Bottle Cost": 10.45,
+      "State Bottle Retail": 15.67
+    },
+    {
+      "State Bottle Cost": 7.11,
+      "State Bottle Retail": 10.67
+    },
+    {
+      "State Bottle Cost": 10.98,
+      "State Bottle Retail": 16.47
+    },
+    {
+      "State Bottle Cost": 4.96,
+      "State Bottle Retail": 7.44
+    },
+    {
+      "State Bottle Cost": 13.64,
+      "State Bottle Retail": 20.46
+    },
+    {
+      "State Bottle Cost": 6.75,
+      "State Bottle Retail": 10.12
+    },
+    {
+      "State Bottle Cost": 17.61,
+      "State Bottle Retail": 26.41
+    },
+    {
+      "State Bottle Cost": 10.42,
+      "State Bottle Retail": 15.63
+    },
+    {
+      "State Bottle Cost": 7.67,
+      "State Bottle Retail": 11.51
+    },
+    {
+      "State Bottle Cost": 10.45,
+      "State Bottle Retail": 15.67
+    },
+    {
+      "State Bottle Cost": 7.17,
+      "State Bottle Retail": 10.76
+    },
+    {
+      "State Bottle Cost": 7.2,
+      "State Bottle Retail": 10.79
+    },
+    {
+      "State Bottle Cost": 3.46,
+      "State Bottle Retail": 5.19
+    },
+    {
+      "State Bottle Cost": 14.17,
+      "State Bottle Retail": 21.26
+    },
+    {
+      "State Bottle Cost": 7.0,
+      "State Bottle Retail": 11.25
+    },
+    {
+      "State Bottle Cost": 7.96,
+      "State Bottle Retail": 11.94
+    },
+    {
+      "State Bottle Cost": 8.25,
+      "State Bottle Retail": 12.38
+    },
+    {
+      "State Bottle Cost": 7.56,
+      "State Bottle Retail": 11.33
+    },
+    {
+      "State Bottle Cost": 2.06,
+      "State Bottle Retail": 3.09
+    },
+    {
+      "State Bottle Cost": 2.75,
+      "State Bottle Retail": 4.13
+    },
+    {
+      "State Bottle Cost": 10.49,
+      "State Bottle Retail": 15.74
+    },
+    {
+      "State Bottle Cost": 7.53,
+      "State Bottle Retail": 11.3
+    },
+    {
+      "State Bottle Cost": 9.7,
+      "State Bottle Retail": 14.92
+    },
+    {
+      "State Bottle Cost": 22.0,
+      "State Bottle Retail": 33.0
+    },
+    {
+      "State Bottle Cost": 10.01,
+      "State Bottle Retail": 15.01
+    },
+    {
+      "State Bottle Cost": 20.25,
+      "State Bottle Retail": 30.37
+    },
+    {
+      "State Bottle Cost": 20.0,
+      "State Bottle Retail": 29.99
+    },
+    {
+      "State Bottle Cost": 19.0,
+      "State Bottle Retail": 28.5
+    },
+    {
+      "State Bottle Cost": 8.62,
+      "State Bottle Retail": 12.94
+    },
+    {
+      "State Bottle Cost": 13.31,
+      "State Bottle Retail": 19.97
+    },
+    {
+      "State Bottle Cost": 4.84,
+      "State Bottle Retail": 7.26
+    },
+    {
+      "State Bottle Cost": 14.53,
+      "State Bottle Retail": 21.8
+    },
+    {
+      "State Bottle Cost": 4.93,
+      "State Bottle Retail": 7.4
+    },
+    {
+      "State Bottle Cost": 3.94,
+      "State Bottle Retail": 5.91
+    },
+    {
+      "State Bottle Cost": 6.5,
+      "State Bottle Retail": 9.74
+    },
+    {
+      "State Bottle Cost": 13.01,
+      "State Bottle Retail": 19.51
+    },
+    {
+      "State Bottle Cost": 17.15,
+      "State Bottle Retail": 25.73
+    },
+    {
+      "State Bottle Cost": 11.55,
+      "State Bottle Retail": 17.32
+    },
+    {
+      "State Bottle Cost": 3.97,
+      "State Bottle Retail": 5.96
+    }
+  ],
+  "50": [
+    {
+      "Category Name": "American Vodkas",
+      "Bottles Sold": 22295376
+    },
+    {
+      "Category Name": "VODKA 80 PROOF",
+      "Bottles Sold": 18124615
+    },
+    {
+      "Category Name": "Canadian Whiskies",
+      "Bottles Sold": 11699574
+    },
+    {
+      "Category Name": "CANADIAN WHISKIES",
+      "Bottles Sold": 11123969
+    },
+    {
+      "Category Name": "Whiskey Liqueur",
+      "Bottles Sold": 8552493
+    },
+    {
+      "Category Name": "SPICED RUM",
+      "Bottles Sold": 6633940
+    },
+    {
+      "Category Name": "Spiced Rum",
+      "Bottles Sold": 5956974
+    },
+    {
+      "Category Name": "Straight Bourbon Whiskies",
+      "Bottles Sold": 4909262
+    },
+    {
+      "Category Name": "TEQUILA",
+      "Bottles Sold": 4079513
+    },
+    {
+      "Category Name": "BLENDED WHISKIES",
+      "Bottles Sold": 4073313
+    }
+  ]
+}

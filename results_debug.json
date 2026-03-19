@@ -1,0 +1,475 @@
+[
+  {
+    "query": "Qual o total do valor de LIMIT_BAL?",
+    "type": "aggregation",
+    "council_result": {
+      "query_type": "aggregation",
+      "operation": "sum",
+      "results": {
+        "ID_sum": 450015000.0,
+        "LIMIT_BAL_sum": 5024529680.0,
+        "AGE_sum": 1064565.0,
+        "BILL_AMT1_sum": 1536699927.0,
+        "BILL_AMT2_sum": 1475372255.0,
+        "BILL_AMT3_sum": 1410394644.0,
+        "BILL_AMT4_sum": 1297888469.0,
+        "BILL_AMT5_sum": 1209342029.0,
+        "BILL_AMT6_sum": 1166152812.0,
+        "PAY_AMT1_sum": 169907415.0,
+        "PAY_AMT2_sum": 177634905.0,
+        "PAY_AMT3_sum": 156770445.0,
+        "PAY_AMT4_sum": 144782306.0,
+        "PAY_AMT5_sum": 143981629.0,
+        "PAY_AMT6_sum": 156465077.0
+      },
+      "columns_analyzed": [
+        "ID",
+        "LIMIT_BAL",
+        "AGE",
+        "BILL_AMT1",
+        "BILL_AMT2",
+        "BILL_AMT3",
+        "BILL_AMT4",
+        "BILL_AMT5",
+        "BILL_AMT6",
+        "PAY_AMT1",
+        "PAY_AMT2",
+        "PAY_AMT3",
+        "PAY_AMT4",
+        "PAY_AMT5",
+        "PAY_AMT6"
+      ],
+      "timestamp": "2026-03-17T14:47:35.010956",
+      "original_query": "Qual o total do valor de LIMIT_BAL?"
+    },
+    "ground_truth": 5024529680.0,
+    "match": true
+  },
+  {
+    "query": "M\u00e9dia de idade (AGE) por n\u00edvel de educa\u00e7\u00e3o (EDUCATION)",
+    "type": "group_by",
+    "council_result": {
+      "query_type": "group_by",
+      "group_columns": [
+        "col(\"EDUCATION\")"
+      ],
+      "target_column": "ID",
+      "results": [
+        {
+          "EDUCATION": "2",
+          "count": 14030,
+          "ID_sum": 210790056.0,
+          "ID_mean": 15024.23777619387
+        },
+        {
+          "EDUCATION": "1",
+          "count": 10585,
+          "ID_sum": 155569991.0,
+          "ID_mean": 14697.212187057155
+        },
+        {
+          "EDUCATION": "3",
+          "count": 4917,
+          "ID_sum": 75438158.0,
+          "ID_mean": 15342.314012609315
+        },
+        {
+          "EDUCATION": "5",
+          "count": 280,
+          "ID_sum": 4884226.0,
+          "ID_mean": 17443.664285714287
+        },
+        {
+          "EDUCATION": "4",
+          "count": 123,
+          "ID_sum": 2231644.0,
+          "ID_mean": 18143.447154471545
+        },
+        {
+          "EDUCATION": "6",
+          "count": 51,
+          "ID_sum": 861646.0,
+          "ID_mean": 16895.019607843136
+        },
+        {
+          "EDUCATION": "0",
+          "count": 14,
+          "ID_sum": 239279.0,
+          "ID_mean": 17091.35714285714
+        }
+      ],
+      "timestamp": "2026-03-17T14:47:35.014704",
+      "original_query": "M\u00e9dia de idade (AGE) por n\u00edvel de educa\u00e7\u00e3o (EDUCATION)"
+    },
+    "ground_truth": [
+      {
+        "EDUCATION": "0",
+        "AGE": 38.857142857142854
+      },
+      {
+        "EDUCATION": "1",
+        "AGE": 34.23183750590458
+      },
+      {
+        "EDUCATION": "2",
+        "AGE": 34.722095509622235
+      },
+      {
+        "EDUCATION": "3",
+        "AGE": 40.29997966239577
+      },
+      {
+        "EDUCATION": "4",
+        "AGE": 33.853658536585364
+      },
+      {
+        "EDUCATION": "5",
+        "AGE": 35.6
+      },
+      {
+        "EDUCATION": "6",
+        "AGE": 43.90196078431372
+      }
+    ],
+    "match": true
+  },
+  {
+    "query": "Top 5 maiores PAY_AMT1",
+    "type": "top_n",
+    "council_result": {
+      "query_type": "top_n",
+      "n": 5,
+      "sort_column": "PAY_AMT1",
+      "descending": true,
+      "results": [
+        {
+          "ID": 28717.0,
+          "LIMIT_BAL": 340000.0,
+          "SEX": "2",
+          "EDUCATION": "1",
+          "MARRIAGE": "3",
+          "AGE": 42.0,
+          "PAY_0": "-1",
+          "PAY_2": "-1",
+          "PAY_3": "-1",
+          "PAY_4": "-1",
+          "PAY_5": "-1",
+          "PAY_6": "0",
+          "BILL_AMT1": 139808.0,
+          "BILL_AMT2": 176743.0,
+          "BILL_AMT3": 34402.0,
+          "BILL_AMT4": 205931.0,
+          "BILL_AMT5": 265431.0,
+          "BILL_AMT6": 270237.0,
+          "PAY_AMT1": 873552.0,
+          "PAY_AMT2": 1215471.0,
+          "PAY_AMT3": 889043.0,
+          "PAY_AMT4": 621000.0,
+          "PAY_AMT5": 20000.0,
+          "PAY_AMT6": 145000.0,
+          "default payment next month": "0"
+        },
+        {
+          "ID": 12331.0,
+          "LIMIT_BAL": 300000.0,
+          "SEX": "1",
+          "EDUCATION": "2",
+          "MARRIAGE": "1",
+          "AGE": 37.0,
+          "PAY_0": "1",
+          "PAY_2": "-1",
+          "PAY_3": "2",
+          "PAY_4": "0",
+          "PAY_5": "0",
+          "PAY_6": "0",
+          "BILL_AMT1": -165580.0,
+          "BILL_AMT2": 324392.0,
+          "BILL_AMT3": 296931.0,
+          "BILL_AMT4": 30355.0,
+          "BILL_AMT5": 26771.0,
+          "BILL_AMT6": 23737.0,
+          "PAY_AMT1": 505000.0,
+          "PAY_AMT2": 331.0,
+          "PAY_AMT3": 1070.0,
+          "PAY_AMT4": 17771.0,
+          "PAY_AMT5": 18000.0,
+          "PAY_AMT6": 16079.0,
+          "default payment next month": "0"
+        },
+        {
+          "ID": 28004.0,
+          "LIMIT_BAL": 510000.0,
+          "SEX": "2",
+          "EDUCATION": "1",
+          "MARRIAGE": "2",
+          "AGE": 30.0,
+          "PAY_0": "-1",
+          "PAY_2": "-1",
+          "PAY_3": "-1",
+          "PAY_4": "-1",
+          "PAY_5": "0",
+          "PAY_6": "0",
+          "BILL_AMT1": 71121.0,
+          "BILL_AMT2": 481382.0,
+          "BILL_AMT3": 559712.0,
+          "BILL_AMT4": 163628.0,
+          "BILL_AMT5": 117475.0,
+          "BILL_AMT6": 116656.0,
+          "PAY_AMT1": 493358.0,
+          "PAY_AMT2": 1227082.0,
+          "PAY_AMT3": 164577.0,
+          "PAY_AMT4": 510.0,
+          "PAY_AMT5": 6239.0,
+          "PAY_AMT6": 4550.0,
+          "default payment next month": "0"
+        },
+        {
+          "ID": 29821.0,
+          "LIMIT_BAL": 400000.0,
+          "SEX": "1",
+          "EDUCATION": "2",
+          "MARRIAGE": "2",
+          "AGE": 37.0,
+          "PAY_0": "1",
+          "PAY_2": "-1",
+          "PAY_3": "0",
+          "PAY_4": "0",
+          "PAY_5": "0",
+          "PAY_6": "0",
+          "BILL_AMT1": 396343.0,
+          "BILL_AMT2": 394858.0,
+          "BILL_AMT3": 395716.0,
+          "BILL_AMT4": 385947.0,
+          "BILL_AMT5": 305542.0,
+          "BILL_AMT6": 271385.0,
+          "PAY_AMT1": 423903.0,
+          "PAY_AMT2": 15100.0,
+          "PAY_AMT3": 14600.0,
+          "PAY_AMT4": 13000.0,
+          "PAY_AMT5": 9500.0,
+          "PAY_AMT6": 9500.0,
+          "default payment next month": "0"
+        },
+        {
+          "ID": 8501.0,
+          "LIMIT_BAL": 400000.0,
+          "SEX": "2",
+          "EDUCATION": "1",
+          "MARRIAGE": "1",
+          "AGE": 28.0,
+          "PAY_0": "-1",
+          "PAY_2": "-1",
+          "PAY_3": "2",
+          "PAY_4": "0",
+          "PAY_5": "0",
+          "PAY_6": "0",
+          "BILL_AMT1": 6500.0,
+          "BILL_AMT2": 405016.0,
+          "BILL_AMT3": 391178.0,
+          "BILL_AMT4": 392932.0,
+          "BILL_AMT5": 394410.0,
+          "BILL_AMT6": 410127.0,
+          "PAY_AMT1": 405016.0,
+          "PAY_AMT2": 0.0,
+          "PAY_AMT3": 14000.0,
+          "PAY_AMT4": 13560.0,
+          "PAY_AMT5": 28000.0,
+          "PAY_AMT6": 0.0,
+          "default payment next month": "0"
+        }
+      ],
+      "timestamp": "2026-03-17T14:47:35.018740",
+      "original_query": "Top 5 maiores PAY_AMT1"
+    },
+    "ground_truth": [
+      {
+        "ID": 28717.0,
+        "PAY_AMT1": 873552.0,
+        "LIMIT_BAL": 340000.0
+      },
+      {
+        "ID": 12331.0,
+        "PAY_AMT1": 505000.0,
+        "LIMIT_BAL": 300000.0
+      },
+      {
+        "ID": 28004.0,
+        "PAY_AMT1": 493358.0,
+        "LIMIT_BAL": 510000.0
+      },
+      {
+        "ID": 29821.0,
+        "PAY_AMT1": 423903.0,
+        "LIMIT_BAL": 400000.0
+      },
+      {
+        "ID": 8501.0,
+        "PAY_AMT1": 405016.0,
+        "LIMIT_BAL": 400000.0
+      }
+    ],
+    "match": true
+  },
+  {
+    "query": "Resumo estat\u00edstico das colunas",
+    "type": "describe",
+    "council_result": {
+      "query_type": "describe",
+      "row_count": 30000,
+      "column_count": 25,
+      "columns": [
+        "ID",
+        "LIMIT_BAL",
+        "SEX",
+        "EDUCATION",
+        "MARRIAGE",
+        "AGE",
+        "PAY_0",
+        "PAY_2",
+        "PAY_3",
+        "PAY_4",
+        "PAY_5",
+        "PAY_6",
+        "BILL_AMT1",
+        "BILL_AMT2",
+        "BILL_AMT3",
+        "BILL_AMT4",
+        "BILL_AMT5",
+        "BILL_AMT6",
+        "PAY_AMT1",
+        "PAY_AMT2",
+        "PAY_AMT3",
+        "PAY_AMT4",
+        "PAY_AMT5",
+        "PAY_AMT6",
+        "default payment next month"
+      ],
+      "dtypes": {
+        "ID": "Float64",
+        "LIMIT_BAL": "Float64",
+        "SEX": "String",
+        "EDUCATION": "String",
+        "MARRIAGE": "String",
+        "AGE": "Float64",
+        "PAY_0": "String",
+        "PAY_2": "String",
+        "PAY_3": "String",
+        "PAY_4": "String",
+        "PAY_5": "String",
+        "PAY_6": "String",
+        "BILL_AMT1": "Float64",
+        "BILL_AMT2": "Float64",
+        "BILL_AMT3": "Float64",
+        "BILL_AMT4": "Float64",
+        "BILL_AMT5": "Float64",
+        "BILL_AMT6": "Float64",
+        "PAY_AMT1": "Float64",
+        "PAY_AMT2": "Float64",
+        "PAY_AMT3": "Float64",
+        "PAY_AMT4": "Float64",
+        "PAY_AMT5": "Float64",
+        "PAY_AMT6": "Float64",
+        "default payment next month": "String"
+      },
+      "numeric_stats": {
+        "ID": {
+          "mean": 15000.5,
+          "min": 1.0,
+          "max": 30000.0,
+          "null_count": 0
+        },
+        "LIMIT_BAL": {
+          "mean": 167484.32266666667,
+          "min": 10000.0,
+          "max": 1000000.0,
+          "null_count": 0
+        },
+        "AGE": {
+          "mean": 35.4855,
+          "min": 21.0,
+          "max": 79.0,
+          "null_count": 0
+        },
+        "BILL_AMT1": {
+          "mean": 51223.3309,
+          "min": -165580.0,
+          "max": 964511.0,
+          "null_count": 0
+        },
+        "BILL_AMT2": {
+          "mean": 49179.07516666667,
+          "min": -69777.0,
+          "max": 983931.0,
+          "null_count": 0
+        },
+        "BILL_AMT3": {
+          "mean": 47013.1548,
+          "min": -157264.0,
+          "max": 1664089.0,
+          "null_count": 0
+        },
+        "BILL_AMT4": {
+          "mean": 43262.94896666666,
+          "min": -170000.0,
+          "max": 891586.0,
+          "null_count": 0
+        },
+        "BILL_AMT5": {
+          "mean": 40311.40096666667,
+          "min": -81334.0,
+          "max": 927171.0,
+          "null_count": 0
+        },
+        "BILL_AMT6": {
+          "mean": 38871.7604,
+          "min": -339603.0,
+          "max": 961664.0,
+          "null_count": 0
+        },
+        "PAY_AMT1": {
+          "mean": 5663.5805,
+          "min": 0.0,
+          "max": 873552.0,
+          "null_count": 0
+        },
+        "PAY_AMT2": {
+          "mean": 5921.1635,
+          "min": 0.0,
+          "max": 1684259.0,
+          "null_count": 0
+        },
+        "PAY_AMT3": {
+          "mean": 5225.6815,
+          "min": 0.0,
+          "max": 896040.0,
+          "null_count": 0
+        },
+        "PAY_AMT4": {
+          "mean": 4826.076866666666,
+          "min": 0.0,
+          "max": 621000.0,
+          "null_count": 0
+        },
+        "PAY_AMT5": {
+          "mean": 4799.387633333334,
+          "min": 0.0,
+          "max": 426529.0,
+          "null_count": 0
+        },
+        "PAY_AMT6": {
+          "mean": 5215.502566666667,
+          "min": 0.0,
+          "max": 528666.0,
+          "null_count": 0
+        }
+      },
+      "timestamp": "2026-03-17T14:47:35.022307",
+      "original_query": "Resumo estat\u00edstico das colunas"
+    },
+    "ground_truth": {
+      "row_count": 30000,
+      "LIMIT_BAL_mean": 167484.32266666667
+    },
+    "match": true
+  }
+]

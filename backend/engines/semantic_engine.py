@@ -71,6 +71,16 @@ class SemanticEngine:
         total_count = len(values)
         cardinality_ratio = unique_count / total_count if total_count > 0 else 0
         
+        # Adaptive thresholds (Dynamic Adjustments)
+        min_id_ratio = 0.85 if total_count < 100 else 0.95 if total_count > 1000 else 0.9
+        max_cat_ratio = 0.3 if total_count < 100 else 0.15 if total_count > 1000 else 0.2
+        
+        has_leading_zeroes = False
+        non_empty_str = [str(v) for v in values if str(v) and str(v).strip()]
+        if non_empty_str:
+            if any(s.startswith('0') and len(s) > 1 and s.isdigit() for s in non_empty_str):
+                has_leading_zeroes = True
+        
         is_numeric = any(t in dtype for t in ["Int", "Float", "Decimal"]) or is_eff_numeric
         is_string = any(t in dtype for t in ["Utf8", "String"]) and not is_eff_numeric
         is_bool = "Bool" in dtype
@@ -101,14 +111,12 @@ class SemanticEngine:
             else:
                 final_type = "DATE"
         
-        # Check for ID
-        elif "ID" in clues:
+        elif "ID" in clues or has_leading_zeroes:
             if is_numeric:
-                # Highly unique or integers
-                if cardinality_ratio > 0.9 or unique_count > 20:
+                if cardinality_ratio > min_id_ratio or unique_count > 20:
                     final_type = "ID"
                 else:
-                    final_type = "CATEGORY" # Low cardinality ID is usually a category (e.g. status_id)
+                    final_type = "CATEGORY" 
                     ambiguous = True
                     reason = f"Numeric ID with low cardinality ({unique_count} uniques) behaves more like a CATEGORY."
             else:
@@ -125,8 +133,8 @@ class SemanticEngine:
 
         # Check for CATEGORY
         elif "CATEGORY" in clues:
-            if is_numeric and cardinality_ratio < 0.2:
-                final_type = "ID" # Assuming numeric category columns act as IDs/Codes (like Category = 1031200)
+            if is_numeric and cardinality_ratio < max_cat_ratio:
+                final_type = "ID" 
             else:
                 final_type = "CATEGORY"
                 if is_numeric and unique_count > (total_count * 0.5) and total_count > 10:
@@ -136,12 +144,7 @@ class SemanticEngine:
         # Default fallback by data characteristics
         else:
             if is_numeric:
-                if unique_count < 10 and total_count > 20:
-                    final_type = "CATEGORY" # Inferred category
-                    ambiguous = True
-                    reason = f"Numeric column with very low cardinality ({unique_count} uniques)."
-                else:
-                    final_type = "MEASURE"
+                final_type = "MEASURE"
             elif is_bool:
                 final_type = "CATEGORY"
             elif is_string:
@@ -169,6 +172,10 @@ class SemanticEngine:
         if semantic_type == "DATE":
             return "Date"
         if semantic_type == "CATEGORY":
+            # Verifica se é um Booleano disfarçado de Categoria (strings True/False)
+            non_empty = [str(v).lower().strip() for v in sample_values if v is not None]
+            if non_empty and set(non_empty).issubset({"true", "false", "t", "f"}):
+                return "Boolean"
             return "Categorical"
         if semantic_type == "MEASURE":
             # If it's effectively numeric but currently String, check if it's float or int

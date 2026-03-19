@@ -1,0 +1,5613 @@
+{
+  "dataset": {},
+  "column_types": {},
+  "derived_columns": [],
+  "results": [
+    {
+      "id": "4391db77",
+      "title": "Analysis: 6. Qual a média de duração administrativa (Adminis...",
+      "rows": 1,
+      "columns": [
+        "Administrative_mean",
+        "Administrative_Duration_mean",
+        "Informational_mean",
+        "Informational_Duration_mean",
+        "ProductRelated_mean",
+        "ProductRelated_Duration_mean",
+        "BounceRates_mean",
+        "PageValues_mean",
+        "SpecialDay_mean",
+        "OperatingSystems_mean",
+        "Browser_mean",
+        "Region_mean"
+      ],
+      "sample": [
+        {
+          "Administrative_mean": 2.780928780928781,
+          "Administrative_Duration_mean": 117.85996184885836,
+          "Informational_mean": 0.7824427824427824,
+          "Informational_Duration_mean": 74.69524397096124,
+          "ProductRelated_mean": 37.60918560918561,
+          "ProductRelated_Duration_mean": 1496.799697345047,
+          "BounceRates_mean": 0.031455091523439505,
+          "PageValues_mean": 8.854572362587458,
+          "SpecialDay_mean": 0.11264953776103472,
+          "OperatingSystems_mean": 2.1644841644841644,
+          "Browser_mean": 2.5625055625055624,
+          "Region_mean": 3.3865723865723867
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "6. Qual a média de duração administrativa (Administrative_Duration)?",
+        "type": "aggregation"
+      },
+      "created_at": "2026-03-18T15:52:14.198029+00:00Z"
+    },
+    {
+      "id": "bdf78c4d",
+      "title": "Analysis: 7. Qual o menor tempo gasto em páginas Informativa...",
+      "rows": 1,
+      "columns": [
+        "Min_Informational_Duration"
+      ],
+      "sample": [
+        {
+          "Min_Informational_Duration": 0.0
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "7. Qual o menor tempo gasto em páginas Informativas (Informational_Duration)?",
+        "type": null
+      },
+      "created_at": "2026-03-18T15:52:15.594673+00:00Z"
+    },
+    {
+      "id": "928b35f0",
+      "title": "Analysis: 8. Qual o sistema operacional (OperatingSystems) m...",
+      "rows": 1,
+      "columns": [
+        "OperatingSystems",
+        "Count"
+      ],
+      "sample": [
+        {
+          "OperatingSystems": 4,
+          "Count": 1
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "8. Qual o sistema operacional (OperatingSystems) mais comum entre os visitantes?",
+        "type": null
+      },
+      "created_at": "2026-03-18T15:52:16.921694+00:00Z"
+    },
+    {
+      "id": "d2618d23",
+      "title": "Analysis: 9. Quantas visitas foram registradas para cada reg...",
+      "rows": 9,
+      "columns": [
+        "Region",
+        "Visits"
+      ],
+      "sample": [
+        {
+          "Region": 1,
+          "Visits": 245834
+        },
+        {
+          "Region": 3,
+          "Visits": 164038
+        },
+        {
+          "Region": 4,
+          "Visits": 155531
+        },
+        {
+          "Region": 2,
+          "Visits": 146949
+        },
+        {
+          "Region": 5,
+          "Visits": 123421
+        },
+        {
+          "Region": 6,
+          "Visits": 82560
+        },
+        {
+          "Region": 7,
+          "Visits": 46375
+        },
+        {
+          "Region": 8,
+          "Visits": 22110
+        },
+        {
+          "Region": 9,
+          "Visits": 13181
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "9. Quantas visitas foram registradas para cada região (Region)?",
+        "type": null
+      },
+      "created_at": "2026-03-18T15:52:18.170616+00:00Z"
+    },
+    {
+      "id": "9708ed8a",
+      "title": "Analysis: 11. Qual o total de PageValues gerado no mês de 'M...",
+      "rows": 1,
+      "columns": [
+        "TotalPageValues"
+      ],
+      "sample": [
+        {
+          "TotalPageValues": 2067608.1970474885
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "11. Qual o total de PageValues gerado no mês de 'May'?",
+        "type": null
+      },
+      "created_at": "2026-03-18T15:52:20.701141+00:00Z"
+    },
+    {
+      "id": "16c759e2",
+      "title": "Analysis: 13. Quais os 3 maiores valores de ProductRelated_D...",
+      "rows": 13,
+      "columns": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "Month",
+        "VisitorType",
+        "Weekend",
+        "Revenue"
+      ],
+      "sample": [
+        {
+          "Administrative": 11,
+          "Administrative_Duration": 674.5821944512917,
+          "Informational": 4,
+          "Informational_Duration": 374.9923579116504,
+          "ProductRelated": 264,
+          "ProductRelated_Duration": 12125.67389653455,
+          "BounceRates": 0.011813776265987756,
+          "ExitRates": "0.03250138876447239",
+          "PageValues": 0.0,
+          "SpecialDay": 0.0723856527565421,
+          "OperatingSystems": 4,
+          "Browser": 3,
+          "Region": 4,
+          "TrafficType": "1",
+          "Month": "Mar",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 7,
+          "Administrative_Duration": 260.6340950373193,
+          "Informational": 4,
+          "Informational_Duration": 351.8448708127179,
+          "ProductRelated": 228,
+          "ProductRelated_Duration": 11162.269611522479,
+          "BounceRates": 0.001033683936583511,
+          "ExitRates": "0.012798658613613408",
+          "PageValues": 38.75980339809633,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 2,
+          "Region": 5,
+          "TrafficType": "9",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 11,
+          "Administrative_Duration": 529.6449523215283,
+          "Informational": 6,
+          "Informational_Duration": 442.67081612389654,
+          "ProductRelated": 264,
+          "ProductRelated_Duration": 11076.50839364094,
+          "BounceRates": 0.013976865005779248,
+          "ExitRates": "0.022393612699598803",
+          "PageValues": 0.0,
+          "SpecialDay": 0.034242781581120194,
+          "OperatingSystems": 1,
+          "Browser": 4,
+          "Region": 1,
+          "TrafficType": "2",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 2,
+          "Administrative_Duration": 164.31738884795067,
+          "Informational": 3,
+          "Informational_Duration": 253.9354887523052,
+          "ProductRelated": 260,
+          "ProductRelated_Duration": 10948.7028866221,
+          "BounceRates": 0.0,
+          "ExitRates": "0.0",
+          "PageValues": 36.18260325512456,
+          "SpecialDay": 0.14770811042919757,
+          "OperatingSystems": 3,
+          "Browser": 1,
+          "Region": 8,
+          "TrafficType": "1",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 10,
+          "Administrative_Duration": 238.3528551817157,
+          "Informational": 1,
+          "Informational_Duration": 174.08173758135416,
+          "ProductRelated": 250,
+          "ProductRelated_Duration": 10849.290798535105,
+          "BounceRates": 0.0,
+          "ExitRates": "0.009650704694945679",
+          "PageValues": 0.0,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 4,
+          "Region": 3,
+          "TrafficType": "9",
+          "Month": "Sep",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 13,
+          "Administrative_Duration": 495.1824058165817,
+          "Informational": 5,
+          "Informational_Duration": 221.6254148183444,
+          "ProductRelated": 283,
+          "ProductRelated_Duration": 10773.116600803136,
+          "BounceRates": 0.0054528583610275365,
+          "ExitRates": "0.033842710389729656",
+          "PageValues": 0.0,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 1,
+          "Browser": 1,
+          "Region": 4,
+          "TrafficType": "1",
+          "Month": "Mar",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 5,
+          "Administrative_Duration": 79.86581500475762,
+          "Informational": 5,
+          "Informational_Duration": 589.4248037951598,
+          "ProductRelated": 257,
+          "ProductRelated_Duration": 10714.793118933743,
+          "BounceRates": 0.019775065654171413,
+          "ExitRates": "0.0210105729526834",
+          "PageValues": 39.33759705011347,
+          "SpecialDay": 0.10281914426300831,
+          "OperatingSystems": 4,
+          "Browser": 5,
+          "Region": 1,
+          "TrafficType": "6",
+          "Month": "May",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 6,
+          "Administrative_Duration": 321.5860460335001,
+          "Informational": 4,
+          "Informational_Duration": 421.49021131393783,
+          "ProductRelated": 246,
+          "ProductRelated_Duration": 10625.629735292354,
+          "BounceRates": 0.00650664729095836,
+          "ExitRates": "0.03656117674792674",
+          "PageValues": 0.0,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 1,
+          "Browser": 3,
+          "Region": 3,
+          "TrafficType": "3",
+          "Month": "Nov",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 9,
+          "Administrative_Duration": 571.3028927311489,
+          "Informational": 2,
+          "Informational_Duration": 264.4117208650489,
+          "ProductRelated": 262,
+          "ProductRelated_Duration": 10597.918326280194,
+          "BounceRates": 0.0023424605089435602,
+          "ExitRates": "0.0",
+          "PageValues": 12.322112171754801,
+          "SpecialDay": 0.07535611492078303,
+          "OperatingSystems": 2,
+          "Browser": 2,
+          "Region": 1,
+          "TrafficType": "4",
+          "Month": "Mar",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 12,
+          "Administrative_Duration": 339.1767745726004,
+          "Informational": 1,
+          "Informational_Duration": 425.3851601019911,
+          "ProductRelated": 244,
+          "ProductRelated_Duration": 10525.177822737878,
+          "BounceRates": 0.024776085220462964,
+          "ExitRates": "0.024921310087342045",
+          "PageValues": 27.690088995289116,
+          "SpecialDay": 0.1702019752377828,
+          "OperatingSystems": 4,
+          "Browser": 8,
+          "Region": 6,
+          "TrafficType": "10",
+          "Month": "May",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 3,
+          "Administrative_Duration": 186.47252067146354,
+          "Informational": 2,
+          "Informational_Duration": 141.9072263415071,
+          "ProductRelated": 299,
+          "ProductRelated_Duration": 10504.85456400551,
+          "BounceRates": 0.0018676830859341957,
+          "ExitRates": "0.010408565608973467",
+          "PageValues": 27.906937109881817,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 4,
+          "Region": 3,
+          "TrafficType": "9",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 9,
+          "Administrative_Duration": 421.0452279663807,
+          "Informational": 4,
+          "Informational_Duration": 60.76089208860599,
+          "ProductRelated": 243,
+          "ProductRelated_Duration": 10471.037344629496,
+          "BounceRates": 0.019010598706929956,
+          "ExitRates": "0.018964155027125954",
+          "PageValues": 1.945570923649118,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 1,
+          "Region": 2,
+          "TrafficType": "12",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 4,
+          "Administrative_Duration": 95.7827886128766,
+          "Informational": 3,
+          "Informational_Duration": 287.45847952457143,
+          "ProductRelated": 249,
+          "ProductRelated_Duration": 10451.753759602892,
+          "BounceRates": 0.0013058290777497035,
+          "ExitRates": "0.007114617978363295",
+          "PageValues": 27.601875610261196,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 1,
+          "Browser": 4,
+          "Region": 1,
+          "TrafficType": "3",
+          "Month": "Jul",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "13. Quais os 3 maiores valores de ProductRelated_Duration agrupados por mês?",
+        "type": "top_n"
+      },
+      "created_at": "2026-03-18T15:52:23.230230+00:00Z"
+    },
+    {
+      "id": "ed96b28d",
+      "title": "Analysis: 15. Qual o mês com maior média de PageValues para ...",
+      "rows": 1,
+      "columns": [
+        "Month",
+        "AvgPageValues"
+      ],
+      "sample": [
+        {
+          "Month": "Mar",
+          "AvgPageValues": 31.986331441813753
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "15. Qual o mês com maior média de PageValues para visitantes que geraram receita (Revenue=True)?",
+        "type": null
+      },
+      "created_at": "2026-03-18T15:52:27.163867+00:00Z"
+    },
+    {
+      "id": "4802896b",
+      "title": "Analysis: 18. Qual o tipo de tráfego (TrafficType) com maior...",
+      "rows": 20,
+      "columns": [
+        "TrafficType",
+        "MaxProductRelatedDuration"
+      ],
+      "sample": [
+        {
+          "TrafficType": "1",
+          "MaxProductRelatedDuration": 12125.67389653455
+        },
+        {
+          "TrafficType": "9",
+          "MaxProductRelatedDuration": 11162.269611522479
+        },
+        {
+          "TrafficType": "2",
+          "MaxProductRelatedDuration": 11076.50839364094
+        },
+        {
+          "TrafficType": "6",
+          "MaxProductRelatedDuration": 10714.793118933743
+        },
+        {
+          "TrafficType": "3",
+          "MaxProductRelatedDuration": 10625.629735292354
+        },
+        {
+          "TrafficType": "4",
+          "MaxProductRelatedDuration": 10597.918326280194
+        },
+        {
+          "TrafficType": "10",
+          "MaxProductRelatedDuration": 10525.177822737878
+        },
+        {
+          "TrafficType": "12",
+          "MaxProductRelatedDuration": 10471.037344629496
+        },
+        {
+          "TrafficType": "8",
+          "MaxProductRelatedDuration": 10369.900896743024
+        },
+        {
+          "TrafficType": "7",
+          "MaxProductRelatedDuration": 10336.61202481651
+        },
+        {
+          "TrafficType": "5",
+          "MaxProductRelatedDuration": 10058.52654005978
+        },
+        {
+          "TrafficType": "11",
+          "MaxProductRelatedDuration": 10053.711123826019
+        },
+        {
+          "TrafficType": "14",
+          "MaxProductRelatedDuration": 9028.839180279376
+        },
+        {
+          "TrafficType": "17",
+          "MaxProductRelatedDuration": 8827.665830439417
+        },
+        {
+          "TrafficType": "13",
+          "MaxProductRelatedDuration": 8818.021292740115
+        },
+        {
+          "TrafficType": "15",
+          "MaxProductRelatedDuration": 8488.908485976588
+        },
+        {
+          "TrafficType": "16",
+          "MaxProductRelatedDuration": 8217.30783199988
+        },
+        {
+          "TrafficType": "18",
+          "MaxProductRelatedDuration": 5963.179662857738
+        },
+        {
+          "TrafficType": "20",
+          "MaxProductRelatedDuration": 5052.131874973384
+        },
+        {
+          "TrafficType": "19",
+          "MaxProductRelatedDuration": 2813.28662690987
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "18. Qual o tipo de tráfego (TrafficType) com maior tempo de retenção (ProductRelated_Duration) que também gerou receita?",
+        "type": null
+      },
+      "created_at": "2026-03-18T15:52:34.131772+00:00Z"
+    },
+    {
+      "id": "3c08887c",
+      "title": "Analysis: 19. Qual o dia especial (SpecialDay) com maior pic...",
+      "rows": 5000,
+      "columns": [
+        "SpecialDay",
+        "MaxTrafficType"
+      ],
+      "sample": [
+        {
+          "SpecialDay": 0.7513577340893701,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.7355847920376815,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.7317851304947114,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.7247393922315155,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.7086703649751721,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.7075628394382298,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.7061512440351817,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.7009459836436315,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6974665500886361,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6938780758818336,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6930302390504409,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6901069709365077,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.686000244019034,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6847402917788044,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6842043055903886,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6765100733051725,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.674185190462714,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6663358928624993,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6645060410452263,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6632466360039896,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6595946413692647,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6580889450906185,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6527206384924794,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6501596422492754,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6435089085027117,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6386819267931899,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.635600641879487,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.633673034944735,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6325859325093955,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6315409829930806,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6275372507047178,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6251776077195121,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6235162999279354,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6183319754701969,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6175813857493365,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6119743659388208,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6079564683587361,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6065434750625278,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6017668728941545,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.598907430057793,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.596486730373783,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5955543411387179,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5927946854659077,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5911056951749961,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5909689493298534,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5870392563095294,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5868265602191277,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5866248610683535,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5863757114721536,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.585765647553395,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5822092316630066,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5782818003876143,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5773490132204013,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.577346621596919,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5756021751962853,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5747628046563827,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5744593621679475,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5726731875737863,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5716894993654631,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5678105835717772,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5659896413583316,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.565689908410402,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5642991993986857,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5637540226740241,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5637177385308999,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5623630117697987,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5618708811820933,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5591909466566698,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5573943674251574,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5547822816166443,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5536548565908785,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5534344091458293,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5526766608443575,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5511237540763153,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.550974890994815,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.55081449484813,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5500452147256196,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5498441197598537,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5496848185071211,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5492426611133534,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5475429034468169,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5428479688104427,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5427973155973997,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.54267982643078,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5425592343410889,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5405022976149927,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5376451882423449,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5360753960970361,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5343641484326501,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.532473686551548,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5301962492823931,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5300821859566974,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.52951589428781,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5293111044666791,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5291807211230659,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5274341308638416,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5266216230223204,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5258323560104093,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5256214681854506,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.525327826018337,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5253010342910699,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5251082701109951,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5244024667275737,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5237393359239874,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.522230251535264,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5210992328655206,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5210025882189786,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5205194693874743,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5186282599212185,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.517786517621269,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5177121181766114,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5159718512427248,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5156869511616825,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5123108158467164,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5108199129344786,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5102411223821968,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.510119098516631,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5099688433643179,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5088155124195447,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5086699695092465,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5084633223107772,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5083870470297857,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5044900458518924,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5044861747258574,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.50433999211799,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5038021675934728,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.502409764481868,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5018733126101681,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5017292698508141,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5016726699762262,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5012862750986327,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5012345428934055,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5011651585272964,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5003733532273569,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.49979828803615073,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.49967862491258347,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.4987446383024382,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.4987304434842543,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.49867065479159417,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.4980832611931881,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.49767713580921863,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.4972747438788657,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.4972045701147628,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.4965694765455325,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.4952565526672296,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.4949550281429285,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.49456128833239776,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.4945139785954009,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.49417666672213734,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.49246130937439947,
+          "MaxTrafficType": "9"
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "19. Qual o dia especial (SpecialDay) com maior pico de acessos nos finais de semana?",
+        "type": null
+      },
+      "created_at": "2026-03-18T15:52:36.310314+00:00Z"
+    },
+    {
+      "id": "67dd9d08",
+      "title": "Analysis: 20. Qual a soma total de ProductRelated_Duration p...",
+      "rows": 1,
+      "columns": [
+        "TotalProductRelatedDuration"
+      ],
+      "sample": [
+        {
+          "TotalProductRelatedDuration": 77127662.80872099
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "20. Qual a soma total de ProductRelated_Duration para visitas do Browser 1 no mês de 'Nov' que não geraram receita (Revenue=False)?",
+        "type": null
+      },
+      "created_at": "2026-03-18T15:52:38.284799+00:00Z"
+    },
+    {
+      "id": "9dc71d63",
+      "title": "Analysis: 1. Qual a média da taxa de rejeição (BounceRates)?...",
+      "rows": 1,
+      "columns": [
+        "Administrative_mean",
+        "Administrative_Duration_mean",
+        "Informational_mean",
+        "Informational_Duration_mean",
+        "ProductRelated_mean",
+        "ProductRelated_Duration_mean",
+        "BounceRates_mean",
+        "PageValues_mean",
+        "SpecialDay_mean",
+        "OperatingSystems_mean",
+        "Browser_mean",
+        "Region_mean"
+      ],
+      "sample": [
+        {
+          "Administrative_mean": 2.780928780928781,
+          "Administrative_Duration_mean": 117.85996184885836,
+          "Informational_mean": 0.7824427824427824,
+          "Informational_Duration_mean": 74.69524397096124,
+          "ProductRelated_mean": 37.60918560918561,
+          "ProductRelated_Duration_mean": 1496.7996973450468,
+          "BounceRates_mean": 0.03145509152343951,
+          "PageValues_mean": 8.854572362587461,
+          "SpecialDay_mean": 0.11264953776103472,
+          "OperatingSystems_mean": 2.1644841644841644,
+          "Browser_mean": 2.5625055625055624,
+          "Region_mean": 3.3865723865723867
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "1. Qual a média da taxa de rejeição (BounceRates)?",
+        "type": "aggregation"
+      },
+      "created_at": "2026-03-18T15:53:06.176075+00:00Z"
+    },
+    {
+      "id": "f8a8f5dc",
+      "title": "Analysis: 2. Qual o total de receita (Revenue=True)?...",
+      "rows": 1,
+      "columns": [
+        "Total_Revenue"
+      ],
+      "sample": [
+        {
+          "Total_Revenue": 154744
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "2. Qual o total de receita (Revenue=True)?",
+        "type": null
+      },
+      "created_at": "2026-03-18T15:53:07.665934+00:00Z"
+    },
+    {
+      "id": "9ce5b224",
+      "title": "Analysis: 4. Qual o maior valor de PageValues registrado?...",
+      "rows": 1,
+      "columns": [
+        "MaxPageValue"
+      ],
+      "sample": [
+        {
+          "MaxPageValue": 191.9076347972832
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "4. Qual o maior valor de PageValues registrado?",
+        "type": null
+      },
+      "created_at": "2026-03-18T15:53:09.400809+00:00Z"
+    },
+    {
+      "id": "fde42acb",
+      "title": "Analysis: 6. Qual a média de duração administrativa (Adminis...",
+      "rows": 1,
+      "columns": [
+        "Administrative_mean",
+        "Administrative_Duration_mean",
+        "Informational_mean",
+        "Informational_Duration_mean",
+        "ProductRelated_mean",
+        "ProductRelated_Duration_mean",
+        "BounceRates_mean",
+        "PageValues_mean",
+        "SpecialDay_mean",
+        "OperatingSystems_mean",
+        "Browser_mean",
+        "Region_mean"
+      ],
+      "sample": [
+        {
+          "Administrative_mean": 2.780928780928781,
+          "Administrative_Duration_mean": 117.85996184885838,
+          "Informational_mean": 0.7824427824427824,
+          "Informational_Duration_mean": 74.69524397096124,
+          "ProductRelated_mean": 37.60918560918561,
+          "ProductRelated_Duration_mean": 1496.799697345047,
+          "BounceRates_mean": 0.031455091523439505,
+          "PageValues_mean": 8.854572362587458,
+          "SpecialDay_mean": 0.1126495377610347,
+          "OperatingSystems_mean": 2.1644841644841644,
+          "Browser_mean": 2.5625055625055624,
+          "Region_mean": 3.3865723865723867
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "6. Qual a média de duração administrativa (Administrative_Duration)?",
+        "type": "aggregation"
+      },
+      "created_at": "2026-03-18T15:53:14.790309+00:00Z"
+    },
+    {
+      "id": "761c2fec",
+      "title": "Analysis: 8. Qual o sistema operacional (OperatingSystems) m...",
+      "rows": 1,
+      "columns": [
+        "OperatingSystems",
+        "Visits"
+      ],
+      "sample": [
+        {
+          "OperatingSystems": 2,
+          "Visits": 413874
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "8. Qual o sistema operacional (OperatingSystems) mais comum entre os visitantes?",
+        "type": null
+      },
+      "created_at": "2026-03-18T15:53:16.817261+00:00Z"
+    },
+    {
+      "id": "602f5ee2",
+      "title": "Analysis: 9. Quantas visitas foram registradas para cada reg...",
+      "rows": 9,
+      "columns": [
+        "Region",
+        "Visits"
+      ],
+      "sample": [
+        {
+          "Region": 1,
+          "Visits": 245834
+        },
+        {
+          "Region": 3,
+          "Visits": 164038
+        },
+        {
+          "Region": 4,
+          "Visits": 155531
+        },
+        {
+          "Region": 2,
+          "Visits": 146949
+        },
+        {
+          "Region": 5,
+          "Visits": 123421
+        },
+        {
+          "Region": 6,
+          "Visits": 82560
+        },
+        {
+          "Region": 7,
+          "Visits": 46375
+        },
+        {
+          "Region": 8,
+          "Visits": 22110
+        },
+        {
+          "Region": 9,
+          "Visits": 13181
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "9. Quantas visitas foram registradas para cada região (Region)?",
+        "type": null
+      },
+      "created_at": "2026-03-18T15:53:18.677057+00:00Z"
+    },
+    {
+      "id": "bc45fd0f",
+      "title": "Analysis: 11. Qual o total de PageValues gerado no mês de 'M...",
+      "rows": 1,
+      "columns": [
+        "TotalPageValuesMay"
+      ],
+      "sample": [
+        {
+          "TotalPageValuesMay": 2067608.1970474888
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "11. Qual o total de PageValues gerado no mês de 'May'?",
+        "type": null
+      },
+      "created_at": "2026-03-18T15:53:20.853196+00:00Z"
+    },
+    {
+      "id": "3e688169",
+      "title": "Analysis: 13. Quais os 3 maiores valores de ProductRelated_D...",
+      "rows": 13,
+      "columns": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "Month",
+        "VisitorType",
+        "Weekend",
+        "Revenue"
+      ],
+      "sample": [
+        {
+          "Administrative": 11,
+          "Administrative_Duration": 674.5821944512917,
+          "Informational": 4,
+          "Informational_Duration": 374.9923579116504,
+          "ProductRelated": 264,
+          "ProductRelated_Duration": 12125.67389653455,
+          "BounceRates": 0.011813776265987756,
+          "ExitRates": "0.03250138876447239",
+          "PageValues": 0.0,
+          "SpecialDay": 0.0723856527565421,
+          "OperatingSystems": 4,
+          "Browser": 3,
+          "Region": 4,
+          "TrafficType": "1",
+          "Month": "Mar",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 7,
+          "Administrative_Duration": 260.6340950373193,
+          "Informational": 4,
+          "Informational_Duration": 351.8448708127179,
+          "ProductRelated": 228,
+          "ProductRelated_Duration": 11162.269611522479,
+          "BounceRates": 0.001033683936583511,
+          "ExitRates": "0.012798658613613408",
+          "PageValues": 38.75980339809633,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 2,
+          "Region": 5,
+          "TrafficType": "9",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 11,
+          "Administrative_Duration": 529.6449523215283,
+          "Informational": 6,
+          "Informational_Duration": 442.67081612389654,
+          "ProductRelated": 264,
+          "ProductRelated_Duration": 11076.50839364094,
+          "BounceRates": 0.013976865005779248,
+          "ExitRates": "0.022393612699598803",
+          "PageValues": 0.0,
+          "SpecialDay": 0.034242781581120194,
+          "OperatingSystems": 1,
+          "Browser": 4,
+          "Region": 1,
+          "TrafficType": "2",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 2,
+          "Administrative_Duration": 164.31738884795067,
+          "Informational": 3,
+          "Informational_Duration": 253.9354887523052,
+          "ProductRelated": 260,
+          "ProductRelated_Duration": 10948.7028866221,
+          "BounceRates": 0.0,
+          "ExitRates": "0.0",
+          "PageValues": 36.18260325512456,
+          "SpecialDay": 0.14770811042919757,
+          "OperatingSystems": 3,
+          "Browser": 1,
+          "Region": 8,
+          "TrafficType": "1",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 10,
+          "Administrative_Duration": 238.3528551817157,
+          "Informational": 1,
+          "Informational_Duration": 174.08173758135416,
+          "ProductRelated": 250,
+          "ProductRelated_Duration": 10849.290798535105,
+          "BounceRates": 0.0,
+          "ExitRates": "0.009650704694945679",
+          "PageValues": 0.0,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 4,
+          "Region": 3,
+          "TrafficType": "9",
+          "Month": "Sep",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 13,
+          "Administrative_Duration": 495.1824058165817,
+          "Informational": 5,
+          "Informational_Duration": 221.6254148183444,
+          "ProductRelated": 283,
+          "ProductRelated_Duration": 10773.116600803136,
+          "BounceRates": 0.0054528583610275365,
+          "ExitRates": "0.033842710389729656",
+          "PageValues": 0.0,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 1,
+          "Browser": 1,
+          "Region": 4,
+          "TrafficType": "1",
+          "Month": "Mar",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 5,
+          "Administrative_Duration": 79.86581500475762,
+          "Informational": 5,
+          "Informational_Duration": 589.4248037951598,
+          "ProductRelated": 257,
+          "ProductRelated_Duration": 10714.793118933743,
+          "BounceRates": 0.019775065654171413,
+          "ExitRates": "0.0210105729526834",
+          "PageValues": 39.33759705011347,
+          "SpecialDay": 0.10281914426300831,
+          "OperatingSystems": 4,
+          "Browser": 5,
+          "Region": 1,
+          "TrafficType": "6",
+          "Month": "May",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 6,
+          "Administrative_Duration": 321.5860460335001,
+          "Informational": 4,
+          "Informational_Duration": 421.49021131393783,
+          "ProductRelated": 246,
+          "ProductRelated_Duration": 10625.629735292354,
+          "BounceRates": 0.00650664729095836,
+          "ExitRates": "0.03656117674792674",
+          "PageValues": 0.0,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 1,
+          "Browser": 3,
+          "Region": 3,
+          "TrafficType": "3",
+          "Month": "Nov",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 9,
+          "Administrative_Duration": 571.3028927311489,
+          "Informational": 2,
+          "Informational_Duration": 264.4117208650489,
+          "ProductRelated": 262,
+          "ProductRelated_Duration": 10597.918326280194,
+          "BounceRates": 0.0023424605089435602,
+          "ExitRates": "0.0",
+          "PageValues": 12.322112171754801,
+          "SpecialDay": 0.07535611492078303,
+          "OperatingSystems": 2,
+          "Browser": 2,
+          "Region": 1,
+          "TrafficType": "4",
+          "Month": "Mar",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 12,
+          "Administrative_Duration": 339.1767745726004,
+          "Informational": 1,
+          "Informational_Duration": 425.3851601019911,
+          "ProductRelated": 244,
+          "ProductRelated_Duration": 10525.177822737878,
+          "BounceRates": 0.024776085220462964,
+          "ExitRates": "0.024921310087342045",
+          "PageValues": 27.690088995289116,
+          "SpecialDay": 0.1702019752377828,
+          "OperatingSystems": 4,
+          "Browser": 8,
+          "Region": 6,
+          "TrafficType": "10",
+          "Month": "May",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 3,
+          "Administrative_Duration": 186.47252067146354,
+          "Informational": 2,
+          "Informational_Duration": 141.9072263415071,
+          "ProductRelated": 299,
+          "ProductRelated_Duration": 10504.85456400551,
+          "BounceRates": 0.0018676830859341957,
+          "ExitRates": "0.010408565608973467",
+          "PageValues": 27.906937109881817,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 4,
+          "Region": 3,
+          "TrafficType": "9",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 9,
+          "Administrative_Duration": 421.0452279663807,
+          "Informational": 4,
+          "Informational_Duration": 60.76089208860599,
+          "ProductRelated": 243,
+          "ProductRelated_Duration": 10471.037344629496,
+          "BounceRates": 0.019010598706929956,
+          "ExitRates": "0.018964155027125954",
+          "PageValues": 1.945570923649118,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 1,
+          "Region": 2,
+          "TrafficType": "12",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 4,
+          "Administrative_Duration": 95.7827886128766,
+          "Informational": 3,
+          "Informational_Duration": 287.45847952457143,
+          "ProductRelated": 249,
+          "ProductRelated_Duration": 10451.753759602892,
+          "BounceRates": 0.0013058290777497035,
+          "ExitRates": "0.007114617978363295",
+          "PageValues": 27.601875610261196,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 1,
+          "Browser": 4,
+          "Region": 1,
+          "TrafficType": "3",
+          "Month": "Jul",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "13. Quais os 3 maiores valores de ProductRelated_Duration agrupados por mês?",
+        "type": "top_n"
+      },
+      "created_at": "2026-03-18T15:53:23.436304+00:00Z"
+    },
+    {
+      "id": "a2f61ed5",
+      "title": "Analysis: 14. Qual o percentual de conversão (Revenue=True) ...",
+      "rows": 1,
+      "columns": [
+        "ConversionRate"
+      ],
+      "sample": [
+        {
+          "ConversionRate": 0
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "14. Qual o percentual de conversão (Revenue=True) para visitantes retornando (Returning_Visitor)?",
+        "type": null
+      },
+      "created_at": "2026-03-18T15:53:26.405713+00:00Z"
+    },
+    {
+      "id": "e0802a23",
+      "title": "Analysis: 15. Qual o mês com maior média de PageValues para ...",
+      "rows": 1,
+      "columns": [
+        "Month",
+        "AvgPageValues"
+      ],
+      "sample": [
+        {
+          "Month": "Mar",
+          "AvgPageValues": 31.986331441813746
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "15. Qual o mês com maior média de PageValues para visitantes que geraram receita (Revenue=True)?",
+        "type": null
+      },
+      "created_at": "2026-03-18T15:53:27.947720+00:00Z"
+    },
+    {
+      "id": "70022905",
+      "title": "Analysis: 18. Qual o tipo de tráfego (TrafficType) com maior...",
+      "rows": 20,
+      "columns": [
+        "TrafficType",
+        "MaxProductRelatedDuration"
+      ],
+      "sample": [
+        {
+          "TrafficType": "1",
+          "MaxProductRelatedDuration": 12125.67389653455
+        },
+        {
+          "TrafficType": "9",
+          "MaxProductRelatedDuration": 11162.269611522479
+        },
+        {
+          "TrafficType": "2",
+          "MaxProductRelatedDuration": 11076.50839364094
+        },
+        {
+          "TrafficType": "6",
+          "MaxProductRelatedDuration": 10714.793118933743
+        },
+        {
+          "TrafficType": "3",
+          "MaxProductRelatedDuration": 10625.629735292354
+        },
+        {
+          "TrafficType": "4",
+          "MaxProductRelatedDuration": 10597.918326280194
+        },
+        {
+          "TrafficType": "10",
+          "MaxProductRelatedDuration": 10525.177822737878
+        },
+        {
+          "TrafficType": "12",
+          "MaxProductRelatedDuration": 10471.037344629496
+        },
+        {
+          "TrafficType": "8",
+          "MaxProductRelatedDuration": 10369.900896743024
+        },
+        {
+          "TrafficType": "7",
+          "MaxProductRelatedDuration": 10336.61202481651
+        },
+        {
+          "TrafficType": "5",
+          "MaxProductRelatedDuration": 10058.52654005978
+        },
+        {
+          "TrafficType": "11",
+          "MaxProductRelatedDuration": 10053.711123826019
+        },
+        {
+          "TrafficType": "14",
+          "MaxProductRelatedDuration": 9028.839180279376
+        },
+        {
+          "TrafficType": "17",
+          "MaxProductRelatedDuration": 8827.665830439417
+        },
+        {
+          "TrafficType": "13",
+          "MaxProductRelatedDuration": 8818.021292740115
+        },
+        {
+          "TrafficType": "15",
+          "MaxProductRelatedDuration": 8488.908485976588
+        },
+        {
+          "TrafficType": "16",
+          "MaxProductRelatedDuration": 8217.30783199988
+        },
+        {
+          "TrafficType": "18",
+          "MaxProductRelatedDuration": 5963.179662857738
+        },
+        {
+          "TrafficType": "20",
+          "MaxProductRelatedDuration": 5052.131874973384
+        },
+        {
+          "TrafficType": "19",
+          "MaxProductRelatedDuration": 4490.243505510818
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "18. Qual o tipo de tráfego (TrafficType) com maior tempo de retenção (ProductRelated_Duration) que também gerou receita?",
+        "type": null
+      },
+      "created_at": "2026-03-18T15:53:32.005137+00:00Z"
+    },
+    {
+      "id": "4146b3c8",
+      "title": "Analysis: 19. Qual o dia especial (SpecialDay) com maior pic...",
+      "rows": 5000,
+      "columns": [
+        "SpecialDay",
+        "MaxTrafficType"
+      ],
+      "sample": [
+        {
+          "SpecialDay": 0.7469473105680895,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.7360586491562784,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.7355847920376815,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.7352756262632639,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.7247393922315155,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.7115528859673599,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.7086703649751721,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.7075628394382298,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.7061512440351817,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6938780758818336,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6901069709365077,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6895766259165984,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.686000244019034,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6847402917788044,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6842043055903886,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6765100733051725,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.674185190462714,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.670167143743701,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6663358928624993,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6645060410452263,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6595946413692647,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6580889450906185,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6527206384924794,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6501596422492754,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6476318974387745,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6447605657832126,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.635600641879487,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6343809907297844,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.633673034944735,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6315409829930806,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6251776077195121,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6183319754701969,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6175813857493365,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6119743659388208,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6112149833478697,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6079564683587361,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6065434750625278,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6047051364721078,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6045802739108523,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.6025661352249966,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.598907430057793,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.596486730373783,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5963682206818405,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5959451093846156,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5936718269584872,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5927946854659077,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5914983878954926,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5911056951749961,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5889123313408892,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5868265602191277,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5866248610683535,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5840151049929169,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5822092316630066,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5782818003876143,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.577346621596919,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5756021751962853,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5747628046563827,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5727258879847461,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5726731875737863,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5716894993654631,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5678105835717772,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5663702349410203,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5661608956013806,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.565689908410402,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5642991993986857,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5637540226740241,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5637177385308999,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5624317586166343,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5618708811820933,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5591909466566698,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5578533485448084,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5573943674251574,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5547822816166443,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5536548565908785,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5534344091458293,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5523847958546376,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5511237540763153,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.550974890994815,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5500452147256196,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5498441197598537,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5496848185071211,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5480227483495587,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5475429034468169,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5466840797698692,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5428479688104427,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.54267982643078,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5425592343410889,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5376451882423449,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5376203741050499,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5360753960970361,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5356879641508584,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5343641484326501,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.532473686551548,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5301962492823931,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5300821859566974,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5293111044666791,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5291807211230659,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5274341308638416,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5270793747693936,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5266216230223204,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5258323560104093,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5257120048663974,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5256214681854506,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.525327826018337,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5253010342910699,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5251082701109951,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5237393359239874,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5215221059788293,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5212093917458771,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5210025882189786,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5205194693874743,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5186282599212185,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5177121181766114,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5159718512427248,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5137888466817592,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.513018996687261,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.512905143141266,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5123108158467164,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5108199129344786,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5107320982856142,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5088155124195447,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5086699695092465,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5044900458518924,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5044861747258574,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.50433999211799,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5042070298201567,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5027447913861399,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5018733126101681,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5017292698508141,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5016726699762262,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5012345428934055,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.5003733532273569,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.49979828803615073,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.49967862491258347,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.4987446383024382,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.4987304434842543,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.49867065479159417,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.49767713580921863,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.4972747438788657,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.4972045701147628,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.4969146782487818,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.4965694765455325,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.4952565526672296,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.4949550281429285,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.4945139785954009,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.49417666672213734,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.49246130937439947,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.4924230542891679,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.49222451958884744,
+          "MaxTrafficType": "9"
+        },
+        {
+          "SpecialDay": 0.49219802382070044,
+          "MaxTrafficType": "9"
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "19. Qual o dia especial (SpecialDay) com maior pico de acessos nos finais de semana?",
+        "type": null
+      },
+      "created_at": "2026-03-18T15:53:34.112576+00:00Z"
+    },
+    {
+      "id": "b375df80",
+      "title": "Analysis: 20. Qual a soma total de ProductRelated_Duration p...",
+      "rows": 1,
+      "columns": [
+        "TotalProductRelatedDuration"
+      ],
+      "sample": [
+        {
+          "TotalProductRelatedDuration": 77127662.80872098
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "20. Qual a soma total de ProductRelated_Duration para visitas do Browser 1 no mês de 'Nov' que não geraram receita (Revenue=False)?",
+        "type": null
+      },
+      "created_at": "2026-03-18T15:53:36.234651+00:00Z"
+    },
+    {
+      "id": "ef189695",
+      "title": "Analysis: Existe correlação entre BounceRates e ExitRates?...",
+      "rows": 5000,
+      "columns": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "Month",
+        "VisitorType",
+        "Weekend",
+        "Revenue"
+      ],
+      "sample": [
+        {
+          "Administrative": 2,
+          "Administrative_Duration": 214.5260806247246,
+          "Informational": 2,
+          "Informational_Duration": 235.0436894219546,
+          "ProductRelated": 37,
+          "ProductRelated_Duration": 297.59043332372585,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.01866144069471431",
+          "PageValues": 37.27054656652182,
+          "SpecialDay": 0.0718825887506447,
+          "OperatingSystems": 3,
+          "Browser": 4,
+          "Region": 5,
+          "TrafficType": "9",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 7,
+          "Administrative_Duration": 99.38925706269276,
+          "Informational": 4,
+          "Informational_Duration": 242.4491097164746,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.001239707396657106",
+          "PageValues": 0.0,
+          "SpecialDay": 0.161902988299603,
+          "OperatingSystems": 2,
+          "Browser": 6,
+          "Region": 6,
+          "TrafficType": "6",
+          "Month": "Dec",
+          "VisitorType": "New_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 1,
+          "Administrative_Duration": 0.0,
+          "Informational": 0,
+          "Informational_Duration": 59.21284062973659,
+          "ProductRelated": 11,
+          "ProductRelated_Duration": 944.3204242966596,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0",
+          "PageValues": 73.22092728732879,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 3,
+          "Region": 2,
+          "TrafficType": "15",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 6,
+          "Administrative_Duration": 287.90459419307615,
+          "Informational": 2,
+          "Informational_Duration": 288.38550342686784,
+          "ProductRelated": 78,
+          "ProductRelated_Duration": 5025.214851750668,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.027613449983003184",
+          "PageValues": 14.638350131885796,
+          "SpecialDay": 0.012611047231725474,
+          "OperatingSystems": 2,
+          "Browser": 4,
+          "Region": 1,
+          "TrafficType": "3",
+          "Month": "Mar",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 3,
+          "Administrative_Duration": 292.4413700661004,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.018626547146870395",
+          "PageValues": 19.678552215058037,
+          "SpecialDay": 0.12944489409433735,
+          "OperatingSystems": 4,
+          "Browser": 4,
+          "Region": 4,
+          "TrafficType": "5",
+          "Month": "May",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 3,
+          "Administrative_Duration": 0.42910442530907744,
+          "Informational": 3,
+          "Informational_Duration": 80.70475197414187,
+          "ProductRelated": 102,
+          "ProductRelated_Duration": 3767.5968475358804,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0025158062415748077",
+          "PageValues": 9.283520190762893,
+          "SpecialDay": 0.07012707991165763,
+          "OperatingSystems": 1,
+          "Browser": 5,
+          "Region": 5,
+          "TrafficType": "3",
+          "Month": "May",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 10,
+          "Administrative_Duration": 420.3408274336866,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.037344497657217826",
+          "PageValues": 29.109329493196945,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 1,
+          "Browser": 1,
+          "Region": 1,
+          "TrafficType": "11",
+          "Month": "Aug",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 1,
+          "Administrative_Duration": 0.0,
+          "Informational": 2,
+          "Informational_Duration": 349.95211819775864,
+          "ProductRelated": 2,
+          "ProductRelated_Duration": 1096.709523129061,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.024689285374233656",
+          "PageValues": 43.034620684651344,
+          "SpecialDay": 0.017701409736812314,
+          "OperatingSystems": 1,
+          "Browser": 1,
+          "Region": 6,
+          "TrafficType": "5",
+          "Month": "May",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 5,
+          "Administrative_Duration": 0.0,
+          "Informational": 3,
+          "Informational_Duration": 303.73582219476157,
+          "ProductRelated": 34,
+          "ProductRelated_Duration": 2528.9985008467825,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.027311683291029506",
+          "PageValues": 0.0,
+          "SpecialDay": 0.01878826950177883,
+          "OperatingSystems": 4,
+          "Browser": 5,
+          "Region": 2,
+          "TrafficType": "6",
+          "Month": "May",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 7,
+          "Administrative_Duration": 372.3525867332304,
+          "Informational": 2,
+          "Informational_Duration": 48.13201192444946,
+          "ProductRelated": 140,
+          "ProductRelated_Duration": 5146.157940573579,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0",
+          "PageValues": 13.47195230159859,
+          "SpecialDay": 0.057943873094556356,
+          "OperatingSystems": 2,
+          "Browser": 1,
+          "Region": 1,
+          "TrafficType": "1",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 0.0,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 43,
+          "ProductRelated_Duration": 2789.0975205786626,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.04270732577169638",
+          "PageValues": 44.70338723057938,
+          "SpecialDay": 0.06874152540486952,
+          "OperatingSystems": 3,
+          "Browser": 2,
+          "Region": 6,
+          "TrafficType": "5",
+          "Month": "Aug",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 3,
+          "Administrative_Duration": 0.0,
+          "Informational": 1,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 45,
+          "ProductRelated_Duration": 662.8270940630148,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.008787859681452395",
+          "PageValues": 63.62010501495664,
+          "SpecialDay": 0.07013854497996393,
+          "OperatingSystems": 3,
+          "Browser": 6,
+          "Region": 2,
+          "TrafficType": "8",
+          "Month": "Dec",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 4,
+          "Administrative_Duration": 102.04714509204163,
+          "Informational": 3,
+          "Informational_Duration": 74.10752816526887,
+          "ProductRelated": 44,
+          "ProductRelated_Duration": 577.4829998960436,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.009222153360372923",
+          "PageValues": 0.0,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 1,
+          "Browser": 4,
+          "Region": 1,
+          "TrafficType": "8",
+          "Month": "Nov",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 5,
+          "Administrative_Duration": 0.0,
+          "Informational": 1,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 96,
+          "ProductRelated_Duration": 3506.061183520006,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.009616631494023881",
+          "PageValues": 50.82230845467298,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 3,
+          "Region": 1,
+          "TrafficType": "7",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 5,
+          "Administrative_Duration": 97.43972544583818,
+          "Informational": 3,
+          "Informational_Duration": 279.45318434986757,
+          "ProductRelated": 68,
+          "ProductRelated_Duration": 1942.58484071607,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.007933760437598456",
+          "PageValues": 41.54105639527169,
+          "SpecialDay": 0.16295783360304403,
+          "OperatingSystems": 4,
+          "Browser": 6,
+          "Region": 3,
+          "TrafficType": "6",
+          "Month": "Dec",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 3,
+          "Administrative_Duration": 0.0,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 143,
+          "ProductRelated_Duration": 4792.497269122202,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.011317622102745643",
+          "PageValues": 28.172269055737978,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 2,
+          "Browser": 2,
+          "Region": 5,
+          "TrafficType": "4",
+          "Month": "Nov",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 4,
+          "Administrative_Duration": 0.0,
+          "Informational": 2,
+          "Informational_Duration": 340.5248530357162,
+          "ProductRelated": 31,
+          "ProductRelated_Duration": 486.61143563692985,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.022924125896452287",
+          "PageValues": 26.176122261691628,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 1,
+          "Browser": 1,
+          "Region": 7,
+          "TrafficType": "1",
+          "Month": "Dec",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 0.0,
+          "Informational": 1,
+          "Informational_Duration": 61.061632420800265,
+          "ProductRelated": 18,
+          "ProductRelated_Duration": 1826.0086560230488,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.010050062443087109",
+          "PageValues": 56.582636405748715,
+          "SpecialDay": 0.2168701009755057,
+          "OperatingSystems": 2,
+          "Browser": 1,
+          "Region": 1,
+          "TrafficType": "3",
+          "Month": "Oct",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 2,
+          "Administrative_Duration": 0.0,
+          "Informational": 2,
+          "Informational_Duration": 218.55599320082413,
+          "ProductRelated": 53,
+          "ProductRelated_Duration": 1246.2324166867456,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.015514313240836401",
+          "PageValues": 9.11877169623789,
+          "SpecialDay": 0.1687486233185977,
+          "OperatingSystems": 1,
+          "Browser": 2,
+          "Region": 1,
+          "TrafficType": "5",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 1,
+          "Administrative_Duration": 204.91084505986026,
+          "Informational": 1,
+          "Informational_Duration": 42.01898649668165,
+          "ProductRelated": 72,
+          "ProductRelated_Duration": 3556.6493892342114,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.008190530391060416",
+          "PageValues": 0.0,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 1,
+          "Region": 2,
+          "TrafficType": "5",
+          "Month": "Nov",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 5,
+          "Administrative_Duration": 86.30683030376956,
+          "Informational": 1,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.01846394329828137",
+          "PageValues": 47.362840019832795,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 2,
+          "Browser": 1,
+          "Region": 4,
+          "TrafficType": "6",
+          "Month": "May",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 6,
+          "Administrative_Duration": 461.4809113929837,
+          "Informational": 5,
+          "Informational_Duration": 505.3593746174281,
+          "ProductRelated": 97,
+          "ProductRelated_Duration": 3469.4772788496784,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.01154009389963988",
+          "PageValues": 0.0,
+          "SpecialDay": 0.06889359422010703,
+          "OperatingSystems": 2,
+          "Browser": 2,
+          "Region": 3,
+          "TrafficType": "3",
+          "Month": "Mar",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 0.0,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 18,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.015109439329377512",
+          "PageValues": 0.0,
+          "SpecialDay": 0.0776511731695091,
+          "OperatingSystems": 1,
+          "Browser": 1,
+          "Region": 1,
+          "TrafficType": "1",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 7,
+          "Administrative_Duration": 212.96677157317322,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 163,
+          "ProductRelated_Duration": 5347.159554733146,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.03454881036869585",
+          "PageValues": 0.0,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 2,
+          "Browser": 1,
+          "Region": 1,
+          "TrafficType": "1",
+          "Month": "May",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 1,
+          "Administrative_Duration": 267.32575044892695,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 219.0747255598851,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.019645228485230756",
+          "PageValues": 22.43744793459527,
+          "SpecialDay": 0.03684902658437619,
+          "OperatingSystems": 2,
+          "Browser": 5,
+          "Region": 4,
+          "TrafficType": "6",
+          "Month": "June",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 2,
+          "Administrative_Duration": 84.70899285864448,
+          "Informational": 1,
+          "Informational_Duration": 143.48623310883406,
+          "ProductRelated": 66,
+          "ProductRelated_Duration": 2397.5715287163275,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0314964730974357",
+          "PageValues": 0.0,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 2,
+          "Browser": 3,
+          "Region": 5,
+          "TrafficType": "5",
+          "Month": "June",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 6,
+          "Administrative_Duration": 325.9146052699014,
+          "Informational": 3,
+          "Informational_Duration": 264.6985428831432,
+          "ProductRelated": 115,
+          "ProductRelated_Duration": 3340.5726081768416,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.041985352341405796",
+          "PageValues": 40.533183946831784,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 2,
+          "Browser": 4,
+          "Region": 2,
+          "TrafficType": "5",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 4,
+          "Administrative_Duration": 78.69462236287421,
+          "Informational": 1,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 101,
+          "ProductRelated_Duration": 2847.9165347021426,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0",
+          "PageValues": 60.093639338533954,
+          "SpecialDay": 0.1290601376234858,
+          "OperatingSystems": 2,
+          "Browser": 3,
+          "Region": 1,
+          "TrafficType": "1",
+          "Month": "Aug",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 282.0501531683084,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0337426885812557",
+          "PageValues": 0.0,
+          "SpecialDay": 0.17100444130351178,
+          "OperatingSystems": 2,
+          "Browser": 2,
+          "Region": 5,
+          "TrafficType": "6",
+          "Month": "Mar",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 8,
+          "Administrative_Duration": 512.8713401891612,
+          "Informational": 0,
+          "Informational_Duration": 58.558966113200746,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0",
+          "PageValues": 84.61657371585142,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 5,
+          "Region": 4,
+          "TrafficType": "15",
+          "Month": "Dec",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 7,
+          "Administrative_Duration": 468.12700982106753,
+          "Informational": 1,
+          "Informational_Duration": 3.756910314704001,
+          "ProductRelated": 107,
+          "ProductRelated_Duration": 4313.540906060427,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0072876166482762714",
+          "PageValues": 12.931506039580102,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 1,
+          "Browser": 3,
+          "Region": 4,
+          "TrafficType": "1",
+          "Month": "Nov",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 281.19483876697825,
+          "Informational": 1,
+          "Informational_Duration": 127.99162345414058,
+          "ProductRelated": 56,
+          "ProductRelated_Duration": 818.8918110555155,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.015886275889482025",
+          "PageValues": 52.892505156801455,
+          "SpecialDay": 0.022236411295623017,
+          "OperatingSystems": 2,
+          "Browser": 3,
+          "Region": 1,
+          "TrafficType": "1",
+          "Month": "May",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 0.0,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.03219576672472934",
+          "PageValues": 59.2521539240571,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 2,
+          "Browser": 1,
+          "Region": 2,
+          "TrafficType": "1",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 5,
+          "Administrative_Duration": 209.90562180827266,
+          "Informational": 2,
+          "Informational_Duration": 267.58374042849346,
+          "ProductRelated": 97,
+          "ProductRelated_Duration": 4372.118276059755,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.020431208209018382",
+          "PageValues": 43.29253521106363,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 2,
+          "Browser": 4,
+          "Region": 1,
+          "TrafficType": "3",
+          "Month": "Oct",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 0.0,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 77,
+          "ProductRelated_Duration": 2649.376904809807,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.030619325845574766",
+          "PageValues": 38.35577996668707,
+          "SpecialDay": 0.10670824129579064,
+          "OperatingSystems": 1,
+          "Browser": 1,
+          "Region": 1,
+          "TrafficType": "1",
+          "Month": "Oct",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 2,
+          "Administrative_Duration": 309.10508192800864,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 60,
+          "ProductRelated_Duration": 3894.4839352088634,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.01093206522223899",
+          "PageValues": 9.935032271628792,
+          "SpecialDay": 0.07018655258978086,
+          "OperatingSystems": 2,
+          "Browser": 2,
+          "Region": 9,
+          "TrafficType": "1",
+          "Month": "May",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 1,
+          "Administrative_Duration": 0.0,
+          "Informational": 0,
+          "Informational_Duration": 277.6908041467326,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.020172590596778447",
+          "PageValues": 50.28363631371802,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 1,
+          "Browser": 4,
+          "Region": 3,
+          "TrafficType": "3",
+          "Month": "Mar",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 9,
+          "Administrative_Duration": 625.8065724603634,
+          "Informational": 0,
+          "Informational_Duration": 120.72393941451776,
+          "ProductRelated": 55,
+          "ProductRelated_Duration": 749.0673884417722,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0",
+          "PageValues": 28.48675715535118,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 1,
+          "Browser": 4,
+          "Region": 8,
+          "TrafficType": "1",
+          "Month": "Sep",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 1,
+          "Administrative_Duration": 232.37504164017187,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 50,
+          "ProductRelated_Duration": 2330.4357717065946,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0024167269993143163",
+          "PageValues": 51.8670139605797,
+          "SpecialDay": 0.1715062612529077,
+          "OperatingSystems": 2,
+          "Browser": 4,
+          "Region": 1,
+          "TrafficType": "7",
+          "Month": "May",
+          "VisitorType": "New_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 4,
+          "Administrative_Duration": 258.10753896671247,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.016415164943472976",
+          "PageValues": 7.586333515167958,
+          "SpecialDay": 0.17616844114807276,
+          "OperatingSystems": 2,
+          "Browser": 5,
+          "Region": 4,
+          "TrafficType": "4",
+          "Month": "May",
+          "VisitorType": "Other",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 5,
+          "Administrative_Duration": 425.4971446686259,
+          "Informational": 2,
+          "Informational_Duration": 273.30597919777,
+          "ProductRelated": 85,
+          "ProductRelated_Duration": 4596.522178850315,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.013191024806254005",
+          "PageValues": 13.590704381353246,
+          "SpecialDay": 0.04959737958659365,
+          "OperatingSystems": 3,
+          "Browser": 1,
+          "Region": 1,
+          "TrafficType": "2",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 0.0,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 62,
+          "ProductRelated_Duration": 2524.0064317666074,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0",
+          "PageValues": 67.68225128509042,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 2,
+          "Browser": 4,
+          "Region": 2,
+          "TrafficType": "8",
+          "Month": "Sep",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 4,
+          "Administrative_Duration": 205.86962981468537,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 45,
+          "ProductRelated_Duration": 779.4477958412806,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.02286699593018947",
+          "PageValues": 64.27655412980286,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 2,
+          "Browser": 1,
+          "Region": 3,
+          "TrafficType": "10",
+          "Month": "Mar",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 2,
+          "Administrative_Duration": 58.897485780742294,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.03044971901475252",
+          "PageValues": 59.60935571177242,
+          "SpecialDay": 0.1646924256761014,
+          "OperatingSystems": 3,
+          "Browser": 1,
+          "Region": 3,
+          "TrafficType": "1",
+          "Month": "Sep",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 3,
+          "Administrative_Duration": 425.42068360174466,
+          "Informational": 2,
+          "Informational_Duration": 348.3192572590152,
+          "ProductRelated": 134,
+          "ProductRelated_Duration": 5339.732408688716,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0276977922583119",
+          "PageValues": 53.344713148158995,
+          "SpecialDay": 0.03987054863171932,
+          "OperatingSystems": 3,
+          "Browser": 5,
+          "Region": 1,
+          "TrafficType": "7",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 0.0,
+          "Informational": 3,
+          "Informational_Duration": 209.23238160232862,
+          "ProductRelated": 25,
+          "ProductRelated_Duration": 2151.741426817247,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.00919365984127911",
+          "PageValues": 54.085729400213765,
+          "SpecialDay": 0.28839344691614044,
+          "OperatingSystems": 1,
+          "Browser": 1,
+          "Region": 1,
+          "TrafficType": "1",
+          "Month": "May",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 0.0,
+          "Informational": 1,
+          "Informational_Duration": 161.1243804386895,
+          "ProductRelated": 50,
+          "ProductRelated_Duration": 1370.8892927726297,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.027925910063281205",
+          "PageValues": 0.0,
+          "SpecialDay": 0.22359699709021483,
+          "OperatingSystems": 2,
+          "Browser": 3,
+          "Region": 1,
+          "TrafficType": "8",
+          "Month": "Oct",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 0.0,
+          "Informational": 1,
+          "Informational_Duration": 157.13358262859347,
+          "ProductRelated": 75,
+          "ProductRelated_Duration": 1519.555066114332,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.019379449413232004",
+          "PageValues": 0.0,
+          "SpecialDay": 0.037325670356520776,
+          "OperatingSystems": 1,
+          "Browser": 1,
+          "Region": 1,
+          "TrafficType": "4",
+          "Month": "Mar",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 2,
+          "Administrative_Duration": 403.0960500139751,
+          "Informational": 0,
+          "Informational_Duration": 313.3772523276424,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 353.0784921389388,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.009975872186294634",
+          "PageValues": 52.53929338202734,
+          "SpecialDay": 0.22000911706268214,
+          "OperatingSystems": 3,
+          "Browser": 2,
+          "Region": 5,
+          "TrafficType": "12",
+          "Month": "Mar",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 0.0,
+          "Informational": 2,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 63,
+          "ProductRelated_Duration": 3559.1653155936647,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0",
+          "PageValues": 33.020286858016725,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 1,
+          "Browser": 1,
+          "Region": 3,
+          "TrafficType": "8",
+          "Month": "May",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 11,
+          "Administrative_Duration": 340.1303125202688,
+          "Informational": 2,
+          "Informational_Duration": 94.17320320439518,
+          "ProductRelated": 180,
+          "ProductRelated_Duration": 7313.166391014873,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0",
+          "PageValues": 28.095537769853944,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 1,
+          "Browser": 3,
+          "Region": 2,
+          "TrafficType": "1",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 6,
+          "Administrative_Duration": 455.3839722404931,
+          "Informational": 2,
+          "Informational_Duration": 410.19195031928393,
+          "ProductRelated": 84,
+          "ProductRelated_Duration": 4275.950149907855,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.008842259566798726",
+          "PageValues": 3.4101363897347845,
+          "SpecialDay": 0.25708275923650586,
+          "OperatingSystems": 2,
+          "Browser": 5,
+          "Region": 1,
+          "TrafficType": "4",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 0.0,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.010344483449768327",
+          "PageValues": 99.0083702100548,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 2,
+          "Browser": 1,
+          "Region": 3,
+          "TrafficType": "4",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 6,
+          "Administrative_Duration": 158.88610749731373,
+          "Informational": 4,
+          "Informational_Duration": 287.5538550076478,
+          "ProductRelated": 165,
+          "ProductRelated_Duration": 6229.919301320353,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0066430089462244015",
+          "PageValues": 24.629860653629052,
+          "SpecialDay": 0.13380225525112208,
+          "OperatingSystems": 1,
+          "Browser": 1,
+          "Region": 1,
+          "TrafficType": "1",
+          "Month": "Oct",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 10,
+          "Administrative_Duration": 0.0,
+          "Informational": 2,
+          "Informational_Duration": 131.11545400483516,
+          "ProductRelated": 91,
+          "ProductRelated_Duration": 2641.6712976292556,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.009849383743588668",
+          "PageValues": 0.0,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 2,
+          "Browser": 5,
+          "Region": 1,
+          "TrafficType": "5",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 12.923592735993296,
+          "Informational": 1,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 48,
+          "ProductRelated_Duration": 1712.928292732337,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.011784025934740764",
+          "PageValues": 5.717937857069796,
+          "SpecialDay": 0.18147802320627993,
+          "OperatingSystems": 1,
+          "Browser": 1,
+          "Region": 1,
+          "TrafficType": "1",
+          "Month": "Aug",
+          "VisitorType": "New_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 5,
+          "Administrative_Duration": 0.0,
+          "Informational": 1,
+          "Informational_Duration": 431.24513673125534,
+          "ProductRelated": 106,
+          "ProductRelated_Duration": 3521.9242838211353,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0",
+          "PageValues": 12.82740751046217,
+          "SpecialDay": 0.21630258881995146,
+          "OperatingSystems": 2,
+          "Browser": 1,
+          "Region": 1,
+          "TrafficType": "2",
+          "Month": "Sep",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 229.9056193022647,
+          "Informational": 2,
+          "Informational_Duration": 113.73502357744763,
+          "ProductRelated": 124,
+          "ProductRelated_Duration": 5275.047725772132,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.01702711644251394",
+          "PageValues": 0.0,
+          "SpecialDay": 0.14744669269871596,
+          "OperatingSystems": 1,
+          "Browser": 1,
+          "Region": 1,
+          "TrafficType": "1",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 6,
+          "Administrative_Duration": 60.75194123203472,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 31,
+          "ProductRelated_Duration": 1512.8071903489017,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.02216614790954309",
+          "PageValues": 23.40081359985264,
+          "SpecialDay": 0.16824180433993252,
+          "OperatingSystems": 2,
+          "Browser": 7,
+          "Region": 1,
+          "TrafficType": "9",
+          "Month": "Oct",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 6,
+          "Administrative_Duration": 24.173007172658274,
+          "Informational": 4,
+          "Informational_Duration": 49.747422366303496,
+          "ProductRelated": 131,
+          "ProductRelated_Duration": 5015.315654444384,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.023418561409055703",
+          "PageValues": 56.999302040003116,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 1,
+          "Browser": 2,
+          "Region": 2,
+          "TrafficType": "6",
+          "Month": "May",
+          "VisitorType": "New_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 0.0,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 54,
+          "ProductRelated_Duration": 1787.235589719135,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.012358991181791498",
+          "PageValues": 28.957382986178473,
+          "SpecialDay": 0.03551482763050638,
+          "OperatingSystems": 2,
+          "Browser": 1,
+          "Region": 1,
+          "TrafficType": "3",
+          "Month": "Dec",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 0.0,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 372.8932880238376,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.05247853510512594",
+          "PageValues": 0.0,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 1,
+          "Browser": 2,
+          "Region": 5,
+          "TrafficType": "1",
+          "Month": "June",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 4,
+          "Administrative_Duration": 309.2747710065652,
+          "Informational": 2,
+          "Informational_Duration": 299.30925093310907,
+          "ProductRelated": 74,
+          "ProductRelated_Duration": 2628.5670992431096,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.03755987002360274",
+          "PageValues": 28.20962730300556,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 3,
+          "Region": 5,
+          "TrafficType": "1",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 3,
+          "Administrative_Duration": 1.806337804523693,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.029830778033061896",
+          "PageValues": 59.67380993317846,
+          "SpecialDay": 0.07641698577273491,
+          "OperatingSystems": 1,
+          "Browser": 1,
+          "Region": 1,
+          "TrafficType": "1",
+          "Month": "May",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 6,
+          "Administrative_Duration": 124.35148086394231,
+          "Informational": 2,
+          "Informational_Duration": 220.69440333149376,
+          "ProductRelated": 102,
+          "ProductRelated_Duration": 5061.119433800663,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0",
+          "PageValues": 10.475367716224625,
+          "SpecialDay": 0.30560311547602903,
+          "OperatingSystems": 3,
+          "Browser": 1,
+          "Region": 1,
+          "TrafficType": "1",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 3,
+          "Administrative_Duration": 155.1393822465167,
+          "Informational": 0,
+          "Informational_Duration": 1.6827539947364158,
+          "ProductRelated": 79,
+          "ProductRelated_Duration": 2249.7991841242133,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0028903824592745736",
+          "PageValues": 130.4436841871727,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 5,
+          "Region": 3,
+          "TrafficType": "1",
+          "Month": "Mar",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 7,
+          "Administrative_Duration": 0.0,
+          "Informational": 2,
+          "Informational_Duration": 366.94786519541947,
+          "ProductRelated": 54,
+          "ProductRelated_Duration": 1390.1446068494279,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.02612368438104761",
+          "PageValues": 29.111921460831333,
+          "SpecialDay": 0.08024155068253222,
+          "OperatingSystems": 3,
+          "Browser": 1,
+          "Region": 1,
+          "TrafficType": "4",
+          "Month": "Dec",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 10,
+          "Administrative_Duration": 511.17067511793454,
+          "Informational": 1,
+          "Informational_Duration": 42.39226635710509,
+          "ProductRelated": 168,
+          "ProductRelated_Duration": 5079.51787897313,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.015206449780439175",
+          "PageValues": 5.433941794668684,
+          "SpecialDay": 0.025387971981831563,
+          "OperatingSystems": 3,
+          "Browser": 2,
+          "Region": 6,
+          "TrafficType": "1",
+          "Month": "May",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 22.299042309124445,
+          "Informational": 0,
+          "Informational_Duration": 135.66453476143658,
+          "ProductRelated": 39,
+          "ProductRelated_Duration": 1447.1326842193125,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.01906323798983803",
+          "PageValues": 83.75845930733871,
+          "SpecialDay": 0.13485911978625123,
+          "OperatingSystems": 2,
+          "Browser": 4,
+          "Region": 6,
+          "TrafficType": "4",
+          "Month": "Dec",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 2,
+          "Administrative_Duration": 202.5046139297637,
+          "Informational": 1,
+          "Informational_Duration": 185.12348233158832,
+          "ProductRelated": 69,
+          "ProductRelated_Duration": 3287.157756408337,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.01408031007955471",
+          "PageValues": 88.40572582508261,
+          "SpecialDay": 0.044710633256845884,
+          "OperatingSystems": 2,
+          "Browser": 6,
+          "Region": 1,
+          "TrafficType": "3",
+          "Month": "Nov",
+          "VisitorType": "New_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 0.0,
+          "Informational": 0,
+          "Informational_Duration": 240.5447762167818,
+          "ProductRelated": 77,
+          "ProductRelated_Duration": 2675.7337435137338,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0",
+          "PageValues": 109.57985830206613,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 1,
+          "Browser": 1,
+          "Region": 1,
+          "TrafficType": "1",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 3,
+          "Administrative_Duration": 129.6873616484426,
+          "Informational": 1,
+          "Informational_Duration": 81.76331170577113,
+          "ProductRelated": 37,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.007435668761810316",
+          "PageValues": 98.62118643185175,
+          "SpecialDay": 0.08699632819587158,
+          "OperatingSystems": 3,
+          "Browser": 2,
+          "Region": 1,
+          "TrafficType": "5",
+          "Month": "Mar",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 2,
+          "Administrative_Duration": 251.31167119965247,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 57,
+          "ProductRelated_Duration": 1086.1334579580189,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.03261980822915338",
+          "PageValues": 0.0,
+          "SpecialDay": 0.014636323701855504,
+          "OperatingSystems": 2,
+          "Browser": 6,
+          "Region": 9,
+          "TrafficType": "1",
+          "Month": "Mar",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 3,
+          "Administrative_Duration": 247.13503875022144,
+          "Informational": 1,
+          "Informational_Duration": 151.6553888558769,
+          "ProductRelated": 27,
+          "ProductRelated_Duration": 1064.529165141961,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.021437864326008218",
+          "PageValues": 95.89052243274674,
+          "SpecialDay": 0.06353017412789451,
+          "OperatingSystems": 2,
+          "Browser": 5,
+          "Region": 6,
+          "TrafficType": "6",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 7,
+          "Administrative_Duration": 230.91695493421008,
+          "Informational": 1,
+          "Informational_Duration": 215.60188790345612,
+          "ProductRelated": 27,
+          "ProductRelated_Duration": 1126.1045434495559,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.022613053797324714",
+          "PageValues": 0.0,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 2,
+          "Region": 9,
+          "TrafficType": "1",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 2,
+          "Administrative_Duration": 181.8042574040943,
+          "Informational": 0,
+          "Informational_Duration": 109.22815386739087,
+          "ProductRelated": 100,
+          "ProductRelated_Duration": 5097.297461382594,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0",
+          "PageValues": 62.91870204659903,
+          "SpecialDay": 0.0820521137624795,
+          "OperatingSystems": 2,
+          "Browser": 4,
+          "Region": 2,
+          "TrafficType": "4",
+          "Month": "Nov",
+          "VisitorType": "New_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 7,
+          "Administrative_Duration": 277.66685031812494,
+          "Informational": 2,
+          "Informational_Duration": 111.54192052031217,
+          "ProductRelated": 85,
+          "ProductRelated_Duration": 1528.5079173297336,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0",
+          "PageValues": 70.89997258330908,
+          "SpecialDay": 0.13027147077606455,
+          "OperatingSystems": 2,
+          "Browser": 1,
+          "Region": 3,
+          "TrafficType": "3",
+          "Month": "Mar",
+          "VisitorType": "Other",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 4,
+          "Administrative_Duration": 176.2081590120298,
+          "Informational": 1,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 719.5653342847438,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.019104135808492132",
+          "PageValues": 55.21869619494032,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 2,
+          "Browser": 5,
+          "Region": 2,
+          "TrafficType": "10",
+          "Month": "Dec",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 6,
+          "Administrative_Duration": 313.36464698841985,
+          "Informational": 0,
+          "Informational_Duration": 116.49991209569419,
+          "ProductRelated": 124,
+          "ProductRelated_Duration": 3429.8318433082177,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.012169965968314954",
+          "PageValues": 26.103831942838454,
+          "SpecialDay": 0.03587429195318335,
+          "OperatingSystems": 3,
+          "Browser": 2,
+          "Region": 6,
+          "TrafficType": "10",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 1,
+          "Administrative_Duration": 194.51317410446438,
+          "Informational": 0,
+          "Informational_Duration": 28.7170866544963,
+          "ProductRelated": 38,
+          "ProductRelated_Duration": 2440.537459709247,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0",
+          "PageValues": 36.0039343461399,
+          "SpecialDay": 0.048880611746774744,
+          "OperatingSystems": 3,
+          "Browser": 3,
+          "Region": 3,
+          "TrafficType": "4",
+          "Month": "May",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 176.243276765618,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 42,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0",
+          "PageValues": 108.55714954525538,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 2,
+          "Browser": 2,
+          "Region": 8,
+          "TrafficType": "1",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 9,
+          "Administrative_Duration": 520.4323374182572,
+          "Informational": 1,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.042706458059310996",
+          "PageValues": 0.7735321415849654,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 4,
+          "Browser": 5,
+          "Region": 2,
+          "TrafficType": "4",
+          "Month": "May",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 43.14971657616675,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 133,
+          "ProductRelated_Duration": 4372.0657114699525,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.010408782981331655",
+          "PageValues": 10.603871056554905,
+          "SpecialDay": 0.1676172592284649,
+          "OperatingSystems": 3,
+          "Browser": 4,
+          "Region": 5,
+          "TrafficType": "3",
+          "Month": "May",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 2,
+          "Administrative_Duration": 174.7316578199304,
+          "Informational": 0,
+          "Informational_Duration": 142.65889486993177,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.00689365074792872",
+          "PageValues": 58.940739748817506,
+          "SpecialDay": 0.03532543519952322,
+          "OperatingSystems": 1,
+          "Browser": 1,
+          "Region": 4,
+          "TrafficType": "2",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 188.2146759201226,
+          "Informational": 0,
+          "Informational_Duration": 37.36611249152374,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.023119990839766125",
+          "PageValues": 65.03196450177275,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 4,
+          "Browser": 2,
+          "Region": 5,
+          "TrafficType": "11",
+          "Month": "Aug",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 8,
+          "Administrative_Duration": 284.72013183653917,
+          "Informational": 2,
+          "Informational_Duration": 225.41940665924125,
+          "ProductRelated": 45,
+          "ProductRelated_Duration": 1319.4790581982675,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.041491942442634155",
+          "PageValues": 0.0,
+          "SpecialDay": 0.17888809776325137,
+          "OperatingSystems": 3,
+          "Browser": 1,
+          "Region": 2,
+          "TrafficType": "4",
+          "Month": "Dec",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 4,
+          "Administrative_Duration": 52.71576223759847,
+          "Informational": 1,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 55,
+          "ProductRelated_Duration": 3151.955487553333,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0",
+          "PageValues": 60.10901441306307,
+          "SpecialDay": 0.01896752072246149,
+          "OperatingSystems": 2,
+          "Browser": 3,
+          "Region": 6,
+          "TrafficType": "1",
+          "Month": "Mar",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 0.0,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.041013438824487616",
+          "PageValues": 38.107046375226986,
+          "SpecialDay": 0.052399603121714385,
+          "OperatingSystems": 3,
+          "Browser": 2,
+          "Region": 2,
+          "TrafficType": "5",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 1,
+          "Administrative_Duration": 332.64673961956487,
+          "Informational": 0,
+          "Informational_Duration": 24.424909975827568,
+          "ProductRelated": 37,
+          "ProductRelated_Duration": 2347.3590865825886,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.017287597701053214",
+          "PageValues": 96.03789065673857,
+          "SpecialDay": 0.12285222471475668,
+          "OperatingSystems": 3,
+          "Browser": 2,
+          "Region": 7,
+          "TrafficType": "3",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 5,
+          "Administrative_Duration": 271.63090514209796,
+          "Informational": 3,
+          "Informational_Duration": 334.67897913700995,
+          "ProductRelated": 40,
+          "ProductRelated_Duration": 1775.6639612445156,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.009844823720032703",
+          "PageValues": 0.0,
+          "SpecialDay": 0.032127314872880924,
+          "OperatingSystems": 3,
+          "Browser": 3,
+          "Region": 2,
+          "TrafficType": "1",
+          "Month": "Dec",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 5,
+          "Administrative_Duration": 0.0,
+          "Informational": 1,
+          "Informational_Duration": 116.73297436564403,
+          "ProductRelated": 57,
+          "ProductRelated_Duration": 1521.3351822464874,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.007212932695718922",
+          "PageValues": 0.0,
+          "SpecialDay": 0.03545757703546477,
+          "OperatingSystems": 2,
+          "Browser": 1,
+          "Region": 1,
+          "TrafficType": "1",
+          "Month": "Dec",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 8,
+          "Administrative_Duration": 0.0,
+          "Informational": 3,
+          "Informational_Duration": 299.73889297540376,
+          "ProductRelated": 96,
+          "ProductRelated_Duration": 3484.8764771745064,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.033708571488983416",
+          "PageValues": 0.0,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 2,
+          "Browser": 3,
+          "Region": 1,
+          "TrafficType": "2",
+          "Month": "Mar",
+          "VisitorType": "New_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 3,
+          "Administrative_Duration": 0.0,
+          "Informational": 2,
+          "Informational_Duration": 307.8037704343783,
+          "ProductRelated": 94,
+          "ProductRelated_Duration": 3316.824641737857,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.029908309816820647",
+          "PageValues": 33.423874151903426,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 3,
+          "Region": 1,
+          "TrafficType": "1",
+          "Month": "May",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 6,
+          "Administrative_Duration": 0.0,
+          "Informational": 1,
+          "Informational_Duration": 79.13841281709361,
+          "ProductRelated": 24,
+          "ProductRelated_Duration": 745.5419765884074,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.03482672329226162",
+          "PageValues": 1.3290494884161284,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 2,
+          "Browser": 1,
+          "Region": 1,
+          "TrafficType": "1",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 4,
+          "Administrative_Duration": 225.52322817319936,
+          "Informational": 2,
+          "Informational_Duration": 89.41041029732189,
+          "ProductRelated": 87,
+          "ProductRelated_Duration": 4646.901084377236,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.019713947373102836",
+          "PageValues": 40.229640406309635,
+          "SpecialDay": 0.17074775381373156,
+          "OperatingSystems": 1,
+          "Browser": 1,
+          "Region": 1,
+          "TrafficType": "1",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 5,
+          "Administrative_Duration": 0.0,
+          "Informational": 3,
+          "Informational_Duration": 386.938454046384,
+          "ProductRelated": 79,
+          "ProductRelated_Duration": 2413.1825687594755,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.037449381075685365",
+          "PageValues": 27.41064847483663,
+          "SpecialDay": 0.076488552047408,
+          "OperatingSystems": 1,
+          "Browser": 3,
+          "Region": 4,
+          "TrafficType": "5",
+          "Month": "Mar",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 53.54114893309941,
+          "Informational": 0,
+          "Informational_Duration": 186.8063500807562,
+          "ProductRelated": 26,
+          "ProductRelated_Duration": 1271.0775102397392,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.038782400316520096",
+          "PageValues": 63.198043794196096,
+          "SpecialDay": 0.0996488738719836,
+          "OperatingSystems": 3,
+          "Browser": 4,
+          "Region": 1,
+          "TrafficType": "10",
+          "Month": "Oct",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 2,
+          "Administrative_Duration": 318.35297966542623,
+          "Informational": 3,
+          "Informational_Duration": 334.2227501642052,
+          "ProductRelated": 76,
+          "ProductRelated_Duration": 2142.263821871395,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.02121011198936889",
+          "PageValues": 6.314464488141596,
+          "SpecialDay": 0.08821629762896549,
+          "OperatingSystems": 1,
+          "Browser": 1,
+          "Region": 2,
+          "TrafficType": "1",
+          "Month": "Jul",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 6,
+          "Administrative_Duration": 197.61816306634938,
+          "Informational": 1,
+          "Informational_Duration": 133.1630263665394,
+          "ProductRelated": 47,
+          "ProductRelated_Duration": 1718.704304786862,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.04091164167591792",
+          "PageValues": 0.0,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 2,
+          "Browser": 1,
+          "Region": 5,
+          "TrafficType": "5",
+          "Month": "May",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 5,
+          "Administrative_Duration": 125.1515021383644,
+          "Informational": 1,
+          "Informational_Duration": 34.18560110159102,
+          "ProductRelated": 30,
+          "ProductRelated_Duration": 2006.5911216127956,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.040896695205593164",
+          "PageValues": 0.0,
+          "SpecialDay": 0.21508936549049454,
+          "OperatingSystems": 3,
+          "Browser": 1,
+          "Region": 4,
+          "TrafficType": "4",
+          "Month": "May",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 0.0,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 11,
+          "ProductRelated_Duration": 135.14548795887958,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.01750314160527932",
+          "PageValues": 4.103359156184432,
+          "SpecialDay": 0.3441065952922635,
+          "OperatingSystems": 3,
+          "Browser": 5,
+          "Region": 5,
+          "TrafficType": "1",
+          "Month": "Oct",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 218.1935980155028,
+          "Informational": 2,
+          "Informational_Duration": 184.37717644513242,
+          "ProductRelated": 17,
+          "ProductRelated_Duration": 867.6228949652525,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.023881423823510883",
+          "PageValues": 55.131737492101934,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 1,
+          "Browser": 3,
+          "Region": 7,
+          "TrafficType": "7",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 4,
+          "Administrative_Duration": 0.0,
+          "Informational": 2,
+          "Informational_Duration": 7.273253223809604,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.015302529350720271",
+          "PageValues": 41.53367039590536,
+          "SpecialDay": 0.05420830604195519,
+          "OperatingSystems": 1,
+          "Browser": 1,
+          "Region": 3,
+          "TrafficType": "9",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 0.0,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 26,
+          "ProductRelated_Duration": 1852.7327986765576,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.022268537177948734",
+          "PageValues": 57.79323878831655,
+          "SpecialDay": 0.02832005338069204,
+          "OperatingSystems": 2,
+          "Browser": 3,
+          "Region": 3,
+          "TrafficType": "13",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 11,
+          "Administrative_Duration": 428.6044844599017,
+          "Informational": 2,
+          "Informational_Duration": 128.80926630012016,
+          "ProductRelated": 47,
+          "ProductRelated_Duration": 329.3371008914387,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.003141930266321046",
+          "PageValues": 34.67103347678703,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 2,
+          "Browser": 1,
+          "Region": 2,
+          "TrafficType": "1",
+          "Month": "Nov",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 10,
+          "Administrative_Duration": 463.5479268057186,
+          "Informational": 4,
+          "Informational_Duration": 284.7842455102467,
+          "ProductRelated": 98,
+          "ProductRelated_Duration": 4485.073506993969,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.018490312210887563",
+          "PageValues": 0.0,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 4,
+          "Region": 4,
+          "TrafficType": "8",
+          "Month": "May",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 3,
+          "Administrative_Duration": 98.75783597102219,
+          "Informational": 3,
+          "Informational_Duration": 246.4004247023846,
+          "ProductRelated": 65,
+          "ProductRelated_Duration": 2086.983963281304,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.046148383702819845",
+          "PageValues": 0.0,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 2,
+          "Browser": 2,
+          "Region": 3,
+          "TrafficType": "4",
+          "Month": "Dec",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 2,
+          "Administrative_Duration": 0.0,
+          "Informational": 0,
+          "Informational_Duration": 62.11592519079344,
+          "ProductRelated": 38,
+          "ProductRelated_Duration": 1571.76741394007,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.021531982068384355",
+          "PageValues": 19.066799827262727,
+          "SpecialDay": 0.04556916064151876,
+          "OperatingSystems": 1,
+          "Browser": 1,
+          "Region": 2,
+          "TrafficType": "5",
+          "Month": "Nov",
+          "VisitorType": "New_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 3,
+          "Administrative_Duration": 87.13273448225274,
+          "Informational": 3,
+          "Informational_Duration": 352.0103332827489,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.028488806630252925",
+          "PageValues": 0.0,
+          "SpecialDay": 0.024500944422994164,
+          "OperatingSystems": 2,
+          "Browser": 3,
+          "Region": 4,
+          "TrafficType": "3",
+          "Month": "Nov",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 3,
+          "Administrative_Duration": 90.75651708376321,
+          "Informational": 1,
+          "Informational_Duration": 60.815502596242276,
+          "ProductRelated": 10,
+          "ProductRelated_Duration": 740.4102551723995,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.014391446235115913",
+          "PageValues": 90.54049698438371,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 2,
+          "Browser": 4,
+          "Region": 3,
+          "TrafficType": "12",
+          "Month": "May",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 0.0,
+          "Informational": 1,
+          "Informational_Duration": 272.71054035994365,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.02233254513019033",
+          "PageValues": 15.187258352385305,
+          "SpecialDay": 0.13701521594611663,
+          "OperatingSystems": 4,
+          "Browser": 3,
+          "Region": 5,
+          "TrafficType": "10",
+          "Month": "Nov",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 503.853353994021,
+          "Informational": 0,
+          "Informational_Duration": 60.3960200625822,
+          "ProductRelated": 24,
+          "ProductRelated_Duration": 3622.6588932470613,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.031096542276246503",
+          "PageValues": 0.0,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 7,
+          "Region": 6,
+          "TrafficType": "9",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 7,
+          "Administrative_Duration": 346.71870996014104,
+          "Informational": 4,
+          "Informational_Duration": 519.6533031911105,
+          "ProductRelated": 56,
+          "ProductRelated_Duration": 5155.401363065635,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.03538873920483051",
+          "PageValues": 76.16104114284767,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 1,
+          "Browser": 4,
+          "Region": 1,
+          "TrafficType": "8",
+          "Month": "Nov",
+          "VisitorType": "New_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 1,
+          "Administrative_Duration": 0.0,
+          "Informational": 1,
+          "Informational_Duration": 131.87783827411442,
+          "ProductRelated": 12,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.005272820481442002",
+          "PageValues": 43.66287767160367,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 2,
+          "Browser": 2,
+          "Region": 1,
+          "TrafficType": "4",
+          "Month": "Nov",
+          "VisitorType": "New_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 1,
+          "Administrative_Duration": 0.0,
+          "Informational": 0,
+          "Informational_Duration": 141.94688912739048,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 519.3208160518454,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.00899453587372098",
+          "PageValues": 36.827931947845926,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 4,
+          "Browser": 2,
+          "Region": 5,
+          "TrafficType": "9",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 6,
+          "Administrative_Duration": 336.6220018156984,
+          "Informational": 2,
+          "Informational_Duration": 229.96174383485368,
+          "ProductRelated": 106,
+          "ProductRelated_Duration": 4251.910891309033,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.018667520484542146",
+          "PageValues": 12.064466361818534,
+          "SpecialDay": 0.15334585709105464,
+          "OperatingSystems": 4,
+          "Browser": 7,
+          "Region": 3,
+          "TrafficType": "4",
+          "Month": "May",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 11,
+          "Administrative_Duration": 392.21669691169666,
+          "Informational": 1,
+          "Informational_Duration": 51.68667199617528,
+          "ProductRelated": 44,
+          "ProductRelated_Duration": 1716.6867709137491,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.023067576838529082",
+          "PageValues": 1.9629591763646452,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 2,
+          "Browser": 2,
+          "Region": 4,
+          "TrafficType": "7",
+          "Month": "Oct",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 4,
+          "Administrative_Duration": 0.0,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 55,
+          "ProductRelated_Duration": 1182.1200465808633,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.007093040830611037",
+          "PageValues": 8.164771533051312,
+          "SpecialDay": 0.1577050563185665,
+          "OperatingSystems": 3,
+          "Browser": 1,
+          "Region": 3,
+          "TrafficType": "1",
+          "Month": "Aug",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 1,
+          "Administrative_Duration": 0.0,
+          "Informational": 0,
+          "Informational_Duration": 193.48515644799824,
+          "ProductRelated": 10,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.04819014352062001",
+          "PageValues": 29.388379474886573,
+          "SpecialDay": 0.10677783642334145,
+          "OperatingSystems": 4,
+          "Browser": 6,
+          "Region": 9,
+          "TrafficType": "1",
+          "Month": "Nov",
+          "VisitorType": "New_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 8,
+          "Administrative_Duration": 335.14357632943097,
+          "Informational": 3,
+          "Informational_Duration": 135.2862711540575,
+          "ProductRelated": 83,
+          "ProductRelated_Duration": 3003.0399208205927,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0358904303552552",
+          "PageValues": 0.0,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 3,
+          "Region": 5,
+          "TrafficType": "7",
+          "Month": "Dec",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 2,
+          "Administrative_Duration": 0.0,
+          "Informational": 2,
+          "Informational_Duration": 442.12433502087924,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.034695978072844094",
+          "PageValues": 66.73083946426861,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 1,
+          "Browser": 3,
+          "Region": 1,
+          "TrafficType": "4",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 5,
+          "Administrative_Duration": 502.2430911469888,
+          "Informational": 0,
+          "Informational_Duration": 195.5039520717818,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.02763241363598208",
+          "PageValues": 10.032447287795193,
+          "SpecialDay": 0.09093403183205037,
+          "OperatingSystems": 2,
+          "Browser": 2,
+          "Region": 1,
+          "TrafficType": "5",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 3,
+          "Administrative_Duration": 365.42791708795573,
+          "Informational": 0,
+          "Informational_Duration": 356.99948769032744,
+          "ProductRelated": 114,
+          "ProductRelated_Duration": 2998.388608290128,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.030846746975871375",
+          "PageValues": 0.0,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 2,
+          "Browser": 1,
+          "Region": 3,
+          "TrafficType": "1",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 7,
+          "Administrative_Duration": 473.1588117582101,
+          "Informational": 5,
+          "Informational_Duration": 495.6491530573668,
+          "ProductRelated": 154,
+          "ProductRelated_Duration": 5313.715147734751,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0",
+          "PageValues": 1.028852742906281,
+          "SpecialDay": 0.08342608464875584,
+          "OperatingSystems": 2,
+          "Browser": 3,
+          "Region": 3,
+          "TrafficType": "1",
+          "Month": "Aug",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 8,
+          "Administrative_Duration": 331.2534776886466,
+          "Informational": 2,
+          "Informational_Duration": 307.41239974203415,
+          "ProductRelated": 60,
+          "ProductRelated_Duration": 2206.8398841240046,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.05036357489793086",
+          "PageValues": 0.0,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 1,
+          "Browser": 3,
+          "Region": 4,
+          "TrafficType": "2",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 12,
+          "Administrative_Duration": 575.8894059912728,
+          "Informational": 3,
+          "Informational_Duration": 203.06603035798202,
+          "ProductRelated": 170,
+          "ProductRelated_Duration": 6610.998537610047,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.006276515423852101",
+          "PageValues": 0.0,
+          "SpecialDay": 0.013791788916071208,
+          "OperatingSystems": 2,
+          "Browser": 1,
+          "Region": 6,
+          "TrafficType": "7",
+          "Month": "Sep",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 3,
+          "Administrative_Duration": 328.01693090093556,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 49,
+          "ProductRelated_Duration": 2534.3712640020335,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.028511561651030914",
+          "PageValues": 40.622731336018795,
+          "SpecialDay": 0.021802413981907506,
+          "OperatingSystems": 3,
+          "Browser": 6,
+          "Region": 9,
+          "TrafficType": "11",
+          "Month": "Oct",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 113.84604784671805,
+          "Informational": 2,
+          "Informational_Duration": 13.28211873403729,
+          "ProductRelated": 65,
+          "ProductRelated_Duration": 3310.319458594083,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.021651381675143418",
+          "PageValues": 15.273251033244259,
+          "SpecialDay": 0.025619012543572423,
+          "OperatingSystems": 2,
+          "Browser": 3,
+          "Region": 7,
+          "TrafficType": "8",
+          "Month": "Nov",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 9,
+          "Administrative_Duration": 382.4821516463173,
+          "Informational": 1,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 159,
+          "ProductRelated_Duration": 6034.761222372355,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.032468111594846374",
+          "PageValues": 18.79810571200234,
+          "SpecialDay": 0.2879145309402822,
+          "OperatingSystems": 2,
+          "Browser": 4,
+          "Region": 5,
+          "TrafficType": "6",
+          "Month": "June",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 3,
+          "Administrative_Duration": 14.761006624452378,
+          "Informational": 1,
+          "Informational_Duration": 36.04061154256681,
+          "ProductRelated": 52,
+          "ProductRelated_Duration": 1285.6883587115335,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.032339970217467706",
+          "PageValues": 0.0,
+          "SpecialDay": 0.02158924180868987,
+          "OperatingSystems": 3,
+          "Browser": 4,
+          "Region": 6,
+          "TrafficType": "6",
+          "Month": "Mar",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 2,
+          "Administrative_Duration": 154.20312618537702,
+          "Informational": 0,
+          "Informational_Duration": 181.80551115408915,
+          "ProductRelated": 22,
+          "ProductRelated_Duration": 1088.0830186277208,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.05266461731553597",
+          "PageValues": 0.0,
+          "SpecialDay": 0.11516209479895802,
+          "OperatingSystems": 2,
+          "Browser": 1,
+          "Region": 1,
+          "TrafficType": "5",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 5,
+          "Administrative_Duration": 182.13044622864453,
+          "Informational": 2,
+          "Informational_Duration": 228.8217262551356,
+          "ProductRelated": 104,
+          "ProductRelated_Duration": 3486.0745220526874,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.00106321937849526",
+          "PageValues": 1.8857732016524018,
+          "SpecialDay": 0.2351581836181869,
+          "OperatingSystems": 3,
+          "Browser": 2,
+          "Region": 9,
+          "TrafficType": "3",
+          "Month": "May",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 7,
+          "Administrative_Duration": 140.12063905000304,
+          "Informational": 2,
+          "Informational_Duration": 152.2302759440608,
+          "ProductRelated": 31,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0",
+          "PageValues": 52.99965537673415,
+          "SpecialDay": 0.14733234005786947,
+          "OperatingSystems": 5,
+          "Browser": 4,
+          "Region": 1,
+          "TrafficType": "5",
+          "Month": "May",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 8,
+          "Administrative_Duration": 347.13815965541363,
+          "Informational": 1,
+          "Informational_Duration": 2.704727104697646,
+          "ProductRelated": 54,
+          "ProductRelated_Duration": 631.9612329410743,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0",
+          "PageValues": 65.5123560989623,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 2,
+          "Region": 2,
+          "TrafficType": "1",
+          "Month": "Mar",
+          "VisitorType": "Other",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 2,
+          "Administrative_Duration": 257.8094489513817,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 35,
+          "ProductRelated_Duration": 1850.2525628605072,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.02882346130281202",
+          "PageValues": 13.80947868746163,
+          "SpecialDay": 0.1114078108363317,
+          "OperatingSystems": 3,
+          "Browser": 4,
+          "Region": 2,
+          "TrafficType": "2",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 12,
+          "Administrative_Duration": 671.2951774076848,
+          "Informational": 2,
+          "Informational_Duration": 382.6811819533765,
+          "ProductRelated": 37,
+          "ProductRelated_Duration": 2256.7061334455047,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0",
+          "PageValues": 57.006721524676124,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 5,
+          "Region": 2,
+          "TrafficType": "3",
+          "Month": "May",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 2,
+          "Administrative_Duration": 0.0,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 75,
+          "ProductRelated_Duration": 1508.5724373269843,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.005046919004457117",
+          "PageValues": 48.80578410836041,
+          "SpecialDay": 0.011977947558545452,
+          "OperatingSystems": 1,
+          "Browser": 2,
+          "Region": 4,
+          "TrafficType": "9",
+          "Month": "Sep",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 128.78237157860815,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0013825102538012925",
+          "PageValues": 39.892243860583164,
+          "SpecialDay": 0.02020747938148795,
+          "OperatingSystems": 2,
+          "Browser": 1,
+          "Region": 7,
+          "TrafficType": "8",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 9,
+          "Administrative_Duration": 428.2877835445988,
+          "Informational": 0,
+          "Informational_Duration": 91.0661162118524,
+          "ProductRelated": 23,
+          "ProductRelated_Duration": 2636.886244331433,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0",
+          "PageValues": 40.45353877759396,
+          "SpecialDay": 0.08527758942899584,
+          "OperatingSystems": 4,
+          "Browser": 3,
+          "Region": 4,
+          "TrafficType": "4",
+          "Month": "May",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 0.0,
+          "Informational": 0,
+          "Informational_Duration": 0.0,
+          "ProductRelated": 31,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.02376608586432227",
+          "PageValues": 104.81906634997426,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 2,
+          "Browser": 3,
+          "Region": 1,
+          "TrafficType": "7",
+          "Month": "May",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 8,
+          "Administrative_Duration": 254.7367110688008,
+          "Informational": 1,
+          "Informational_Duration": 159.48924609129983,
+          "ProductRelated": 57,
+          "ProductRelated_Duration": 2687.9330589090914,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.008444367608766188",
+          "PageValues": 0.0,
+          "SpecialDay": 0.10007081721171654,
+          "OperatingSystems": 2,
+          "Browser": 3,
+          "Region": 7,
+          "TrafficType": "5",
+          "Month": "May",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 5,
+          "Administrative_Duration": 217.583109023557,
+          "Informational": 3,
+          "Informational_Duration": 258.38058937584765,
+          "ProductRelated": 129,
+          "ProductRelated_Duration": 3918.6988682816773,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0032130681943750225",
+          "PageValues": 32.13529615220863,
+          "SpecialDay": 0.17521868710938343,
+          "OperatingSystems": 2,
+          "Browser": 3,
+          "Region": 2,
+          "TrafficType": "1",
+          "Month": "Oct",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        },
+        {
+          "Administrative": 6,
+          "Administrative_Duration": 233.85100884728237,
+          "Informational": 3,
+          "Informational_Duration": 277.5970622342765,
+          "ProductRelated": 50,
+          "ProductRelated_Duration": 3204.6954519514093,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.007718246919204055",
+          "PageValues": 0.0,
+          "SpecialDay": 0.2560525502456034,
+          "OperatingSystems": 2,
+          "Browser": 4,
+          "Region": 4,
+          "TrafficType": "10",
+          "Month": "Dec",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 5,
+          "Administrative_Duration": 0.0,
+          "Informational": 0,
+          "Informational_Duration": 219.1483441890609,
+          "ProductRelated": 69,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0064354198125674",
+          "PageValues": 0.0,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 2,
+          "Region": 3,
+          "TrafficType": "8",
+          "Month": "Nov",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 2,
+          "Administrative_Duration": 0.0,
+          "Informational": 2,
+          "Informational_Duration": 204.93829682544595,
+          "ProductRelated": 29,
+          "ProductRelated_Duration": 2778.1938869444157,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0409719729274694",
+          "PageValues": 0.0,
+          "SpecialDay": 0.14036284093972487,
+          "OperatingSystems": 2,
+          "Browser": 4,
+          "Region": 1,
+          "TrafficType": "4",
+          "Month": "Sep",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 6,
+          "Administrative_Duration": 17.001431601990134,
+          "Informational": 3,
+          "Informational_Duration": 288.7417054462784,
+          "ProductRelated": 118,
+          "ProductRelated_Duration": 2954.1723869921716,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0063967615444442665",
+          "PageValues": 0.0,
+          "SpecialDay": 0.15814148859923097,
+          "OperatingSystems": 1,
+          "Browser": 4,
+          "Region": 5,
+          "TrafficType": "2",
+          "Month": "Mar",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 0,
+          "Administrative_Duration": 0.0,
+          "Informational": 4,
+          "Informational_Duration": 243.00528520025017,
+          "ProductRelated": 43,
+          "ProductRelated_Duration": 3313.5253617887283,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.03590027124910772",
+          "PageValues": 0.05489835748620209,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 2,
+          "Region": 1,
+          "TrafficType": "7",
+          "Month": "May",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 5,
+          "Administrative_Duration": 379.64301873206074,
+          "Informational": 0,
+          "Informational_Duration": 39.700018231874566,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.023246708428160647",
+          "PageValues": 35.91501900713125,
+          "SpecialDay": 0.14707728532854716,
+          "OperatingSystems": 1,
+          "Browser": 2,
+          "Region": 8,
+          "TrafficType": "1",
+          "Month": "Nov",
+          "VisitorType": "New_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 5,
+          "Administrative_Duration": 212.9786776774901,
+          "Informational": 0,
+          "Informational_Duration": 98.33849984606869,
+          "ProductRelated": 0,
+          "ProductRelated_Duration": 0.0,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.027979473257810496",
+          "PageValues": 70.13024498365303,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 4,
+          "Region": 4,
+          "TrafficType": "7",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 6,
+          "Administrative_Duration": 67.07310913586761,
+          "Informational": 1,
+          "Informational_Duration": 7.6876264778430325,
+          "ProductRelated": 102,
+          "ProductRelated_Duration": 2353.7473519166565,
+          "BounceRates": 0.8975617086438155,
+          "ExitRates": "0.0",
+          "PageValues": 76.84750389564098,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 2,
+          "Browser": 2,
+          "Region": 4,
+          "TrafficType": "11",
+          "Month": "Oct",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "Existe correlação entre BounceRates e ExitRates?",
+        "type": null
+      },
+      "created_at": "2026-03-18T15:56:53.698390+00:00Z"
+    },
+    {
+      "id": "56042a3e",
+      "title": "Analysis: quais top 3 produtos mais vendidos?...",
+      "rows": 3,
+      "columns": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "Month",
+        "VisitorType",
+        "Weekend",
+        "Revenue"
+      ],
+      "sample": [
+        {
+          "Administrative": 20,
+          "Administrative_Duration": 478.8323212979519,
+          "Informational": 4,
+          "Informational_Duration": 93.64899628363419,
+          "ProductRelated": 97,
+          "ProductRelated_Duration": 2688.955705801762,
+          "BounceRates": 0.0,
+          "ExitRates": "0.003470846090583391",
+          "PageValues": 0.0,
+          "SpecialDay": 0.054325262033133315,
+          "OperatingSystems": 2,
+          "Browser": 1,
+          "Region": 4,
+          "TrafficType": "1",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 19,
+          "Administrative_Duration": 434.1198936303714,
+          "Informational": 3,
+          "Informational_Duration": 290.74180175171057,
+          "ProductRelated": 234,
+          "ProductRelated_Duration": 6962.580140064196,
+          "BounceRates": 0.0,
+          "ExitRates": "0.0",
+          "PageValues": 61.8026398217385,
+          "SpecialDay": 0.09990419167955009,
+          "OperatingSystems": 2,
+          "Browser": 3,
+          "Region": 1,
+          "TrafficType": "11",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": false,
+          "Revenue": true
+        },
+        {
+          "Administrative": 19,
+          "Administrative_Duration": 746.3212798652575,
+          "Informational": 3,
+          "Informational_Duration": 246.68963512550616,
+          "ProductRelated": 143,
+          "ProductRelated_Duration": 6337.413485940393,
+          "BounceRates": 0.01891165842010638,
+          "ExitRates": "0.009831478891055241",
+          "PageValues": 84.65093802407273,
+          "SpecialDay": 0.0,
+          "OperatingSystems": 3,
+          "Browser": 1,
+          "Region": 4,
+          "TrafficType": "6",
+          "Month": "Nov",
+          "VisitorType": "Returning_Visitor",
+          "Weekend": true,
+          "Revenue": true
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "quais top 3 produtos mais vendidos?",
+        "type": "top_n"
+      },
+      "created_at": "2026-03-18T16:13:33.336856+00:00Z"
+    }
+  ],
+  "last_updated": "2026-03-18T16:13:33.336856+00:00Z"
+}

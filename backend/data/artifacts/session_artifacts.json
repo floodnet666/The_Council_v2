@@ -1,0 +1,757 @@
+{
+  "dataset": {},
+  "column_types": {},
+  "derived_columns": [],
+  "results": [
+    {
+      "id": "39439b50",
+      "title": "Analysis: 1. Quantos registros totais existem no arquivo de ...",
+      "rows": 1,
+      "columns": [
+        "count"
+      ],
+      "sample": [
+        {
+          "count": 19666763
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "1. Quantos registros totais existem no arquivo de vendas de bebidas?",
+        "type": "aggregation"
+      },
+      "created_at": "2026-03-18T17:50:36.101154+00:00Z"
+    },
+    {
+      "id": "2f75228b",
+      "title": "Analysis: 2. Qual é o valor total de vendas ('Sale (Dollars)...",
+      "rows": 1,
+      "columns": [
+        "Pack_sum",
+        "Bottle Volume (ml)_sum",
+        "State Bottle Cost_sum",
+        "State Bottle Retail_sum",
+        "Bottles Sold_sum",
+        "Sale (Dollars)_sum",
+        "Volume Sold (Liters)_sum",
+        "Volume Sold (Gallons)_sum",
+        "ano_sum",
+        "dia_semana_idx_sum"
+      ],
+      "sample": [
+        {
+          "Pack_sum": 241445834,
+          "Bottle Volume (ml)_sum": 17928127276,
+          "State Bottle Cost_sum": 195358292.44,
+          "State Bottle Retail_sum": 293326118.64,
+          "Bottles Sold_sum": 202859351,
+          "Sale (Dollars)_sum": 2652215869.750001,
+          "Volume Sold (Liters)_sum": 179554172.32999998,
+          "Volume Sold (Gallons)_sum": 47406618.169999994,
+          "ano_sum": 994458731,
+          "dia_semana_idx_sum": 53080125
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "2. Qual é o valor total de vendas ('Sale (Dollars)') gerado considerando todas as linhas?",
+        "type": "aggregation"
+      },
+      "created_at": "2026-03-18T17:55:53.577093+00:00Z"
+    },
+    {
+      "id": "f052e712",
+      "title": "Analysis: 5. Agrupe as vendas por 'Category Name' e me mostr...",
+      "rows": 100,
+      "columns": [
+        "Category Name",
+        "count",
+        "Sale (Dollars)_sum",
+        "Sale (Dollars)_mean"
+      ],
+      "sample": [
+        {
+          "Category Name": "Imported Vodka",
+          "count": 1521,
+          "Sale (Dollars)_sum": 1280118.1700000013,
+          "Sale (Dollars)_mean": 841.6293030900732
+        },
+        {
+          "Category Name": "Imported Distilled Spirit Specialty",
+          "count": 11906,
+          "Sale (Dollars)_sum": 5641674.159999983,
+          "Sale (Dollars)_mean": 473.85134889971306
+        },
+        {
+          "Category Name": "Special Order Items",
+          "count": 20178,
+          "Sale (Dollars)_sum": 7213310.200000016,
+          "Sale (Dollars)_mean": 357.4839032609781
+        },
+        {
+          "Category Name": "DECANTERS & SPECIALTY PACKAGES",
+          "count": 40551,
+          "Sale (Dollars)_sum": 12166703.709999938,
+          "Sale (Dollars)_mean": 300.0346159157589
+        },
+        {
+          "Category Name": "Irish Whiskies",
+          "count": 119460,
+          "Sale (Dollars)_sum": 29881510.089997996,
+          "Sale (Dollars)_mean": 250.13820601036326
+        },
+        {
+          "Category Name": "STRAIGHT RYE WHISKIES",
+          "count": 59869,
+          "Sale (Dollars)_sum": 14778611.690000344,
+          "Sale (Dollars)_mean": 246.84914880823706
+        },
+        {
+          "Category Name": "Imported Brandies",
+          "count": 206888,
+          "Sale (Dollars)_sum": 48536311.829996,
+          "Sale (Dollars)_mean": 234.60187072230383
+        },
+        {
+          "Category Name": "TENNESSEE WHISKIES",
+          "count": 245162,
+          "Sale (Dollars)_sum": 56755838.60000063,
+          "Sale (Dollars)_mean": 231.50340835855732
+        },
+        {
+          "Category Name": "Tennessee Whiskies",
+          "count": 264018,
+          "Sale (Dollars)_sum": 59436180.14000206,
+          "Sale (Dollars)_mean": 225.12169677825776
+        },
+        {
+          "Category Name": "Temporary & Specialty Packages",
+          "count": 101776,
+          "Sale (Dollars)_sum": 21878398.46000007,
+          "Sale (Dollars)_mean": 214.9661851517064
+        },
+        {
+          "Category Name": "IRISH WHISKIES",
+          "count": 88389,
+          "Sale (Dollars)_sum": 18319958.549999233,
+          "Sale (Dollars)_mean": 207.26514102432694
+        },
+        {
+          "Category Name": "Temporary &  Specialty Packages",
+          "count": 2757,
+          "Sale (Dollars)_sum": 555908.5500000002,
+          "Sale (Dollars)_mean": 201.6353101196954
+        },
+        {
+          "Category Name": "Imported Vodkas",
+          "count": 343936,
+          "Sale (Dollars)_sum": 68065207.8699943,
+          "Sale (Dollars)_mean": 197.90079511884275
+        },
+        {
+          "Category Name": "Iowa Distilleries",
+          "count": 2855,
+          "Sale (Dollars)_sum": 557729.2899999991,
+          "Sale (Dollars)_mean": 195.35176532399268
+        },
+        {
+          "Category Name": null,
+          "count": 25040,
+          "Sale (Dollars)_sum": 4816156.44000001,
+          "Sale (Dollars)_mean": 192.3385159744413
+        },
+        {
+          "Category Name": "Spiced Rum",
+          "count": 482721,
+          "Sale (Dollars)_sum": 91477236.52000539,
+          "Sale (Dollars)_mean": 189.50332908658498
+        },
+        {
+          "Category Name": "IMPORTED VODKA",
+          "count": 404048,
+          "Sale (Dollars)_sum": 76445853.93999445,
+          "Sale (Dollars)_mean": 189.19993154277327
+        },
+        {
+          "Category Name": "Straight Rye Whiskies",
+          "count": 64396,
+          "Sale (Dollars)_sum": 12120735.020000093,
+          "Sale (Dollars)_mean": 188.22186191689067
+        },
+        {
+          "Category Name": "SPICED RUM",
+          "count": 530323,
+          "Sale (Dollars)_sum": 99708252.03999951,
+          "Sale (Dollars)_mean": 188.0141951980199
+        },
+        {
+          "Category Name": "100% Agave Tequila",
+          "count": 267660,
+          "Sale (Dollars)_sum": 49879760.059999526,
+          "Sale (Dollars)_mean": 186.35492811775956
+        },
+        {
+          "Category Name": "Single Malt Scotch",
+          "count": 83131,
+          "Sale (Dollars)_sum": 15178362.69999947,
+          "Sale (Dollars)_mean": 182.58366553992457
+        },
+        {
+          "Category Name": "Canadian Whiskies",
+          "count": 960928,
+          "Sale (Dollars)_sum": 170682696.68000692,
+          "Sale (Dollars)_mean": 177.6227736937699
+        },
+        {
+          "Category Name": "Imported Dry Gins",
+          "count": 105509,
+          "Sale (Dollars)_sum": 18716555.559999734,
+          "Sale (Dollars)_mean": 177.39297652332723
+        },
+        {
+          "Category Name": "Mixto Tequila",
+          "count": 211897,
+          "Sale (Dollars)_sum": 35459749.74000004,
+          "Sale (Dollars)_mean": 167.34427452960654
+        },
+        {
+          "Category Name": "IMPORTED GRAPE BRANDIES",
+          "count": 155688,
+          "Sale (Dollars)_sum": 25586569.769998554,
+          "Sale (Dollars)_mean": 164.34516321102817
+        },
+        {
+          "Category Name": "CANADIAN WHISKIES",
+          "count": 936212,
+          "Sale (Dollars)_sum": 150942547.97000214,
+          "Sale (Dollars)_mean": 161.226888749559
+        },
+        {
+          "Category Name": "Whiskey Liqueur",
+          "count": 469299,
+          "Sale (Dollars)_sum": 74703499.19000052,
+          "Sale (Dollars)_mean": 159.18103211385602
+        },
+        {
+          "Category Name": "WHISKEY LIQUEUR",
+          "count": 334572,
+          "Sale (Dollars)_sum": 53100157.18000163,
+          "Sale (Dollars)_mean": 158.71070256925753
+        },
+        {
+          "Category Name": "TEQUILA",
+          "count": 435298,
+          "Sale (Dollars)_sum": 68479198.8799972,
+          "Sale (Dollars)_mean": 157.3156754223479
+        },
+        {
+          "Category Name": "IMPORTED DRY GINS",
+          "count": 113313,
+          "Sale (Dollars)_sum": 17676754.47999978,
+          "Sale (Dollars)_mean": 155.99935117770937
+        },
+        {
+          "Category Name": "MISC. IMPORTED CORDIALS & LIQUEURS",
+          "count": 246088,
+          "Sale (Dollars)_sum": 37832800.36000012,
+          "Sale (Dollars)_mean": 153.73687607685105
+        },
+        {
+          "Category Name": "Single Barrel Bourbon Whiskies",
+          "count": 13281,
+          "Sale (Dollars)_sum": 2002910.8500000038,
+          "Sale (Dollars)_mean": 150.8102439575336
+        },
+        {
+          "Category Name": "SINGLE MALT SCOTCH",
+          "count": 82675,
+          "Sale (Dollars)_sum": 12381601.809999598,
+          "Sale (Dollars)_mean": 149.76234423948713
+        },
+        {
+          "Category Name": "Imported Cordials & Liqueurs",
+          "count": 225744,
+          "Sale (Dollars)_sum": 33613998.40000009,
+          "Sale (Dollars)_mean": 148.9031752781916
+        },
+        {
+          "Category Name": "Straight Bourbon Whiskies",
+          "count": 619010,
+          "Sale (Dollars)_sum": 91803860.46000554,
+          "Sale (Dollars)_mean": 148.30755635612596
+        },
+        {
+          "Category Name": "CREAM LIQUEURS",
+          "count": 232844,
+          "Sale (Dollars)_sum": 34183197.92999993,
+          "Sale (Dollars)_mean": 146.80729557128348
+        },
+        {
+          "Category Name": "DISTILLED SPIRITS SPECIALTY",
+          "count": 60228,
+          "Sale (Dollars)_sum": 8404512.850000175,
+          "Sale (Dollars)_mean": 139.54494338181865
+        },
+        {
+          "Category Name": "American Vodkas",
+          "count": 1461280,
+          "Sale (Dollars)_sum": 203442973.33997515,
+          "Sale (Dollars)_mean": 139.22244425433533
+        },
+        {
+          "Category Name": "Imported Schnapps",
+          "count": 152450,
+          "Sale (Dollars)_sum": 21157841.109999113,
+          "Sale (Dollars)_mean": 138.78544512954485
+        },
+        {
+          "Category Name": "IMPORTED SCHNAPPS",
+          "count": 169243,
+          "Sale (Dollars)_sum": 23426180.369999275,
+          "Sale (Dollars)_mean": 138.41742565423252
+        },
+        {
+          "Category Name": "Cream Liqueurs",
+          "count": 197955,
+          "Sale (Dollars)_sum": 27260356.360000707,
+          "Sale (Dollars)_mean": 137.7098651713809
+        },
+        {
+          "Category Name": "Scotch Whiskies",
+          "count": 162477,
+          "Sale (Dollars)_sum": 22062522.979999747,
+          "Sale (Dollars)_mean": 135.78859149294823
+        },
+        {
+          "Category Name": "IMPORTED AMARETTO",
+          "count": 12789,
+          "Sale (Dollars)_sum": 1732239.590000002,
+          "Sale (Dollars)_mean": 135.44761826569723
+        },
+        {
+          "Category Name": "Imported Flavored Vodka",
+          "count": 200062,
+          "Sale (Dollars)_sum": 25790309.649998613,
+          "Sale (Dollars)_mean": 128.91158565843895
+        },
+        {
+          "Category Name": "Corn Whiskies",
+          "count": 6935,
+          "Sale (Dollars)_sum": 884427.5399999998,
+          "Sale (Dollars)_mean": 127.53100793078585
+        },
+        {
+          "Category Name": "Coffee Liqueurs",
+          "count": 61211,
+          "Sale (Dollars)_sum": 7600330.049999994,
+          "Sale (Dollars)_mean": 124.16608207675081
+        },
+        {
+          "Category Name": "AMERICAN ALCOHOL",
+          "count": 24351,
+          "Sale (Dollars)_sum": 2966946.7599999895,
+          "Sale (Dollars)_mean": 121.84085910229517
+        },
+        {
+          "Category Name": "SCOTCH WHISKIES",
+          "count": 199770,
+          "Sale (Dollars)_sum": 24075953.20999936,
+          "Sale (Dollars)_mean": 120.51836216648826
+        },
+        {
+          "Category Name": "SINGLE BARREL BOURBON WHISKIES",
+          "count": 9268,
+          "Sale (Dollars)_sum": 1116618.5799999996,
+          "Sale (Dollars)_mean": 120.48107250755282
+        },
+        {
+          "Category Name": "Mezcal",
+          "count": 4685,
+          "Sale (Dollars)_sum": 563435.5499999991,
+          "Sale (Dollars)_mean": 120.26372465314816
+        },
+        {
+          "Category Name": "STRAIGHT BOURBON WHISKIES",
+          "count": 543684,
+          "Sale (Dollars)_sum": 65040166.79999762,
+          "Sale (Dollars)_mean": 119.6286203014943
+        },
+        {
+          "Category Name": "Neutral Grain Spirits",
+          "count": 21603,
+          "Sale (Dollars)_sum": 2564627.9400000013,
+          "Sale (Dollars)_mean": 118.71628662685744
+        },
+        {
+          "Category Name": "GRAPE SCHNAPPS",
+          "count": 13044,
+          "Sale (Dollars)_sum": 1537955.1300000013,
+          "Sale (Dollars)_mean": 117.90517709291638
+        },
+        {
+          "Category Name": "BOTTLED IN BOND BOURBON",
+          "count": 6417,
+          "Sale (Dollars)_sum": 746961.729999998,
+          "Sale (Dollars)_mean": 116.40357332086614
+        },
+        {
+          "Category Name": "IMPORTED VODKA - MISC",
+          "count": 256241,
+          "Sale (Dollars)_sum": 29635930.989997584,
+          "Sale (Dollars)_mean": 115.65782979104421
+        },
+        {
+          "Category Name": "VODKA 80 PROOF",
+          "count": 1265974,
+          "Sale (Dollars)_sum": 145764888.82998464,
+          "Sale (Dollars)_mean": 115.1411441451354
+        },
+        {
+          "Category Name": "COFFEE LIQUEURS",
+          "count": 75505,
+          "Sale (Dollars)_sum": 8691324.369999958,
+          "Sale (Dollars)_mean": 115.10925594331447
+        },
+        {
+          "Category Name": "Flavored Rum",
+          "count": 248436,
+          "Sale (Dollars)_sum": 28594699.879996937,
+          "Sale (Dollars)_mean": 115.09885797548236
+        },
+        {
+          "Category Name": "Bottled in Bond Bourbon",
+          "count": 7021,
+          "Sale (Dollars)_sum": 803326.9500000007,
+          "Sale (Dollars)_mean": 114.41773963822827
+        },
+        {
+          "Category Name": "American Distilled Spirit Specialty",
+          "count": 14404,
+          "Sale (Dollars)_sum": 1626860.9300000076,
+          "Sale (Dollars)_mean": 112.94507983893416
+        },
+        {
+          "Category Name": "White Rum",
+          "count": 239911,
+          "Sale (Dollars)_sum": 26746193.50000205,
+          "Sale (Dollars)_mean": 111.48381483134183
+        },
+        {
+          "Category Name": "Aged Dark Rum",
+          "count": 26802,
+          "Sale (Dollars)_sum": 2720602.6199999917,
+          "Sale (Dollars)_mean": 101.50744795164509
+        },
+        {
+          "Category Name": "PUERTO RICO & VIRGIN ISLANDS RUM",
+          "count": 395376,
+          "Sale (Dollars)_sum": 39716893.230003916,
+          "Sale (Dollars)_mean": 100.45347524888692
+        },
+        {
+          "Category Name": "FLAVORED RUM",
+          "count": 278367,
+          "Sale (Dollars)_sum": 27277184.179995835,
+          "Sale (Dollars)_mean": 97.99000664588775
+        },
+        {
+          "Category Name": "MISC. AMERICAN CORDIALS & LIQUEURS",
+          "count": 127044,
+          "Sale (Dollars)_sum": 12369039.24000006,
+          "Sale (Dollars)_mean": 97.36027864362
+        },
+        {
+          "Category Name": "WATERMELON SCHNAPPS",
+          "count": 17844,
+          "Sale (Dollars)_sum": 1705878.7100000018,
+          "Sale (Dollars)_mean": 95.59956904281562
+        },
+        {
+          "Category Name": "Blended Whiskies",
+          "count": 412136,
+          "Sale (Dollars)_sum": 38346622.51000105,
+          "Sale (Dollars)_mean": 93.04361305491645
+        },
+        {
+          "Category Name": "Cocktails /RTD",
+          "count": 269672,
+          "Sale (Dollars)_sum": 24635331.099999662,
+          "Sale (Dollars)_mean": 91.35294394671921
+        },
+        {
+          "Category Name": "PEACH SCHNAPPS",
+          "count": 63400,
+          "Sale (Dollars)_sum": 5705569.889999952,
+          "Sale (Dollars)_mean": 89.99321593059861
+        },
+        {
+          "Category Name": "BARBADOS RUM",
+          "count": 9909,
+          "Sale (Dollars)_sum": 854201.7100000004,
+          "Sale (Dollars)_mean": 86.20463316177216
+        },
+        {
+          "Category Name": "BLENDED WHISKIES",
+          "count": 441610,
+          "Sale (Dollars)_sum": 37132214.839999154,
+          "Sale (Dollars)_mean": 84.08372736124443
+        },
+        {
+          "Category Name": "JAMAICA RUM",
+          "count": 15288,
+          "Sale (Dollars)_sum": 1253254.2900000021,
+          "Sale (Dollars)_mean": 81.97634026687612
+        },
+        {
+          "Category Name": "Triple Sec",
+          "count": 37779,
+          "Sale (Dollars)_sum": 3091659.2399999695,
+          "Sale (Dollars)_mean": 81.83539109028744
+        },
+        {
+          "Category Name": "AMERICAN COCKTAILS",
+          "count": 284695,
+          "Sale (Dollars)_sum": 22720367.500000417,
+          "Sale (Dollars)_mean": 79.80599413407477
+        },
+        {
+          "Category Name": "APPLE SCHNAPPS",
+          "count": 33099,
+          "Sale (Dollars)_sum": 2631735.3799999855,
+          "Sale (Dollars)_mean": 79.51102389800252
+        },
+        {
+          "Category Name": "Gold Rum",
+          "count": 64188,
+          "Sale (Dollars)_sum": 5062873.2399999695,
+          "Sale (Dollars)_mean": 78.8756970150179
+        },
+        {
+          "Category Name": "American Flavored Vodka",
+          "count": 490316,
+          "Sale (Dollars)_sum": 38379015.69999928,
+          "Sale (Dollars)_mean": 78.27404306610283
+        },
+        {
+          "Category Name": "VODKA FLAVORED",
+          "count": 502813,
+          "Sale (Dollars)_sum": 38704567.869996235,
+          "Sale (Dollars)_mean": 76.97606837929058
+        },
+        {
+          "Category Name": "Neutral Grain Spirits Flavored",
+          "count": 21279,
+          "Sale (Dollars)_sum": 1584007.4600000004,
+          "Sale (Dollars)_mean": 74.43993890690354
+        },
+        {
+          "Category Name": "100 PROOF VODKA",
+          "count": 99124,
+          "Sale (Dollars)_sum": 7305335.800000367,
+          "Sale (Dollars)_mean": 73.69896089746547
+        },
+        {
+          "Category Name": "American Dry Gins",
+          "count": 203730,
+          "Sale (Dollars)_sum": 14342166.359999882,
+          "Sale (Dollars)_mean": 70.39791076424622
+        },
+        {
+          "Category Name": "American Schnapps",
+          "count": 317653,
+          "Sale (Dollars)_sum": 22153899.07999992,
+          "Sale (Dollars)_mean": 69.74245192080642
+        },
+        {
+          "Category Name": "American Brandies",
+          "count": 321279,
+          "Sale (Dollars)_sum": 21513177.63999952,
+          "Sale (Dollars)_mean": 66.96104519747485
+        },
+        {
+          "Category Name": "TRIPLE SEC",
+          "count": 48609,
+          "Sale (Dollars)_sum": 3246462.9299999895,
+          "Sale (Dollars)_mean": 66.78728075047809
+        },
+        {
+          "Category Name": "AMERICAN DRY GINS",
+          "count": 256386,
+          "Sale (Dollars)_sum": 16796630.849999346,
+          "Sale (Dollars)_mean": 65.51305785027009
+        },
+        {
+          "Category Name": "AMERICAN GRAPE BRANDIES",
+          "count": 243144,
+          "Sale (Dollars)_sum": 15601405.950000575,
+          "Sale (Dollars)_mean": 64.16529278946047
+        },
+        {
+          "Category Name": "ROOT BEER SCHNAPPS",
+          "count": 13615,
+          "Sale (Dollars)_sum": 867176.1400000018,
+          "Sale (Dollars)_mean": 63.692702166728004
+        },
+        {
+          "Category Name": "BUTTERSCOTCH SCHNAPPS",
+          "count": 33865,
+          "Sale (Dollars)_sum": 2138725.019999992,
+          "Sale (Dollars)_mean": 63.15443732467126
+        },
+        {
+          "Category Name": "BLACKBERRY BRANDIES",
+          "count": 59714,
+          "Sale (Dollars)_sum": 3713928.3100000704,
+          "Sale (Dollars)_mean": 62.19526928358627
+        },
+        {
+          "Category Name": "American Cordials & Liqueur",
+          "count": 227976,
+          "Sale (Dollars)_sum": 14079425.820000587,
+          "Sale (Dollars)_mean": 61.758368512477574
+        },
+        {
+          "Category Name": "CINNAMON SCHNAPPS",
+          "count": 34235,
+          "Sale (Dollars)_sum": 1971718.8199999924,
+          "Sale (Dollars)_mean": 57.593656199795305
+        },
+        {
+          "Category Name": "MISCELLANEOUS SCHNAPPS",
+          "count": 32375,
+          "Sale (Dollars)_sum": 1775350.1000000087,
+          "Sale (Dollars)_mean": 54.837068725868996
+        },
+        {
+          "Category Name": "AMERICAN AMARETTO",
+          "count": 53417,
+          "Sale (Dollars)_sum": 2847722.9199999953,
+          "Sale (Dollars)_mean": 53.311172847595245
+        },
+        {
+          "Category Name": "PEPPERMINT SCHNAPPS",
+          "count": 120504,
+          "Sale (Dollars)_sum": 6163636.860000053,
+          "Sale (Dollars)_mean": 51.14881547500542
+        },
+        {
+          "Category Name": "PEACH BRANDIES",
+          "count": 15070,
+          "Sale (Dollars)_sum": 767577.5699999977,
+          "Sale (Dollars)_mean": 50.9341453218313
+        },
+        {
+          "Category Name": "APRICOT BRANDIES",
+          "count": 38509,
+          "Sale (Dollars)_sum": 1919003.7900000159,
+          "Sale (Dollars)_mean": 49.83260510530047
+        },
+        {
+          "Category Name": "FLAVORED GINS",
+          "count": 12010,
+          "Sale (Dollars)_sum": 576449.5800000004,
+          "Sale (Dollars)_mean": 47.997467110741084
+        },
+        {
+          "Category Name": "CHERRY BRANDIES",
+          "count": 13216,
+          "Sale (Dollars)_sum": 616244.9599999987,
+          "Sale (Dollars)_mean": 46.62870460048416
+        },
+        {
+          "Category Name": "STRAWBERRY SCHNAPPS",
+          "count": 11853,
+          "Sale (Dollars)_sum": 543700.2500000009,
+          "Sale (Dollars)_mean": 45.87026491183674
+        },
+        {
+          "Category Name": "RASPBERRY SCHNAPPS",
+          "count": 13207,
+          "Sale (Dollars)_sum": 599720.0100000009,
+          "Sale (Dollars)_mean": 45.409253426213446
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "5. Agrupe as vendas por 'Category Name' e me mostre o Top 5 de faturamento.",
+        "type": "group_by"
+      },
+      "created_at": "2026-03-18T18:06:27.143248+00:00Z"
+    },
+    {
+      "id": "33e72987",
+      "title": "Analysis: 6. Qual condado ('County') tem a média mais cara d...",
+      "rows": 1,
+      "columns": [
+        "Pack_mean",
+        "Bottle Volume (ml)_mean",
+        "State Bottle Cost_mean",
+        "State Bottle Retail_mean",
+        "Bottles Sold_mean",
+        "Sale (Dollars)_mean",
+        "Volume Sold (Liters)_mean",
+        "Volume Sold (Gallons)_mean",
+        "ano_mean",
+        "dia_semana_idx_mean"
+      ],
+      "sample": [
+        {
+          "Pack_mean": 12.276846677818815,
+          "Bottle Volume (ml)_mean": 911.5952267284657,
+          "State Bottle Cost_mean": 9.933428890879954,
+          "State Bottle Retail_mean": 14.914821914934308,
+          "Bottles Sold_mean": 10.314831729044581,
+          "Sale (Dollars)_mean": 134.85784205201543,
+          "Volume Sold (Liters)_mean": 9.12982844863692,
+          "Volume Sold (Gallons)_mean": 2.4104942013080652,
+          "ano_mean": 2016.0493313007332,
+          "dia_semana_idx_mean": 2.6989761863708837
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "6. Qual condado ('County') tem a média mais cara de preço de varejo ('State Bottle Retail')?",
+        "type": "aggregation"
+      },
+      "created_at": "2026-03-18T18:11:43.025460+00:00Z"
+    },
+    {
+      "id": "d9ded93e",
+      "title": "Analysis: 10. Qual fornecedor ('Vendor Name') vendeu a maior...",
+      "rows": 1,
+      "columns": [
+        "Pack_sum",
+        "Bottle Volume (ml)_sum",
+        "State Bottle Cost_sum",
+        "State Bottle Retail_sum",
+        "Bottles Sold_sum",
+        "Sale (Dollars)_sum",
+        "Volume Sold (Liters)_sum",
+        "Volume Sold (Gallons)_sum",
+        "ano_sum",
+        "dia_semana_idx_sum"
+      ],
+      "sample": [
+        {
+          "Pack_sum": 241445834,
+          "Bottle Volume (ml)_sum": 17928127276,
+          "State Bottle Cost_sum": 195358292.43999997,
+          "State Bottle Retail_sum": 293326118.64,
+          "Bottles Sold_sum": 202859351,
+          "Sale (Dollars)_sum": 2652215869.750001,
+          "Volume Sold (Liters)_sum": 179554172.32999998,
+          "Volume Sold (Gallons)_sum": 47406618.17,
+          "ano_sum": 994458731,
+          "dia_semana_idx_sum": 53080125
+        }
+      ],
+      "chart": null,
+      "meta": {
+        "query": "10. Qual fornecedor ('Vendor Name') vendeu a maior quantidade de garrafas no total ('Bottles Sold')?",
+        "type": "aggregation"
+      },
+      "created_at": "2026-03-18T18:27:30.911973+00:00Z"
+    }
+  ],
+  "last_updated": "2026-03-18T18:27:30.911973+00:00Z"
+}

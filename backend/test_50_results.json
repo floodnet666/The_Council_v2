@@ -1,0 +1,182 @@
+[
+  {
+    "id": 26,
+    "question": "26. Filtre as vendas que ocorreram depois de 01/01/2015 e grupe por categoria, sumando o número de garrafas.",
+    "status": "sucesso",
+    "time_secs": 37.06,
+    "response": "Sinto muito, a análise desta pergunta excedeu o limite de segurança de 35 segundos para evitar sobrecarga do servidor.",
+    "agent": "system"
+  },
+  {
+    "id": 27,
+    "question": "27. Qual 'Vendor Name' tem a maior variedade de produtos únicos ('Item Number') ofertados?",
+    "status": "sucesso",
+    "time_secs": 37.06,
+    "response": "Sinto muito, a análise desta pergunta excedeu o limite de segurança de 35 segundos para evitar sobrecarga do servidor.",
+    "agent": "system"
+  },
+  {
+    "id": 28,
+    "question": "28. Compare as vendas de Vodka e de Whiskey. Qual teve maior faturamento?",
+    "status": "sucesso",
+    "time_secs": 37.08,
+    "response": "Sinto muito, a análise desta pergunta excedeu o limite de segurança de 35 segundos para evitar sobrecarga do servidor.",
+    "agent": "system"
+  },
+  {
+    "id": 29,
+    "question": "29. Qual é o percentual aproximado do faturamento total que pertence à cidade de 'DES MOINES'?",
+    "status": "sucesso",
+    "time_secs": 37.06,
+    "response": "Sinto muito, a análise desta pergunta excedeu o limite de segurança de 35 segundos para evitar sobrecarga do servidor.",
+    "agent": "system"
+  },
+  {
+    "id": 30,
+    "question": "30. Existe alguma loja que comprou mais de 1000 garrafas em uma única transação?",
+    "status": "sucesso",
+    "time_secs": 37.08,
+    "response": "Sinto muito, a análise desta pergunta excedeu o limite de segurança de 35 segundos para evitar sobrecarga do servidor.",
+    "agent": "system"
+  },
+  {
+    "id": 31,
+    "question": "31. Mostre as estatísticas descritivas (min, max, media) de 'Sale (Dollars)'.",
+    "status": "erro_conexao",
+    "time_secs": 4.07,
+    "error_text": "HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002B9D37D16D0>: Failed to establish a new connection: [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione'))"
+  },
+  {
+    "id": 32,
+    "question": "32. Em média, qual é a diferença absoluta entre o preço de varejo da loja e o custo da garrafa?",
+    "status": "erro_conexao",
+    "time_secs": 4.1,
+    "error_text": "HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002B9D37E5D50>: Failed to establish a new connection: [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione'))"
+  },
+  {
+    "id": 33,
+    "question": "33. Filtre vendas da cidade 'CEDAR RAPIDS' e identifique o produto ('Item Description') mais vendido (soma de garrafas).",
+    "status": "erro_conexao",
+    "time_secs": 4.09,
+    "error_text": "HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002B9D37E7FD0>: Failed to establish a new connection: [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione'))"
+  },
+  {
+    "id": 34,
+    "question": "34. Agrupe por 'Store Name' e mostre quantas Lojas diferentes têm o mesmo nome. Quais os nomes mais comuns?",
+    "status": "erro_conexao",
+    "time_secs": 4.11,
+    "error_text": "HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002B9D37F2290>: Failed to establish a new connection: [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione'))"
+  },
+  {
+    "id": 35,
+    "question": "35. Qual é o mês com o maior volume em Litros da história do dataset?",
+    "status": "erro_conexao",
+    "time_secs": 4.07,
+    "error_text": "HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002B9D37E7110>: Failed to establish a new connection: [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione'))"
+  },
+  {
+    "id": 36,
+    "question": "36. Qual é a variação percentual de vendas (faturamento) do primeiro semestre para o segundo semestre de 2015? Calcule dinamicamente.",
+    "status": "erro_conexao",
+    "time_secs": 4.12,
+    "error_text": "HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002B9D37E5490>: Failed to establish a new connection: [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione'))"
+  },
+  {
+    "id": 37,
+    "question": "37. Identifique os Top 3 fornecedores que têm o maior lucro projetado por litro vendido.",
+    "status": "erro_conexao",
+    "time_secs": 4.1,
+    "error_text": "HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002B9D37E4790>: Failed to establish a new connection: [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione'))"
+  },
+  {
+    "id": 38,
+    "question": "38. Para a cidade 'DES MOINES', como a média de preço de varejo varia ao longo dos meses do ano de 2012?",
+    "status": "erro_conexao",
+    "time_secs": 4.09,
+    "error_text": "HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002B9D37D1050>: Failed to establish a new connection: [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione'))"
+  },
+  {
+    "id": 39,
+    "question": "39. Descubra qual conjunto Condado/Cidade concentra os maiores outliers de preço (acima do percentil 95 ou limite superior equivalente).",
+    "status": "erro_conexao",
+    "time_secs": 4.12,
+    "error_text": "HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002B9D37D6990>: Failed to establish a new connection: [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione'))"
+  },
+  {
+    "id": 40,
+    "question": "40. Calcule a correlação entre o custo da garrafa e o número de garrafas vendidas. Há uma correlação linear obvia?",
+    "status": "erro_conexao",
+    "time_secs": 4.1,
+    "error_text": "HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002B9D37F1410>: Failed to establish a new connection: [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione'))"
+  },
+  {
+    "id": 41,
+    "question": "41. Crie um rank das 5 categorias menos vendidas que ainda geraram algum faturamento positivo.",
+    "status": "erro_conexao",
+    "time_secs": 4.07,
+    "error_text": "HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002B9D37FC890>: Failed to establish a new connection: [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione'))"
+  },
+  {
+    "id": 42,
+    "question": "42. Verifique se o somatório do 'Bottle Volume (ml)' vezes 'Bottles Sold' bate com o 'Volume Sold (Liters)' para as primeiras 10 transações.",
+    "status": "erro_conexao",
+    "time_secs": 4.11,
+    "error_text": "HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002B9D37723D0>: Failed to establish a new connection: [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione'))"
+  },
+  {
+    "id": 43,
+    "question": "43. Quais os 2 meses do ano global onde geralmente as vendas despencam (menor soma de vendas históricas conjuntas)?",
+    "status": "erro_conexao",
+    "time_secs": 4.08,
+    "error_text": "HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002B9D37D1B50>: Failed to establish a new connection: [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione'))"
+  },
+  {
+    "id": 44,
+    "question": "44. Liste o share do mercado (faturamento): descubra qual % a loja número 1 ocupa diante de todo o faturamento da base.",
+    "status": "erro_conexao",
+    "time_secs": 4.09,
+    "error_text": "HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002B9D37D7C10>: Failed to establish a new connection: [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione'))"
+  },
+  {
+    "id": 45,
+    "question": "45. Execute um agrupamento com rolling window (média móvel mensal) do faturamento total global, se o duckdb/polars permitir, caso contrário apenas agregue mensal.",
+    "status": "erro_conexao",
+    "time_secs": 4.11,
+    "error_text": "HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002B9D37F3950>: Failed to establish a new connection: [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione'))"
+  },
+  {
+    "id": 46,
+    "question": "46. Pode gerar um gráfico de barras com as 10 cidades que mais venderam garrafas?",
+    "status": "erro_conexao",
+    "time_secs": 4.1,
+    "error_text": "HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002B9D37F3410>: Failed to establish a new connection: [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione'))"
+  },
+  {
+    "id": 47,
+    "question": "47. Eu quero um gráfico de pizza mostrando a proporção de vendas (em dólares) dos Top 5 Condados.",
+    "status": "erro_conexao",
+    "time_secs": 4.08,
+    "error_text": "HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002B9D37E6650>: Failed to establish a new connection: [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione'))"
+  },
+  {
+    "id": 48,
+    "question": "48. Crie um gráfico de linha do faturamento total ao longo dos anos-mês (ex: Jan/2012, Fev/2012).",
+    "status": "erro_conexao",
+    "time_secs": 4.09,
+    "error_text": "HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002B9D37E7590>: Failed to establish a new connection: [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione'))"
+  },
+  {
+    "id": 49,
+    "question": "49. Crie um gráfico de dispersão (scatter plot) cruzando o 'State Bottle Cost' (eixo X) e o 'State Bottle Retail' (eixo Y).",
+    "status": "erro_conexao",
+    "time_secs": 4.08,
+    "error_text": "HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002B9D37E7AD0>: Failed to establish a new connection: [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione'))"
+  },
+  {
+    "id": 50,
+    "question": "50. Construa um gráfico de barras comparando as categorias de produto Top 8 que mais venderam garrafas totais.",
+    "status": "erro_conexao",
+    "time_secs": 4.09,
+    "error_text": "HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002B9D37E5290>: Failed to establish a new connection: [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione'))"
+  }
+]

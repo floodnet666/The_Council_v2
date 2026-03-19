@@ -3,7 +3,7 @@ import numpy as np
 import os
 import json
 from typing import List, Dict, Any
-from sentence_transformers import SentenceTransformer
+from langchain_ollama import OllamaEmbeddings
 
 class MemoryEngine:
     def __init__(self, index_path: str = "data/faiss_index.bin", metadata_path: str = "data/faiss_meta.json"):
@@ -16,9 +16,9 @@ class MemoryEngine:
 
     def _load_lazy(self):
         if not self._is_loaded:
-            print("Loading Embedding Model...")
-            self.model = SentenceTransformer('all-MiniLM-L6-v2') 
-            self.dimension = 384
+            print("Loading Embedding Model (Ollama)...")
+            self.model = OllamaEmbeddings(model="nomic-embed-text") 
+            self.dimension = 768
             
             # Try to load existing index and metadata
             if os.path.exists(self.index_path):
@@ -48,14 +48,14 @@ class MemoryEngine:
         if not docs:
             return
         
-        embeddings = self.model.encode(docs)
+        embeddings = self.model.embed_documents(docs)
         self.index.add(np.array(embeddings, dtype='float32'))
         self.documents.extend(docs)
         # Save usually happens here or manually
         
     def search(self, query: str, k: int = 3) -> List[str]:
         self._load_lazy()
-        query_vector = self.model.encode([query])
+        query_vector = self.model.embed_documents([query])
         distances, indices = self.index.search(np.array(query_vector, dtype='float32'), k)
         
         results = []
