@@ -20,9 +20,10 @@ load_dotenv()
 trace.set_tracer_provider(TracerProvider())
 tracer = trace.get_tracer(__name__)
 # Export traces to console for now (can be swapped for LangSmith/OTLP)
-trace.get_tracer_provider().add_span_processor(
-    BatchSpanProcessor(ConsoleSpanExporter())
-)
+# trace.get_tracer_provider().add_span_processor(
+#     BatchSpanProcessor(ConsoleSpanExporter())
+# )
+
 
 # Initialize Graph in lifespan
 app_graph = None
@@ -108,22 +109,25 @@ async def chat(request: ChatRequest):
         # Contextual log for the entire request
         with logger.contextualize(session_id=request.session_id):
             logger.info("Starting graph execution")
-            output = await asyncio.wait_for(app_graph.ainvoke(input_state, config=config), timeout=42.0)
+            output = await app_graph.ainvoke(input_state, config=config)
             
             # Get the last message from the last agent
-            messages = output["messages"]
-            last_message = messages[-1]
+            messages = output.get("messages", [])
+            last_message = messages[-1] if messages else HumanMessage(content="No response generated")
             
+            # EXTRAI OS DADOS PUROS DO ESTADO (Injetados pelo Analyst/Polars)
             raw_data = output.get("raw_data_context", None)
             
             logger.info(f"Graph execution complete. Agent: {last_message.name if hasattr(last_message, 'name') else 'unknown'}")
             
+            # O NOVO CONTRATO HTTP (Separação estrita UI/Data)
             return {
-                "response": last_message.content,
+                "response": last_message.content,  # Apenas texto fluido humano
+                "visual_data": raw_data,           # O frontend vai ler isso para gerar o gráfico diretamente!
                 "agent": last_message.name if hasattr(last_message, "name") else "unknown",
-                "visual_data": raw_data,
                 "status": "success"
             }
+
     except asyncio.TimeoutError:
         with logger.contextualize(session_id=request.session_id):
             logger.warning(f"Timeout (42s) reached for message: {request.message[:50]}")

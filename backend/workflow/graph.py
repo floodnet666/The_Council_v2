@@ -73,51 +73,47 @@ async def analyst_node(state: AgentState):
         file_path = state.get("active_file")
         messages = list(state["messages"])
         last_user_message = next((m for m in reversed(messages) if isinstance(m, HumanMessage)), messages[-1])
-        last_user_query = last_user_message.content
+        current_input = last_user_message.content
+        syntax_context = ""
         
-        logger.info("Executing Analyst Agent (Deterministic AST Mode)")
-        try:
-            # We no longer request generic python code, we cast strictly into Pydantic models.
-            state_update = await analyst_agent.run_conversational(last_user_query, file_path)
-            # The agent returns state updates dict
-            return state_update
-            
-        except Exception as e:
-            logger.error(f"Error in analyst_node: {e}")
-            return {
-                "messages": [AIMessage(content=f"Error executing analysis: {e}", name="analyst")]
-            }
+        retry_count = 0
+        max_retries = 3
+        
+        while retry_count <= max_retries:
+            try:
+                logger.info(f"Executing Analyst Agent (Attempt {retry_count + 1})")
+                state_update = await analyst_agent.run(current_input, file_path, syntax_context=syntax_context)
+                return state_update
+            except Exception as e:
+                logger.error(f"Error in analyst_node: {e}")
+                retry_count += 1
+                if retry_count > max_retries:
+                    return {
+                        "messages": [AIMessage(content=f"Error executing analysis: {e}", name="analyst")]
+                    }
+
 
 async def reflection_node(state: AgentState):
     """
-    Evaluates Analyst's response. Did it leak JSON array inside the chat response?
-    If so, routes back to analyst to fix it. Otherwise -> END.
+    Atua como o 'Editor-Chefe'. Verifica se a mensagem final
+    gerada pelo analista tem qualidade sênior e não vazou dados estruturados.
     """
     with tracer.start_as_current_span("reflection_node"):
-        last_message = state["messages"][-1]
+        last_message = state["messages"][-1].content
         
-        if last_message.name != "analyst":
-            return {"next_node": "END"}
-            
-        content = last_message.content
-        logger.info("Running Reflection on Analyst output...")
+        logger.info("Executando Reflection Node (Supervisor)")
         
-        # Simple heuristic check for prompt glue (JSON array `[` or `{...}` inside text)
-        has_json_array = re.search(r'\[[\s\n]*\{.*\}[\s\n]*\]', content, re.DOTALL)
-        has_json_block = "```json" in content
-        
-        if has_json_array or has_json_block:
-            logger.warning("Reflection Failed: Analyst leaked JSON or Raw Data in conversation response. Forcing Rewrite.")
-            correction_message = SystemMessage(
-                content="CRITICAL SYSTEM FEEDBACK: You leaked raw JSON data or JSON code blocks into the response text. NEVER output the raw data directly in the chat string. Rewrite your previous message to just talk about the conclusions fluently without pasting the json payload. I repeat: No JSON."
-            )
+        # Heurística de segurança
+        if "```json" in last_message or "{" in last_message or "ANALYSIS_DATA:" in last_message:
+            logger.warning("Reflection detectou vazamento de dados estruturados na conversa. Exigindo reescrita.")
             return {
-                "messages": [correction_message],
-                "next_node": "analyst"  # Go back
+                "messages": [SystemMessage(content="SUPERVISOR OVERRIDE: Your last message leaked raw JSON or dictionary syntax. Rewrite it as a fluent human response. DO NOT include raw data structures.")],
+                "next_node": "analyst"
             }
-        else:
-            logger.info("Reflection Passed: Analyst response is clean and human-like.")
-            return {"next_node": "END"}
+            
+        logger.info("Resposta conversacional aprovada pelo Supervisor.")
+        return {"next_node": "END"}
+
 
 async def librarian_node(state: AgentState):
     with tracer.start_as_current_span("librarian_node"):
@@ -195,18 +191,18 @@ async def create_graph():
         }
     )
     
-    # Analyst goes to Reflection
     workflow.add_edge("analyst", "reflection")
     
-    # Reflection decides either to fix Analyst or STOP
+    # O nó de reflexão decide se volta pro analista ou finaliza
     workflow.add_conditional_edges(
         "reflection",
-        reflection_decision,
+        lambda state: state.get("next_node", "END"),
         {
-            "analyst": "analyst",
+            "analyst": "analyst", # Loop de correção ativado
             "END": END
         }
     )
+
     
     # Other agents end directly
     workflow.add_edge("librarian", END)
