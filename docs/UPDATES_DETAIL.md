@@ -73,6 +73,32 @@ Comprehensive details of recent features added to synchronize backend intelligen
   - **After**: `return True` (returns a `boolean`)
   - **Reason**: O chamador (`AnalystAgent.run()`) avaliava o retorno com `if not success:`, o que dispara implicitamente `bool(LazyFrame)` gerando `TypeError: the truth value of a LazyFrame is ambiguous`. Retornar `True` previne esse crash mantendo o fluxo correto.
 
+---
+
+## 8. Arquitetura Determinística e Falso Positivo (2026-03-19)
+
+### 📌 `workflow/state.py`
+- **[MODIFY]** **AgentState**: Adicionado `raw_data_context` (Dict) e `visual_schema` (Dict) para isolar dados brutos do diálogo de texto fluido.
+
+### 📌 `schemas/operations.py` [NEW]
+- **[ADD]** **PolarsOperation (Pydantic)**: Criada a AST estrita para mapear intenções do LLM para operações determinísticas Polars (`aggregation`, `group_by`, `top_n`), banindo Regex.
+
+### 📌 `engines/query_engine.py`
+- **[MODIFY]** **execute_deterministic_operation**: Reescrevido para ler exclusivamente o objeto `PolarsOperation` e executar chamadas nativas do Polars, removendo dependência de Regex Text-Search.
+
+### 📌 `agents/analyst_agent.py`
+- **[MODIFY]** **run_conversational**: Refatorado para fluxo em 3 etapas:
+    1. `_extract_deterministic_intent`: Bind LLM + Pydantic para preencher `PolarsOperation`.
+    2. Execução Determinística via QueryEngine.
+    3. `_generate_fluid_explanation`: Geração de texto humano livre de JSON.
+
+### 📌 `workflow/graph.py`
+- **[ADD]** **reflection_node**: Nó de segurança cíclico que valida se o AnalystAgent vazou JSON na resposta. Se detectar sintaxe `{}` ou `[]`, força a reescrita antes da saída.
+
+### 📌 `main.py`
+- **[MODIFY]** **/chat endpoint**: Atualizado para retornar `visual_data` incorporando `raw_data_context` separado de `response`, fixando o contrato de API.
+
+
 ### 📌 `query_engine.py`
 - **[FIX]** **execute_group_by NameError**: Moveu a definição de `schema = self.df.collect_schema()` para o início do método `execute_group_by`.
   - **Before**: `schema` era passado para `_extract_filter_expr(..., schema=schema)` antes de ser definido.

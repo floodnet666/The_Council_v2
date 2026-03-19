@@ -114,11 +114,14 @@ async def chat(request: ChatRequest):
             messages = output["messages"]
             last_message = messages[-1]
             
+            raw_data = output.get("raw_data_context", None)
+            
             logger.info(f"Graph execution complete. Agent: {last_message.name if hasattr(last_message, 'name') else 'unknown'}")
             
             return {
                 "response": last_message.content,
                 "agent": last_message.name if hasattr(last_message, "name") else "unknown",
+                "visual_data": raw_data,
                 "status": "success"
             }
     except asyncio.TimeoutError:
