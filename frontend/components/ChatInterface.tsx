@@ -8,7 +8,11 @@ type Message = {
     role: "user" | "assistant";
     content: string;
     agent?: string;
+    visualData?: any;
+    visualConfig?: any;
 };
+
+
 
 export default function ChatInterface() {
     const [messages, setMessages] = useState<Message[]>([]);
@@ -107,8 +111,12 @@ export default function ChatInterface() {
             const aiMsg: Message = {
                 role: "assistant",
                 content: data.response,
-                agent: data.agent
+                agent: data.agent,
+                visualData: data.visual_data,
+                visualConfig: data.visual_config
             };
+
+
             setMessages((prev) => [...prev, aiMsg]);
 
         } catch (error) {
@@ -122,6 +130,26 @@ export default function ChatInterface() {
 
     const renderContent = (msg: Message) => {
         const content = msg.content;
+
+        // Se houver dados visuais puros
+        if (msg.visualData) {
+            // Caso 1: Gráfico Configurado
+            if (msg.visualConfig) {
+                return (
+                    <div className="space-y-4 w-full">
+                        <p className="text-sm leading-relaxed whitespace-pre-wrap">{content}</p>
+                        <ChartRenderer config={msg.visualConfig} data={msg.visualData} />
+                    </div>
+                );
+            }
+            // Caso 2: Tabela Simples (Fallback)
+            return (
+                <div className="space-y-4 w-full">
+                    <p className="text-sm leading-relaxed whitespace-pre-wrap">{content}</p>
+                    <DataTable data={msg.visualData} />
+                </div>
+            );
+        }
 
         // 1. Handle LIBRARIAN_RESPONSE
         if (content.includes("LIBRARIAN_RESPONSE:\n")) {
@@ -137,56 +165,10 @@ export default function ChatInterface() {
             );
         }
 
-        // 2. Handle CHART_JSON
-        if (content.includes("CHART_JSON:")) {
-            const marker = "CHART_JSON:";
-            const splitPoint = content.indexOf(marker);
-            const preText = content.substring(0, splitPoint).trim();
-            const postMarker = content.substring(splitPoint + marker.length);
-
-            const jsonMatch = postMarker.match(/^(\{.*?\})(\n\n|$)/s);
-            if (jsonMatch) {
-                const spec = jsonMatch[1];
-                const remaining = postMarker.substring(jsonMatch[0].length).trim();
-
-                return (
-                    <div className="space-y-4 w-full min-w-[300px]">
-                        {preText && <p className="text-sm leading-relaxed">{preText}</p>}
-                        <ChartRenderer spec={spec} />
-                        {remaining && <p className="text-sm border-l-2 border-[var(--color-neon-blue)] pl-3 text-gray-400 italic">{remaining}</p>}
-                    </div>
-                );
-            }
-        }
-
-        // 3. Handle ANALYSIS_DATA
-        if (content.includes("ANALYSIS_DATA:\n")) {
-            const marker = "ANALYSIS_DATA:\n";
-            const splitPoint = content.indexOf(marker);
-            const preText = content.substring(0, splitPoint).trim();
-            const postMarker = content.substring(splitPoint + marker.length);
-
-            const jsonMatch = postMarker.match(/^(\{.*?\})(\n\n|$|---)/s);
-            if (jsonMatch) {
-                const dataJson = jsonMatch[1];
-                const remaining = postMarker.substring(jsonMatch[0].length).replace(/^---\n/, "").trim();
-
-                return (
-                    <div className="space-y-4 w-full">
-                        {preText && <p className="text-sm leading-relaxed">{preText}</p>}
-                        <DataTable dataJson={dataJson} />
-                        {remaining && (
-                            <div className="pt-2 border-t border-[var(--color-glass-border)]">
-                                <p className="text-sm leading-relaxed whitespace-pre-wrap">{remaining}</p>
-                            </div>
-                        )}
-                    </div>
-                );
-            }
-        }
-
         return <p className="text-sm leading-relaxed whitespace-pre-wrap">{content}</p>;
     };
+
+
 
     return (
         <section className="flex-1 flex flex-col relative h-[calc(100vh-6rem)]">

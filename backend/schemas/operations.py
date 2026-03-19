@@ -21,3 +21,8 @@ class PolarsOperation(BaseModel):
         default=True,
         description="True if asking for 'top', 'highest', 'best'. False if 'bottom', 'lowest', 'worst'."
     )
+class ChartSchema(BaseModel):
+    chart_type: Literal["bar", "line", "pie", "scatter"] = Field(description="Tipo de gráfico")
+    x_axis: str = Field(description="Nome da coluna para o eixo X")
+    y_axis: str = Field(description="Nome da coluna para o eixo Y")
+    title: Optional[str] = Field(default=None, description="Título do gráfico")

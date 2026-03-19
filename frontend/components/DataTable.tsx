@@ -2,25 +2,9 @@
 
 import { useMemo } from "react";
 
-export default function DataTable({ dataJson }: { dataJson: string }) {
-    const data = useMemo(() => {
-        try {
-            const parsed = JSON.parse(dataJson);
-            const results = parsed.results || [];
-            
-            // If results is a single object (aggregation), wrap it in an array
-            if (results && typeof results === 'object' && !Array.isArray(results)) {
-                return [results];
-            }
-            
-            return Array.isArray(results) ? results : [];
-        } catch (e) {
-            console.error("Invalid Table JSON", e);
-            return [];
-        }
-    }, [dataJson]);
-
+export default function DataTable({ data }: { data: any[] }) {
     if (!data || data.length === 0) return null;
+
 
     const columns = Object.keys(data[0]);
 

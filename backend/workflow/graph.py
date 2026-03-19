@@ -137,8 +137,9 @@ async def designer_node(state: AgentState):
         file_path = state.get("active_file")
         last_message = state["messages"][-1].content
         logger.info("Executing Designer Agent")
-        response = await designer_agent.run(last_message, file_path)
-        return {"messages": [AIMessage(content=response, name="designer")]}
+        state_update = await designer_agent.run(last_message, file_path)
+        return state_update
+
 
 async def reporting_node(state: AgentState):
     with tracer.start_as_current_span("reporting_node"):

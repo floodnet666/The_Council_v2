@@ -120,13 +120,15 @@ async def chat(request: ChatRequest):
             
             logger.info(f"Graph execution complete. Agent: {last_message.name if hasattr(last_message, 'name') else 'unknown'}")
             
-            # O NOVO CONTRATO HTTP (Separação estrita UI/Data)
+            # O NOVO CONTRATO HTTP (Separação estrita UI/Data/Config)
             return {
                 "response": last_message.content,  # Apenas texto fluido humano
-                "visual_data": raw_data,           # O frontend vai ler isso para gerar o gráfico diretamente!
+                "visual_data": raw_data,           # O frontend vai ler isso para gerar a tabela/gráfico!
+                "visual_config": output.get("visual_schema"), # <-- NOVO
                 "agent": last_message.name if hasattr(last_message, "name") else "unknown",
                 "status": "success"
             }
+
 
     except asyncio.TimeoutError:
         with logger.contextualize(session_id=request.session_id):

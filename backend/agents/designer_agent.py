@@ -4,6 +4,7 @@ from engines.llm_engine import llm_engine
 from engines.data_engine import DataEngine
 from engines.visualization_engine import VisualizationEngine
 from engines.query_engine import QueryEngine
+from schemas.operations import ChartSchema
 import json
 from utils.json_utils import safe_json_dumps
 
@@ -14,47 +15,67 @@ class DesignerAgent:
         self.viz_engine = viz_engine
         self.query_engine = QueryEngine()
 
-    async def run(self, message: str, active_file: str = None) -> str:
+    async def run(self, message: str, active_file: str = None) -> Dict[str, Any]:
         if not active_file:
-            return "I need a dataset to create a chart. Please upload a file first."
+            return {
+                "messages": [AIMessage(content="I need a dataset to create a chart. Please upload a file first.", name="designer")]
+            }
             
         # Ensure data is loaded
         if self.data_engine.df is None or self.data_engine.metadata.get("source") != active_file:
             success = self.data_engine.load_data(active_file)
             if not success:
-                return f"Could not load data from {active_file}."
+                return {
+                    "messages": [AIMessage(content=f"Could not load data from {active_file}.", name="designer")]
+                }
         
         # Configure QueryEngine
         self.query_engine.set_dataframe(self.data_engine.df)
         
-        # Use LLM only to refine the query for the QueryEngine if needed, 
-        # or just pass the message directly to QueryEngine.
-        # QueryEngine is already smart enough to detect patterns.
-        
         try:
-            # 1. Execute deterministic query to get data for the chart
+            # 1. Execute deterministic query to get data for the chart 
+            # (Usamos a query bruta ou extraímos intent? O Designer confia no raw_data_context anterior se for o caso.
+            # Mas aqui ele executa de novo ou assume já ter dados?
+            # Para manter conformidade com passo 2 da prompt:)
             query_result = self.query_engine.execute_query(message)
             
             if "error" in query_result:
-                return f"Error preparing data for chart: {query_result['error']}"
+                return {
+                    "messages": [AIMessage(content=f"Error preparing data for chart: {query_result['error']}", name="designer")]
+                }
             
-            # 2. Generate chart spec using VisualizationEngine
-            # We can use the original message as title
-            spec = self.viz_engine.create_chart_from_query_result(query_result, title=message)
-            
-            # 3. Use LLM to provide a brief context/description of the chart being shown
+            # 2. Usar LLM estruturado para extrair a intenção visual
             prompt = f"""
-            You are the Designer Agent. I have generated a chart for the user's request: "{message}".
-            The data used was: {safe_json_dumps(query_result.get('results', [])[:3], indent=2)}
+            Você é um Designer Agent. Sua função é mapear a requisição de visualização do usuário para um ChartSchema rígido.
             
-            Provide a very brief (1 sentence) professional description of what this chart shows.
+            Colunas Disponíveis: {self.data_engine.df.columns}
+            Dados Amostrais (RAG): {safe_json_dumps(query_result.get('results', [])[:3], indent=2)}
+            
+            Requisição: "{message}"
+            
+            Retorne o ChartSchema correspondente para renderização nativa.
+            """
+            
+            llm_structured = self.llm.with_structured_output(ChartSchema)
+            chart_config = await llm_structured.ainvoke(prompt)
+            
+            # 3. Gerar descrição simples
+            desc_prompt = f"""
+            Você é o Designer Agent. Foi gerada uma configuração de gráfico: {chart_config.model_dump()}.
+            Crie uma descrição fluida e breve (1 frase) sobre o que este visualizador demonstra.
             """
             try:
-                description = (await self.llm.ainvoke(prompt)).content
+                description = (await self.llm.ainvoke(desc_prompt)).content
             except:
-                description = "Here is the visualization you requested."
-            
-            return f"CHART_JSON:{spec}\n\n{description}"
+                description = "Aqui está a visualização solicitada baseada nos seus dados."
+                
+            return {
+                "messages": [AIMessage(content=description, name="designer")],
+                "visual_schema": chart_config.model_dump()
+            }
             
         except Exception as e:
-            return f"I encountered an error while designing your chart: {e}"
+            return {
+                "messages": [AIMessage(content=f"I encountered an error while designing your chart: {e}", name="designer")]
+            }
+
