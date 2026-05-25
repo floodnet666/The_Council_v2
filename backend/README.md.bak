@@ -23,7 +23,7 @@ uv sync
 
 ### 2. Iniciar Ollama
 ```bash
-ollama run hf.co/mradermacher/gemma-4-E2B-it-uncensored-GGUF:Q8_0
+ollama pull qwen2.5-coder:1.5b
 ```
 
 ### 3. Iniciar Backend

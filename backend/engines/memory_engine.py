@@ -3,7 +3,7 @@ import numpy as np
 import os
 import json
 from typing import List, Dict, Any
-from langchain_ollama import OllamaEmbeddings
+from langchain_community.embeddings import HuggingFaceEmbeddings
 
 class MemoryEngine:
     def __init__(self, index_path: str = "data/faiss_index.bin", metadata_path: str = "data/faiss_meta.json"):
@@ -17,8 +17,8 @@ class MemoryEngine:
     def _load_lazy(self):
         if not self._is_loaded:
             print("Loading Embedding Model (Ollama)...")
-            self.model = OllamaEmbeddings(model="nomic-embed-text") 
-            self.dimension = 768
+            self.model = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+            self.dimension = 384
             
             # Try to load existing index and metadata
             if os.path.exists(self.index_path):

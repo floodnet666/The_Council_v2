@@ -33,23 +33,18 @@ class DesignerAgent:
         self.query_engine.set_dataframe(self.data_engine.df)
         
         try:
-            # 1. Execute deterministic query to get data for the chart 
-            # (Usamos a query bruta ou extraímos intent? O Designer confia no raw_data_context anterior se for o caso.
-            # Mas aqui ele executa de novo ou assume já ter dados?
-            # Para manter conformidade com passo 2 da prompt:)
-            query_result = self.query_engine.execute_query(message)
-            
-            if "error" in query_result:
-                return {
-                    "messages": [AIMessage(content=f"Error preparing data for chart: {query_result['error']}", name="designer")]
-                }
-            
+            # Coleta uma amostra de dados para contexto do LLM
+            try:
+                sample_data = self.data_engine.df.head(3).collect().to_dicts()
+            except Exception as e:
+                sample_data = []
+
             # 2. Usar LLM estruturado para extrair a intenção visual
             prompt = f"""
             Você é um Designer Agent. Sua função é mapear a requisição de visualização do usuário para um ChartSchema rígido.
             
             Colunas Disponíveis: {self.data_engine.df.columns}
-            Dados Amostrais (RAG): {safe_json_dumps(query_result.get('results', [])[:3], indent=2)}
+            Dados Amostrais (RAG): {safe_json_dumps(sample_data, indent=2)}
             
             Requisição: "{message}"
             

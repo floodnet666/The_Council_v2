@@ -55,7 +55,7 @@ graph TD
 3. **Configure Ollama**:
    Ensure `ollama` is running and pull the required model:
    ```bash
-   ollama run hf.co/mradermacher/gemma-4-E2B-it-uncensored-GGUF:Q8_0
+   ollama pull qwen2.5-coder:1.5b
    ```
 
 ## 📖 Deep Documentation

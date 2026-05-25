@@ -12,7 +12,7 @@
    - ✅ `GeneralAgent` - General conversation handling
 
 2. **Engine Layer**
-   - ✅ `LLMEngine` - Ollama integration (hf.co/mradermacher/gemma-4-E2B-it-uncensored-GGUF:Q8_0)
+   - ✅ `LLMEngine` - Ollama integration (qwen2.5:1.5b)
    - ✅ `DataEngine` - Polars-based data processing
    - ✅ `MemoryEngine` - FAISS vector store for RAG
    - ✅ `VisualizationEngine` - Plotly chart generation
@@ -109,7 +109,7 @@ uv run test_lib_simple.py
 ## 📝 Configuration
 
 ### Current LLM Model
-- **Model**: hf.co/mradermacher/gemma-4-E2B-it-uncensored-GGUF:Q8_0
+- **Model**: qwen2.5:1.5b
 - **Provider**: Ollama (localhost:11434)
 - **Temperature**: 0.1
 

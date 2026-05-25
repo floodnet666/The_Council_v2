@@ -46,12 +46,16 @@ class QueryEngine:
                 sort_col = f"{target[0]}_sum" if target else "count"
 
                 
+                
+                descending = True if operation.sort_descending is None else operation.sort_descending
+                limit_val = 10 if operation.limit is None else operation.limit
+
                 result = (
                     self.df
                     .group_by(operation.group_column)
                     .agg(agg_exprs)
-                    .sort(sort_col, descending=operation.sort_descending)
-                    .limit(operation.limit)
+                    .sort(sort_col, descending=descending)
+                    .limit(limit_val)
                     .collect()
                 )
                 return {
@@ -66,10 +70,13 @@ class QueryEngine:
                     return {"error": "target_columns is required for top_n sorting"}
                     
                 sort_col = operation.target_columns[0]
+                descending = True if operation.sort_descending is None else operation.sort_descending
+                limit_val = 10 if operation.limit is None else operation.limit
+
                 result = (
                     self.df
-                    .sort(sort_col, descending=operation.sort_descending)
-                    .limit(operation.limit)
+                    .sort(sort_col, descending=descending)
+                    .limit(limit_val)
                     .collect()
                 )
                 return {
