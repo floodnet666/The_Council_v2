@@ -1,13 +1,9 @@
-import os
 import time
 import uuid
-import json
 import traceback
-import requests
 import polars as pl
 import numpy as np
 import chromadb
-from bs4 import BeautifulSoup
 from sentence_transformers import SentenceTransformer
 from langchain_ollama import ChatOllama
 from langchain_core.messages import SystemMessage, HumanMessage

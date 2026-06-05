@@ -1,7 +1,6 @@
 import asyncio
 import os
 import sys
-from pprint import pprint
 
 # Adiciona E:\The_Council_v2\backend ao PATH
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))

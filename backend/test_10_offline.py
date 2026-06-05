@@ -1,6 +1,5 @@
 import asyncio
 import time
-import json
 import os
 import sys
 
@@ -63,7 +62,7 @@ async def run_query(question: str, idx: int):
         }
 
 async def main():
-    print(f"Iniciando Teste Robusto OFFLINE (Direct Graph): 10 Perguntas")
+    print("Iniciando Teste Robusto OFFLINE (Direct Graph): 10 Perguntas")
     print(f"File: {FILE_PATH}\n")
     
     results = []

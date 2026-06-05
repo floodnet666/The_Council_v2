@@ -1,15 +1,15 @@
 "use client";
 
-import { useState, useRef, useEffect, useMemo } from "react";
-import ChartRenderer from "@/components/ChartRenderer";
+import { useState, useRef, useEffect } from "react";
+import ChartRenderer, { ChartConfig } from "@/components/ChartRenderer";
 import DataTable from "@/components/DataTable";
 
 type Message = {
     role: "user" | "assistant";
     content: string;
     agent?: string;
-    visualData?: any;
-    visualConfig?: any;
+    visualData?: Record<string, unknown>[];
+    visualConfig?: ChartConfig;
 };
 
 

@@ -8,26 +8,38 @@ const Plot = dynamic(() => import("react-plotly.js"), {
   loading: () => <div className="h-64 animate-pulse bg-gray-800 rounded-lg flex items-center justify-center text-xs text-gray-500">Initializing Chart Engine...</div> 
 });
 
-export default function ChartRenderer({ config, data }: { config: any, data: any[] }) {
-    if (!config || !data || data.length === 0) return <div className="text-red-500 text-xs p-2 border border-red-900/30 rounded">Invalid Chart Specification</div>;
+export interface ChartConfig {
+    chart_type: string;
+    title?: string;
+    x_axis: string;
+    y_axis: string;
+}
 
+export interface ChartRendererProps {
+    config: ChartConfig | null | undefined;
+    data: Record<string, unknown>[] | null | undefined;
+}
+
+export default function ChartRenderer({ config, data }: ChartRendererProps) {
     const plotData = useMemo(() => {
-        let trace: any = {
+        if (!config || !data || data.length === 0) return [];
+        
+        const trace: Record<string, unknown> = {
             type: config.chart_type,
             name: config.title || "Data"
         };
         
         if (config.chart_type === "pie") {
-            trace.labels = data.map((row: any) => row[config.x_axis]);
-            trace.values = data.map((row: any) => row[config.y_axis]);
+            trace.labels = data.map((row) => row[config.x_axis]);
+            trace.values = data.map((row) => row[config.y_axis]);
             trace.marker = { 
                 colors: ["#27272a", "#3f3f46", "#52525b", "#71717a", "#a1a1aa", "#d4d4d8", "#e4e4e7"] 
             };
             trace.textinfo = "percent";
             trace.hoverinfo = "label+percent+value";
         } else {
-            trace.x = data.map((row: any) => row[config.x_axis]);
-            trace.y = data.map((row: any) => row[config.y_axis]);
+            trace.x = data.map((row) => row[config.x_axis]);
+            trace.y = data.map((row) => row[config.y_axis]);
             trace.marker = { color: "#71717a", opacity: 0.8 }; // zinc-500
             
             if (config.chart_type === "scatter") {
@@ -41,6 +53,10 @@ export default function ChartRenderer({ config, data }: { config: any, data: any
         
         return [trace];
     }, [config, data]);
+
+    if (!config || !data || data.length === 0) {
+        return <div className="text-red-500 text-xs p-2 border border-red-900/30 rounded">Invalid Chart Specification</div>;
+    }
 
     return (
         <div className="w-full h-80 glass-panel rounded-xl overflow-hidden my-4">

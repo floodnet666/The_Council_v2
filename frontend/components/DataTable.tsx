@@ -1,8 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
-
-export default function DataTable({ data }: { data: any[] }) {
+export default function DataTable({ data }: { data: Record<string, unknown>[] }) {
     if (!data || data.length === 0) return null;
 
 
@@ -21,7 +19,7 @@ export default function DataTable({ data }: { data: any[] }) {
                     </tr>
                 </thead>
                 <tbody>
-                    {data.slice(0, 10).map((row: any, idx: number) => (
+                    {data.slice(0, 10).map((row, idx: number) => (
                         <tr key={idx} className="border-b border-[var(--color-glass-border)] hover:bg-[rgba(255,255,255,0.05)] transition-colors">
                             {columns.map(col => (
                                 <td key={col} className="p-3 text-sm text-gray-300">

@@ -1,6 +1,5 @@
-from typing import TypedDict, Annotated, List, Dict, Any, Union, Optional
+from typing import TypedDict, Annotated, List, Dict, Any, Optional
 from langchain_core.messages import BaseMessage
-import operator
 
 def manage_messages(left: List[BaseMessage], right: List[BaseMessage]) -> List[BaseMessage]:
     """Reducer for messages: preserves SystemPrompt at index 0 and truncates the oldest messages to prevent KV cache bloat."""

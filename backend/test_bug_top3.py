@@ -1,5 +1,4 @@
 import asyncio
-import os
 from engines.data_engine import DataEngine
 from agents.analyst_agent import AnalystAgent
 
@@ -18,7 +17,7 @@ async def main():
         res = await agent.run("quais top 3 produtos mais vendidos?", r"C:\Users\thiag\Downloads\online_shoppers.csv")
         print("\n--- AGENT RESPONSE ---")
         print(res)
-    except Exception as e:
+    except Exception:
         print("\n--- CRASHED ---")
         import traceback
         traceback.print_exc()

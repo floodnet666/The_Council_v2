@@ -1,4 +1,3 @@
-import polars as pl
 import time
 import os
 import sys

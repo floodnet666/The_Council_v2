@@ -1,6 +1,6 @@
 import polars as pl
 import re
-from typing import Dict, Any, List, Optional, Tuple, Literal
+from typing import Dict, Any, List, Tuple, Literal
 
 SemanticType = Literal["DATE", "ID", "MEASURE", "CATEGORY", "TEXT", "UNKNOWN"]
 
@@ -59,113 +59,84 @@ class SemanticEngine:
 
     def _infer_single_column(self, name: str, values: List[Any], dtype: str, is_eff_numeric: bool = False, is_eff_date: bool = False) -> Tuple[SemanticType, bool, str]:
         name_lower = name.lower()
-        
-        # 1. Initial clues from name
-        clues = []
-        for s_type, patterns in self.PATTERNS.items():
-            if any(re.search(p, name_lower) for p in patterns):
-                clues.append(s_type)
+        clues = [s_type for s_type, patterns in self.PATTERNS.items() if any(re.search(p, name_lower) for p in patterns)]
 
-        # 2. Data stats
-        unique_count = len(set(values)) if values else 0
         total_count = len(values)
-        cardinality_ratio = unique_count / total_count if total_count > 0 else 0
+        unique_count = len(set(values)) if values else 0
+        card_ratio = unique_count / total_count if total_count > 0 else 0
         
-        # Adaptive thresholds (Dynamic Adjustments)
-        min_id_ratio = 0.85 if total_count < 100 else 0.95 if total_count > 1000 else 0.9
-        max_cat_ratio = 0.3 if total_count < 100 else 0.15 if total_count > 1000 else 0.2
-        
-        has_leading_zeroes = False
         non_empty_str = [str(v) for v in values if str(v) and str(v).strip()]
-        if non_empty_str:
-            if any(s.startswith('0') and len(s) > 1 and s.isdigit() for s in non_empty_str):
-                has_leading_zeroes = True
+        has_leading_zeroes = bool(non_empty_str and any(s.startswith('0') and len(s) > 1 and s.isdigit() for s in non_empty_str))
         
         is_numeric = any(t in dtype for t in ["Int", "Float", "Decimal"]) or is_eff_numeric
         is_string = any(t in dtype for t in ["Utf8", "String"]) and not is_eff_numeric
         is_bool = "Bool" in dtype
         
-        # Decision Logic
-        final_type: SemanticType = "UNKNOWN"
-        ambiguous = False
-        reason = ""
-
-        # Check for DATE
         if "DATE" in clues or is_eff_date:
-            if is_numeric:
-                # Might be year/month
-                if all(isinstance(v, (int, float)) and 1900 <= v <= 2100 for v in values if v):
-                    final_type = "DATE"
-                else:
-                    final_type = "MEASURE"
-                    ambiguous = True
-                    reason = f"Column name suggests DATE but values are numeric outside typical year range."
-            elif is_string:
-                # Check for date pattern in string
-                if any(re.search(r'\d{2,4}[-/]\d{2}[-/]\d{2,4}', str(v)) for v in values if v):
-                    final_type = "DATE"
-                else:
-                    final_type = "TEXT"
-                    ambiguous = True
-                    reason = f"Column name suggests DATE but string values don't match date patterns."
-            else:
-                final_type = "DATE"
-        
+            final_type, ambig, reason = self._check_date(values, is_numeric, is_string)
         elif "ID" in clues or has_leading_zeroes:
-            if is_numeric:
-                if cardinality_ratio > min_id_ratio or unique_count > 20:
-                    final_type = "ID"
-                else:
-                    final_type = "CATEGORY" 
-                    ambiguous = True
-                    reason = f"Numeric ID with low cardinality ({unique_count} uniques) behaves more like a CATEGORY."
-            else:
-                final_type = "ID"
-
-        # Check for MEASURE
+            final_type, ambig, reason = self._check_id(unique_count, total_count, card_ratio, is_numeric)
         elif "MEASURE" in clues:
-            if is_numeric:
-                final_type = "MEASURE"
-            else:
-                final_type = "TEXT"
-                ambiguous = True
-                reason = f"Name suggests MEASURE but data is non-numeric."
-
-        # Check for CATEGORY
+            final_type, ambig, reason = self._check_measure(is_numeric)
         elif "CATEGORY" in clues:
-            if is_numeric and cardinality_ratio < max_cat_ratio:
-                final_type = "ID" 
-            else:
-                final_type = "CATEGORY"
-                if is_numeric and unique_count > (total_count * 0.5) and total_count > 10:
-                    ambiguous = True
-                    reason = f"Name suggests CATEGORY but numeric data has very high cardinality."
-
-        # Default fallback by data characteristics
+            final_type, ambig, reason = self._check_category(unique_count, total_count, card_ratio, is_numeric)
         else:
-            if is_numeric:
-                final_type = "MEASURE"
-            elif is_bool:
-                final_type = "CATEGORY"
-            elif is_string:
-                avg_len = sum(len(str(v)) for v in values) / total_count if total_count > 0 else 0
-                if unique_count < 500 and cardinality_ratio < 0.5:
-                    final_type = "CATEGORY"
-                elif "ID" in clues and cardinality_ratio > 0.8 and avg_len < 50:
-                    final_type = "ID"
-                elif cardinality_ratio > 0.9 and avg_len < 15: # Highly unique but very short might be an ID code
-                    final_type = "ID"
-                    ambiguous = True
-                    reason = "Inferred ID from short unique strings, but no name clue found."
-                else:
-                    final_type = "TEXT"
+            final_type, ambig, reason = self._fallback(values, total_count, unique_count, card_ratio, is_numeric, is_bool, is_string, clues)
 
-        # Final check: Conflict between clues
         if len(clues) > 1:
-            ambiguous = True
+            ambig = True
             reason = f"Conflicting name clues: {clues}"
 
-        return final_type, ambiguous, reason
+        return final_type, ambig, reason
+
+    def _check_date(self, values: List[Any], is_numeric: bool, is_string: bool) -> Tuple[SemanticType, bool, str]:
+        if is_numeric:
+            if all(isinstance(v, (int, float)) and 1900 <= v <= 2100 for v in values if v):
+                return "DATE", False, ""
+            return "MEASURE", True, "Column name suggests DATE but values are numeric outside typical year range."
+        if is_string:
+            if any(re.search(r'\d{2,4}[-/]\d{2}[-/]\d{2,4}', str(v)) for v in values if v):
+                return "DATE", False, ""
+            return "TEXT", True, "Column name suggests DATE but string values don't match date patterns."
+        return "DATE", False, ""
+
+    def _check_id(self, unique_count: int, total_count: int, card_ratio: float, is_numeric: bool) -> Tuple[SemanticType, bool, str]:
+        min_id_ratio = 0.85 if total_count < 100 else 0.95 if total_count > 1000 else 0.9
+        if is_numeric:
+            if card_ratio > min_id_ratio or unique_count > 20:
+                return "ID", False, ""
+            return "CATEGORY", True, f"Numeric ID with low cardinality ({unique_count} uniques) behaves more like a CATEGORY."
+        return "ID", False, ""
+
+    def _check_measure(self, is_numeric: bool) -> Tuple[SemanticType, bool, str]:
+        if is_numeric:
+            return "MEASURE", False, ""
+        return "TEXT", True, "Name suggests MEASURE but data is non-numeric."
+
+    def _check_category(self, unique_count: int, total_count: int, card_ratio: float, is_numeric: bool) -> Tuple[SemanticType, bool, str]:
+        max_cat_ratio = 0.3 if total_count < 100 else 0.15 if total_count > 1000 else 0.2
+        if is_numeric and card_ratio < max_cat_ratio:
+            return "ID", False, ""
+        
+        if is_numeric and unique_count > (total_count * 0.5) and total_count > 10:
+            return "CATEGORY", True, "Name suggests CATEGORY but numeric data has very high cardinality."
+        return "CATEGORY", False, ""
+
+    def _fallback(self, values: List[Any], total_count: int, unique_count: int, card_ratio: float, is_numeric: bool, is_bool: bool, is_string: bool, clues: List[str]) -> Tuple[SemanticType, bool, str]:
+        if is_numeric:
+            return "MEASURE", False, ""
+        if is_bool:
+            return "CATEGORY", False, ""
+        if is_string:
+            avg_len = sum(len(str(v)) for v in values) / total_count if total_count > 0 else 0
+            if unique_count < 500 and card_ratio < 0.5:
+                return "CATEGORY", False, ""
+            if "ID" in clues and card_ratio > 0.8 and avg_len < 50:
+                return "ID", False, ""
+            if card_ratio > 0.9 and avg_len < 15:
+                return "ID", True, "Inferred ID from short unique strings, but no name clue found."
+            return "TEXT", False, ""
+        return "UNKNOWN", False, ""
 
     def _map_to_technical_type(self, semantic_type: SemanticType, current_dtype: str, sample_values: List[Any], is_eff_numeric: bool = False) -> str:
         """Suggests the best technical Polars type."""

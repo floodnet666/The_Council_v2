@@ -5,7 +5,6 @@ Simula interacao completa: upload de dados -> query analitica -> resposta
 import asyncio
 import polars as pl
 from engines.data_engine import DataEngine
-from engines.query_engine import QueryEngine
 from agents.analyst_agent import AnalystAgent
 import json
 

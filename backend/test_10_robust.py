@@ -1,6 +1,5 @@
 import requests
 import time
-import json
 import os
 
 PORTS = [8000, 8001]
@@ -40,7 +39,7 @@ def main():
         return
 
     api_url = f"http://localhost:{port}/chat"
-    print(f"Iniciando Teste Robusto: 10 Perguntas")
+    print("Iniciando Teste Robusto: 10 Perguntas")
     print(f"Alvo: {api_url}")
     print(f"File: {FILE_PATH}\n")
 

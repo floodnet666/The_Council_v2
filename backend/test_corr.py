@@ -18,7 +18,7 @@ async def main():
     try:
         response = await analyst.run("Existe correlação entre BounceRates e ExitRates?", active_file=dataset_path)
         print("Response:", response)
-    except Exception as e:
+    except Exception:
         print("\n=== STACK TRACE ===")
         traceback.print_exc()
 

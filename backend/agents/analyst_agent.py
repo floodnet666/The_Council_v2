@@ -1,7 +1,6 @@
 """
 Analyst Agent - Rewrite for The Council 2.0 Architectural Overhaul
 """
-from typing import Dict, Any, List
 from langchain_core.messages import AIMessage
 from engines.llm_engine import llm_engine
 from engines.data_engine import DataEngine
@@ -10,8 +9,6 @@ from schemas.operations import DualSqlOperation
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from utils.logging_config import logger
-import json
-import re
 
 class AnalystAgent:
     def __init__(self, data_engine: DataEngine):

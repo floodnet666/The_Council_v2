@@ -1,14 +1,11 @@
-import pytest
 from fastapi.testclient import TestClient
 import os
-import json
 import polars as pl
 
 # 1. INJEÇÃO DO MODELO ANTES DAS IMPORTAÇÕES PARA GARANTIR OVERRIDE
 os.environ["OLLAMA_MODEL"] = "hf.co/mradermacher/gemma-4-E2B-it-uncensored-GGUF:Q8_0"
 
 from main import app
-from engines.data_engine import PandasSyntaxDetectedError
 
 def test_gemma_tool_calling_and_polars_determinism():
     """
@@ -72,7 +69,7 @@ def test_gemma_tool_calling_and_polars_determinism():
             assert sum_key is not None, "Nenhuma coluna agregada encontrada."
             assert monitor_data[sum_key] == 3000, f"Erro de agregação SQL. Encontrado: {monitor_data[sum_key]} em vez de 3000."
             
-            print(f"\n[SUCESSO] Gemma-4-E2B-it-uncensored processou Tool Calling (SQL Context) corretamente!")
+            print("\n[SUCESSO] Gemma-4-E2B-it-uncensored processou Tool Calling (SQL Context) corretamente!")
             print(f"[SUCESSO] Resposta fluida gerada: {chat_text[:120]}...")
 
         finally:

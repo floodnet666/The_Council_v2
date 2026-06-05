@@ -1,5 +1,4 @@
-from typing import Dict, Any, List, Optional
-import json
+from typing import Dict, Any, List
 from utils.json_utils import safe_json_dumps
 
 

@@ -7,7 +7,6 @@ em um arquivo Markdown para análise humana posterior.
 """
 
 import os
-import sys
 import time
 import traceback
 from datetime import datetime
@@ -94,11 +93,11 @@ def run_audit():
             results = memory_engine.search(question, k=2)
             query_time = time.time() - start_query_time
             
-            markdown_content += f"- **Status de Execução:** ✅ SUCESSO\n"
+            markdown_content += "- **Status de Execução:** ✅ SUCESSO\n"
             markdown_content += f"- **Tempo de Busca:** {query_time:.4f} segundos\n"
             
             if not results:
-                markdown_content += f"- **Aviso:** ⚠️ A busca não retornou nenhum erro, mas a lista de resultados está VAZIA. A base do FAISS pode não conter dados.\n\n"
+                markdown_content += "- **Aviso:** ⚠️ A busca não retornou nenhum erro, mas a lista de resultados está VAZIA. A base do FAISS pode não conter dados.\n\n"
                 empty_count += 1
                 continue
                 
@@ -126,16 +125,16 @@ def run_audit():
             
             print(f"[ERRO CRÍTICO] Falha no teste {i}. Verifique o relatório.")
             
-            markdown_content += f"- **Status de Execução:** ❌ FALHA CRÍTICA\n"
+            markdown_content += "- **Status de Execução:** ❌ FALHA CRÍTICA\n"
             markdown_content += f"- **Tempo até a Falha:** {query_time:.4f} segundos\n\n"
-            markdown_content += f"#### 🛑 Stack Trace do Erro\n"
+            markdown_content += "#### 🛑 Stack Trace do Erro\n"
             markdown_content += f"```text\n{error_trace}\n```\n\n"
             
             # Análise heurística do erro para ajudar no diagnóstico
             if "dimension" in str(e).lower() or "mismatch" in str(e).lower() or "shape" in str(e).lower():
-                markdown_content += f"> **💡 Diagnóstico Preliminar:** O erro sugere uma incompatibilidade de dimensões nos embeddings. O modelo usado para consultar (ex: Nomic 768d) diverge do modelo usado para popular o índice (ex: MiniLM 384d).\n\n"
+                markdown_content += "> **💡 Diagnóstico Preliminar:** O erro sugere uma incompatibilidade de dimensões nos embeddings. O modelo usado para consultar (ex: Nomic 768d) diverge do modelo usado para popular o índice (ex: MiniLM 384d).\n\n"
             elif "not found" in str(e).lower() or "load" in str(e).lower() or "path" in str(e).lower():
-                markdown_content += f"> **💡 Diagnóstico Preliminar:** O arquivo do índice FAISS (`.bin`) ou os metadados não foram encontrados no caminho especificado pelo `MemoryEngine`.\n\n"
+                markdown_content += "> **💡 Diagnóstico Preliminar:** O arquivo do índice FAISS (`.bin`) ou os metadados não foram encontrados no caminho especificado pelo `MemoryEngine`.\n\n"
 
         markdown_content += "---\n\n"
         
@@ -158,7 +157,7 @@ def run_audit():
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         f.write(final_content)
         
-    print(f"\n[✅ AUDITORIA CONCLUÍDA]")
+    print("\n[✅ AUDITORIA CONCLUÍDA]")
     print(f"- Sucessos: {success_count}")
     print(f"- Vazios: {empty_count}")
     print(f"- Erros: {error_count}")

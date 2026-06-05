@@ -1,14 +1,11 @@
-import os
 import time
 import uuid
 import json
-import traceback
 import polars as pl
 import numpy as np
 import chromadb
 from sentence_transformers import SentenceTransformer
 from langchain_ollama import ChatOllama
-from langchain_core.messages import SystemMessage, HumanMessage
 
 # --- CONFIGURAÇÃO ---
 CHROMA_PATH = "./chroma_memory"
@@ -227,9 +224,9 @@ class UltimateKnowledgeBuilder:
         import time
         
         for q_pt in BASE_QUESTIONS:
-            print(f"\n" + "="*50)
+            print("\n" + "="*50)
             print(f"🛠️  Codificando: {q_pt}")
-            print(f"==========================================")
+            print("==========================================")
             
             # Geração de Código Sênior com Timeout
             gen_prompt = f"Gere APENAS o código Polars (variável 'result' a partir de 'lf') para responder: {q_pt}. Contexto: {SCHEMA_CONTEXT}"
@@ -258,13 +255,13 @@ class UltimateKnowledgeBuilder:
                     print(f"   ⏱️ Tempo Geração: {gen_time:.2f}s")
                     print(f"📥 Código Recebido:\n---\n{code}\n---")
                 except concurrent.futures.TimeoutError:
-                    print(f"   ⚠️ Timeout na Geração LLM para Código (45s excedidos). Pulando.")
+                    print("   ⚠️ Timeout na Geração LLM para Código (45s excedidos). Pulando.")
                     continue
                 except Exception as e:
                     print(f"   ❌ Erro na Geração: {e}")
                     continue
                     
-            print(f"👉 Validando Código no Sandbox...")
+            print("👉 Validando Código no Sandbox...")
             start_test = time.time()
             test_res = self.test_code(code)
             test_time = time.time() - start_test
@@ -277,7 +274,7 @@ class UltimateKnowledgeBuilder:
                 def get_trans():
                     return self.get_translations(q_pt)
                 
-                print(f"👉 Traduzindo Pergunta...")
+                print("👉 Traduzindo Pergunta...")
                 start_trans = time.time()
                 
                 with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor_trans:

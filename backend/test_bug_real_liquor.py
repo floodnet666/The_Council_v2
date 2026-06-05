@@ -1,5 +1,4 @@
 import asyncio
-import os
 from langchain_core.messages import AIMessage
 from workflow.graph import create_graph
 
@@ -22,7 +21,7 @@ async def main():
              "active_file": r"uploads\Liquor_Sales.csv",
              "messages": [AIMessage(content="quais top 3 produtos mais vendios?")]
         })
-    except Exception as e:
+    except Exception:
         print("\n--- CRASHED ---")
     
 if __name__ == "__main__":

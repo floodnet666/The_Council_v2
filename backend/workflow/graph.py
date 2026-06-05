@@ -1,9 +1,7 @@
 from langgraph.graph import StateGraph, END
-from typing import Dict, Any, Literal
+from typing import Literal
 from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
-import json
 import os
-import re
 
 from .state import AgentState
 from agents.router_agent import RouterAgent
@@ -18,9 +16,7 @@ from opentelemetry import trace
 tracer = trace.get_tracer(__name__)
 
 from engines.data_engine import DataEngine
-from engines.memory_engine import MemoryEngine
 from engines.visualization_engine import VisualizationEngine
-from engines.llm_engine import llm_engine
 
 # Global instances (simple demo persistence)
 data_engine = DataEngine()

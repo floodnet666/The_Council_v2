@@ -9,7 +9,6 @@ import time
 tracer = trace.get_tracer(__name__)
 
 
-import json
 import numpy as np
 from sklearn.cluster import KMeans
 from sklearn.ensemble import IsolationForest
@@ -87,12 +86,81 @@ class DataEngine:
             # Fallback seguro para auto-parse se o formato for indefinido
             return pl.col(col_name).str.to_datetime(strict=False)
 
+    def _read_file(self, file_path: str) -> pl.LazyFrame:
+        if file_path.endswith('.csv'):
+            try:
+                headers = pl.read_csv(file_path, n_rows=0).columns
+                overrides = {col: pl.String for col in headers}
+                return pl.scan_csv(file_path, schema_overrides=overrides)
+            except Exception:
+                return pl.scan_csv(file_path, infer_schema_length=0)
+        elif file_path.endswith('.parquet'):
+            return pl.scan_parquet(file_path)
+        else:
+            raise ValueError("Unsupported file format")
+
+    def _apply_casting_plan(self, base_df: pl.LazyFrame, casting_plan: Dict[str, Any], sample_df: pl.DataFrame) -> pl.LazyFrame:
+        refined_df = base_df
+        schema = base_df.collect_schema()
+
+        for col, target_type in casting_plan.items():
+            if col not in schema.names():
+                continue
+            
+            try:
+                if target_type == pl.Date and schema[col] in [pl.String, pl.Utf8]:
+                    refined_df = refined_df.with_columns(
+                        self._parse_date_expr(col, sample_df[col].to_list()).alias(col)
+                    )
+                elif target_type in [pl.Float64, pl.Int64] and schema[col] in [pl.String, pl.Utf8]:
+                     refined_df = refined_df.with_columns(
+                         pl.col(col).str.replace_all(",", "").str.replace_all("$", "").cast(target_type, strict=False)
+                     )
+                elif target_type == pl.Boolean and schema[col] in [pl.String, pl.Utf8]:
+                     refined_df = refined_df.with_columns(
+                         pl.when(pl.col(col).is_null() | (pl.col(col).str.strip_chars() == ""))
+                         .then(None)
+                         .otherwise(pl.col(col).str.to_lowercase().str.strip_chars() == "true")
+                         .alias(col)
+                     )
+                else:
+                    refined_df = refined_df.with_columns(
+                        pl.col(col).cast(target_type, strict=False)
+                    )
+            except Exception as e:
+                logger.warning(f"Could not cast column {col} to {target_type}: {e}")
+                
+        return refined_df
+
+    def _derive_columns(self, refined_df: pl.LazyFrame) -> pl.LazyFrame:
+        derived_ops = []
+        cols = refined_df.collect_schema().names()
+        
+        date_cols = [c for c, t in refined_df.collect_schema().items() if t == pl.Date or t == pl.Datetime]
+        if date_cols:
+            base_date = pl.col(date_cols[0])
+            derived_ops.extend([
+                base_date.dt.year().alias("ano"),
+                base_date.dt.strftime("%Y-%m").alias("mes_ano"),
+                base_date.dt.weekday().alias("dia_semana_idx"),
+            ])
+            
+            q_col = next((c for c in cols if any(word in c.lower() for word in ["qty", "quantity", "quantidade"])), None)
+            p_col = next((c for c in cols if any(word in c.lower() for word in ["price", "valor", "preço"])), None)
+            if q_col and p_col:
+                derived_ops.append(
+                    (pl.col(q_col).cast(pl.Float64) * pl.col(p_col).cast(pl.Float64)).alias("vendas")
+                )
+
+        if derived_ops:
+            return refined_df.with_columns(derived_ops)
+        return refined_df
+
     def load_data(self, file_path: str):
         """
         Loads data into a LazyFrame with semantic type detection.
         Uses infer_schema_length=0 to prevent early inference crashes.
         """
-        # Singleton Check
         if DataEngine._global_lazy_df is not None and DataEngine._global_scanned_file == file_path:
             logger.info(f"Using Static Global Cache for: {file_path}")
             self.df = DataEngine._global_lazy_df
@@ -107,92 +175,18 @@ class DataEngine:
             start_time = time.time()
             logger.info(f"Loading data from: {file_path} ({file_size / 1e6:.2f} MB)")
             try:
-                # 1. Initial Load (Lazy)
-                if file_path.endswith('.csv'):
-                    # Force everything to String initially to prevent ANY primitive parsing errors
-                    # We read only headers first to get names
-                    try:
-                        headers = pl.read_csv(file_path, n_rows=0).columns
-                        overrides = {col: pl.String for col in headers}
-                        base_df = pl.scan_csv(file_path, schema_overrides=overrides)
-                    except:
-                        # Fallback if header read fails
-                        base_df = pl.scan_csv(file_path, infer_schema_length=0)
-                elif file_path.endswith('.parquet'):
-                    base_df = pl.scan_parquet(file_path)
-                else:
-                    raise ValueError("Unsupported file format")
+                base_df = self._read_file(file_path)
                 
-                # 2. Semantic Analysis on a sample
-                # We collect a sample to validate our semantic decisions
                 sample_df = base_df.limit(200).collect()
                 semantic_meta = self.semantic_engine.detect_semantic_types(sample_df)
-                
-                # 3. Apply Casting Plan based on semantic decisions
                 casting_plan = self.semantic_engine.get_casting_plan(semantic_meta)
                 
-                # Refine the LazyFrame with the casting plan
-                refined_df = base_df
-                schema = base_df.collect_schema()
-
-                for col, target_type in casting_plan.items():
-                    if col not in schema.names():
-                        continue
-                    
-                    try:
-                        # Special handling for dates if they are currently strings
-                        if target_type == pl.Date and schema[col] in [pl.String, pl.Utf8]:
-                            refined_df = refined_df.with_columns(
-                                self._parse_date_expr(col, sample_df[col].to_list()).alias(col)
-                            )
-                        # Special handling for numeric casting from strings (handles commas/etc)
-                        elif target_type in [pl.Float64, pl.Int64] and schema[col] in [pl.String, pl.Utf8]:
-                             # Clean numeric strings before casting if needed
-                             refined_df = refined_df.with_columns(
-                                 pl.col(col).str.replace_all(",", "").str.replace_all("$", "").cast(target_type, strict=False)
-                             )
-                        elif target_type == pl.Boolean and schema[col] in [pl.String, pl.Utf8]:
-                             refined_df = refined_df.with_columns(
-                                 pl.when(pl.col(col).is_null() | (pl.col(col).str.strip_chars() == ""))
-                                 .then(None)
-                                 .otherwise(pl.col(col).str.to_lowercase().str.strip_chars() == "true")
-                                 .alias(col)
-                             )
-                        else:
-                            refined_df = refined_df.with_columns(
-                                pl.col(col).cast(target_type, strict=False)
-                            )
-                    except Exception as e:
-                        logger.warning(f"Could not cast column {col} to {target_type}: {e}")
-
-                # 4. Automatic Column Derivation (from V1)
-                derived_ops = []
-                cols = refined_df.collect_schema().names()
-                
-                # Check for first available date column for time derivation
-                date_cols = [c for c, t in refined_df.collect_schema().items() if t == pl.Date or t == pl.Datetime]
-                if date_cols:
-                    base_date = pl.col(date_cols[0])
-                    derived_ops.extend([
-                        base_date.dt.year().alias("ano"),
-                        base_date.dt.strftime("%Y-%m").alias("mes_ano"),
-                        base_date.dt.weekday().alias("dia_semana_idx"),
-                    ])
-                    # Add sales derivation if quantity and price are detected
-                    q_col = next((c for c in cols if any(word in c.lower() for word in ["qty", "quantity", "quantidade"])), None)
-                    p_col = next((c for c in cols if any(word in c.lower() for word in ["price", "valor", "preço"])), None)
-                    if q_col and p_col:
-                        derived_ops.append(
-                            (pl.col(q_col).cast(pl.Float64) * pl.col(p_col).cast(pl.Float64)).alias("vendas")
-                        )
-
-                if derived_ops:
-                    refined_df = refined_df.with_columns(derived_ops)
+                refined_df = self._apply_casting_plan(base_df, casting_plan, sample_df)
+                refined_df = self._derive_columns(refined_df)
 
                 self.df = refined_df
                 self.ctx = pl.SQLContext(frames={"data": self.df})
                 
-                # Update Static Global Cache
                 DataEngine._global_lazy_df = self.df
                 DataEngine._global_ctx = self.ctx
                 DataEngine._global_scanned_file = file_path
@@ -247,7 +241,7 @@ class DataEngine:
             return {"error": str(e)}
 
     def execute_python(self, code: str):
-        logger.info(f"[PYTHON] Executing code block...")
+        logger.info("[PYTHON] Executing code block...")
         
         # Sandbox setup (from V1)
         loc = {

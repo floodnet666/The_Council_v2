@@ -20,7 +20,7 @@ res = requests.post(f"{base_url}/chat", json={
 })
 data = res.json()
 print(f"   Agent: {data['agent']}")
-print(f"   ✓ Response received\n")
+print("   ✓ Response received\n")
 
 # Test 3: Librarian Agent
 print("3. Librarian Agent (System Question)...")
@@ -52,7 +52,7 @@ res = requests.post(f"{base_url}/chat", json={
 data = res.json()
 print(f"   Agent: {data['agent']}")
 if "CHART_JSON" in data['response']:
-    print(f"   ✓ Chart generated successfully")
+    print("   ✓ Chart generated successfully")
     spec = json.loads(data['response'].replace("CHART_JSON:", ""))
     print(f"   Chart type: {spec['data'][0]['type']}")
 else:

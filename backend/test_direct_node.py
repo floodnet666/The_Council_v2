@@ -1,5 +1,4 @@
 import time
-import polars as pl
 from engines.data_engine import DataEngine
 from engines.query_engine import QueryEngine
 

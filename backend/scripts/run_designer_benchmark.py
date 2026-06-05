@@ -1,8 +1,6 @@
-import os
 import json
 import asyncio
 from langchain_core.messages import HumanMessage
-from workflow.graph import create_graph
 
 QUESTIONS = {
     "bar": "Gere um gráfico de barras com o total de pedidos por status_pedido",

@@ -8,7 +8,6 @@ from workflow.graph import create_graph
 from utils.logging_config import logger
 from opentelemetry import trace
 from opentelemetry.sdk.trace import TracerProvider
-from opentelemetry.sdk.trace.export import BatchSpanProcessor, ConsoleSpanExporter
 from opentelemetry.instrumentation.fastapi import FastAPIInstrumentor
 from dotenv import load_dotenv
 import os

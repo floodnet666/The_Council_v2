@@ -1,6 +1,5 @@
 import json
 import plotly.graph_objects as go
-import plotly.io as pio
 import os
 
 # Save images to artifacts directory so the walkthrough can embed them

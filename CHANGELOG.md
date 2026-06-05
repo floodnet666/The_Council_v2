@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased] - 2026-05-25
+## [Unreleased] - 2026-06-05
+
+### Refactoring & Zero Bloat
+- **Cyclomatic Complexity Reduction**: 
+  - `SemanticEngine._infer_single_column` refactored into private helper methods (`_check_date`, `_check_id`, etc.), reducing CC from 59 to 24.
+  - `DataEngine.load_data` decoupled into `_read_file`, `_apply_casting_plan`, and `_derive_columns`, reducing CC from 35 to max 14.
+- **Backend Linting**: Applied `uvx ruff check --fix .` across the backend, resolving 100+ structural linting issues, fixing unused imports and unused variables.
+- **Frontend Strict Typing**: Removed implicit/explicit `any` types in `ChartRenderer.tsx`, `DataTable.tsx`, and `ChatInterface.tsx` in favor of `Record<string, unknown>` and concrete interfaces. Fixed a React Hooks rule violation (`useMemo` before early return) in `ChartRenderer.tsx`.
 
 ### Added
 - Adicionado script de teste E2E `backend/tests/test_api_e2e_gemma.py` construído para validar estritamente o `hf.co/mradermacher/gemma-4-E2B-it-uncensored-GGUF:Q8_0`. Garante que operações semânticas do Polars não sofram alucinações de Pandas.
@@ -22,6 +29,7 @@ All notable changes to this project will be documented in this file.
 ### Arquitetura (XP/TDD) & Zero Bloat
 - **Sincronia Frontend/Backend de Gráficos**: Refatorado o grafo de estados do LangGraph (`backend/workflow/graph.py`, `state.py`). Pedidos de gráficos (intent `designer`) agora roteiam obrigatoriamente pelo `AnalystAgent` (engine matemática Polars) definindo a flag `wants_chart = True`. Após a análise estrutural, o supervisor roteia para o `DesignerAgent`. Isso injeta `visual_data` e `visual_config` na API, ativando corretamente o `<ChartRenderer />` no Frontend (React).
 - **Limpeza Central (Zero Bloat)**: Removidos arquivos de logs soltos (`test_out.txt`, `full_diff.txt`, `.tsv`, `.csv` temporários). Scripts de debug e validação rápida movidos de raiz para a nova pasta utilitária `scripts/debug_tools/`.
+- **Impurezas de Importação**: Removida a importação dupla de `create_graph` no `backend/main.py`. (A duplicidade do `DataEngine` no `graph.py` já havia sido expurgada durante a remoção do `PandasSyntaxDetectedError`).
 
 ### Adicionado (Data Profiling & BI Semântico)
 - **`engines/data_engine.py`**:

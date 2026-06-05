@@ -2,15 +2,12 @@ import asyncio
 import os
 import sys
 import json
-import polars as pl
-from typing import Dict, Any
 
 # Adiciona o diretório backend ao path para importação
 sys.path.append(os.path.join(os.getcwd(), "backend"))
 
 from agents.analyst_agent import AnalystAgent
 from engines.data_engine import DataEngine
-from utils.json_utils import safe_json_dumps
 
 async def run_heuristic_test():
     print("=== THE COUNCIL 2.0 - HEURISTIC VERIFICATION ===")

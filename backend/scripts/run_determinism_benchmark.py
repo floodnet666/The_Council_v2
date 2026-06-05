@@ -1,8 +1,6 @@
 import os
 import json
 import time
-import uuid
-import polars as pl
 from fastapi.testclient import TestClient
 
 os.environ["OLLAMA_MODEL"] = "hf.co/mradermacher/gemma-4-E2B-it-uncensored-GGUF:Q8_0"

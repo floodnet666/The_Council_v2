@@ -1,6 +1,5 @@
 import requests
 import time
-import json
 
 url = "http://localhost:8001/chat"
 payload = {

@@ -2,7 +2,7 @@ import faiss
 import numpy as np
 import os
 import json
-from typing import List, Dict, Any
+from typing import List
 from langchain_community.embeddings import HuggingFaceEmbeddings
 
 class MemoryEngine:
@@ -36,7 +36,7 @@ class MemoryEngine:
                         elif isinstance(metadata, dict) and 'documents' in metadata:
                             self.documents = metadata['documents']
                         else:
-                            print(f"Warning: Unknown metadata format, using empty documents list")
+                            print("Warning: Unknown metadata format, using empty documents list")
                     print(f"Loaded {len(self.documents)} documents from metadata")
             else:
                 self.index = faiss.IndexFlatL2(self.dimension)

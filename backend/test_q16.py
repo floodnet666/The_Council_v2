@@ -1,5 +1,4 @@
 import asyncio
-import polars as pl
 from engines.data_engine import DataEngine
 from agents.analyst_agent import AnalystAgent
 

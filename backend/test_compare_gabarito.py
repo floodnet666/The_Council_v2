@@ -2,7 +2,6 @@ import requests
 import json
 import re
 import os
-import time
 
 API_URL = "http://localhost:8001/chat"
 GABARITO_PATH = "gabarito.json"

@@ -3,7 +3,6 @@ import time
 import pytest
 import polars as pl
 from engines.data_engine import DataEngine
-from engines.query_engine import QueryEngine
 
 # Caminho do dataset gerado
 DATASET_PATH = os.path.join(os.path.dirname(__file__), "../../tests/datasets/vendas_1M.csv")

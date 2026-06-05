@@ -5,7 +5,6 @@ from engines.data_engine import DataEngine
 from engines.visualization_engine import VisualizationEngine
 from engines.query_engine import QueryEngine
 from schemas.operations import ChartSchema
-import json
 from utils.json_utils import safe_json_dumps
 
 class DesignerAgent:
@@ -45,7 +44,7 @@ class DesignerAgent:
                 try:
                     sample_data = self.data_engine.df.head(3).collect().to_dicts()
                     available_columns = self.data_engine.df.columns
-                except Exception as e:
+                except Exception:
                     sample_data = []
                     available_columns = []
 
