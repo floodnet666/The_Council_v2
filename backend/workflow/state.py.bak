@@ -17,6 +17,3 @@ class AgentState(TypedDict):
     
     # visual_schema: Stores instructions from DesignerAgent for Plotly (if needed later)
     visual_schema: Optional[Dict[str, Any]]
-    
-    # wants_chart: Signal from Router to chain Analyst -> Designer
-    wants_chart: Optional[bool]

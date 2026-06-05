@@ -112,9 +112,12 @@ def test_gemma_designer_chart_generation():
             assert data["status"] == "success", f"Gemma falhou na execução estruturada: {data}"
             assert "response" in data
             
-            # Garante que o roteamento foi pro Designer e ele cuspiu o Schema visual
+            # Garante que o roteamento foi pro Designer e ele cuspiu o Schema visual E os Dados
             visual_schema = data.get("visual_config")
+            visual_data = data.get("visual_data")
+            
             assert visual_schema is not None, f"Visual schema is None! Resposta do agente: {data['response']}"
+            assert visual_data is not None, f"Visual data is None! Payload recebido: {data}"
             
             # Valida as propriedades obrigatórias do ChartSchema
             assert "chart_type" in visual_schema

@@ -17,5 +17,8 @@ All notable changes to this project will be documented in this file.
   - *Bug:* Se o LLM alucinasse `null` (None) para atributos opcionais (`limit`, `sort_descending`), o Pydantic propagava o nulo e o Polars estourava `TypeError` em `sort(descending=None)`.
   - *Fix (Zero Bloat):* Adicionados fallbacks idiomáticos nativos antes da cadeia de invocação: `descending = True if operation.sort_descending is None else operation.sort_descending`.
 - **`DesignerAgent.run`**: 
-  - *Bug:* Acionava método não-existente na QueryEngine (`execute_query`) para reter contexto local para RAG.
   - *Fix:* Roteado para extração nativa direta e limpa do cache do Polars LazyFrame `self.data_engine.df.head(3).collect().to_dicts()`.
+
+### Arquitetura (XP/TDD) & Zero Bloat
+- **Sincronia Frontend/Backend de Gráficos**: Refatorado o grafo de estados do LangGraph (`backend/workflow/graph.py`, `state.py`). Pedidos de gráficos (intent `designer`) agora roteiam obrigatoriamente pelo `AnalystAgent` (engine matemática Polars) definindo a flag `wants_chart = True`. Após a análise estrutural, o supervisor roteia para o `DesignerAgent`. Isso injeta `visual_data` e `visual_config` na API, ativando corretamente o `<ChartRenderer />` no Frontend (React).
+- **Limpeza Central (Zero Bloat)**: Removidos arquivos de logs soltos (`test_out.txt`, `full_diff.txt`, `.tsv`, `.csv` temporários). Scripts de debug e validação rápida movidos de raiz para a nova pasta utilitária `scripts/debug_tools/`.

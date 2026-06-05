@@ -15,7 +15,7 @@ class DesignerAgent:
         self.viz_engine = viz_engine
         self.query_engine = QueryEngine()
 
-    async def run(self, message: str, active_file: str = None, aggregated_data: list = None) -> Dict[str, Any]:
+    async def run(self, message: str, active_file: str = None) -> Dict[str, Any]:
         if not active_file:
             return {
                 "messages": [AIMessage(content="I need a dataset to create a chart. Please upload a file first.", name="designer")]
@@ -34,22 +34,16 @@ class DesignerAgent:
         
         try:
             # Coleta uma amostra de dados para contexto do LLM
-            if aggregated_data:
-                sample_data = aggregated_data[:3]
-                available_columns = list(aggregated_data[0].keys()) if len(aggregated_data) > 0 else []
-            else:
-                try:
-                    sample_data = self.data_engine.df.head(3).collect().to_dicts()
-                    available_columns = self.data_engine.df.columns
-                except Exception as e:
-                    sample_data = []
-                    available_columns = []
+            try:
+                sample_data = self.data_engine.df.head(3).collect().to_dicts()
+            except Exception as e:
+                sample_data = []
 
             # 2. Usar LLM estruturado para extrair a intenção visual
             prompt = f"""
             Você é um Designer Agent. Sua função é mapear a requisição de visualização do usuário para um ChartSchema rígido.
             
-            Colunas Disponíveis: {available_columns}
+            Colunas Disponíveis: {self.data_engine.df.columns}
             Dados Amostrais (RAG): {safe_json_dumps(sample_data, indent=2)}
             
             Requisição: "{message}"

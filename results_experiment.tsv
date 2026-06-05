@@ -1,5 +1,0 @@
-query_type	status	latency_sec	error_calculated
-aggregation	PASS	0.0033	0.0
-group_by	PASS	0.0037	0.0
-top_n	PASS	0.0025	0.0
-describe	PASS	0.0010	0.0
