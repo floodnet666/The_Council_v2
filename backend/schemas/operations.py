@@ -21,6 +21,14 @@ class PolarsOperation(BaseModel):
         default=True,
         description="True if asking for 'top', 'highest', 'best'. False if 'bottom', 'lowest', 'worst'."
     )
+class DualSqlOperation(BaseModel):
+    visual_query: str = Field(
+        description="A query SQL em dialeto PostgreSQL (compatível com Polars SQLContext) a ser executada na tabela 'data' para retornar a granularidade visual bruta (os dados que irão para o Gráfico ou Tabela)."
+    )
+    analytical_query: str = Field(
+        description="A query SQL em dialeto PostgreSQL focada puramente na agregação global (MIN, MAX, AVG, CORR, SUM). Ela retorna os Contornos, Padrões e Correlações resumidos (1 linha estatística) para que o Analista possa discursar sobre causalidade."
+    )
+
 class ChartSchema(BaseModel):
     chart_type: Literal["bar", "line", "pie", "scatter"] = Field(description="Tipo de gráfico")
     x_axis: str = Field(description="Nome da coluna para o eixo X")

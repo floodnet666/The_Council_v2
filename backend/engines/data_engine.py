@@ -60,7 +60,7 @@ class DataEngine:
     def _detect_date_format(self, values: List[Any]) -> Optional[str]:
         """Detects the date format on a small sample list using datetime.strptime."""
         from datetime import datetime
-        formats = ["%Y-%m-%d", "%m/%d/%Y", "%d/%m/%Y", "%Y/%m/%d"]
+        formats = ["%Y-%m-%d %H:%M:%S", "%Y-%m-%d", "%m/%d/%Y", "%d/%m/%Y", "%Y/%m/%d"]
         
         non_empty = [str(v).strip() for v in values if v is not None and str(v).strip()]
         if not non_empty:
@@ -80,10 +80,12 @@ class DataEngine:
         fmt = self._detect_date_format(values)
         if fmt:
             logger.info(f"Detected Date format for {col_name}: {fmt}")
+            if "%H" in fmt:
+                return pl.col(col_name).str.to_datetime(fmt, strict=False)
             return pl.col(col_name).str.to_date(fmt, strict=False)
         else:
             # Fallback seguro para auto-parse se o formato for indefinido
-            return pl.col(col_name).str.to_date(strict=False)
+            return pl.col(col_name).str.to_datetime(strict=False)
 
     def load_data(self, file_path: str):
         """
@@ -317,11 +319,23 @@ class DataEngine:
             file_size = self.metadata.get("file_size", 0)
             if file_size > 500 * 1024 * 1024: # 500 MB
                 row_count = "Large Dataset (>500MB) - Total count skipped for performance"
+                string_profiles = {}
             else:
-                row_count = self.df.select(pl.len()).collect().item()
+                collected_df = self.df.collect()
+                row_count = len(collected_df)
+                
+                # Semantic Profiling for Strings/Categoricals (to prevent LLM hallucinating Dates)
+                string_profiles = {}
+                for col_name, dtype in schema.items():
+                    if dtype in (pl.String, pl.Categorical):
+                        unique_vals = collected_df[col_name].drop_nulls().unique()
+                        if len(unique_vals) <= 20:
+                            string_profiles[col_name] = unique_vals.to_list()
+                            
         except Exception as e:
             preview = []
             row_count = f"Error collecting stats: {e}"
+            string_profiles = {}
 
         return {
             "status": "loaded",
@@ -330,5 +344,6 @@ class DataEngine:
             "semantic_types": self.metadata.get("semantic_types", {}),
             "ambiguities": self.metadata.get("ambiguities", {}),
             "preview": preview,
-            "row_count": row_count
+            "row_count": row_count,
+            "string_profiles": string_profiles
         }

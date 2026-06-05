@@ -22,3 +22,10 @@ All notable changes to this project will be documented in this file.
 ### Arquitetura (XP/TDD) & Zero Bloat
 - **Sincronia Frontend/Backend de Gráficos**: Refatorado o grafo de estados do LangGraph (`backend/workflow/graph.py`, `state.py`). Pedidos de gráficos (intent `designer`) agora roteiam obrigatoriamente pelo `AnalystAgent` (engine matemática Polars) definindo a flag `wants_chart = True`. Após a análise estrutural, o supervisor roteia para o `DesignerAgent`. Isso injeta `visual_data` e `visual_config` na API, ativando corretamente o `<ChartRenderer />` no Frontend (React).
 - **Limpeza Central (Zero Bloat)**: Removidos arquivos de logs soltos (`test_out.txt`, `full_diff.txt`, `.tsv`, `.csv` temporários). Scripts de debug e validação rápida movidos de raiz para a nova pasta utilitária `scripts/debug_tools/`.
+
+### Adicionado (Data Profiling & BI Semântico)
+- **`engines/data_engine.py`**:
+  - Adicionado Profiling Semântico para colunas Categóricas e Strings (`string_profiles`) limitadas a 20 valores únicos. Isso provê à LLM a capacidade de mapear agrupamentos temporais ou lógicos não-nativos (ex: nomes de meses em texto) substituindo o uso falho de funções de datas em Strings.
+- **`agents/analyst_agent.py`**:
+  - Adicionado Self-Healing loop dinâmico (MAX_RETRIES=2) para interceptar o erro de exceção de parser `sqlparser-rs` do Polars e forçar a correção ANSI da query pela LLM em runtime.
+  - O prompt da LLM foi ajustado com diretrizes de "CRITICAL BI LOGIC" estritas, coibindo `SUM()` em campos Boleanos, orientando o uso do `COUNT(*)` filtrado e proibindo matemática temporal baseada no `CURRENT_DATE`. Alias obrigatórios (`AS`) implementados no exemplo analítico para resolver o crash de duplicidade nativo do Polars SQL.

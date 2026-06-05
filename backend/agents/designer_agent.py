@@ -33,6 +33,10 @@ class DesignerAgent:
         self.query_engine.set_dataframe(self.data_engine.df)
         
         try:
+            # Proteção Anti-Crash de payload para a UI: Truncar se o Analyst retornar linhas puras massivas
+            if aggregated_data and len(aggregated_data) > 1000:
+                aggregated_data = aggregated_data[:1000]
+
             # Coleta uma amostra de dados para contexto do LLM
             if aggregated_data:
                 sample_data = aggregated_data[:3]

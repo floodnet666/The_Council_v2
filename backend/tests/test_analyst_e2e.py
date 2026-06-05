@@ -67,48 +67,24 @@ async def test_analyst_with_query_engine():
         
         response = await analyst.run(query, active_file=csv_path)
         
-        # Verifica se tem ANALYSIS_DATA
-        if "ANALYSIS_DATA:" in response:
-            parts = response.split("---")
-            data_part = parts[0].replace("ANALYSIS_DATA:", "").strip()
+        if isinstance(response, dict) and "messages" in response:
+            content = response["messages"][0].content
+            raw_data = response.get("raw_data_context", [])
+            print("\n[DADOS VISUAIS (Para o Gráfico)]")
+            print(json.dumps(raw_data, indent=2, ensure_ascii=False))
             
-            print("\n[DADOS ESTRUTURADOS]")
-            try:
-                data = json.loads(data_part)
-                print(json.dumps(data, indent=2, ensure_ascii=False))
-            except:
-                print(data_part)
-            
-            if len(parts) > 1:
-                print("\n[EXPLICACAO DO LLM]")
-                print(parts[1].strip())
+            print("\n[EXPLICACAO DO LLM (A partir do SQL Analítico)]")
+            print(content)
         else:
-            print("\n[RESPOSTA]")
+            print("\n[RESPOSTA INESPERADA]")
             print(response)
         
         print("\n" + "=" * 70)
-    
-    # 5. Testar query exploratoria
-    print("\nTESTE DE QUERY EXPLORATORIA")
-    print("=" * 70)
-    
-    query = "O que voce pode me dizer sobre esses dados?"
-    print(f"Query: {query}")
-    print("-" * 70)
-    
-    response = await analyst.run(query, active_file=csv_path)
-    print("\n[RESPOSTA]")
-    print(response)
-    
-    print("\n" + "=" * 70)
-    print("TODOS OS TESTES CONCLUIDOS")
-    print("=" * 70)
     
     # Limpar arquivo de teste
     import os
     os.remove(csv_path)
     print(f"\nArquivo de teste removido: {csv_path}")
-
 
 if __name__ == "__main__":
     asyncio.run(test_analyst_with_query_engine())

@@ -15,8 +15,8 @@ export default function Home() {
           </h1>
         </div>
         <div className="flex items-center gap-4">
-          <span className="text-xs text-gray-500 uppercase tracking-widest">Autonomous Analytics</span>
-          <div className="h-2 w-2 rounded-full bg-[var(--color-neon-green)] glow-green"></div>
+          <span className="text-xs text-zinc-500 uppercase tracking-widest">Autonomous Analytics</span>
+          <div className="h-2 w-2 rounded-full bg-zinc-300 glow-soft"></div>
         </div>
       </header>
 
@@ -25,8 +25,8 @@ export default function Home() {
         {/* Sidebar */}
         <aside className="w-64 glass-panel border-l-0 border-y-0 flex flex-col p-4 gap-4 hidden md:flex">
           <nav className="flex flex-col gap-2">
-            <button className="flex items-center gap-3 p-3 rounded-lg hover:bg-[var(--color-surface-hover)] transition-colors text-sm text-gray-300 hover:text-white">
-              <span className="w-2 h-2 rounded-full bg-[var(--color-neon-blue)]"></span>
+            <button className="flex items-center gap-3 p-3 rounded-lg hover:bg-[var(--color-surface-hover)] transition-colors text-sm text-zinc-400 hover:text-zinc-100">
+              <span className="w-2 h-2 rounded-full bg-zinc-400"></span>
               New Session
             </button>
             <div className="h-px bg-[var(--color-glass-border)] my-2"></div>

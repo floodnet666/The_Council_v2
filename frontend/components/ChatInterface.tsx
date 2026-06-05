@@ -156,8 +156,8 @@ export default function ChatInterface() {
             const text = content.replace("LIBRARIAN_RESPONSE:\n", "");
             return (
                 <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-[var(--color-neon-purple)] font-bold text-[10px] uppercase tracking-widest mb-1">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-neon-purple)] shadow-[0_0_5px_var(--color-neon-purple)]"></span>
+                    <div className="flex items-center gap-2 text-zinc-400 font-bold text-[10px] uppercase tracking-widest mb-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-zinc-400 shadow-[0_0_5px_rgba(161,161,170,0.5)]"></span>
                         Archive Search Result
                     </div>
                     <p className="text-sm leading-relaxed whitespace-pre-wrap">{text}</p>
@@ -183,26 +183,30 @@ export default function ChatInterface() {
             <div className="flex-1 overflow-y-auto p-4 md:p-8 space-y-6">
                 {messages.length === 0 ? (
                     <div className="flex flex-col items-center justify-center h-full text-center space-y-6 opacity-80">
-                        <div className="h-24 w-24 rounded-full border border-[var(--color-glass-border)] flex items-center justify-center bg-[var(--color-surface)] glow-blue transition-all duration-500 hover:scale-105">
-                            <span className="text-4xl">👁️</span>
+                        <div className="h-24 w-24 rounded-full border border-[var(--color-glass-border)] flex items-center justify-center bg-[var(--color-surface)] glow-soft transition-all duration-500 hover:scale-105">
+                            <span className="text-3xl text-zinc-300 font-light">◬</span>
                         </div>
-                        <h2 className="text-2xl font-light">How can The Council assist you today?</h2>
+                        <h2 className="text-2xl font-light text-zinc-200">How can The Council assist you today?</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl w-full">
                             <button 
                                 onClick={() => !uploading && fileInputRef.current?.click()} 
                                 disabled={uploading}
-                                className={`glass-panel p-4 rounded-xl text-left transition-all group cursor-pointer ${uploading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[var(--color-surface-hover)] hover:border-[var(--color-neon-blue)]'}`}
+                                className={`glass-panel p-4 rounded-xl text-left transition-all group cursor-pointer ${uploading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[var(--color-surface-hover)]'}`}
                             >
-                                <div className="text-sm font-semibold text-[var(--color-neon-blue)] mb-1 group-hover:glow-blue">
+                                <div className="text-sm font-semibold text-zinc-300 mb-1">
                                     {uploading ? "Analyzing..." : "Analyze Data"}
                                 </div>
-                                <div className="text-xs text-gray-400">
+                                <div className="text-xs text-zinc-500">
                                     {uploading ? "Indexing massive dataset (4.7GB+)..." : "Upload a CSV and get instant insights."}
                                 </div>
                             </button>
-                            <button onClick={() => setInput("Generate a report")} className="glass-panel p-4 rounded-xl text-left hover:bg-[var(--color-surface-hover)] transition-all hover:border-[var(--color-neon-purple)] group cursor-pointer">
-                                <div className="text-sm font-semibold text-[var(--color-neon-purple)] mb-1 group-hover:glow-purple">Generate Report</div>
-                                <div className="text-xs text-gray-400">Create a comprehensive PDF report.</div>
+                            <button className="glass-panel p-4 rounded-xl text-left transition-all hover:bg-[var(--color-surface-hover)] group">
+                                <div className="text-sm font-semibold text-zinc-300 mb-1">
+                                    Run Global Audit
+                                </div>
+                                <div className="text-xs text-zinc-500">
+                                    Analyze 43 linked schemas across regions.
+                                </div>
                             </button>
                         </div>
                     </div>
@@ -212,10 +216,10 @@ export default function ChatInterface() {
                             <div key={idx} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"} w-full`}>
                                 <div className={`
                                     max-w-[90%] md:max-w-[80%] p-4 rounded-2xl glass-panel relative w-fit
-                                    ${msg.role === "user" ? "border-l-0 bg-[rgba(255,255,255,0.02)]" : "border-[var(--color-neon-blue)] border-opacity-30"}
+                                    ${msg.role === "user" ? "border-l-0 bg-[rgba(255,255,255,0.02)]" : "border-zinc-700 border-opacity-30"}
                                 `}>
                                     {msg.agent && (
-                                        <div className="absolute -top-3 left-4 text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-[var(--color-surface)] border border-[var(--color-glass-border)] text-[var(--color-neon-blue)]">
+                                        <div className="absolute -top-3 left-4 text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-[var(--color-surface)] border border-[var(--color-glass-border)] text-zinc-400">
                                             {msg.agent}
                                         </div>
                                     )}

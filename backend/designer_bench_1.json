@@ -1,0 +1,39 @@
+{
+  "bar": {
+    "query": "Gere um gráfico de barras com o total de pedidos por status_pedido",
+    "visual_config": {
+      "chart_type": "bar",
+      "x_axis": "status_pedido",
+      "y_axis": "total_pedidos",
+      "title": "Total Order Values by Status (Global Analytical Dossier Visualization)"
+    },
+    "visual_data": [
+      {
+        "status_pedido": "Shipped",
+        "total_pedidos": 9902
+      },
+      {
+        "status_pedido": "Processing",
+        "total_pedidos": 4953
+      },
+      {
+        "status_pedido": "Delivered",
+        "total_pedidos": 80149
+      },
+      {
+        "status_pedido": "Cancelled",
+        "total_pedidos": 4996
+      }
+    ]
+  },
+  "line": {
+    "query": "Gere um gráfico de linha do tempo mostrando o lucro diário",
+    "visual_config": {
+      "chart_type": "line",
+      "x_axis": "order_date",
+      "y_axis": "total_lucro_diario",
+      "title": "Daily Profit Analysis (Min: 50.03, Max: 4999.88, Discount Factor: 0.6490707899727145)"
+    },
+    "visual_data": [
+      {
+        "order_date": 

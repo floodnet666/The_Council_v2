@@ -170,11 +170,25 @@ from langgraph.checkpoint.sqlite.aio import AsyncSqliteSaver
 _checkpointer_context = None
 _checkpointer = None
 
+import aiosqlite
+
 async def init_checkpointer():
     global _checkpointer_context, _checkpointer
     if _checkpointer is None:
-        _checkpointer_context = AsyncSqliteSaver.from_conn_string("the_council.db")
-        _checkpointer = await _checkpointer_context.__aenter__()
+        # [SENIOR ENGINEERING] Resiliência a Crashes e Deadlocks
+        # 1. Timeout de 15s para garantir que processos bloqueantes cedam (Deadlock Recovery)
+        conn = await aiosqlite.connect("the_council.db", timeout=15.0)
+        
+        # 2. WAL Mode (Write-Ahead Logging) evita que falhas abruptas do servidor corrompam o DB
+        # e permite leituras concorrentes enquanto gravações estão acontecendo.
+        await conn.execute("PRAGMA journal_mode=WAL;")
+        
+        # 3. Espera ativa no driver em caso de Lock pendente (Zumbi), evitando travamento infinito
+        await conn.execute("PRAGMA busy_timeout=5000;")
+        await conn.execute("PRAGMA synchronous=NORMAL;")
+        
+        _checkpointer = AsyncSqliteSaver(conn)
+        await _checkpointer.setup()
     return _checkpointer
 
 async def create_graph():

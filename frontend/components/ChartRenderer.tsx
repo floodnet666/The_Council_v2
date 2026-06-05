@@ -12,35 +12,66 @@ export default function ChartRenderer({ config, data }: { config: any, data: any
     if (!config || !data || data.length === 0) return <div className="text-red-500 text-xs p-2 border border-red-900/30 rounded">Invalid Chart Specification</div>;
 
     const plotData = useMemo(() => {
-        return [{
+        let trace: any = {
             type: config.chart_type,
-            x: data.map((row: any) => row[config.x_axis]),
-            y: data.map((row: any) => row[config.y_axis]),
-            marker: { color: "#06b6d4" },
             name: config.title || "Data"
-        }];
+        };
+        
+        if (config.chart_type === "pie") {
+            trace.labels = data.map((row: any) => row[config.x_axis]);
+            trace.values = data.map((row: any) => row[config.y_axis]);
+            trace.marker = { 
+                colors: ["#27272a", "#3f3f46", "#52525b", "#71717a", "#a1a1aa", "#d4d4d8", "#e4e4e7"] 
+            };
+            trace.textinfo = "percent";
+            trace.hoverinfo = "label+percent+value";
+        } else {
+            trace.x = data.map((row: any) => row[config.x_axis]);
+            trace.y = data.map((row: any) => row[config.y_axis]);
+            trace.marker = { color: "#71717a", opacity: 0.8 }; // zinc-500
+            
+            if (config.chart_type === "scatter") {
+                trace.mode = "markers";
+                trace.marker = { size: 8, color: "#a1a1aa", opacity: 0.6 };
+            }
+            if (config.chart_type === "line") {
+                trace.line = { color: "#e4e4e7", width: 2 }; // zinc-200
+            }
+        }
+        
+        return [trace];
     }, [config, data]);
 
     return (
-        <div className="w-full h-80 glass-panel rounded-xl overflow-hidden my-4 border border-cyan-900/30 shadow-2xl">
+        <div className="w-full h-80 glass-panel rounded-xl overflow-hidden my-4">
             <Plot
                 data={plotData}
                 layout={{
-                    title: config.title || "Visualização",
+                    title: {
+                        text: config.title || "Visualização",
+                        font: { size: 14, color: "#a1a1aa", family: "Inter, sans-serif" }
+                    },
                     autosize: true,
-                    margin: { l: 50, r: 30, t: 50, b: 50 },
+                    margin: { l: 40, r: 20, t: 40, b: 40 },
                     paper_bgcolor: "rgba(0,0,0,0)",
                     plot_bgcolor: "rgba(0,0,0,0)",
-                    font: { color: "#ededed", family: "Inter, sans-serif" },
+                    font: { color: "#71717a", family: "Inter, sans-serif", size: 11 },
+                    hoverlabel: {
+                        bgcolor: "#18181b", // zinc-900
+                        bordercolor: "#27272a",
+                        font: { color: "#e4e4e7", family: "Inter, sans-serif" }
+                    },
                     xaxis: { 
-                        title: config.x_axis,
-                        gridcolor: "rgba(255,255,255,0.05)", 
-                        zerolinecolor: "rgba(255,255,255,0.1)" 
+                        title: { text: config.x_axis, font: { size: 10 } },
+                        gridcolor: "rgba(255,255,255,0.02)", 
+                        zerolinecolor: "rgba(255,255,255,0.05)",
+                        showline: false
                     },
                     yaxis: { 
-                        title: config.y_axis,
-                        gridcolor: "rgba(255,255,255,0.05)", 
-                        zerolinecolor: "rgba(255,255,255,0.1)" 
+                        title: { text: config.y_axis, font: { size: 10 } },
+                        gridcolor: "rgba(255,255,255,0.02)", 
+                        zerolinecolor: "rgba(255,255,255,0.05)",
+                        showline: false
                     }
                 }}
                 config={{ 
@@ -48,7 +79,7 @@ export default function ChartRenderer({ config, data }: { config: any, data: any
                     responsive: true 
                 }}
                 useResizeHandler={true}
-                className="w-full h-full"
+                className="w-full h-full animate-in fade-in slide-in-from-bottom-2 duration-700"
             />
         </div>
     );

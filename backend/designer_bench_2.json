@@ -1,0 +1,42 @@
+{
+  "bar": {
+    "query": "Gere um gráfico de barras com o total de pedidos por status_pedido",
+    "visual_config": {
+      "chart_type": "scatter",
+      "x_axis": "dia_semana_idx",
+      "y_axis": "valor_bruto",
+      "title": "Distribuição de Valor Bruto por Dia da Semana (Baseado em Dados RAG)"
+    },
+    "visual_data": []
+  },
+  "line": {
+    "query": "Gere um gráfico de linha do tempo mostrando o lucro diário",
+    "visual_config": {
+      "chart_type": "scatter",
+      "x_axis": "dia_semana_idx",
+      "y_axis": "valor_bruto",
+      "title": "Distribuição de Valor Bruto por Dia da Semana (Indexado)"
+    },
+    "visual_data": []
+  },
+  "pie": {
+    "query": "Mostre a proporção de pedidos por status_pedido em um gráfico de pizza",
+    "visual_config": {
+      "chart_type": "scatter",
+      "x_axis": "dia_semana_idx",
+      "y_axis": "valor_bruto",
+      "title": "Distribuição de Valor Bruto por Dia da Semana (Baseado em Dados RAG)"
+    },
+    "visual_data": []
+  },
+  "scatter": {
+    "query": "Faça um gráfico de dispersão cruzando o valor bruto com o valor de desconto para achar padrões",
+    "visual_config": {
+      "chart_type": "scatter",
+      "x_axis": "dia_semana_idx",
+      "y_axis": "valor_bruto",
+      "title": "Distribuição de Valor Bruto por Dia da Semana (Baseado em Dados RAG)"
+    },
+    "visual_data": []
+  }
+}

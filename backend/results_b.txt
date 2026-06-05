@@ -1,0 +1,4 @@
+=== RESUMO (TESTE B) ===
+A correlação aponta que vender mais (dar desconto) está fortemente associado a um lucro estimado maior. A hipótese mais provável é que vender mais gera lucro de forma causal, pois o desconto é a ferramenta utilizada para converter a alta demanda (que gera o volume de vendas) em receita, maximizando a margem dentro das condições de mercado observadas no arquivo. No entanto, é crucial monitorar se essa relação se mantém em diferentes períodos para confirmar a causalidade e descartar a hipótese de que ambos são apenas efeitos de uma demanda externa.
+
+[METRICAS B] Tempo Total: 157.55s
