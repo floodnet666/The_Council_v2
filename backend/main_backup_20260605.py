@@ -5,6 +5,7 @@ from pydantic import BaseModel
 from typing import Optional
 from langchain_core.messages import HumanMessage
 from workflow.graph import create_graph
+from workflow.graph import create_graph
 from utils.logging_config import logger
 from opentelemetry import trace
 from opentelemetry.sdk.trace import TracerProvider
